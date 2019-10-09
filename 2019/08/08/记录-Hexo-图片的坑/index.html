@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-x16.ico?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="配置   条目 型号 备注    系统 Windows 10    编辑器 Typora 0.9.73(beta)    Hexo v3.9.0    问题今天第一次使用 Hexo，感觉还是棒棒哒。但是，很快蛋疼的事情就出现了，插入图片，不显示。  当时就蒙蔽了，不应该啊，做的这么棒的一款东西，怎么这个还有问题。直接谷歌，发现不是我一个小伙伴出现了这个问题，大家都拿出了自己的解决办法，我试了试，有">
+<meta name="keywords" content="Hexo,坑">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记录 Hexo 图片的坑">
+<meta property="og:url" content="http://yoursite.com/2019/08/08/记录-Hexo-图片的坑/index.html">
+<meta property="og:site_name" content="ZHL的博客">
+<meta property="og:description" content="配置   条目 型号 备注    系统 Windows 10    编辑器 Typora 0.9.73(beta)    Hexo v3.9.0    问题今天第一次使用 Hexo，感觉还是棒棒哒。但是，很快蛋疼的事情就出现了，插入图片，不显示。  当时就蒙蔽了，不应该啊，做的这么棒的一款东西，怎么这个还有问题。直接谷歌，发现不是我一个小伙伴出现了这个问题，大家都拿出了自己的解决办法，我试了试，有">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2019/08/08/记录-Hexo-图片的坑/en.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/08/08/记录-Hexo-图片的坑/不要和我说.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/08/记录-Hexo-图片的坑/Typora优先使用相对路径.png">
+<meta property="og:updated_time" content="2019-10-09T13:28:17.070Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="记录 Hexo 图片的坑">
+<meta name="twitter:description" content="配置   条目 型号 备注    系统 Windows 10    编辑器 Typora 0.9.73(beta)    Hexo v3.9.0    问题今天第一次使用 Hexo，感觉还是棒棒哒。但是，很快蛋疼的事情就出现了，插入图片，不显示。  当时就蒙蔽了，不应该啊，做的这么棒的一款东西，怎么这个还有问题。直接谷歌，发现不是我一个小伙伴出现了这个问题，大家都拿出了自己的解决办法，我试了试，有">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/08/记录-Hexo-图片的坑/en.jpg">
+  <link rel="canonical" href="http://yoursite.com/2019/08/08/记录-Hexo-图片的坑/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>记录 Hexo 图片的坑 | ZHL的博客</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9fd3e2a7c57b3971f3439f9713354241";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ZHL的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">love-wh</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/08/记录-Hexo-图片的坑/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">记录 Hexo 图片的坑
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-08 18:47:47" itemprop="dateCreated datePublished" datetime="2019-08-08T18:47:47+08:00">2019-08-08</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><table>
+<thead>
+<tr>
+<th>条目</th>
+<th>型号</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>系统</td>
+<td>Windows 10</td>
+<td></td>
+</tr>
+<tr>
+<td>编辑器</td>
+<td>Typora 0.9.73(beta)</td>
+<td></td>
+</tr>
+<tr>
+<td>Hexo</td>
+<td>v3.9.0</td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>今天第一次使用 Hexo，感觉还是棒棒哒。但是，很快蛋疼的事情就出现了，插入图片，不显示。</p>
+<p><img src="/2019/08/08/记录-Hexo-图片的坑/en.jpg" alt></p>
+<p>当时就蒙蔽了，不应该啊，做的这么棒的一款东西，怎么这个还有问题。直接谷歌，发现不是我一个小伙伴出现了这个问题，大家都拿出了自己的解决办法，我试了试，有些地方还是不行，只好自己调教了。</p>
+<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><ol>
+<li>图片上传至 Github。本人不喜欢将图片上传至图床，第一，麻烦；第二，md 文件和资源文件分开放难管理；第三，我鬼知道图床什么时候就 GG 了，😎 Github 总是比图床来的可靠吧！</li>
+<li>完全使用 MarkDown 语法。第一，本人懒，不愿意记那么多；第二，我的 Typora 不认其他奇奇怪怪的语法！</li>
+<li>能够所见即所得。我在我家 Typora 里是什么样，Push 上 Github 里也应该是什么样！</li>
+<li>支持中文！这个，天朝的各位大大都没异议吧！</li>
+<li>愉快的编辑。不要有太多繁琐的操作，图片能拖住丢进去，就绝不会打开资源管理器来选！</li>
+</ol>
+<p><img src="/2019/08/08/记录-Hexo-图片的坑/不要和我说.png" alt></p>
+<p>看到这里如果想直接看解决办法，请直接跳转到 <a href="#总结">总结</a>。</p>
+<h1 id="开撸"><a href="#开撸" class="headerlink" title="开撸"></a>开撸</h1><p>找了一下别人的解决办法，最后发现只有<a href="https://alreadyright.github.io/2019/06/16/aboutHexo/" target="_blank" rel="noopener">这位仁兄</a>的解决办法可能符合我的要求，既然有巨人，那就站他肩膀上，站得高至少也凉快些嘛。</p>
+<h2 id="修改博客配置"><a href="#修改博客配置" class="headerlink" title="修改博客配置"></a>修改博客配置</h2><p>将博客根目录下的文件 <code>_config.yml</code> 中的 <code>post_asset_folder: false</code> 改为 <code>post_asset_folder: true</code>。</p>
+<h2 id="装插件-hexo-asset-image"><a href="#装插件-hexo-asset-image" class="headerlink" title="装插件 hexo-asset-image"></a>装插件 hexo-asset-image</h2><p>装一个可以改写文件路径的插件，图片为什么不显示，就是因为路径的问题。cmd 在博客根目录下 <code>npm install hexo-asset-image -–save</code>。</p>
+<h2 id="发现问题"><a href="#发现问题" class="headerlink" title="发现问题"></a>发现问题</h2><p>装好插件后装逼写一篇博客来，嗯，标题就写《记录-Hexo-图片的坑》，<code>hexo new &quot;记录-Hexo-图片的坑&quot;</code>，在 <code>博客根目录\source\_posts</code>下多了 <code>记录-Hexo-图片的坑.md</code> 和 <code>记录-Hexo-图片的坑</code> 文件夹。打开 <code>记录-Hexo-图片的坑.md</code>插入图片 <code>![](./记录-Hexo-图片的坑/en.jpg)</code>，<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code> 一气呵成，<code>localhost:4000</code> 刷起来，😳😳😳图呢？</p>
+<p>查看一下图片路径，咦，这路径怎么是 <code>.com/xxx.jpg</code>，程序员的直觉告诉我，事情不对！</p>
+<p>再看下<a href="https://alreadyright.github.io/2019/06/16/aboutHexo/" target="_blank" rel="noopener">这位仁兄</a>的博客，奥，插件版本不对，好，改版本！</p>
+<h2 id="修改插件-hexo-asset-image-版本"><a href="#修改插件-hexo-asset-image-版本" class="headerlink" title="修改插件 hexo-asset-image 版本"></a>修改插件 hexo-asset-image 版本</h2><p>将博客根目录下的文件 <code>package.json</code> 中的 <code>&quot;hexo-asset-image&quot;: &quot;1.0.0&quot;</code> 修改为 <code>&quot;hexo-asset-image&quot;: &quot;0.0.3&quot;</code>，别问我😁为什么“这位仁兄”的改是 <code>0.0.1</code>，我改的是 <code>0.0.3</code>，因为我任性！其实是因为试过 <code>0.0.3</code> 也是可以的，高版本总是好一点嘛，不知道这里对不对😂😂😂。</p>
+<p>改完后<code>npm install &amp;&amp; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code> 一气呵成，再 <code>localhost:4000</code> 刷起来，😳😳😳图呢？</p>
+<h2 id="路径写法和中文问题"><a href="#路径写法和中文问题" class="headerlink" title="路径写法和中文问题"></a>路径写法和中文问题</h2><p>卧槽，卧槽，卧槽……</p>
+<p>我的图呢？不应该啊，再看图片路径，怎么会是 <code>/2019/08/08/记录-Hexo-图片的坑/./%E8%AE%B0%E5%BD%95-Hexo-%E5%9B%BE%E7%89%87%E7%9A%84%E5%9D%91/en.jpg</code></p>
+<p>好吧，至少我看到了有部分是对的，没办法，只好看一下插件的源码了。。。。。。</p>
+<p>打开源码文件，位于 <code>博客根目录\node_modules\hexo-asset-image\index.js</code> 。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">var</span> cheerio = <span class="built_in">require</span>(<span class="string">'cheerio'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPosition</span>(<span class="params">str, m, i</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hexo.extend.filter.register(<span class="string">'after_post_render'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> config = hexo.config;</span><br><span class="line">  <span class="keyword">if</span>(config.post_asset_folder)&#123;</span><br><span class="line">    <span class="keyword">var</span> link = data.permalink;</span><br><span class="line">    <span class="keyword">var</span> beginPos = getPosition(link, <span class="string">'/'</span>, <span class="number">3</span>) + <span class="number">1</span>;</span><br><span class="line">    <span class="comment">// In hexo 3.1.1, the permalink of "about" page is like ".../about/index.html".</span></span><br><span class="line">    <span class="keyword">var</span> endPos = link.lastIndexOf(<span class="string">'/'</span>) + <span class="number">1</span>;</span><br><span class="line">    link = link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> toprocess = [<span class="string">'excerpt'</span>, <span class="string">'more'</span>, <span class="string">'content'</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      <span class="keyword">var</span> key = toprocess[i];</span><br><span class="line"> </span><br><span class="line">      <span class="keyword">var</span> $ = cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: <span class="literal">false</span>,</span><br><span class="line">        xmlMode: <span class="literal">false</span>,</span><br><span class="line">        lowerCaseTags: <span class="literal">false</span>,</span><br><span class="line">        decodeEntities: <span class="literal">false</span></span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(<span class="string">'img'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">// For windows style path, we replace '\' to '/'.</span></span><br><span class="line">        <span class="keyword">var</span> src = $(<span class="keyword">this</span>).attr(<span class="string">'src'</span>).replace(<span class="string">'\\'</span>, <span class="string">'/'</span>);   <span class="comment">//---------1</span></span><br><span class="line">        <span class="keyword">if</span>(!<span class="regexp">/http[s]*.*|\/\/.*/</span>.test(src))&#123;</span><br><span class="line">          <span class="comment">// For "about" page, the first part of "src" can't be removed.</span></span><br><span class="line">          <span class="comment">// In addition, to support multi-level local directory.</span></span><br><span class="line">          <span class="keyword">var</span> linkArray = link.split(<span class="string">'/'</span>).filter(<span class="function"><span class="keyword">function</span>(<span class="params">elem</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> elem != <span class="string">''</span>;</span><br><span class="line">          &#125;);</span><br><span class="line">          <span class="keyword">var</span> srcArray = src.split(<span class="string">'/'</span>).filter(<span class="function"><span class="keyword">function</span>(<span class="params">elem</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> elem != <span class="string">''</span>;   <span class="comment">//---------2</span></span><br><span class="line">          &#125;);</span><br><span class="line">          <span class="keyword">if</span>(linkArray[linkArray.length - <span class="number">1</span>] == srcArray[<span class="number">0</span>])   <span class="comment">//---------3</span></span><br><span class="line">            srcArray.shift();</span><br><span class="line">          src = srcArray.join(<span class="string">'/'</span>);</span><br><span class="line">          $(<span class="keyword">this</span>).attr(<span class="string">'src'</span>, <span class="string">'/'</span> + link + src);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] = $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>这代码，应该能改吧，哈哈哈，我承认，第一眼看到，我是蒙蔽的。</p>
+<p>仔细看了一下标记 1 处 <code>var src = $(this).attr(&#39;src&#39;).replace(&#39;\\&#39;, &#39;/&#39;);</code>，猜测 <code>src</code> 应该就是我们写的图片的路径，源码的作用是将 Windows 的文件分隔符改为 Unix 类型的文件分隔符，即将 <code>\</code> 改为 <code>/</code>，这没错，也就是说，我在 Typora 中是可以这样 <code>![](.\记录-Hexo-图片的坑\en.jpg)</code> 写图片路径的，非常好！我的 Typora 支持以相对路径插入图片，非常 nice~！不过需要设置，如图设置：<br><img src="/2019/08/08/记录-Hexo-图片的坑/Typora优先使用相对路径.png" alt="Typora优先使用相对路径"></p>
+<p>设置好，就能愉快的往 Typora 里直接丢图片了，直接拖进去，才是正确的打开方式！</p>
+<p>😳😳😳还是没解决显示图的问题啊！别急，再往下看看，诶！在标记 2 处看出了端倪，原来，我的这种  <code>![](./记录-Hexo-图片的坑/en.jpg)</code> 写法不对！😂😂😂，只能写  <code>![](记录-Hexo-图片的坑/en.jpg)</code> 或   <code>![](/记录-Hexo-图片的坑/en.jpg)</code>，好吧，不支持就不支持吧，那我就写成这样 <code>![](记录-Hexo-图片的坑\en.jpg)</code> 吧。</p>
+<p>再试一下，还是没有图！！！😤😤😤结合图片路径，继续看源码！知道原因了，在标记 3 处，源码作者考虑到了我们需要所见即所得，我们带文件夹的路径写法，在这一步，作者判断了有没有写文件夹，如果我们的 MarkDown 中有写（一般都会写好吧，毕竟能所见即所得啊），他通过判断数组变量 <code>linkArray</code> 最后一个值是否与保存着我们写的路径的数组变量 <code>srcArray</code> 的第一个值相等，如果相等，则删除其中一个，然后拼接，对啊，逻辑没有错啊，为什么我还是看不到图片呢？其实是因为中文的原因，中文图片路径做了 <code>URL</code> 编码，我们看到的 <code>%E8%AE%B0%E5%BD%95-Hexo-%E5%9B%BE%E7%89%87%E7%9A%84%E5%9D%91</code> 其实就是 <code>记录-Hexo-图片的坑</code>，知道原因了，就好解决了。</p>
+<p>将标记 3 处的 <code>var srcArray = src.split(&#39;/&#39;).filter(function(elem){</code> 改为 <code>var srcArray = decodeURI(src).split(&#39;/&#39;).filter(function(elem){</code>，还有其他的改法，但是我怎么简单怎么来，接着再来一遍猛如虎的操作 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>，<code>localhost:4000</code> 刷起来。</p>
+<p>有图片了，舒服~</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
+<li>将博客根目录下的文件 <code>_config.yml</code> 中的 <code>post_asset_folder: false</code> 改为 <code>post_asset_folder: true</code>。</li>
+<li>cmd 在博客根目录下 <code>npm install hexo-asset-image -–save</code>。</li>
+<li>将博客根目录下的文件 <code>package.json</code> 中的 <code>&quot;hexo-asset-image&quot;: &quot;1.0.0&quot;</code> 修改为 <code>&quot;hexo-asset-image&quot;: &quot;0.0.3&quot;</code>，在博客根目录下 cmd <code>npm install</code>；</li>
+<li>修改 <code>博客根目录\node_modules\hexo-asset-image\index.js</code> 文件中的第 38 行为 <code>var srcArray = decodeURI(src).split(&#39;/&#39;).filter(function(elem){</code>；</li>
+<li>在博客根目录下 cmd  <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>，完成。</li>
+</ol>
+<p><strong>注意：图片地址只能写成 <code>/目录/xxx.jpg</code>、<code>目录/xxx.jpg</code>、<code>目录\xxx.jpg</code> 或 <code>\目录\xxx.jpg</code> 的形式，前面不能带 <code>.</code>，且路径中不能含有空格，建议使用 “-” 代替空格。</strong></p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            
+              <a href="/tags/坑/" rel="tag"># 坑</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/08/08/Hexo-GitPage-搭建个人博客/" rel="next" title="Hexo + GitPage 搭建个人博客">
+                  <i class="fa fa-chevron-left"></i> Hexo + GitPage 搭建个人博客
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/08/09/DICOM-的一些疑问/" rel="prev" title="DICOM 的一些疑问">
+                  DICOM 的一些疑问 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="gitalk-container"></div>
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.png"
+      alt="ZHL">
+  <p class="site-author-name" itemprop="name">ZHL</p>
+  <div class="site-description motion-element" itemprop="description">我的博客</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#配置"><span class="nav-number">1.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">2.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目标"><span class="nav-number">3.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开撸"><span class="nav-number">4.</span> <span class="nav-text">开撸</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改博客配置"><span class="nav-number">4.1.</span> <span class="nav-text">修改博客配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#装插件-hexo-asset-image"><span class="nav-number">4.2.</span> <span class="nav-text">装插件 hexo-asset-image</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发现问题"><span class="nav-number">4.3.</span> <span class="nav-text">发现问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改插件-hexo-asset-image-版本"><span class="nav-number">4.4.</span> <span class="nav-text">修改插件 hexo-asset-image 版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路径写法和中文问题"><span class="nav-number">4.5.</span> <span class="nav-text">路径写法和中文问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZHL</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.3.0</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+    var gitalk = new Gitalk({
+      clientID: '1422018403cef567d9ea',
+      clientSecret: 'cff6b3aa554481268305af952f14f47e7acd7b19',
+      repo: 'Gitalk',
+      owner: 'zhuhelong',
+      admin: ['zhuhelong'],
+      id: '851a5ad2cfc12364f50fe37934886efc',
+        language: 'zh-CN',
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
+
+</body>
+</html>

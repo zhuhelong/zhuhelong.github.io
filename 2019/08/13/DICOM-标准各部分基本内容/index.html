@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-x16.ico?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="Part 1 Introduction and Overview标题引言与概述 内容简要介绍了 DICOM 的历史、概念、适用范围及组成。 Part 2 Conformance标题一致性 内容定义了要求制造商精确地描述的其产品的 DICOM 兼容性，即该产品的 DICOM 兼容性声明。 重要内容 Table A.1-2. UID Values，该表格包含 UID 值与 UID 名的对应关系。  P">
+<meta name="keywords" content="DICOM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DICOM 标准各部分基本内容">
+<meta property="og:url" content="http://yoursite.com/2019/08/13/DICOM-标准各部分基本内容/index.html">
+<meta property="og:site_name" content="ZHL的博客">
+<meta property="og:description" content="Part 1 Introduction and Overview标题引言与概述 内容简要介绍了 DICOM 的历史、概念、适用范围及组成。 Part 2 Conformance标题一致性 内容定义了要求制造商精确地描述的其产品的 DICOM 兼容性，即该产品的 DICOM 兼容性声明。 重要内容 Table A.1-2. UID Values，该表格包含 UID 值与 UID 名的对应关系。  P">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-09T13:28:17.057Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DICOM 标准各部分基本内容">
+<meta name="twitter:description" content="Part 1 Introduction and Overview标题引言与概述 内容简要介绍了 DICOM 的历史、概念、适用范围及组成。 Part 2 Conformance标题一致性 内容定义了要求制造商精确地描述的其产品的 DICOM 兼容性，即该产品的 DICOM 兼容性声明。 重要内容 Table A.1-2. UID Values，该表格包含 UID 值与 UID 名的对应关系。  P">
+  <link rel="canonical" href="http://yoursite.com/2019/08/13/DICOM-标准各部分基本内容/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>DICOM 标准各部分基本内容 | ZHL的博客</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9fd3e2a7c57b3971f3439f9713354241";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ZHL的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">love-wh</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/13/DICOM-标准各部分基本内容/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">DICOM 标准各部分基本内容
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-13 09:23:58" itemprop="dateCreated datePublished" datetime="2019-08-13T09:23:58+08:00">2019-08-13</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Part-1-Introduction-and-Overview"><a href="#Part-1-Introduction-and-Overview" class="headerlink" title="Part 1 Introduction and Overview"></a>Part 1 Introduction and Overview</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>引言与概述</p>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>简要介绍了 DICOM 的历史、概念、适用范围及组成。</p>
+<h1 id="Part-2-Conformance"><a href="#Part-2-Conformance" class="headerlink" title="Part 2 Conformance"></a>Part 2 Conformance</h1><h2 id="标题-1"><a href="#标题-1" class="headerlink" title="标题"></a>标题</h2><p>一致性</p>
+<h2 id="内容-1"><a href="#内容-1" class="headerlink" title="内容"></a>内容</h2><p>定义了要求制造商精确地描述的其产品的 DICOM 兼容性，即该产品的 DICOM 兼容性声明。</p>
+<h2 id="重要内容"><a href="#重要内容" class="headerlink" title="重要内容"></a>重要内容</h2><ol>
+<li><strong>Table A.1-2. UID Values</strong>，该表格包含 <strong>UID</strong> 值与 <strong>UID</strong> 名的对应关系。</li>
+</ol>
+<h1 id="Part-3-Information-Object-Definitions"><a href="#Part-3-Information-Object-Definitions" class="headerlink" title="Part 3 Information Object Definitions"></a>Part 3 Information Object Definitions</h1><h2 id="标题-2"><a href="#标题-2" class="headerlink" title="标题"></a>标题</h2><p>信息对象定义</p>
+<h2 id="内容-2"><a href="#内容-2" class="headerlink" title="内容"></a>内容</h2><p>定义了两类信息对象类，即标准型和复合型，对其结构和类型进行了说明。</p>
+<h1 id="Part-4-Service-Class-Specifications"><a href="#Part-4-Service-Class-Specifications" class="headerlink" title="Part 4 Service Class Specifications"></a>Part 4 Service Class Specifications</h1><h2 id="标题-3"><a href="#标题-3" class="headerlink" title="标题"></a>标题</h2><p>服务类规范</p>
+<h2 id="重要内容-1"><a href="#重要内容-1" class="headerlink" title="重要内容"></a>重要内容</h2><ol>
+<li><strong>Table K.6-1. Attributes for the Modality Worklist Information Model</strong></li>
+</ol>
+<h2 id="内容-3"><a href="#内容-3" class="headerlink" title="内容"></a>内容</h2><p>说明了应用于信息对象定义实例操作和处理的许多服务类，详细描述了作用于信息对象上的命令及其产生的结果。定义了可以使用 DICOM 进行通信的类别。</p>
+<h1 id="Part-5-Data-Structures-and-Encoding"><a href="#Part-5-Data-Structures-and-Encoding" class="headerlink" title="Part 5 Data Structures and Encoding"></a>Part 5 Data Structures and Encoding</h1><h2 id="标题-4"><a href="#标题-4" class="headerlink" title="标题"></a>标题</h2><p>数据结构及其编码</p>
+<h2 id="重要内容-2"><a href="#重要内容-2" class="headerlink" title="重要内容"></a>重要内容</h2><ol>
+<li>K.3 Example of Long Text Value Representation in the Chinese Language with GB2312 G1 汉字编码</li>
+</ol>
+<h2 id="内容-4"><a href="#内容-4" class="headerlink" title="内容"></a>内容</h2><p>描述了怎么样对信息对象类和服务类进行构造和编码。</p>
+<h1 id="Part-6-Data-Dictionary"><a href="#Part-6-Data-Dictionary" class="headerlink" title="Part 6 Data Dictionary"></a>Part 6 Data Dictionary</h1><h2 id="标题-5"><a href="#标题-5" class="headerlink" title="标题"></a>标题</h2><p> 数据字典</p>
+<h2 id="内容-5"><a href="#内容-5" class="headerlink" title="内容"></a>内容</h2><p>描述了所有数据元素的标签，名称，关键字，VR，VM 和是否过时。</p>
+<h1 id="Part-7-Message-Exchange"><a href="#Part-7-Message-Exchange" class="headerlink" title="Part 7 Message Exchange"></a>Part 7 Message Exchange</h1><h2 id="标题-6"><a href="#标题-6" class="headerlink" title="标题"></a>标题</h2><p>消息交换</p>
+<h2 id="内容-6"><a href="#内容-6" class="headerlink" title="内容"></a>内容</h2><p>定义了在医学图像环境中进行消息交换通讯的医学图像实体所用到的服务和协议。</p>
+<h1 id="Part-8-Network-Communication-Support-for-Message-Exchange"><a href="#Part-8-Network-Communication-Support-for-Message-Exchange" class="headerlink" title="Part 8 Network Communication Support for Message Exchange"></a>Part 8 Network Communication Support for Message Exchange</h1><h2 id="标题-7"><a href="#标题-7" class="headerlink" title="标题"></a>标题</h2><p>消息交换的网络支持</p>
+<h2 id="内容-7"><a href="#内容-7" class="headerlink" title="内容"></a>内容</h2><p>说明了在网络环境下的通讯服务和支持 DICOM 应用进行消息交换的必要的上层协议。</p>
+<h2 id="重要内容-3"><a href="#重要内容-3" class="headerlink" title="重要内容"></a>重要内容</h2><ol>
+<li>PDU 的结构</li>
+</ol>
+<h1 id="Part-10-Media-Storage-and-File-Format-for-Media-Interchange"><a href="#Part-10-Media-Storage-and-File-Format-for-Media-Interchange" class="headerlink" title="Part 10 Media Storage and File Format for Media Interchange"></a>Part 10 Media Storage and File Format for Media Interchange</h1><h2 id="标题-8"><a href="#标题-8" class="headerlink" title="标题"></a>标题</h2><p>用于媒体交换的媒体存储和文件格式</p>
+<h2 id="内容-8"><a href="#内容-8" class="headerlink" title="内容"></a>内容</h2><p>这部分说明了在可移动存储介质上医学图像信息存储的通用模型。提供了在各种物理存储介质上交换不同类型的医学图像的框架，支持封装任何信息对象定义的文件格式。</p>
+<h1 id="Part-11-Media-Storage-Application-Profiles"><a href="#Part-11-Media-Storage-Application-Profiles" class="headerlink" title="Part 11 Media Storage Application Profiles"></a>Part 11 Media Storage Application Profiles</h1><h2 id="标题-9"><a href="#标题-9" class="headerlink" title="标题"></a>标题</h2><p>媒体存储应用框架</p>
+<h2 id="内容-9"><a href="#内容-9" class="headerlink" title="内容"></a>内容</h2><p>用于医学图像及相关设备信息交换的兼容性申明。</p>
+<h1 id="Part-12-Media-Formats-and-Physical-Media-for-Media-Interchange"><a href="#Part-12-Media-Formats-and-Physical-Media-for-Media-Interchange" class="headerlink" title="Part 12 Media Formats and Physical Media for Media Interchange"></a>Part 12 Media Formats and Physical Media for Media Interchange</h1><h2 id="标题-10"><a href="#标题-10" class="headerlink" title="标题"></a>标题</h2><p>用于媒体交换的物理介质和媒体格式</p>
+<h2 id="内容-10"><a href="#内容-10" class="headerlink" title="内容"></a>内容</h2><p>提供了在医学环境中数字图像计算机之间信息交换的功能。</p>
+<h1 id="Part-14-Grayscale-Standard-Display-Function"><a href="#Part-14-Grayscale-Standard-Display-Function" class="headerlink" title="Part 14 Grayscale Standard Display Function"></a>Part 14 Grayscale Standard Display Function</h1><h2 id="标题-11"><a href="#标题-11" class="headerlink" title="标题"></a>标题</h2><p>灰度显示标准函数</p>
+<h2 id="内容-11"><a href="#内容-11" class="headerlink" title="内容"></a>内容</h2><p>说明了灰度图像的标准显示功能。</p>
+<h1 id="Part-15-Security-and-System-Management-Profiles"><a href="#Part-15-Security-and-System-Management-Profiles" class="headerlink" title="Part 15 Security and System Management Profiles"></a>Part 15 Security and System Management Profiles</h1><h2 id="标题-12"><a href="#标题-12" class="headerlink" title="标题"></a>标题</h2><p>安全和系统管理框架</p>
+<h2 id="内容-12"><a href="#内容-12" class="headerlink" title="内容"></a>内容</h2><p>如题。</p>
+<h1 id="Part-16-Content-Mapping-Resource"><a href="#Part-16-Content-Mapping-Resource" class="headerlink" title="Part 16 Content Mapping Resource"></a>Part 16 Content Mapping Resource</h1><h2 id="标题-13"><a href="#标题-13" class="headerlink" title="标题"></a>标题</h2><p>内容映射标准</p>
+<h2 id="内容-13"><a href="#内容-13" class="headerlink" title="内容"></a>内容</h2><p>定义了标准使用的模板和上下文组。</p>
+<h1 id="Part-17-Explanatory-Information"><a href="#Part-17-Explanatory-Information" class="headerlink" title="Part 17 Explanatory Information"></a>Part 17 Explanatory Information</h1><h2 id="标题-14"><a href="#标题-14" class="headerlink" title="标题"></a>标题</h2><p>说明信息</p>
+<h2 id="内容-14"><a href="#内容-14" class="headerlink" title="内容"></a>内容</h2><p>DICOM 标准的这一部分包含规范性和附录资料形式的解释性信息。</p>
+<h1 id="Part-18-Web-Services"><a href="#Part-18-Web-Services" class="headerlink" title="Part 18 Web Services"></a>Part 18 Web Services</h1><h2 id="标题-15"><a href="#标题-15" class="headerlink" title="标题"></a>标题</h2><p>WEB 服务</p>
+<h2 id="内容-15"><a href="#内容-15" class="headerlink" title="内容"></a>内容</h2><p>指定用于管理和分发DICOM信息对象（如医学图像、注释、报告等）的Web服务。</p>
+<h1 id="Part-19-Application-Hosting"><a href="#Part-19-Application-Hosting" class="headerlink" title="Part 19 Application Hosting"></a>Part 19 Application Hosting</h1><h2 id="标题-16"><a href="#标题-16" class="headerlink" title="标题"></a>标题</h2><p>应用托管</p>
+<h2 id="内容-16"><a href="#内容-16" class="headerlink" title="内容"></a>内容</h2><p>定义两个软件应用程序之间的接口。</p>
+<h1 id="Part-20-Imaging-Reports-using-HL7-Clinical-Document-Architecture"><a href="#Part-20-Imaging-Reports-using-HL7-Clinical-Document-Architecture" class="headerlink" title="Part 20 Imaging Reports using HL7 Clinical Document Architecture"></a>Part 20 Imaging Reports using HL7 Clinical Document Architecture</h1><h2 id="标题-17"><a href="#标题-17" class="headerlink" title="标题"></a>标题</h2><p>采用 HL7 临床文档架构的成像报告。</p>
+<h2 id="内容-17"><a href="#内容-17" class="headerlink" title="内容"></a>内容</h2><p>此部分主要指 DICOM 和 HL7 之间的数据交换。</p>
+<h1 id="Part-21-Transformations-between-DICOM-and-other-Representations"><a href="#Part-21-Transformations-between-DICOM-and-other-Representations" class="headerlink" title="Part 21 Transformations between DICOM and other Representations"></a>Part 21 Transformations between DICOM and other Representations</h1><h2 id="标题-18"><a href="#标题-18" class="headerlink" title="标题"></a>标题</h2><p>DICOM和其他表示之间的转换</p>
+<h2 id="内容-18"><a href="#内容-18" class="headerlink" title="内容"></a>内容</h2><p>如题。</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/DICOM/" rel="tag"># DICOM</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/08/12/DICOM-基础知识/" rel="next" title="DICOM 基础知识">
+                  <i class="fa fa-chevron-left"></i> DICOM 基础知识
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/08/13/DICOM-VR-表/" rel="prev" title="DICOM VR 表">
+                  DICOM VR 表 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="gitalk-container"></div>
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.png"
+      alt="ZHL">
+  <p class="site-author-name" itemprop="name">ZHL</p>
+  <div class="site-description motion-element" itemprop="description">我的博客</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-1-Introduction-and-Overview"><span class="nav-number">1.</span> <span class="nav-text">Part 1 Introduction and Overview</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题"><span class="nav-number">1.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容"><span class="nav-number">1.2.</span> <span class="nav-text">内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-2-Conformance"><span class="nav-number">2.</span> <span class="nav-text">Part 2 Conformance</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-1"><span class="nav-number">2.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-1"><span class="nav-number">2.2.</span> <span class="nav-text">内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重要内容"><span class="nav-number">2.3.</span> <span class="nav-text">重要内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-3-Information-Object-Definitions"><span class="nav-number">3.</span> <span class="nav-text">Part 3 Information Object Definitions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-2"><span class="nav-number">3.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-2"><span class="nav-number">3.2.</span> <span class="nav-text">内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-4-Service-Class-Specifications"><span class="nav-number">4.</span> <span class="nav-text">Part 4 Service Class Specifications</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-3"><span class="nav-number">4.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重要内容-1"><span class="nav-number">4.2.</span> <span class="nav-text">重要内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-3"><span class="nav-number">4.3.</span> <span class="nav-text">内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-5-Data-Structures-and-Encoding"><span class="nav-number">5.</span> <span class="nav-text">Part 5 Data Structures and Encoding</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-4"><span class="nav-number">5.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重要内容-2"><span class="nav-number">5.2.</span> <span class="nav-text">重要内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-4"><span class="nav-number">5.3.</span> <span class="nav-text">内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-6-Data-Dictionary"><span class="nav-number">6.</span> <span class="nav-text">Part 6 Data Dictionary</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-5"><span class="nav-number">6.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-5"><span class="nav-number">6.2.</span> <span class="nav-text">内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-7-Message-Exchange"><span class="nav-number">7.</span> <span class="nav-text">Part 7 Message Exchange</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-6"><span class="nav-number">7.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-6"><span class="nav-number">7.2.</span> <span class="nav-text">内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-8-Network-Communication-Support-for-Message-Exchange"><span class="nav-number">8.</span> <span class="nav-text">Part 8 Network Communication Support for Message Exchange</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-7"><span class="nav-number">8.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-7"><span class="nav-number">8.2.</span> <span class="nav-text">内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重要内容-3"><span class="nav-number">8.3.</span> <span class="nav-text">重要内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-10-Media-Storage-and-File-Format-for-Media-Interchange"><span class="nav-number">9.</span> <span class="nav-text">Part 10 Media Storage and File Format for Media Interchange</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-8"><span class="nav-number">9.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-8"><span class="nav-number">9.2.</span> <span class="nav-text">内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-11-Media-Storage-Application-Profiles"><span class="nav-number">10.</span> <span class="nav-text">Part 11 Media Storage Application Profiles</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-9"><span class="nav-number">10.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-9"><span class="nav-number">10.2.</span> <span class="nav-text">内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-12-Media-Formats-and-Physical-Media-for-Media-Interchange"><span class="nav-number">11.</span> <span class="nav-text">Part 12 Media Formats and Physical Media for Media Interchange</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-10"><span class="nav-number">11.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-10"><span class="nav-number">11.2.</span> <span class="nav-text">内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-14-Grayscale-Standard-Display-Function"><span class="nav-number">12.</span> <span class="nav-text">Part 14 Grayscale Standard Display Function</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-11"><span class="nav-number">12.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-11"><span class="nav-number">12.2.</span> <span class="nav-text">内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-15-Security-and-System-Management-Profiles"><span class="nav-number">13.</span> <span class="nav-text">Part 15 Security and System Management Profiles</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-12"><span class="nav-number">13.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-12"><span class="nav-number">13.2.</span> <span class="nav-text">内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-16-Content-Mapping-Resource"><span class="nav-number">14.</span> <span class="nav-text">Part 16 Content Mapping Resource</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-13"><span class="nav-number">14.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-13"><span class="nav-number">14.2.</span> <span class="nav-text">内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-17-Explanatory-Information"><span class="nav-number">15.</span> <span class="nav-text">Part 17 Explanatory Information</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-14"><span class="nav-number">15.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-14"><span class="nav-number">15.2.</span> <span class="nav-text">内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-18-Web-Services"><span class="nav-number">16.</span> <span class="nav-text">Part 18 Web Services</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-15"><span class="nav-number">16.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-15"><span class="nav-number">16.2.</span> <span class="nav-text">内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-19-Application-Hosting"><span class="nav-number">17.</span> <span class="nav-text">Part 19 Application Hosting</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-16"><span class="nav-number">17.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-16"><span class="nav-number">17.2.</span> <span class="nav-text">内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-20-Imaging-Reports-using-HL7-Clinical-Document-Architecture"><span class="nav-number">18.</span> <span class="nav-text">Part 20 Imaging Reports using HL7 Clinical Document Architecture</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-17"><span class="nav-number">18.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-17"><span class="nav-number">18.2.</span> <span class="nav-text">内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-21-Transformations-between-DICOM-and-other-Representations"><span class="nav-number">19.</span> <span class="nav-text">Part 21 Transformations between DICOM and other Representations</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题-18"><span class="nav-number">19.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容-18"><span class="nav-number">19.2.</span> <span class="nav-text">内容</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZHL</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.3.0</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+    var gitalk = new Gitalk({
+      clientID: '1422018403cef567d9ea',
+      clientSecret: 'cff6b3aa554481268305af952f14f47e7acd7b19',
+      repo: 'Gitalk',
+      owner: 'zhuhelong',
+      admin: ['zhuhelong'],
+      id: 'b34c73f920b7a429d5ca1478b8fd8039',
+        language: 'zh-CN',
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
+
+</body>
+</html>

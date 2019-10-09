@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-x16.ico?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="我的博客">
+<meta name="keywords" content="ZHL">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ZHL的博客">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="ZHL的博客">
+<meta property="og:description" content="我的博客">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ZHL的博客">
+<meta name="twitter:description" content="我的博客">
+  <link rel="canonical" href="http://yoursite.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>ZHL的博客</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9fd3e2a7c57b3971f3439f9713354241";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ZHL的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">love-wh</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-home">
+            
+  <section id="posts" class="posts-expand">
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/27/Git-记录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/09/27/Git-记录/" class="post-title-link" itemprop="url">Git 记录</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-27 20:22:08" itemprop="dateCreated datePublished" datetime="2019-09-27T20:22:08+08:00">2019-09-27</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h1><p>用了很久的 Git 了，但是也只是会基本的一些东西。不过就算是基本的，也可以记录下来。</p>
+<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><ol>
+<li>下载最新版的 Git。</li>
+</ol>
+<h1 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h1><p>命令格式：<code>git init</code>。</p>
+<hr>
+<ol>
+<li>创建项目文件夹 <code>D:/Test/GitTraining</code>。</li>
+<li>Git Bash 转到该文件下，运行命令 <code>git init</code>。</li>
+</ol>
+<p>效果：创建了一个名为 GitTraining 的 Git 仓库。同时 GitTraining 文件夹下出现一个名为 <code>.git</code> 的隐藏文件夹。</p>
+<p><img src="/2019/09/27/Git-记录/git-init-1.png" alt="git-init-1"></p>
+<p><strong>创建第一个文件</strong></p>
+<p>创建好文件 <code>1.txt</code>，并写点代码。</p>
+<p>内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">111111111</span><br></pre></td></tr></table></figure>
+
+<h1 id="添加文件到-Git-仓库"><a href="#添加文件到-Git-仓库" class="headerlink" title="添加文件到 Git 仓库"></a>添加文件到 Git 仓库</h1><p>命令格式：<code>git add 文件名或通配符</code>。</p>
+<hr>
+<p><code>git add 1.txt 或者 git add .</code></p>
+<h1 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h1><p>命令格式：<code>git commit -m &quot;代码提交信息&quot;</code>。</p>
+<hr>
+<p><code>git commit -m &quot;No.1 commit&quot;</code></p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[master (root-commit) 7ccaacc] No.1 commit</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line"> create mode 100644 1.txt</span><br></pre></td></tr></table></figure>
+
+<p>修改文件 <code>1.txt</code>，内容改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br></pre></td></tr></table></figure>
+
+<h1 id="查看文件改动"><a href="#查看文件改动" class="headerlink" title="查看文件改动"></a>查看文件改动</h1><p>命令格式：<code>git status [参数]</code>。</p>
+<hr>
+<p><code>git status</code></p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">On branch master</span><br><span class="line">Changes not staged for commit:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span><br><span class="line">  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</span><br><span class="line"></span><br><span class="line">        modified:   1.txt</span><br><span class="line"></span><br><span class="line">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span><br></pre></td></tr></table></figure>
+
+<h1 id="查看文件内容更改详情"><a href="#查看文件内容更改详情" class="headerlink" title="查看文件内容更改详情"></a>查看文件内容更改详情</h1><p>命令格式：<code>git diff</code>。</p>
+<hr>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">diff --git a/1.txt b/1.txt</span><br><span class="line">index 15c36bc..4825c6a 100644</span><br><span class="line">--- a/1.txt</span><br><span class="line">+++ b/1.txt</span><br><span class="line">@@ -1 +1,2 @@</span><br><span class="line"> 1111111111</span><br><span class="line">+2222222222</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>再次提交：<code>git add 1.txt | git commit -m &quot;No.2 commit&quot;</code></p>
+<p>多加一行再提交，文件内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br></pre></td></tr></table></figure>
+
+<p>再次提交：<code>git add * | git commit -m &quot;No.3 commit&quot;</code></p>
+<h1 id="查看提交图表"><a href="#查看提交图表" class="headerlink" title="查看提交图表"></a>查看提交图表</h1><p>命令格式：<code>git log --graph</code>。</p>
+<hr>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">* commit 1c3a383eb6cc11d7c7539b6dd86b8c8d66bd8f54 (HEAD -&gt; master)</span><br><span class="line">| Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| Date:   Sat Sep 28 10:45:00 2019 +0800</span><br><span class="line">|</span><br><span class="line">|     No.3 commit</span><br><span class="line">|</span><br><span class="line">* commit f7dd549756103ea808715a5701d564832c9c3cc3</span><br><span class="line">| Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| Date:   Sat Sep 28 10:44:37 2019 +0800</span><br><span class="line">|</span><br><span class="line">|     No.2 commit</span><br><span class="line">|</span><br><span class="line">* commit a1d3d012538055e561688160bb144aa7c1f5b098</span><br><span class="line">  Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">  Date:   Sat Sep 28 10:43:04 2019 +0800</span><br><span class="line"></span><br><span class="line">      No.1 commit</span><br></pre></td></tr></table></figure>
+
+<h1 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h1><p>命令格式：<code>git branch [分支名]</code>。</p>
+<p><code>git branch no_1_branch</code></p>
+<h1 id="切换到分支"><a href="#切换到分支" class="headerlink" title="切换到分支"></a>切换到分支</h1><p>命令格式：<code>git checkout [分支名]</code>。</p>
+<p><strong>上面 创建分支 + 切换到分支 也可以合成一条命令：</strong> <code>git checkout -b [分支名]</code></p>
+<hr>
+<p><code>git checkout no_1_branch</code></p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Switched to branch &apos;no_1_branch&apos;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>修改文件 <code>1.txt</code>，内容改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line"></span><br><span class="line">no_1_branch:</span><br><span class="line">1111111111</span><br></pre></td></tr></table></figure>
+
+<p>提交 <code>git add * &amp;&amp; git commit -m &quot;No.1 no_1_branch commit&quot;</code>。</p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[no_1_branch ebfda7b] No.1 no_1_branch commit</span><br><span class="line"> 1 file changed, 3 insertions(+)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>切回到 <code>master</code> 分支。</p>
+<p><code>git checkout master</code>。</p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Switched to branch &apos;master&apos;</span><br></pre></td></tr></table></figure>
+
+<p>同时文件内容被改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>修改文件 <code>1.txt</code>，内容改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line">4444444444</span><br></pre></td></tr></table></figure>
+
+<p>提交 <code>git add * &amp;&amp; git commit -m &quot;No.4 commit&quot;</code>。</p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[master 81f36b4] No.4 commit</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>切回到 <code>no_1_branch</code> 分支。</p>
+<p><code>git checkout no_1_branch</code>。</p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Switched to branch &apos;no_1_branch&apos;</span><br></pre></td></tr></table></figure>
+
+<p>同时文件内容被改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line"></span><br><span class="line">no_1_branch:</span><br><span class="line">1111111111</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>修改文件 <code>1.txt</code>，内容改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line"></span><br><span class="line">no_1_branch:</span><br><span class="line">1111111111</span><br><span class="line">2222222222</span><br></pre></td></tr></table></figure>
+
+<p>提交 <code>git add * &amp;&amp; git commit -m &quot;No.2 no_1_branch commit&quot;</code>。</p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[no_1_branch c04f92b] No.2 no_1_branch commit</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br></pre></td></tr></table></figure>
+
+<h1 id="合并分支（merge-方式）"><a href="#合并分支（merge-方式）" class="headerlink" title="合并分支（merge 方式）"></a>合并分支（merge 方式）</h1><p>命令格式：<code>git merge [被合并的分支名]</code>。</p>
+<hr>
+<p>合并分支到 <code>master</code> 分支。</p>
+<p><code>git checkout master &amp;&amp; git merge no_1_branch</code></p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Switched to branch &apos;master&apos;</span><br><span class="line">Auto-merging 1.txt</span><br><span class="line">CONFLICT (content): Merge conflict in 1.txt</span><br><span class="line">Automatic merge failed; fix conflicts and then commit the result.</span><br></pre></td></tr></table></figure>
+
+<h1 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h1><p>不同的分支修改了相同的文件就会产生冲突。手动修改冲突。</p>
+<hr>
+<p>这时发现文件 <code>1.txt</code>，内容为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">4444444444</span><br><span class="line">=======</span><br><span class="line"></span><br><span class="line">no_1_branch:</span><br><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; no_1_branch</span><br></pre></td></tr></table></figure>
+
+<p>将 <code>1.txt</code> 修改为 <code>no_1_branch</code> 的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line"></span><br><span class="line">no_1_branch:</span><br><span class="line">1111111111</span><br><span class="line">2222222222</span><br></pre></td></tr></table></figure>
+
+<p>解决好冲突了，提交合并 <code>git add 1.txt &amp;&amp; git commit</code></p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[master f7cfe75] Merge branch &apos;no_1_branch&apos;</span><br></pre></td></tr></table></figure>
+
+<p>再查看一下图表 <code>git log --graph</code></p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">*   commit f7cfe75956357f88880a612f16f479052f430de0 (HEAD -&gt; master)</span><br><span class="line">|\  Merge: 93d30f6 424a126</span><br><span class="line">| | Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| | Date:   Sat Sep 28 11:36:54 2019 +0800</span><br><span class="line">| |</span><br><span class="line">| |     Merge branch &apos;no_1_branch&apos;</span><br><span class="line">| |</span><br><span class="line">| * commit 424a126b4d6fbb76954bca34e9fcdf4e3d09f182 (no_1_branch)</span><br><span class="line">| | Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| | Date:   Sat Sep 28 10:49:22 2019 +0800</span><br><span class="line">| |</span><br><span class="line">| |     No.2 no_1_branch commit</span><br><span class="line">| |</span><br><span class="line">| * commit 298a3ef8bb439964e6ab908f1b52cf0878225eef</span><br><span class="line">| | Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| | Date:   Sat Sep 28 10:46:29 2019 +0800</span><br><span class="line">| |</span><br><span class="line">| |     No.1 no_1_branch commit</span><br><span class="line">| |</span><br><span class="line">* | commit 93d30f64faf96f75febe5ac43309bf67563c9fe0</span><br><span class="line">|/  Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">|   Date:   Sat Sep 28 10:48:33 2019 +0800</span><br><span class="line">|</span><br><span class="line">|       No.4 commit</span><br><span class="line">|</span><br><span class="line">* commit 1c3a383eb6cc11d7c7539b6dd86b8c8d66bd8f54</span><br><span class="line">| Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| Date:   Sat Sep 28 10:45:00 2019 +0800</span><br><span class="line">|</span><br><span class="line">|     No.3 commit</span><br><span class="line">|</span><br><span class="line">* commit f7dd549756103ea808715a5701d564832c9c3cc3</span><br><span class="line">| Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| Date:   Sat Sep 28 10:44:37 2019 +0800</span><br><span class="line">|</span><br><span class="line">|     No.2 commit</span><br><span class="line">|</span><br><span class="line">* commit a1d3d012538055e561688160bb144aa7c1f5b098</span><br><span class="line">  Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">  Date:   Sat Sep 28 10:43:04 2019 +0800</span><br><span class="line"></span><br><span class="line">      No.1 commit</span><br></pre></td></tr></table></figure>
+
+<h1 id="合并分支（rebase-方式）"><a href="#合并分支（rebase-方式）" class="headerlink" title="合并分支（rebase 方式）"></a>合并分支（rebase 方式）</h1><p>命令格式：<code>git merge [被合并的分支名]</code>。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/26/Qt-智能指针/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/09/26/Qt-智能指针/" class="post-title-link" itemprop="url">Qt 智能指针</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-26 16:30:12" itemprop="dateCreated datePublished" datetime="2019-09-26T16:30:12+08:00">2019-09-26</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Qt/" itemprop="url" rel="index"><span itemprop="name">Qt</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Qt/智能指针/" itemprop="url" rel="index"><span itemprop="name">智能指针</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>由于使用的是 Qt，所以决定不适用标准库的智能指针，改用 Qt 的智能指针。</p>
+<p>结合 Qt 中的容器进行测试，使用的容器是 <code>QList</code>。在容器中，如果保存的是指针，那么一般来所指针所指的对象应该保存在堆中，所以使用完后需要清除释放，Qt 容器都带有 <code>public void clear()</code> 方法，但是该方法实际上只是清除了容器所保存的指针，并未清除释放掉指针所指内存。所以要寻找合适的方法。</p>
+<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>创建好 Qt 项目。这里直接使用的是 UI 项目。</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 文件：mainwidow.h</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> MAINWINDOW_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAINWINDOW_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QMainWindow&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> Ui &#123;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">MainWindow</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainWindow</span> :</span> <span class="keyword">public</span> QMainWindow &#123;</span><br><span class="line">        Q_OBJECT</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">explicit</span> <span class="title">MainWindow</span><span class="params">(QWidget *parent = <span class="literal">nullptr</span>)</span></span>;</span><br><span class="line">        ~MainWindow();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> slots:</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">on_clear_push_button_clicked</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">on_delete_push_button_clicked</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">on_smart_pointer_push_button_clicked</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">        Ui::MainWindow *ui;</span><br><span class="line">        QList&lt;QString *&gt; *<span class="built_in">list</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> <span class="comment">// MAINWINDOW_H</span></span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 文件：mainwindowcpp</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"mainwindow.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"ui_mainwindow.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QDebug&gt;</span></span></span><br><span class="line"></span><br><span class="line">MainWindow::MainWindow(QWidget *parent) :</span><br><span class="line">    QMainWindow(parent),</span><br><span class="line">    ui(<span class="keyword">new</span> Ui::MainWindow) &#123;</span><br><span class="line">    ui-&gt;setupUi(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">MainWindow::~MainWindow() &#123;</span><br><span class="line">    <span class="keyword">delete</span> ui;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> MainWindow::on_clear_push_button_clicked() &#123;</span><br><span class="line">    <span class="comment">// 使用容器自带的 clear 函数</span></span><br><span class="line">    <span class="keyword">int</span> delete_times = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">list</span> = <span class="keyword">new</span> QList&lt;QString *&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; ++i) &#123;</span><br><span class="line">        <span class="built_in">list</span>-&gt;append(<span class="keyword">new</span> QString(QString::number(i)));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>((i + <span class="number">1</span>) % <span class="number">1000</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            qDebug() &lt;&lt; <span class="string">"start delete! delete time: "</span> &lt;&lt; ++delete_times;</span><br><span class="line">            <span class="built_in">list</span>-&gt;clear();  <span class="comment">// 根本没有清除内存</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> MainWindow::on_delete_push_button_clicked() &#123;</span><br><span class="line">    <span class="comment">// 普通指针，使用 delete</span></span><br><span class="line">    <span class="keyword">int</span> delete_times = <span class="number">0</span>;</span><br><span class="line">    QString *<span class="built_in">string</span>;</span><br><span class="line">    <span class="built_in">list</span> = <span class="keyword">new</span> QList&lt;QString *&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000000</span>; ++i) &#123;</span><br><span class="line">        <span class="built_in">list</span>-&gt;append(<span class="keyword">new</span> QString(QString::number(i)));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>((i + <span class="number">1</span>) % <span class="number">1000</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            qDebug() &lt;&lt; <span class="string">"start delete! delete time: "</span> &lt;&lt; ++delete_times;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">1000</span>; ++j) &#123;</span><br><span class="line">                <span class="built_in">string</span> = <span class="built_in">list</span>-&gt;last();</span><br><span class="line">                <span class="keyword">delete</span> <span class="built_in">string</span>;</span><br><span class="line">                <span class="built_in">string</span> = <span class="literal">nullptr</span>;</span><br><span class="line">                <span class="built_in">list</span>-&gt;removeLast();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> MainWindow::on_smart_pointer_push_button_clicked() &#123;</span><br><span class="line">    <span class="comment">// 智能指针</span></span><br><span class="line">    <span class="keyword">int</span> delete_times = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">list</span> = <span class="keyword">new</span> QList&lt;QString *&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; ++i) &#123;</span><br><span class="line">        QSharedPointer&lt;QString&gt; <span class="built_in">string</span>(<span class="keyword">new</span> QString(QString::number(<span class="number">100</span>)));</span><br><span class="line">        <span class="built_in">list</span>-&gt;append(<span class="built_in">string</span>.data());</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>((i + <span class="number">1</span>) % <span class="number">1000</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            qDebug() &lt;&lt; <span class="string">"start delete! delete time: "</span> &lt;&lt; ++delete_times;</span><br><span class="line">            <span class="built_in">list</span>-&gt;clear();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h1><p>使用采用每次点完按钮后都重启再测下一项的方式。</p>
+<p>初始打开程序后内存用量。</p>
+<p><img src="/2019/09/26/Qt-智能指针/初始打开界面的内存用量.png" alt="初始打开界面的内存用量"></p>
+<p>使用容器自带的 clear 函数后内存用量。</p>
+<p><img src="/2019/09/26/Qt-智能指针/使用-clear-后内存用量.png" alt="使用-clear-后内存用量"></p>
+<p>使用普通指针和 delete 后内存用量。</p>
+<p><img src="/2019/09/26/Qt-智能指针/使用普通指针和-delete-后内存用量.png" alt="使用普通指针和-delete-后内存用量"></p>
+<p>使用智能指针后内存用量。</p>
+<p><img src="/2019/09/26/Qt-智能指针/使用智能指针后内存用量.png" alt="使用智能指针后内存用量"></p>
+<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>使用智能指针，方便！</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/25/C-继承/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/09/25/C-继承/" class="post-title-link" itemprop="url">C++ 继承</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-25 15:20:57" itemprop="dateCreated datePublished" datetime="2019-09-25T15:20:57+08:00">2019-09-25</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>1.<a href="https://blog.csdn.net/tobacco5648/article/details/7650040" target="_blank" rel="noopener">C++继承：同名隐藏、覆盖，虚函数</a>。</p>
+<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>型号</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>操作系统</td>
+<td>win 10</td>
+<td></td>
+</tr>
+<tr>
+<td>MinGW</td>
+<td>x86_64-posix-seh-rev0</td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="类似-Java-的用法"><a href="#类似-Java-的用法" class="headerlink" title="类似 Java 的用法"></a>类似 Java 的用法</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"A print"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> :</span> <span class="keyword">public</span> A &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"B print"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-1."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    A a1;</span><br><span class="line">    a1.print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-2."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    A a2 = B();</span><br><span class="line">    a2.print();</span><br><span class="line">    a2.B::print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-3."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    A *a3 = <span class="keyword">new</span> B();</span><br><span class="line">    a3-&gt;print();</span><br><span class="line">    a3-&gt;B::print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-4."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b;</span><br><span class="line">    A &amp;a4 = b;</span><br><span class="line">    a4.print();</span><br><span class="line">    a4.B::print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-1."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b1;</span><br><span class="line">    b1.print();</span><br><span class="line">    b1.A::print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-2."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b2 = B();</span><br><span class="line">    b2.print();</span><br><span class="line">    b2.A::print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-3."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B *b3 = <span class="keyword">new</span> B();</span><br><span class="line">    b3-&gt;print();</span><br><span class="line">    b3-&gt;A::print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-4."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b_b;</span><br><span class="line">    B &amp;b4 = b_b;</span><br><span class="line">    b4.print();</span><br><span class="line">    b4.A::print();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="编译结果"><a href="#编译结果" class="headerlink" title="编译结果"></a>编译结果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">like_java.cpp: In function &apos;int main()&apos;:</span><br><span class="line">like_java.cpp:26:11: error: &apos;B&apos; is not a base of &apos;A&apos;</span><br><span class="line">     a2.B::print();</span><br><span class="line">           ^~~~~</span><br><span class="line">like_java.cpp:31:12: error: &apos;B&apos; is not a base of &apos;A&apos;</span><br><span class="line">     a3-&gt;B::print();</span><br><span class="line">            ^~~~~</span><br><span class="line">like_java.cpp:37:11: error: &apos;B&apos; is not a base of &apos;A&apos;</span><br><span class="line">     a4.B::print();</span><br></pre></td></tr></table></figure>
+
+<h3 id="编译出错分析"><a href="#编译出错分析" class="headerlink" title="编译出错分析"></a>编译出错分析</h3><p>这是一个错误示范，现实中也不会像报错的这三句这样用。</p>
+<h2 id="修改正确"><a href="#修改正确" class="headerlink" title="修改正确"></a>修改正确</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"A print"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> :</span> <span class="keyword">public</span> A &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"B print"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-1."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    A a1;</span><br><span class="line">    a1.print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-2."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    A a2 = B();</span><br><span class="line">    a2.print();</span><br><span class="line">    <span class="comment">// a2.B::print();</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-3."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    A *a3 = <span class="keyword">new</span> B();</span><br><span class="line">    a3-&gt;print();</span><br><span class="line">    <span class="comment">// a3-&gt;B::print();</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-4."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b;</span><br><span class="line">    A &amp;a4 = b;</span><br><span class="line">    a4.print();</span><br><span class="line">    <span class="comment">// a4.B::print();</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-1."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b1;</span><br><span class="line">    b1.print();</span><br><span class="line">    b1.A::print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-2."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b2 = B();</span><br><span class="line">    b2.print();</span><br><span class="line">    b2.A::print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-3."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B *b3 = <span class="keyword">new</span> B();</span><br><span class="line">    b3-&gt;print();</span><br><span class="line">    b3-&gt;A::print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-4."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b_b;</span><br><span class="line">    B &amp;b4 = b_b;</span><br><span class="line">    b4.print();</span><br><span class="line">    b4.A::print();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>还有使用 using 的用法，参见参考文献【1】。</p>
+<h2 id="编译-amp-执行结果"><a href="#编译-amp-执行结果" class="headerlink" title="编译&amp;执行结果"></a>编译&amp;执行结果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">------------ A-1.</span><br><span class="line">A print</span><br><span class="line">------------ A-2.</span><br><span class="line">A print</span><br><span class="line">------------ A-3.</span><br><span class="line">A print</span><br><span class="line">------------ A-4.</span><br><span class="line">A print</span><br><span class="line">------------ B-1.</span><br><span class="line">B print</span><br><span class="line">A print</span><br><span class="line">------------ B-2.</span><br><span class="line">B print</span><br><span class="line">A print</span><br><span class="line">------------ B-3.</span><br><span class="line">B print</span><br><span class="line">A print</span><br><span class="line">------------ B-4.</span><br><span class="line">B print</span><br><span class="line">A print</span><br></pre></td></tr></table></figure>
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>和 Java 不同，Java 子类会直接重写父类同名方法，导致在类外无法再访问父类同名方法，类内可以使用 <code>super</code>。</p>
+<h1 id="使用-virtual"><a href="#使用-virtual" class="headerlink" title="使用 virtual"></a>使用 virtual</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"A print"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> :</span> <span class="keyword">public</span> A &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> override </span>&#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"B print"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-1."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    A a1;</span><br><span class="line">    a1.print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-2."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    A a2 = B();</span><br><span class="line">    a2.print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-3."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    A *a3 = <span class="keyword">new</span> B();</span><br><span class="line">    a3-&gt;print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-4."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b;</span><br><span class="line">    A &amp;a4 = b;</span><br><span class="line">    a4.print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-1."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b1;</span><br><span class="line">    b1.print();</span><br><span class="line">    b1.A::print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-2."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b2 = B();</span><br><span class="line">    b2.print();</span><br><span class="line">    b2.A::print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-3."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B *b3 = <span class="keyword">new</span> B();</span><br><span class="line">    b3-&gt;print();</span><br><span class="line">    b3-&gt;A::print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-4."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b_b;</span><br><span class="line">    B &amp;b4 = b_b;</span><br><span class="line">    b4.print();</span><br><span class="line">    b4.A::print();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="编译-amp-执行结果-1"><a href="#编译-amp-执行结果-1" class="headerlink" title="编译&amp;执行结果"></a>编译&amp;执行结果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">------------ A-1.</span><br><span class="line">A print</span><br><span class="line">------------ A-2.</span><br><span class="line">A print</span><br><span class="line">------------ A-3.</span><br><span class="line">B print</span><br><span class="line">------------ A-4.</span><br><span class="line">B print</span><br><span class="line">------------ B-1.</span><br><span class="line">B print</span><br><span class="line">A print</span><br><span class="line">------------ B-2.</span><br><span class="line">B print</span><br><span class="line">A print</span><br><span class="line">------------ B-3.</span><br><span class="line">B print</span><br><span class="line">A print</span><br><span class="line">------------ B-4.</span><br><span class="line">B print</span><br><span class="line">A print</span><br></pre></td></tr></table></figure>
+
+<h2 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h2><p><code>B</code> 类重写了 <code>A</code> 类中的虚函数，实现了多态，所以 <code>A-3</code> 和 <code>A-4</code> 输出的是 <code>B print</code>。</p>
+<p>注：13 行中的 <code>override</code> 可省略，但是不建议将其省略！</p>
+<h1 id="基类重载"><a href="#基类重载" class="headerlink" title="基类重载"></a>基类重载</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"A print"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*virtual*/</span> <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"A print value: "</span> &lt;&lt; value &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> :</span> <span class="keyword">public</span> A &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"B print"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-1."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    A a1;</span><br><span class="line">    a1.print();</span><br><span class="line">    a1.print(<span class="number">111</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-2."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    A a2 = B();</span><br><span class="line">    a2.print();</span><br><span class="line">    a2.print(<span class="number">222</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-3."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    A *a3 = <span class="keyword">new</span> B();</span><br><span class="line">    a3-&gt;print();</span><br><span class="line">    a3-&gt;print(<span class="number">333</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-4."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b;</span><br><span class="line">    A &amp;a4 = b;</span><br><span class="line">    a4.print();</span><br><span class="line">    a4.print(<span class="number">444</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-1."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b1;</span><br><span class="line">    b1.print();</span><br><span class="line">    b1.A::print();</span><br><span class="line">    b1.print(<span class="number">111</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-2."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b2 = B();</span><br><span class="line">    b2.print();</span><br><span class="line">    b2.A::print();</span><br><span class="line">    b2.print(<span class="number">222</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-3."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B *b3 = <span class="keyword">new</span> B();</span><br><span class="line">    b3-&gt;print();</span><br><span class="line">    b3-&gt;A::print();</span><br><span class="line">    b3-&gt;print(<span class="number">333</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-4."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b_b;</span><br><span class="line">    B &amp;b4 = b_b;</span><br><span class="line">    b4.print();</span><br><span class="line">    b4.A::print();</span><br><span class="line">    b4.print(<span class="number">444</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>10 行中的 <code>virtual</code> 加不加编译结果都不变。</p>
+<h2 id="编译结果-1"><a href="#编译结果-1" class="headerlink" title="编译结果"></a>编译结果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">base_class_overload.cpp: In function &apos;int main()&apos;:</span><br><span class="line">base_class_overload.cpp:48:17: error: no matching function for call to &apos;B::print(int)&apos;</span><br><span class="line">     b1.print(111);</span><br><span class="line">                 ^</span><br><span class="line">base_class_overload.cpp:17:14: note: candidate: &apos;virtual void B::print()&apos;</span><br><span class="line">         void print() &#123;</span><br><span class="line">              ^~~~~</span><br><span class="line">base_class_overload.cpp:17:14: note:   candidate expects 0 arguments, 1 provided</span><br><span class="line">base_class_overload.cpp:54:17: error: no matching function for call to &apos;B::print(int)&apos;</span><br><span class="line">     b2.print(222);</span><br><span class="line">                 ^</span><br><span class="line">base_class_overload.cpp:17:14: note: candidate: &apos;virtual void B::print()&apos;</span><br><span class="line">         void print() &#123;</span><br><span class="line">              ^~~~~</span><br><span class="line">base_class_overload.cpp:17:14: note:   candidate expects 0 arguments, 1 provided</span><br><span class="line">base_class_overload.cpp:60:18: error: no matching function for call to &apos;B::print(int)&apos;</span><br><span class="line">     b3-&gt;print(333);</span><br><span class="line">                  ^</span><br><span class="line">base_class_overload.cpp:17:14: note: candidate: &apos;virtual void B::print()&apos;</span><br><span class="line">         void print() &#123;</span><br><span class="line">              ^~~~~</span><br><span class="line">base_class_overload.cpp:17:14: note:   candidate expects 0 arguments, 1 provided</span><br><span class="line">base_class_overload.cpp:67:17: error: no matching function for call to &apos;B::print(int)&apos;</span><br><span class="line">     b4.print(444);</span><br><span class="line">                 ^</span><br><span class="line">base_class_overload.cpp:17:14: note: candidate: &apos;virtual void B::print()&apos;</span><br><span class="line">         void print() &#123;</span><br><span class="line">              ^~~~~</span><br><span class="line">base_class_overload.cpp:17:14: note:   candidate expects 0 arguments, 1 provided</span><br></pre></td></tr></table></figure>
+
+<h3 id="编译出错分析-1"><a href="#编译出错分析-1" class="headerlink" title="编译出错分析"></a>编译出错分析</h3><p>在 Java 中，这样的继承是没有问题的。目前还不清楚为什么 C++ 中为什么是错误的。</p>
+<h2 id="修改正确-1"><a href="#修改正确-1" class="headerlink" title="修改正确"></a>修改正确</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"A print"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">print_int</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"A print_int value: "</span> &lt;&lt; value &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> :</span> <span class="keyword">public</span> A &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"B print"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-1."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    A a1;</span><br><span class="line">    a1.print();</span><br><span class="line">    a1.print_int(<span class="number">111</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-2."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    A a2 = B();</span><br><span class="line">    a2.print();</span><br><span class="line">    a2.print_int(<span class="number">222</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-3."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    A *a3 = <span class="keyword">new</span> B();</span><br><span class="line">    a3-&gt;print();</span><br><span class="line">    a3-&gt;print_int(<span class="number">333</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ A-4."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b;</span><br><span class="line">    A &amp;a4 = b;</span><br><span class="line">    a4.print();</span><br><span class="line">    a4.print_int(<span class="number">444</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-1."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b1;</span><br><span class="line">    b1.print();</span><br><span class="line">    b1.A::print();</span><br><span class="line">    b1.print_int(<span class="number">111</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-2."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b2 = B();</span><br><span class="line">    b2.print();</span><br><span class="line">    b2.A::print();</span><br><span class="line">    b2.print_int(<span class="number">222</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-3."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B *b3 = <span class="keyword">new</span> B();</span><br><span class="line">    b3-&gt;print();</span><br><span class="line">    b3-&gt;A::print();</span><br><span class="line">    b3-&gt;print_int(<span class="number">333</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------ B-4."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    B b_b;</span><br><span class="line">    B &amp;b4 = b_b;</span><br><span class="line">    b4.print();</span><br><span class="line">    b4.A::print();</span><br><span class="line">    b4.print_int(<span class="number">444</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="编译-amp-执行结果-2"><a href="#编译-amp-执行结果-2" class="headerlink" title="编译&amp;执行结果"></a>编译&amp;执行结果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">------------ A-1.</span><br><span class="line">A print</span><br><span class="line">A print_int value: 111</span><br><span class="line">------------ A-2.</span><br><span class="line">A print</span><br><span class="line">A print_int value: 222</span><br><span class="line">------------ A-3.</span><br><span class="line">B print</span><br><span class="line">A print_int value: 333</span><br><span class="line">------------ A-4.</span><br><span class="line">B print</span><br><span class="line">A print_int value: 444</span><br><span class="line">------------ B-1.</span><br><span class="line">B print</span><br><span class="line">A print</span><br><span class="line">A print_int value: 111</span><br><span class="line">------------ B-2.</span><br><span class="line">B print</span><br><span class="line">A print</span><br><span class="line">A print_int value: 222</span><br><span class="line">------------ B-3.</span><br><span class="line">B print</span><br><span class="line">A print</span><br><span class="line">A print_int value: 333</span><br><span class="line">------------ B-4.</span><br><span class="line">B print</span><br><span class="line">A print</span><br><span class="line">A print_int value: 444</span><br></pre></td></tr></table></figure>
+
+<h2 id="小结-2"><a href="#小结-2" class="headerlink" title="小结"></a>小结</h2><p>基类中重载会后子类继承其中一个函数会发生错误，这个目前还不知道是为什么（有时间再深究）。虽然不推荐使用子类的指针，一般都使用父类指针指向子类的对象，但是偶尔还是要用到的。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/11/DCMTK-工具：wlmscpfs-测试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/09/11/DCMTK-工具：wlmscpfs-测试/" class="post-title-link" itemprop="url">DCMTK 工具：wlmscpfs 测试</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-11 13:15:09" itemprop="dateCreated datePublished" datetime="2019-09-11T13:15:09+08:00">2019-09-11</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/DCMTK/" itemprop="url" rel="index"><span itemprop="name">DCMTK</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/DCMTK/wlmscpfs/" itemprop="url" rel="index"><span itemprop="name">wlmscpfs</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ol>
+<li><a href="https://blog.csdn.net/zssureqh/article/details/38775315" target="_blank" rel="noopener">DICOM医学图像处理：基于DCMTK工具包学习和分析worklist</a></li>
+</ol>
+<p>感谢以上参考文献的作者的辛勤付出~</p>
+<h1 id="系统配置"><a href="#系统配置" class="headerlink" title="系统配置"></a>系统配置</h1><table>
+<thead>
+<tr>
+<th>条目</th>
+<th>型号</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>操作系统</td>
+<td>win 10</td>
+<td></td>
+</tr>
+<tr>
+<td>wlmscpfs</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+<tr>
+<td>findscu</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h1><p>已编译或下载好 dcmtk 工具包，并将其加入到环境变量的 <code>PATH</code> 中（也可不加，但是需要输入所在目录前缀）。</p>
+<p>创建的工作目录中不要有中文及空格。</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h2><p>创建工作目录，如：<code>C:\DICOM_dcmqrscp_test</code>。</p>
+<p>创建 <code>worklist</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\worklist</code>。</p>
+<p>在 <code>worklist</code> 工作目录下，创建 AETable 目录，<br>如创建 <code>OFFIS</code> AETable 目录：<code>C:\DICOM_dcmqrscp_test\worklist\OFFIS</code></p>
+<p>创建 <code>findscu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\findscu</code>，不创建也可以。</p>
+<h2 id="准备需要用到的文件"><a href="#准备需要用到的文件" class="headerlink" title="准备需要用到的文件"></a>准备需要用到的文件</h2><p>1.将 <code>dcmtk 安装目录\share\dcmtk\wlistdb\OFFIS</code> 目录中的所有文件复制到  <code>worklist</code> 工作目录下的 <code>OFFIS</code> AETable 目录。<br>2.由于这些文件是 dump 格式，需要转换成 wlmscpfs 可以使用的 dcm 格式，CMD 转到 <code>C:\DICOM_dcmqrscp_test\worklist\OFFIS</code>，然后运行 <code>for %i in (*.*) do dump2dcm %i %i.wl</code>，生成了 11 个 wl 文件，将其中的 <code>lockfile.wl</code> 删除。</p>
+<h1 id="运行-wlmscpfs-服务"><a href="#运行-wlmscpfs-服务" class="headerlink" title="运行 wlmscpfs 服务"></a>运行 <code>wlmscpfs</code> 服务</h1><p>CMD 转到 <code>C:\DICOM_dcmqrscp_test\wlistdb</code>，然后运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wlmscpfs 11110 --disable-file-reject --debug</span><br></pre></td></tr></table></figure>
+
+<p>如配置无误则出现如下信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D: $dcmtk: wlmscpfs v3.6.4+ DEV $</span><br><span class="line">D:</span><br><span class="line">W: (notice: dcmdata auto correction disabled.)</span><br></pre></td></tr></table></figure>
+
+<p>不要关闭，让其运行。</p>
+<h1 id="运行-findscu-查找"><a href="#运行-findscu-查找" class="headerlink" title="运行 findscu 查找"></a>运行 <code>findscu</code> 查找</h1><p>新开一个 CMD 转到  <code>findscu</code> 工作目录（没有创建的话可不转），运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">findscu 127.0.0.1 11110 ^</span><br><span class="line">--call OFFIS ^</span><br><span class="line">--debug ^</span><br><span class="line">-k 0010,0010</span><br><span class="line">-k 0010,0040</span><br></pre></td></tr></table></figure>
+
+<p>0010,0010 是病人姓名标签，所以整个命令的意思是访问 IP 为 127.0.0.1 端口号为 11110 的 worklist 服务器，从服务器中名为 OFFIS 的 AE 查找所有病人姓名，病人性别。<br>如配置无误则 CMD 打印出 findscu 查找到的信息。<br>如果想要查找指定的病人，则可在 <code>-k</code> 中添加内容，如：<code>-k 0010,0010=病人姓名</code>。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/09/DCMTK-源码中一些名词/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/09/09/DCMTK-源码中一些名词/" class="post-title-link" itemprop="url">DCMTK 源码中一些名词</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-09 19:03:53" itemprop="dateCreated datePublished" datetime="2019-09-09T19:03:53+08:00">2019-09-09</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DCMTK/" itemprop="url" rel="index"><span itemprop="name">DCMTK</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <table>
+<thead>
+<tr>
+<th>词语</th>
+<th>释义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DUL</td>
+<td>DICOM Upper Layer</td>
+<td>在 dcmtk/dcmnet/dul.h 中作为前缀出现</td>
+</tr>
+<tr>
+<td>ASC</td>
+<td>Association 缩写</td>
+<td>在 dcmtk/dcmnet/assoc.h 中作为前缀出现</td>
+</tr>
+<tr>
+<td>FSM</td>
+<td>Finite state machine 的缩写，即有限状态自动机</td>
+<td>在 dcmnet/libsrc/dulpriv.h 中出现</td>
+</tr>
+<tr>
+<td>OF</td>
+<td>OFFIS 取前两个字母</td>
+<td>毕竟是 <a href="http://www.offis.de/" target="_blank" rel="noopener">OFFIS</a> 公司出品的</td>
+</tr>
+</tbody></table>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/30/Qt-iconfont-to-QIcon/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/30/Qt-iconfont-to-QIcon/" class="post-title-link" itemprop="url">Qt iconfont to QIcon</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-30 08:37:28" itemprop="dateCreated datePublished" datetime="2019-08-30T08:37:28+08:00">2019-08-30</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Qt/" itemprop="url" rel="index"><span itemprop="name">Qt</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="普通使用"><a href="#普通使用" class="headerlink" title="普通使用"></a>普通使用</h1><p>使用 <code>iconfont</code> 极大简化了开发中需要使用图标的问题，一般来说使用 <code>iconfont</code> 都是将其作为字符来使用，比如在一个 <code>QLabel</code> 中：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 其中 ICONFONT_PATH 为字体库文件目录。如“*/theme/iconfont.ttf”。</span></span><br><span class="line"><span class="keyword">int</span> fontId = QFontDatabase::addApplicationFont(ICONFONT_PATH);</span><br><span class="line">QFont iconfont;</span><br><span class="line">iconfont.setFamily(QFontDatabase::applicationFontFamilies(fontId).at(<span class="number">0</span>));</span><br><span class="line"><span class="comment">// 设置字体大小</span></span><br><span class="line">iconfont.setPixelSize(<span class="number">16</span>);</span><br><span class="line">QLabel label;</span><br><span class="line">label.setFont(iconfont);</span><br><span class="line"><span class="comment">// 其中 icon_id 是一个 iconfont 的 Unicode 编码，一般在下载下来的字体库介绍中有。</span></span><br><span class="line"><span class="comment">// 形式如下：0x6501，即使用 16 进制。</span></span><br><span class="line">setText(QChar(icon_id));</span><br></pre></td></tr></table></figure>
+
+<h1 id="使用到-QIcon-中"><a href="#使用到-QIcon-中" class="headerlink" title="使用到 QIcon 中"></a>使用到 QIcon 中</h1><p>上面这种使用方式已经能满足大部分需求了，但是，有时候需要将 <code>iconfont</code> 使用到 <code>QIcon</code> 中，比如 <code>QToolButton</code> 的 <code>setIcon</code> 只能使用 <code>QIcon</code> 。要将 <code>iconfont</code> 使用到 <code>QIcon</code> 中，需要借助 <code>QPixmap</code>。一般可以将 <code>iconfont</code> 应用到 <code>Qicon</code> 可以写成一个方法：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 其中 icon_font_id 为字符图标的 ID，w 为要生成的图标的大小，color 为图标颜色。</span></span><br><span class="line">QIcon QIconTool::getIconFromIconFont(<span class="keyword">int</span> icon_font_id, <span class="keyword">int</span> w, QColor color) &#123;</span><br><span class="line">    <span class="comment">// 一般图标为正方形，如果有其他需求，加一个参数，如 h。</span></span><br><span class="line">    <span class="function">QPixmap <span class="title">pixmap</span><span class="params">(w, w)</span></span>;</span><br><span class="line">    pixmap.fill(Qt::transparent);</span><br><span class="line">    QPainter painter;</span><br><span class="line">    painter.begin(&amp;pixmap);</span><br><span class="line">    <span class="comment">// 其中 ICONFONT_PATH 为字体库文件目录。如“*/theme/iconfont.ttf”。</span></span><br><span class="line">    <span class="keyword">int</span> fontId = QFontDatabase::addApplicationFont(ICONFONT_PATH);</span><br><span class="line">    QFont iconfont;</span><br><span class="line">    iconfont.setFamily(QFontDatabase::applicationFontFamilies(fontId).at(<span class="number">0</span>));</span><br><span class="line">    font.setPixelSize(w);</span><br><span class="line">    painter.setFont(font);</span><br><span class="line">    painter.setPen(color);</span><br><span class="line">    painter.drawText(pixmap.rect(), QString(QChar(icon_font_id)));</span><br><span class="line">    painter.end();</span><br><span class="line">    <span class="keyword">return</span> pixmap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/22/DICOM-汉字编码/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/22/DICOM-汉字编码/" class="post-title-link" itemprop="url">DICOM 汉字编码</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-22 17:21:08" itemprop="dateCreated datePublished" datetime="2019-08-22T17:21:08+08:00">2019-08-22</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="DICOM-是可以使用汉字的"><a href="#DICOM-是可以使用汉字的" class="headerlink" title="DICOM 是可以使用汉字的"></a>DICOM 是可以使用汉字的</h1><p>在 DICOM 标准中，Part 5 中 K.3 Example of Long Text Value Representation in the Chinese Language with GB2312 G1 介绍了汉字编码的有关内容，不过使用的是 GB2312，众所周知，GB2312 已经是被淘汰掉了，最新的应该是使用 GB18030，使用 Sante DICOM Editor 软件编辑 DICOM 文件，将 (0008,0005) Specific Character Set 元素改为 <code>GB18030</code>，再将 (0010,0010) Patient’s Name 元素改为中文，最后使用 <code>DCMTK</code> 的 <code>dcmdump</code> 工具验证通过。</p>
+<p>还有可以改为 Unicode 编码。</p>
+<p>即 (0008,0005) Specific Character Set 元素改为 <code>ISO_IR 192</code>。</p>
+<p>在 Part 5 中 6.1 Support of Character Repertoires 有详细说明支持哪些编码。</p>
+<h1 id="使用-GB18030-的顾虑"><a href="#使用-GB18030-的顾虑" class="headerlink" title="使用 GB18030 的顾虑"></a>使用 GB18030 的顾虑</h1><p>虽然 GB18030 是国标，但是兼容性最好的应该还是 Unicode 编码。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/20/DCMTK-工具：dcmqrscp-测试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/20/DCMTK-工具：dcmqrscp-测试/" class="post-title-link" itemprop="url">DCMTK 工具：dcmqrscp 测试</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-20 12:35:26" itemprop="dateCreated datePublished" datetime="2019-08-20T12:35:26+08:00">2019-08-20</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/DCMTK/" itemprop="url" rel="index"><span itemprop="name">DCMTK</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/DCMTK/dcmqrscp/" itemprop="url" rel="index"><span itemprop="name">dcmqrscp</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ol>
+<li><a href="https://blog.csdn.net/zssureqh/article/details/39758969" target="_blank" rel="noopener">DICOM医学图像处理：DCMTK的wiki资料学习之PACS调试</a>（感谢这位大佬的辛勤付出~）；</li>
+<li><a href="https://support.dcmtk.org/redmine/projects/dcmtk/wiki/Howto_PACSDebuggingWithDCMTK" target="_blank" rel="noopener">DCMTK WIKI</a>（感谢开源工作者的辛勤付出~）。</li>
+</ol>
+<h1 id="系统配置"><a href="#系统配置" class="headerlink" title="系统配置"></a>系统配置</h1><table>
+<thead>
+<tr>
+<th>条目</th>
+<th>型号</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>操作系统</td>
+<td>win 10</td>
+<td></td>
+</tr>
+<tr>
+<td>dcmqrscp</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+<tr>
+<td>echoscu</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+<tr>
+<td>storescu</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+<tr>
+<td>findscu</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+<tr>
+<td>dcmdump</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h1><p>已编译或下载好 dcmtk 工具包，并将其加入到环境变量的 <code>PATH</code> 中（也可不加，但是需要输入所在目录前缀）。</p>
+<p>创建的工作目录中不要有中文及空格。</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h2><p>创建工作目录，如：<code>C:\DICOM_dcmqrscp_test</code>。</p>
+<p>创建 <code>dcmqrscp</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\dcmqrscp</code>。</p>
+<p>在 <code>dcmqrscp</code> 工作目录下，创建 AETable 目录，<br>如：<code>C:\DICOM_dcmqrscp_test\dcmqrscp\COMMON</code><br>如：<code>C:\DICOM_dcmqrscp_test\dcmqrscp\ACME_STORE</code>。</p>
+<p>创建 <code>echoscu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\echoscu</code>，不创建也可以，因为 echoscu 只是用于验证服务器是否存在，服务器是否为其服务。</p>
+<p>创建 <code>storescu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\storescu</code> 。</p>
+<p>创建 <code>findscu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\findscu</code>，不创建也可以。</p>
+<p>创建 <code>storescu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\storescu</code> 。</p>
+<h2 id="准备需要用到的文件"><a href="#准备需要用到的文件" class="headerlink" title="准备需要用到的文件"></a>准备需要用到的文件</h2><p>1.将 dcmqrscp 配置文件（位于 <code>dcmtk 安装目录\etc\dcmtk\dcmqrscp.cfg</code>） 复制到 <code>dcmqrscp</code> 工作目录中。<br>2.将一个 dcm 文件复制到 <code>storescu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\storescu\111.DCM</code>。<a href="/111.dcm">我的一个 DCM 文件</a>。</p>
+<h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><p>1.可以修改 <code>NetworkTCPPort</code> 为其他的端口，如： <code>NetworkTCPPort = 11110</code>。<br>2.后面配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">acme1 = (后面请求的 AE Title,请求端的主机名,上面 NetworkTCPPort 的值)</span><br><span class="line">acmeCTcompany = acme1</span><br></pre></td></tr></table></figure>
+
+<p>3.<code>AETable</code> 内的修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">COMMON       C:\DICOM_dcmqrscp_test\dcmqrscp\COMMON       R  (200, 1024mb) ANY</span><br><span class="line">ACME_STORE   C:\DICOM_dcmqrscp_test\dcmqrscp\ACME_STORE   RW (9, 1024mb)</span><br></pre></td></tr></table></figure>
+
+<p>修改后，总的配置如下（删除了注释）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">NetworkTCPPort  = 11110</span><br><span class="line">MaxPDUSize      = 16384</span><br><span class="line">MaxAssociations = 16</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">HostTable BEGIN</span><br><span class="line"></span><br><span class="line">#one_scu = (ONE_SCU,BAIZE,12345)</span><br><span class="line">#acmeCTcompany = one_scu</span><br><span class="line"># 或</span><br><span class="line">acmeCTcompany = (ONE_SCU,BAIZE,12345)</span><br><span class="line"></span><br><span class="line">HostTable END</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">VendorTable BEGIN</span><br><span class="line"></span><br><span class="line">&quot;Acme CT Company&quot;   = acmeCTcompany</span><br><span class="line"></span><br><span class="line">VendorTable END</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">AETable BEGIN</span><br><span class="line"></span><br><span class="line">COMMON       C:\DICOM_dcmqrscp_test\dcmqrscp\COMMON       R  (200, 1024mb) ANY</span><br><span class="line">ACME_STORE   C:\DICOM_dcmqrscp_test\dcmqrscp\ACME_STORE   RW (9, 1024mb)   acmeCTcompany</span><br><span class="line"></span><br><span class="line">AETable END</span><br></pre></td></tr></table></figure>
+
+<h1 id="运行-dcmqrscp-开启服务"><a href="#运行-dcmqrscp-开启服务" class="headerlink" title="运行 dcmqrscp 开启服务"></a>运行 <code>dcmqrscp</code> 开启服务</h1><p>CMD 转到 <code>C:\DICOM_dcmqrscp_test\dcmqrscp</code>，然后运行 <code>dcmqrscp.exe --config dcmqrscp.cfg -d</code>。</p>
+<p>如配置无误则出现如下信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D: $dcmtk: dcmqrscp v3.6.4+ DEV $</span><br><span class="line">D:</span><br><span class="line">D: DcmDataDictionary: Loading file: dcmtk 安装目录\share\dcmtk\dicom.dic</span><br></pre></td></tr></table></figure>
+
+<p>不要关闭，让其运行。</p>
+<h1 id="运行-echoscu-测试服务能否连通"><a href="#运行-echoscu-测试服务能否连通" class="headerlink" title="运行 echoscu 测试服务能否连通"></a>运行 <code>echoscu</code> 测试服务能否连通</h1><p>新开一个 CMD 转到 <code>echoscu</code> ` 工作目录（没有创建的话可不转），运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echoscu.exe -d 127.0.0.1 11110 ^</span><br><span class="line">-aec ACME_STORE ^</span><br><span class="line">-aet ONE_SCU</span><br></pre></td></tr></table></figure>
+
+<p>如配置无误则在 <code>echoscu</code> 端出现如下信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">D: $dcmtk: echoscu v3.6.4+ DEV $</span><br><span class="line">D:</span><br><span class="line">D: DcmDataDictionary: Loading file: dcmtk 安装目录\share\dcmtk\dicom.dic</span><br><span class="line">D: Request Parameters:</span><br><span class="line">D: ====================== BEGIN A-ASSOCIATE-RQ =====================</span><br><span class="line">D: Our Implementation Class UID:      1.2.276.0.7230010.3.0.3.6.4</span><br><span class="line">D: Our Implementation Version Name:   OFFIS_DCMTK_364</span><br><span class="line">D: Their Implementation Class UID:</span><br><span class="line">D: Their Implementation Version Name:</span><br><span class="line">D: Application Context Name:    1.2.840.10008.3.1.1.1</span><br><span class="line">D: Calling Application Name:    ECHOSCU</span><br><span class="line">D: Called Application Name:     ACME_STORE</span><br><span class="line">D: Responding Application Name: ACME_STORE</span><br><span class="line">D: Our Max PDU Receive Size:    16384</span><br><span class="line">D: Their Max PDU Receive Size:  0</span><br><span class="line">D: Presentation Contexts:</span><br><span class="line">D:   Context ID:        1 (Proposed)</span><br><span class="line">D:     Abstract Syntax: =VerificationSOPClass</span><br><span class="line">D:     Proposed SCP/SCU Role: Default</span><br><span class="line">D:     Proposed Transfer Syntax(es):</span><br><span class="line">D:       =LittleEndianImplicit</span><br><span class="line">D: Requested Extended Negotiation: none</span><br><span class="line">D: Accepted Extended Negotiation:  none</span><br><span class="line">D: Requested User Identity Negotiation: none</span><br><span class="line">D: User Identity Negotiation Response:  none</span><br><span class="line">D: ======================= END A-ASSOCIATE-RQ ======================</span><br><span class="line">I: Requesting Association</span><br><span class="line">D: setting network send timeout to 60 seconds</span><br><span class="line">D: setting network receive timeout to 60 seconds</span><br><span class="line">D: Constructing Associate RQ PDU</span><br><span class="line">D: PDU Type: Associate Accept, PDU Length: 184 + 6 bytes PDU header</span><br><span class="line">D:   02  00  00  00  00  b8  00  01  00  00  41  43  4d  45  5f  53</span><br><span class="line">D:   54  4f  52  45  20  20  20  20  20  20  45  43  48  4f  53  43</span><br><span class="line">D:   55  20  20  20  20  20  20  20  20  20  00  00  00  00  00  00</span><br><span class="line">D:   00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00</span><br><span class="line">D:   00  00  00  00  00  00  00  00  00  00  10  00  00  15  31  2e</span><br><span class="line">D:   32  2e  38  34  30  2e  31  30  30  30  38  2e  33  2e  31  2e</span><br><span class="line">D:   31  2e  31  21  00  00  19  01  00  00  00  40  00  00  11  31</span><br><span class="line">D:   2e  32  2e  38  34  30  2e  31  30  30  30  38  2e  31  2e  32</span><br><span class="line">D:   50  00  00  3a  51  00  00  04  00  00  40  00  52  00  00  1b</span><br><span class="line">D:   31  2e  32  2e  32  37  36  2e  30  2e  37  32  33  30  30  31</span><br><span class="line">D:   30  2e  33  2e  30  2e  33  2e  36  2e  34  55  00  00  0f  4f</span><br><span class="line">D:   46  46  49  53  5f  44  43  4d  54  4b  5f  33  36  34</span><br><span class="line">D: Parsing an A-ASSOCIATE PDU</span><br><span class="line">D: Association Parameters Negotiated:</span><br><span class="line">D: ====================== BEGIN A-ASSOCIATE-AC =====================</span><br><span class="line">D: Our Implementation Class UID:      1.2.276.0.7230010.3.0.3.6.4</span><br><span class="line">D: Our Implementation Version Name:   OFFIS_DCMTK_364</span><br><span class="line">D: Their Implementation Class UID:    1.2.276.0.7230010.3.0.3.6.4</span><br><span class="line">D: Their Implementation Version Name: OFFIS_DCMTK_364</span><br><span class="line">D: Application Context Name:    1.2.840.10008.3.1.1.1</span><br><span class="line">D: Calling Application Name:    ECHOSCU</span><br><span class="line">D: Called Application Name:     ACME_STORE</span><br><span class="line">D: Responding Application Name: ACME_STORE</span><br><span class="line">D: Our Max PDU Receive Size:    16384</span><br><span class="line">D: Their Max PDU Receive Size:  16384</span><br><span class="line">D: Presentation Contexts:</span><br><span class="line">D:   Context ID:        1 (Accepted)</span><br><span class="line">D:     Abstract Syntax: =VerificationSOPClass</span><br><span class="line">D:     Proposed SCP/SCU Role: Default</span><br><span class="line">D:     Accepted SCP/SCU Role: Default</span><br><span class="line">D:     Accepted Transfer Syntax: =LittleEndianImplicit</span><br><span class="line">D: Requested Extended Negotiation: none</span><br><span class="line">D: Accepted Extended Negotiation:  none</span><br><span class="line">D: Requested User Identity Negotiation: none</span><br><span class="line">D: User Identity Negotiation Response:  none</span><br><span class="line">D: ======================= END A-ASSOCIATE-AC ======================</span><br><span class="line">I: Association Accepted (Max Send PDV: 16372)</span><br><span class="line">I: Sending Echo Request (MsgID 1)</span><br><span class="line">D: DcmDataset::read() TransferSyntax=&quot;Little Endian Implicit&quot;</span><br><span class="line">I: Received Echo Response (Success)</span><br><span class="line">I: Releasing Association</span><br></pre></td></tr></table></figure>
+
+<p>同时 <code>dcmqrscp</code> 端也出现很多信息。</p>
+<h1 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h1><h2 id="出现参考文献中列举出来的错误"><a href="#出现参考文献中列举出来的错误" class="headerlink" title="出现参考文献中列举出来的错误"></a>出现参考文献中列举出来的错误</h2><p>参照 <a href="https://blog.csdn.net/zssureqh/article/details/39758969" target="_blank" rel="noopener">DICOM医学图像处理：DCMTK的wiki资料学习之PACS调试</a> 或 <a href="https://support.dcmtk.org/redmine/projects/dcmtk/wiki/Howto_PACSDebuggingWithDCMTK" target="_blank" rel="noopener">DCMTK WIKI</a> 进行错误的修改。</p>
+<h2 id="运行-echoscu-出现-index-bat-创建-Handle-错误"><a href="#运行-echoscu-出现-index-bat-创建-Handle-错误" class="headerlink" title="运行 echoscu 出现 index.bat 创建 Handle 错误"></a>运行 <code>echoscu</code> 出现 <code>index.bat</code> 创建 <code>Handle</code> 错误</h2><h3 id="错误提示"><a href="#错误提示" class="headerlink" title="错误提示"></a>错误提示</h3><p>在 <code>dcmqrscp</code> 端最后出现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">D: DB_createHandle () : Handle created for C:\DICOM_dcmqrscp_test\ACME_STORE</span><br><span class="line">D:                      maxStudiesPerStorageArea: 200 maxBytesPerStudy: 1073741824</span><br><span class="line">E: C:\DICOM_dcmqrscp_test\ACME_STORE\index.dat: 操作成功完成。</span><br><span class="line">E: dispatch: cannot create DB Handle</span><br><span class="line">E: DIMSE Failure (aborting association): 000c:0001 Index database error</span><br></pre></td></tr></table></figure>
+
+<h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p>没有正确的创建 AETable 目录 <code>ACME_STORE</code> 文件夹。</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>创建 <code>ACME_STORE</code> 文件夹，<br>如创建：<code>C:\DICOM_dcmqrscp_test\ACME_STORE</code>（需和配置文件一致）。</p>
+<h1 id="运行-storescu-上传-DCM-文件"><a href="#运行-storescu-上传-DCM-文件" class="headerlink" title="运行 storescu 上传 DCM 文件"></a>运行 <code>storescu</code> 上传 DCM 文件</h1><p>新开一个 CMD 转到 <code>storescu</code> 工作目录，运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">storescu.exe -d 127.0.0.1 11110 ^</span><br><span class="line">-aec ACME_STORE ^</span><br><span class="line">-aet ONE_SCU ^</span><br><span class="line">111.dcm</span><br></pre></td></tr></table></figure>
+
+<p>如配置无误则在 <code>C:\DICOM_dcmqrscp_test\ACME_STORE</code> 中可以看到如下图所示结果。</p>
+<p><img src="/2019/08/20/DCMTK-工具：dcmqrscp-测试/stroescu-上传测试.png" alt="stroescu-上传测试"></p>
+<p>这样就表示上传成功。</p>
+<h1 id="运行-findscu-查询-DCM-文件"><a href="#运行-findscu-查询-DCM-文件" class="headerlink" title="运行 findscu 查询 DCM 文件"></a>运行 <code>findscu</code> 查询 DCM 文件</h1><p>新开一个 CMD 转到 <code>findscu</code> 工作目录（没有创建的话可不转），运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">findscu.exe --verbose --study ^</span><br><span class="line">-aec ACME_STORE -aet ONE_SCU ^</span><br><span class="line">127.0.0.1 11110 ^</span><br><span class="line">-k QueryRetrieveLevel=STUDY ^</span><br><span class="line">-k StudyDate ^</span><br><span class="line">-k StudyDescription ^</span><br><span class="line">-k StudyInstanceUID</span><br></pre></td></tr></table></figure>
+
+<p>如配置无误则在 <code>findscu</code> 端出现如下信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">I: Requesting Association</span><br><span class="line">I: Association Accepted (Max Send PDV: 16372)</span><br><span class="line">I: Sending Find Request (MsgID 1)</span><br><span class="line">I: Request Identifiers:</span><br><span class="line">I:</span><br><span class="line">I: # Dicom-Data-Set</span><br><span class="line">I: # Used TransferSyntax: Little Endian Explicit</span><br><span class="line">I: (0008,0020) DA (no value available)                     #   0, 0 StudyDate</span><br><span class="line">I: (0008,0052) CS [STUDY]                                  #   6, 1 QueryRetrieveLevel</span><br><span class="line">I: (0008,1030) LO (no value available)                     #   0, 0 StudyDescription</span><br><span class="line">I: (0020,000d) UI (no value available)                     #   0, 0 StudyInstanceUID</span><br><span class="line">I:</span><br><span class="line">I: ---------------------------</span><br><span class="line">I: Find Response: 1 (Pending)</span><br><span class="line">I:</span><br><span class="line">I: # Dicom-Data-Set</span><br><span class="line">I: # Used TransferSyntax: Little Endian Explicit</span><br><span class="line">I: (0008,0005) CS [ISO_IR 100]                             #  10, 1 SpecificCharacterSet</span><br><span class="line">I: (0008,0020) DA [20100926]                               #   8, 1 StudyDate</span><br><span class="line">I: (0008,0052) CS [STUDY ]                                 #   6, 1 QueryRetrieveLevel</span><br><span class="line">I: (0008,0054) AE [ACME_STORE]                             #  10, 1 RetrieveAETitle</span><br><span class="line">I: (0008,1030) LO [t-12057 ]                               #   8, 1 StudyDescription</span><br><span class="line">I: (0020,000d) UI [1.2.840.113619.2.55.3.2831193967.596.1285460208.406 ] #  52, 1 StudyInstanceUID</span><br><span class="line">I:</span><br><span class="line">I: Received Final Find Response (Success)</span><br><span class="line">I: Releasing Association</span><br></pre></td></tr></table></figure>
+
+<p>可新开一个 CMD 转到 <code>storescu</code> 工作目录，运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dcmdump.exe 111.DCM</span><br></pre></td></tr></table></figure>
+
+<p>可以看到 <code>findscu</code> 查找出来的信息和 <code>dcmdump</code> 出来的信息一致。</p>
+<h1 id="运行-movescu-下载-DCM-文件至本地"><a href="#运行-movescu-下载-DCM-文件至本地" class="headerlink" title="运行 movescu 下载 DCM 文件至本地"></a>运行 <code>movescu</code> 下载 DCM 文件至本地</h1><p><a href="https://support.dcmtk.org/redmine/projects/dcmtk/wiki/Howto_PACSDebuggingWithDCMTK" target="_blank" rel="noopener">DCMTK WIKI</a> 中关于 <code>movescu</code> 的部分原文。</p>
+<blockquote>
+<p>Now we can check a DICOM connection (echoscu), start a PACS (dcmqrscp), store to it (storescu) and query for Studies. The last thing that is missing is actually retrieving data from the PACS. There are two ways to do that, the “C-MOVE” approach or the “C-GET” approach. C-MOVE is more flexible and the most common one found in practice; that’s why we show it here. In DCMTK the tool “movescu” implements the C-MOVE approach. For every of the three Query SOP Classes (Patient Root, Study Root and Patient/Study Only) there is also a related C-MOVE, and a related C-GET SOP Class. We use the C-MOVE Study Root Retrieve SOP Class here (note that the exact SOP Class names are a littlebit different but have been replaced for readability).</p>
+<p>Using C-MOVE one can order a set of images from the PACS. The PACS then transfers them using the Storage SOP Classes that are also used by storescu (see above). Thus, the receiver of images ordered by a C-MOVE command must be a a server (SCP) of the required Storage SOP Classes. In order to receive the images yourself, you must tell the PACS the your own AE Title which is contained in the C-MOVE order message as the “Move Destination”. Now, the special thing about the C-MOVE approach is that you can tell the PACS not only your own AE Title but also any other AE Title on the DICOM network! That way you can not only ask the PACS to send the images to yourself but also to any Storage-enabled DICOM server by providing its AE Title.</p>
+</blockquote>
+<p>大致说明了以下几点：</p>
+<ol>
+<li><code>C-MOVE</code> 比 <code>C-GET</code> 灵活；</li>
+<li>使用 movescu 需要指定 <code>Move Destination</code>；</li>
+<li><code>C-MOVE</code> 不仅可以将 DCM 文件移动到请求端自身，也可以移动到其他具有存储功能的服务端（也就是其他 PACS，使用 <code>Move Destination</code> 来指定 PACS 地址）。</li>
+</ol>
+<p>新开一个 CMD 转到 <code>movescu</code> 工作目录（没有创建的话可不转），运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">movescu.exe --verbose --study ^</span><br><span class="line">-aec ACME_STORE -aet ONE_SCU -aem ONE_SCU ^</span><br><span class="line">127.0.0.1 11110 ^</span><br><span class="line">--port 12345 ^</span><br><span class="line">--output-directory C:\DICOM_dcmqrscp_test\movescu ^</span><br><span class="line">-k QueryRetrieveLevel=STUDY ^</span><br><span class="line">-k PatientName=&quot;病人姓名&quot;</span><br></pre></td></tr></table></figure>
+
+<p>如配置无误则在 <code>C:\DICOM_dcmqrscp_test\movescu</code> 中可以看到如下图所示结果。</p>
+<p><img src="/2019/08/20/DCMTK-工具：dcmqrscp-测试/movescu-下载到本地测试.png" alt="movescu-下载到本地测试"></p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/19/Win10-无法调节亮度，也不能开启夜间模式的解决办法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/19/Win10-无法调节亮度，也不能开启夜间模式的解决办法/" class="post-title-link" itemprop="url">Win10 无法调节亮度，也不能开启夜间模式的解决办法</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-19 09:42:01" itemprop="dateCreated datePublished" datetime="2019-08-19T09:42:01+08:00">2019-08-19</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Win-10/" itemprop="url" rel="index"><span itemprop="name">Win 10</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>前段时候安装了“向日葵远程控制”软件，回来后发现电脑无法开启夜间模式，之后更是发现亮度也不能调节。卸载了“向日葵”后重启电脑，发现并没有用，之后在知乎找到很多解决办法，有一个解决绑法成功解决我的问题，记录一下。</p>
+<p>右击“开始” —— 计算机管理 —— 设备管理器 —— 监视器 —— Generic Monitor (orayOPMS) —— 右击卸载 —— 重启电脑。</p>
+<p>看到其他用户安装了 Teamviewer 后也出现这种情况。因该也可以使用同样的方式解决。</p>
+<blockquote>
+<p>个人猜测原因：远程控制类软件不是采用截屏的方式让远程用户看到桌面，而是采用注册一个显卡与显示器之间的“中间件”来获取屏幕图像信息，就是“Generic Monitor (orayOPMS)”，所以卸载它就好了。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/13/DICOM-PDU-解析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/13/DICOM-PDU-解析/" class="post-title-link" itemprop="url">DICOM PDU 解析</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-13 21:14:25" itemprop="dateCreated datePublished" datetime="2019-08-13T21:14:25+08:00">2019-08-13</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>使用 wlmscpfs 作为 Worklist SCP。<br>使用 findscu 作为 SCU 获取 Worklist，这是其中的一次 A-ASSOCIATE-RQ 请求。</p>
+<p>对其进行解析。</p>
+<p>PDU Length: 256 + 6 bytes PDU header</p>
+<p><img src="/2019/08/13/DICOM-PDU-解析/PDU-解析.png" alt="PDU-解析"></p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.png"
+      alt="ZHL">
+  <p class="site-author-name" itemprop="name">ZHL</p>
+  <div class="site-description motion-element" itemprop="description">我的博客</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZHL</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.3.0</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+    
+
+</body>
+</html>

@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-x16.ico?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="给出 DICOM 的一些简写和全称以及翻译，只是个人翻译，如有有更优的翻译或翻译有误，欢迎提出和指正。 格式：  符号：&amp;lt;，表示与右前方一格相同。 符号：-，不表示单词间换行连接符，表其原本语义。     简写 全称 翻译，或包含含义    DICOM Digital Imaging and Communications in Medicine 医学数字成像与通信   PACS Pictur">
+<meta name="keywords" content="DICOM,专业术语">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DICOM 专业术语列表">
+<meta property="og:url" content="http://yoursite.com/2019/08/10/DICOM-专业术语列表/index.html">
+<meta property="og:site_name" content="ZHL的博客">
+<meta property="og:description" content="给出 DICOM 的一些简写和全称以及翻译，只是个人翻译，如有有更优的翻译或翻译有误，欢迎提出和指正。 格式：  符号：&amp;lt;，表示与右前方一格相同。 符号：-，不表示单词间换行连接符，表其原本语义。     简写 全称 翻译，或包含含义    DICOM Digital Imaging and Communications in Medicine 医学数字成像与通信   PACS Pictur">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-09T13:28:17.049Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DICOM 专业术语列表">
+<meta name="twitter:description" content="给出 DICOM 的一些简写和全称以及翻译，只是个人翻译，如有有更优的翻译或翻译有误，欢迎提出和指正。 格式：  符号：&amp;lt;，表示与右前方一格相同。 符号：-，不表示单词间换行连接符，表其原本语义。     简写 全称 翻译，或包含含义    DICOM Digital Imaging and Communications in Medicine 医学数字成像与通信   PACS Pictur">
+  <link rel="canonical" href="http://yoursite.com/2019/08/10/DICOM-专业术语列表/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>DICOM 专业术语列表 | ZHL的博客</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9fd3e2a7c57b3971f3439f9713354241";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ZHL的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">love-wh</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/10/DICOM-专业术语列表/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">DICOM 专业术语列表
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-10 12:11:53" itemprop="dateCreated datePublished" datetime="2019-08-10T12:11:53+08:00">2019-08-10</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>给出 DICOM 的一些简写和全称以及翻译，只是个人翻译，如有有更优的翻译或翻译有误，欢迎提出和指正。</p>
+<p><strong>格式：</strong></p>
+<ol>
+<li>符号：&lt;，表示与右前方一格相同。</li>
+<li>符号：-，不表示单词间换行连接符，表其原本语义。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>简写</th>
+<th>全称</th>
+<th>翻译，或包含含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DICOM</td>
+<td>Digital Imaging and Communications in Medicine</td>
+<td>医学数字成像与通信</td>
+</tr>
+<tr>
+<td>PACS</td>
+<td>Picture Archiving and Communication System</td>
+<td>医学影像存档与通信系统</td>
+</tr>
+<tr>
+<td>HIS</td>
+<td>Hospital Information System</td>
+<td>医院信息系统</td>
+</tr>
+<tr>
+<td>RIS</td>
+<td>Radiology Information System</td>
+<td>放射科信息系统</td>
+</tr>
+<tr>
+<td>IOD</td>
+<td>Information Object Definitions</td>
+<td>信息对象定义</td>
+</tr>
+<tr>
+<td>IOE</td>
+<td>Information Object Entity</td>
+<td>信息对象实体。类似于面向对象编程中，IOD 就是类，IOE 就是实例</td>
+</tr>
+<tr>
+<td>Normal IOD</td>
+<td>&lt;</td>
+<td>标准 IOD。只包含单个信息实体的信息对象定义</td>
+</tr>
+<tr>
+<td>Composite IOD</td>
+<td>&lt;</td>
+<td>复合 IOD。包含一个以上的<strong>相关</strong>信息实体的信息对象定义</td>
+</tr>
+<tr>
+<td>VR</td>
+<td>Value Representation</td>
+<td>值表示法。可理解为数据类型，分为隐式值表示法和显式值表示法。隐式值表示法：预先规定表示方法，从数据字典中查找，对应 VL 为 4 个字节。显式值表示法：用两个字符指明表示方法，对应 VL 为 2 个字节，当显式值表示法为 OB、OW、OF、UT、SQ 或 UN 时，VL 拓展为 4 个字节，其中紧跟着的 2 个字节为 0000H</td>
+</tr>
+<tr>
+<td>VM</td>
+<td>Value Multiplicity</td>
+<td>值重度。数据元素的 VM 指定可以在该数据元素的值字段中编码的值的数量。当数据元素具有多个值时，字符串类型的值使用“\”来分隔</td>
+</tr>
+<tr>
+<td>VL</td>
+<td>Value Length</td>
+<td>值长度。其中有未定义长度，一般用于 VR 为 SQ 时，此时 VL 为 FFFFFFFFH</td>
+</tr>
+<tr>
+<td>LUT</td>
+<td>Look Up Table</td>
+<td>查表法</td>
+</tr>
+<tr>
+<td>IOM</td>
+<td>Information Object Module</td>
+<td>信息对象模块</td>
+</tr>
+<tr>
+<td>SCP</td>
+<td>Service Class Provider</td>
+<td>服务提供者</td>
+</tr>
+<tr>
+<td>SCU</td>
+<td>Service Class User</td>
+<td>服务使用者</td>
+</tr>
+<tr>
+<td>DICOM Service Element</td>
+<td>&lt;</td>
+<td>DICOM 服务元素（分为 DIMSE 和 DISSE）</td>
+</tr>
+<tr>
+<td>DIMSE</td>
+<td>DICOM Message Service Elements</td>
+<td>DICOM 消息服务元素。都是证实型服务，包含：DIMSE-C、DIMSE-N</td>
+</tr>
+<tr>
+<td>DISSE</td>
+<td>DICOM Storage Service Elements</td>
+<td>DICOM 存储服务元素</td>
+</tr>
+<tr>
+<td>SE</td>
+<td>Service Element</td>
+<td>服务元素。对特点 SOP 类的信息对象实施的基本操作</td>
+</tr>
+<tr>
+<td>SG</td>
+<td>Service Group</td>
+<td>服务组。属于一个 SOP 类的一组服务元素</td>
+</tr>
+<tr>
+<td>SOP</td>
+<td>Service Object Pair</td>
+<td>服务对象对。（Normal IOD 或 Composite IOD）+ SG（SG 中只含 DIMSE）</td>
+</tr>
+<tr>
+<td>Service Class Specification</td>
+<td>&lt;</td>
+<td>服务类规范。由多个 SOP Class 有规律组成</td>
+</tr>
+<tr>
+<td>AE</td>
+<td>Application Entity</td>
+<td>应用实体。就是各种设备，既可是实体硬件设备，也可是软件</td>
+</tr>
+<tr>
+<td>AET</td>
+<td>Application Entity Title</td>
+<td>应用实体标题</td>
+</tr>
+<tr>
+<td>IE</td>
+<td>Information Entity</td>
+<td>信息实体。现实世界中单一事物（如一幅图像，一个病人等）的一组信息的整体称谓</td>
+</tr>
+<tr>
+<td>Modality</td>
+<td>&lt;</td>
+<td><strong>特指</strong>成像设备</td>
+</tr>
+<tr>
+<td>Study</td>
+<td>&lt;</td>
+<td><strong>特指</strong>一次检查</td>
+</tr>
+<tr>
+<td>DIMSE-C</td>
+<td>DIMSE Composite SOP Service</td>
+<td>DIMSE 对复合 SOP 的服务。一般由一个 DIMSE 服务使用者向另一个对等 DIMSE 服务使用者发起，包含：C-STORE、C-FIND、C-GET、C-MOVE、C-ECHO、C-CANCEL</td>
+</tr>
+<tr>
+<td>C-STORE</td>
+<td>Composite SOP Store</td>
+<td>复合 SOP 请求存储</td>
+</tr>
+<tr>
+<td>C-FIND</td>
+<td>Composite SOP Find</td>
+<td>复合 SOP 请求查找</td>
+</tr>
+<tr>
+<td>C-GET</td>
+<td>Composite SOP Get</td>
+<td>复合 SOP 请求获取</td>
+</tr>
+<tr>
+<td>C-MOVE</td>
+<td>Composite SOP Move</td>
+<td>复合 SOP 请求迁移。只是请求，具体传输需要使用 C-STORE</td>
+</tr>
+<tr>
+<td>C-ECHO</td>
+<td>Composite SOP Echo</td>
+<td>复合 SOP 发现服务。echo 有回声的意思，该服务用于判断对等 DIMSE 服务使用者之间的通讯是否存在</td>
+</tr>
+<tr>
+<td>C-CANCEL</td>
+<td>Composite SOP Cancel</td>
+<td>复合 SOP 取消服务。信息对象实体无操作时返回</td>
+</tr>
+<tr>
+<td>DIMSE-N</td>
+<td>DIMSE Normal SOP Service</td>
+<td>DIMSE 对标准 SOP的服务。一般由一个 DIMSE 服务使用者向另一个对等 DIMSE 服务使用者发起，包含：N-EVENT-REPORT、N-GET、N-SET、N-ACTION、N-CREATE、N-DELETE</td>
+</tr>
+<tr>
+<td>N-EVENT-REPORT</td>
+<td>Normal SOP Event Report</td>
+<td>标准 SOP 报告服务。由一个 DIMSE 服务使用者激活，向对等 DIMSE 服务使用者报告有关某个 SOP 实例的事件，该服务为证实服务，需要等待响应。</td>
+</tr>
+<tr>
+<td>N-GET</td>
+<td>Normal SOP Get</td>
+<td>标准 SOP 请求检索信息</td>
+</tr>
+<tr>
+<td>N-SET</td>
+<td>Normal SOP Set</td>
+<td>标准 SOP 请求修改信息</td>
+</tr>
+<tr>
+<td>N-ACTION</td>
+<td>Normal SOP Action</td>
+<td>标准 SOP 请求执行某个动作</td>
+</tr>
+<tr>
+<td>N-CREATE</td>
+<td>Normal SOP Create</td>
+<td>标准 SOP 请求创建某个 SOP 类的一个实例</td>
+</tr>
+<tr>
+<td>N-DELETE</td>
+<td>Normal SOP Delete</td>
+<td>标准 SOP 请求删除某个 SOP 类的一个实例</td>
+</tr>
+<tr>
+<td>UID</td>
+<td>Unique IDentifier</td>
+<td>唯一标识符</td>
+</tr>
+<tr>
+<td>FSC</td>
+<td>File Set Creator</td>
+<td>文件集生成器</td>
+</tr>
+<tr>
+<td>FSR</td>
+<td>File Set Reader</td>
+<td>文件集阅读器</td>
+</tr>
+<tr>
+<td>FSU</td>
+<td>FIle Set Update</td>
+<td>文件集更新器</td>
+</tr>
+<tr>
+<td>OSI model</td>
+<td>Open System Interconnection Reference Model</td>
+<td>开放式系统互联通信参考模型</td>
+</tr>
+<tr>
+<td>IOS</td>
+<td>International Organization for Standardization</td>
+<td>国际标准化组织</td>
+</tr>
+<tr>
+<td>PCI</td>
+<td>Protocol Control Information</td>
+<td>协议控制信息</td>
+</tr>
+<tr>
+<td>ICI</td>
+<td>Interface Control Information</td>
+<td>接口控制信息</td>
+</tr>
+<tr>
+<td>IDU</td>
+<td>Interface Data Unit</td>
+<td>接口数据单元</td>
+</tr>
+<tr>
+<td>ACSE</td>
+<td>Association Control Service Element</td>
+<td>关联控制服务元素</td>
+</tr>
+<tr>
+<td>ULP</td>
+<td>Upper Layer Protocol</td>
+<td>上层协议</td>
+</tr>
+<tr>
+<td>PDU</td>
+<td>Protocol Data Unit</td>
+<td>协议数据单元</td>
+</tr>
+<tr>
+<td>A-ASSOCIATE</td>
+<td>&lt;</td>
+<td>连接。AE 间建立连接</td>
+</tr>
+<tr>
+<td>A-RELEASE</td>
+<td>&lt;</td>
+<td>释放连接。AE 间释放连接</td>
+</tr>
+<tr>
+<td>A-ABORT</td>
+<td>&lt;</td>
+<td>异常终止。AE 间发现异常后强制终止</td>
+</tr>
+<tr>
+<td>A-DATA</td>
+<td>&lt;</td>
+<td>数据传输。AE 间数据传输</td>
+</tr>
+<tr>
+<td>A-P-ABORT</td>
+<td>&lt;</td>
+<td>通知异常终止。AE 间通知连接的异常终止</td>
+</tr>
+<tr>
+<td>A-ASSOCIATE-RQ</td>
+<td>Associate Request</td>
+<td>连接请求</td>
+</tr>
+<tr>
+<td>A-ASSOCIATE-AC</td>
+<td>Associate Accept</td>
+<td>连接接受</td>
+</tr>
+<tr>
+<td>A-ASSOCIATE-RJ</td>
+<td>Associate Reject</td>
+<td>连接拒绝</td>
+</tr>
+<tr>
+<td>A-RELEASE-RQ</td>
+<td>Release Request</td>
+<td>释放连接请求</td>
+</tr>
+<tr>
+<td>A-RELEASE-RP</td>
+<td>Release Respond</td>
+<td>释放连接回应</td>
+</tr>
+<tr>
+<td>A-ABORT</td>
+<td>Abort</td>
+<td>中断</td>
+</tr>
+<tr>
+<td>P-DATA-TF</td>
+<td>Data Transfer</td>
+<td>数据传输</td>
+</tr>
+<tr>
+<td>PDV</td>
+<td>Presentation Data Value</td>
+<td>表示数据值？表达资料值？演示数据值？</td>
+</tr>
+<tr>
+<td>Little Endian</td>
+<td>&lt;</td>
+<td>低字节序/小端序。按照从低地址到高地址的顺序存放数据的低位字节到高位字节。DICOM 文件中各数据元素排列的顺序按照标签数值 Little Endian 编码</td>
+</tr>
+<tr>
+<td>Big Endian</td>
+<td>&lt;</td>
+<td>高字节序/大端序。按照从低地址到高地址的顺序存放数据的高位字节到低位字节</td>
+</tr>
+<tr>
+<td>MWL</td>
+<td>Modality Worklist</td>
+<td>设备工作清单</td>
+</tr>
+<tr>
+<td>MPPS</td>
+<td>Modality Performed Procedure Step</td>
+<td>设备执行过程的步骤。即能实时查看到设备运行状态</td>
+</tr>
+<tr>
+<td>Storage Commitment</td>
+<td>&lt;</td>
+<td>SCP 的一种服务，让成像设备在删除图像缓存前可以确认 SCP 上已经安全的存储了该图像</td>
+</tr>
+<tr>
+<td>IHE</td>
+<td>Integrating The Healthcare Enterprise</td>
+<td>医疗健康信息集成规范</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/DICOM/" rel="tag"># DICOM</a>
+            
+              <a href="/tags/专业术语/" rel="tag"># 专业术语</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/08/09/DICOM-的一些疑问/" rel="next" title="DICOM 的一些疑问">
+                  <i class="fa fa-chevron-left"></i> DICOM 的一些疑问
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/08/12/DICOM-文件编码/" rel="prev" title="DICOM 文件编码">
+                  DICOM 文件编码 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="gitalk-container"></div>
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.png"
+      alt="ZHL">
+  <p class="site-author-name" itemprop="name">ZHL</p>
+  <div class="site-description motion-element" itemprop="description">我的博客</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZHL</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.3.0</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+    var gitalk = new Gitalk({
+      clientID: '1422018403cef567d9ea',
+      clientSecret: 'cff6b3aa554481268305af952f14f47e7acd7b19',
+      repo: 'Gitalk',
+      owner: 'zhuhelong',
+      admin: ['zhuhelong'],
+      id: 'c7902d7c8407412e439f0dea5678f909',
+        language: 'zh-CN',
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
+
+</body>
+</html>

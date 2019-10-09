@@ -1,0 +1,2286 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-x16.ico?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="我的博客">
+<meta name="keywords" content="ZHL">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ZHL的博客">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="ZHL的博客">
+<meta property="og:description" content="我的博客">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ZHL的博客">
+<meta name="twitter:description" content="我的博客">
+  <link rel="canonical" href="http://yoursite.com/page/2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>ZHL的博客</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9fd3e2a7c57b3971f3439f9713354241";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ZHL的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">love-wh</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-home">
+            
+  <section id="posts" class="posts-expand">
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/13/DICOM-VR-表/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/13/DICOM-VR-表/" class="post-title-link" itemprop="url">DICOM VR 表</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-13 11:18:18" itemprop="dateCreated datePublished" datetime="2019-08-13T11:18:18+08:00">2019-08-13</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>DICOM 标准（2019年）一共包含 34 种 VR。</p>
+<table>
+<thead>
+<tr>
+<th>VR Name<br>值表示法名称</th>
+<th>Definition<br>定义</th>
+<th>Character Repertoire<br>字符集</th>
+<th>Length of Value<br>值长度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AE<br>Application Entity</td>
+<td>A string of characters that identifies an Application Entity with leading and trailing spaces (20H) being non-significant. A value consisting solely of spaces shall not be used.</td>
+<td>Default Character Repertoire excluding character code 5CH(the BACKSLASH “&quot; in ISO-IR6), and all control characters.</td>
+<td>16 bytes maximum</td>
+</tr>
+<tr>
+<td>AS<br>Age String</td>
+<td>A string of characters with one of the following formats – nnnD,nnnW, nnnM, nnnY; where nnn shall contain the number of daysfor D, weeks for W, months for M, or years for Y.<br>Example: “018M” would represent an age of 18 months.</td>
+<td>“0”-“9”, “D”, “W”, “M”, “Y” of Default Character Repertoire</td>
+<td>4 bytes fixed</td>
+</tr>
+<tr>
+<td>AT<br>Attribute Tag</td>
+<td>Ordered pair of 16-bit unsigned integers that is the value of a DataElement Tag.<br>Example: A Data Element Tag of (0018,00FF) would be encodedas a series of 4 bytes in a Little-Endian Transfer Syntax as18H,00H,FFH,00H.<br>Note<br>The encoding of an AT value is exactly the same as the encoding of a Data Element Tag as defined in Section7.</td>
+<td>not applicable</td>
+<td>4 bytes fixed</td>
+</tr>
+<tr>
+<td>CS<br>Code String</td>
+<td>A string of characters identifying a controlled concept. Leading or trailing spaces (20H) are not significant.</td>
+<td>Uppercase characters, “0”-“9”, the SPACE character, and underscore “_”, of the Default Character Repertoire</td>
+<td>16 bytes maximum</td>
+</tr>
+<tr>
+<td>DA<br>Date</td>
+<td>A string of characters of the format YYYYMMDD; where YYYY shall contain year, MM shall contain the month, and DD shall contain the day, interpreted as a date of the Gregorian calendarsystem.<br>Example:<br>“19930822” would represent August 22, 1993.<br>Note<br>1. The ACR-NEMA Standard 300 (predecessor to DICOM) supported a string of characters of the format YYYY.MM.DD for this VR. Use of this format is not compliant.<br>2. See also DT VR in this table.<br>3. Dates before year 1582, e.g., used for dating historical or archeological items, are interpreted as proleptic Gregorian calendar dates, unless otherwise specified.</td>
+<td>“0”-“9” of Default Character Repertoire<br>In the context of a Query with range matching (see PS3.4), the character “-“ is allowed,and a trailing SPACE character is allowed for padding.</td>
+<td>8 bytes fixed<br>In the context of a Query with range matching (seePS3.4), the lengthis 18 bytes maximum.</td>
+</tr>
+<tr>
+<td>DS<br>Decimal String</td>
+<td>A string of characters representing either a fixed point number or a floating point number. A fixed point number shall contain only the characters 0-9 with an optional leading “+” or “-“ and an optional “.” to mark the decimal point. A floating point number shall be conveyed as defined in ANSI X3.9, with an “E” or “e” to indicate the start of the exponent. Decimal Strings may be padded with leading or trailing spaces. Embedded spaces are not allowed.<br>Note<br>Data Elements with multiple values using this VR may not be properly encoded if Explicit-VR Transfer Syntax is used and the VL of this attribute exceeds 65534 bytes.</td>
+<td>“0”-“9”, “+”, “-“, “E”, “e”, “.” and the SPACE character of Default Character Repertoire</td>
+<td>16 bytes maximum</td>
+</tr>
+<tr>
+<td>DT<br>Date Time</td>
+<td>A concatenated date-time character string in the format:<br>YYYYMMDDHHMMSS.FFFFFF&amp;ZZXX<br>The components of this string, from left to right, are YYYY = Year, MM = Month, DD = Day, HH = Hour (range “00” - “23”), MM = Minute (range “00” - “59”), SS = Second (range “00” - “60”).<br>FFFFFF = Fractional Second contains a fractional part of a second as small as 1 millionth of a second (range “000000” - “999999”).<br>&amp;ZZXX is an optional suffix for offset from Coordinated Universal Time (UTC), where &amp; = “+” or “-“, and ZZ = Hours and XX = Minutes of offset.<br>The year, month, and day shall be interpreted as a date of the Gregorian calendar system.<br>A 24-hour clock is used. Midnight shall be represented by only “0000” since “2400” would violate the hour range.<br>The Fractional Second component, if present, shall contain 1 to 6 digits. If Fractional Second is unspecified the preceding “.” shall not be included. The offset suffix, if present, shall contain 4 digits. The string may be padded with trailing SPACE characters. Leading and embedded spaces are not allowed.<br>A component that is omitted from the string is termed a null component. Trailing null components of Date Time indicate that the value is not precise to the precision of those components. The YYYY component shall not be null. Non-trailing null components are prohibited. The optional suffix is not considered as acomponent.<br>A Date Time value without the optional suffix is interpreted to be in the local time zone of the application creating the Data Element, unless explicitly specified by the Timezone Offset From UTC (0008,0201).<br>UTC offsets are calculated as “local time minus UTC”. The offset for a Date Time value in UTC shall be +0000.<br>Note<br>1.The range of the offset is -1200 to +1400. The offset for United States Eastern Standard Time is -0500. The offset for Japan Standard Time is +0900.<br>2.The RFC 2822 use of -0000 as an offset to indicate local time is not allowed.<br>3.A Date Time value of 195308 means August 1953, not specific to particular day. A Date Time value of 19530827111300.0 means August 27, 1953, 11;13 a.m. accurate to 1/10th second.<br>4.The Second component may have a value of 60 only for a leap second.<br>5.The offset may be included regardless of null components; e.g., 2007-0500 is a legal value.</td>
+<td>“0”-“9”, “+”, “-“, “.” and the SPACE character of Default Character Repertoire</td>
+<td>26 bytes maximum<br>In the context of a Query with range matching (see PS3.4), the length is 54 bytes maximum.</td>
+</tr>
+<tr>
+<td>FL<br>Floating Point Single</td>
+<td>Single precision binary floating point number represented in IEEE 754:1985 32-bit Floating Point Number Format.</td>
+<td>not applicable</td>
+<td>4 bytes fixed</td>
+</tr>
+<tr>
+<td>FD<br>Floating Point Double</td>
+<td>Double precision binary floating point number represented in IEEE 754:1985 64-bit Floating Point Number Format.</td>
+<td>not applicable</td>
+<td>8 bytes fixed</td>
+</tr>
+<tr>
+<td>IS<br>Integer String</td>
+<td>A string of characters representing an Integer in base-10 (decimal), shall contain only the characters 0 - 9, with an optional leading “+” or “-“. It may be padded with leading and/or trailing spaces.Embedded spaces are not allowed.<br>The integer, n, represented shall be in the range:<br>-2^31 &lt;= n &lt;= (2^31 -1).</td>
+<td>“0”-“9”, “+”, “-“ and the SPACE character of Default Character Repertoire</td>
+<td>12 bytes maximum</td>
+</tr>
+<tr>
+<td>LO<br>Long String</td>
+<td>A character string that may be padded with leading and/or trailing spaces. The character code 5CH (the BACKSLASH “&quot; in ISO-IR 6) shall not be present, as it is used as the delimiter between values in multi-valued data elements. The string shall not have Control Characters except for ESC.</td>
+<td>Default Character Repertoire and/or as defined by (0008,0005) excluding character code 5CH (the BACKSLASH “&quot; in ISO-IR 6), and all Control Characters except ESC when used for ISO 2022 escape sequences.</td>
+<td>64 chars maximum<br>(see Note in Section 6.2)</td>
+</tr>
+<tr>
+<td>LT<br>Long Text</td>
+<td>A character string that may contain one or more paragraphs. It may contain the Graphic Character set and the Control Characters, CR, LF, FF, and ESC. It may be padded with trailing spaces, which may be ignored, but leading spaces are considered to be significant. Data Elements with this VR shall not be multi-valued and therefore character code 5CH (the BACKSLASH “&quot; in ISO-IR 6) may be used.</td>
+<td>Default Character Repertoire and/or as defined by (0008,0005) excluding Control Characters except TAB, LF, FF, CR (and ESC when used for ISO 2022 escapesequences).</td>
+<td>10240 chars maximum<br>(seeNote in Section6.2)</td>
+</tr>
+<tr>
+<td>OB<br>Other Byte</td>
+<td>An octet-stream where the encoding of the contents is specified by the negotiated Transfer Syntax. OB is a VR that is insensitive to byte ordering (see Section 7.3). The octet-stream shall be padded with a single trailing NULL byte value (00H) when necessary to achieve even length.</td>
+<td>not applicable</td>
+<td>see Transfer<br>Syntax definition</td>
+</tr>
+<tr>
+<td>OD<br>Other Double</td>
+<td>A stream of 64-bit IEEE 754:1985 floating point words. OD is a VR that requires byte swapping within each 64-bit word when changing byte ordering (see Section 7.3).</td>
+<td>not applicable</td>
+<td>2^32 - 8 bytes maximum</td>
+</tr>
+<tr>
+<td>OF<br>Other Float</td>
+<td>A stream of 32-bit IEEE 754:1985 floating point words. OF is a VR that requires byte swapping within each 32-bit word when changing byte ordering (see Section 7.3).</td>
+<td>not applicable</td>
+<td>2^32 - 4 bytes maximum</td>
+</tr>
+<tr>
+<td>OL<br>Other Long</td>
+<td>A stream of 32-bit words where the encoding of the contents is specified by the negotiated Transfer Syntax. OL is a VR that requires byte swapping within each word when changing byte ordering (see Section 7.3).</td>
+<td>not applicable</td>
+<td>see Transfer<br>Syntax definition</td>
+</tr>
+<tr>
+<td>OV<br>Other 64-bit Very Long</td>
+<td>A stream of 64-bit words where the encoding of the contents is specified by the negotiated Transfer Syntax. OV is a VR that requires byte swapping within each word when changing byte ordering (see Section 7.3).</td>
+<td>not applicable</td>
+<td>see Transfer<br>Syntax definition</td>
+</tr>
+<tr>
+<td>OW<br>Other Word</td>
+<td>A stream of 16-bit words where the encoding of the contents is specified by the negotiated Transfer Syntax. OW is a VR that requires byte swapping within each word when changing byte ordering (see Section 7.3).</td>
+<td>not applicable</td>
+<td>see Transfer<br>Syntax definition</td>
+</tr>
+<tr>
+<td>PN<br>Person Name</td>
+<td>A character string encoded using a 5 component convention. The character code 5CH (the BACKSLASH “&quot; in ISO-IR 6) shall not be present, as it is used as the delimiter between values in multi-valued data elements. The string may be padded with trailing spaces. For human use, the five components in their order of occurrence are: family name complex, given name complex, middle name, name prefix, name suffix.<br>Note<br>HL7 prohibits leading spaces within a component; DICOM allows leading and trailing spaces and considers them insignificant.<br>Any of the five components may be an empty string. The component delimiter shall be the caret “^” character (5EH). There shall be no more than four component delimiters, i.e., none after the last component if all components are present. Delimiters are required for interior null components. Trailing null components and their delimiters may be omitted. Multiple entries are permitted in each component and are encoded as natural text strings, in the format preferred by the named person.<br>For veterinary use, the first two of the five components in their order of occurrence are: responsible party family name or responsible organization name, patient name. The remaining components are not used and shall not be present.<br>This group of five components is referred to as a Person Name component group.<br>For the purpose of writing names in ideographic characters and in phonetic characters, up to 3 groups of components (see Annex H, Annex I and Annex J) may be used. The delimiter for component groups shall be the equals character “=” (3DH). There shall be no more than two component group delimiters, i.e., none after the last component group if all component groups are present. The three component groups of components in their order of occurrence are: an alphabetic representation, an ideographic representation, and a phonetic representation.<br>Any component group may be absent, including the first component group. In this case, the person name may start with one or more “=” delimiters. Delimiters are required for interior null component groups. Trailing null component groups and their delimiters may be omitted.<br>Precise semantics are defined for each component group. See Section 6.2.1.2.<br>For examples and notes, see Section 6.2.1.1.</td>
+<td>Default Character Repertoire and/or as defined by (0008,0005) excluding character code 5CH (the BACKSLASH “&quot; in ISO-IR 6) and all Control Characters except ESC when used for ISO 2022 escape sequences.</td>
+<td>64 chars maximum per component group<br>(see Note inSection 6.2)</td>
+</tr>
+<tr>
+<td>SH<br>Short String</td>
+<td>A character string that may be padded with leading and/or trailing spaces. The character code 05CH (the BACKSLASH “&quot; in ISO-IR 6) shall not be present, as it is used as the delimiter between values for multiple data elements. The string shall not have Control Characters except ESC.</td>
+<td>Default Character Repertoire and/or as defined by(0008,0005) excluding character code 5CH (the BACKSLASH “&quot; in ISO-IR 6)and all Control Characters except ESC when used for ISO 2022 escape sequences.</td>
+<td>16 chars maximum<br>(see Note in Section 6.2)</td>
+</tr>
+<tr>
+<td>SL<br>Signed Long</td>
+<td>Signed binary integer 32 bits long in 2’s complement form.<br>Represents an integer, n, in the range:<br>-2^31 &lt;= n &lt;= 2^31 - 1.</td>
+<td>not applicable</td>
+<td>4 bytes fixed</td>
+</tr>
+<tr>
+<td>SQ<br>Sequence of Items</td>
+<td>Value is a Sequence of zero or more Items, as defined in Section 7.5.</td>
+<td>not applicable (see Section 7.5)</td>
+<td>not applicable (see Section 7.5)</td>
+</tr>
+<tr>
+<td>SS<br>Signed Short</td>
+<td>Signed binary integer 16 bits long in 2’s complement form.<br>Represents an integer n in the range:<br>-2^15 &lt;= n &lt;= 2^15 - 1.</td>
+<td>not applicable</td>
+<td>2 bytes fixed</td>
+</tr>
+<tr>
+<td>ST<br>Short Text</td>
+<td>A character string that may contain one or more paragraphs. It may contain the Graphic Character set and the Control Characters, CR, LF, FF, and ESC. It may be padded with trailing spaces, which may be ignored, but leading spaces are considered to be significant. Data Elements with this VR shall not be multi-valued and therefore character code 5CH (the BACKSLASH “&quot; in ISO-IR 6) may be used.</td>
+<td>Default Character Repertoireand/or as defined by (0008,0005) excluding Control Characters except TAB, LF,FF, CR (and ESC when used for ISO 2022 escape sequences).</td>
+<td>1024 chars maximum<br>(see Note in Section 6.2)</td>
+</tr>
+<tr>
+<td>SV<br>Signed 64-bitVery Long</td>
+<td>Signed binary integer 64 bits long. Represents an integer n in the range:<br>-2^63 &lt;= n &lt;= 2^63 - 1.</td>
+<td>not applicable</td>
+<td>8 bytes fixed</td>
+</tr>
+<tr>
+<td>TM<br>Time</td>
+<td>A string of characters of the format HHMMSS.FFFFFF; where HH contains hours (range “00” - “23”), MM contains minutes (range “00” - “59”), SS contains seconds (range “00” - “60”), and FFFFFF contains a fractional part of a second as small as 1 millionth of a second (range “000000” - “999999”). A 24-hour clock is used. Midnight shall be represented by only “0000” since “2400” would violate the hour range. The string may be padded with trailing spaces. Leading and embedded spaces are not allowed.<br>One or more of the components MM, SS, or FFFFFF may be unspecified as long as every component to the right of an unspecified component is also unspecified, which indicates that the value is not precise to the precision of those unspecified components.<br>The FFFFFF component, if present, shall contain 1 to 6 digits. If FFFFFF is unspecified the preceding “.” shall not be included.<br>Examples:<br>1.”070907.0705 “ represents a time of 7 hours, 9 minutes and 7.0705 seconds.<br>2.”1010” represents a time of 10 hours, and 10 minutes.<br>3.”021 “ is an invalid value.<br>Note<br>1.The ACR-NEMA Standard 300 (predecessor to DICOM) supported a string of characters of the format HH:MM:SS.frac for this VR. Use of this format is not compliant.<br>2.See also DT VR in this table.<br>3.The SS component may have a value of 60 only for a leap second.</td>
+<td>“0”-“9”, “.” and the SPACE character of Default Character Repertoire<br>In the context of a Query with range matching (see PS3.4), the character “-“ is allowed.</td>
+<td>14 bytes maximum<br>In the context of a Query with range matching (see PS3.4), the length is 28 bytes maximum.</td>
+</tr>
+<tr>
+<td>UC<br>Unlimited Characters</td>
+<td>A character string that may be of unlimited length that may be padded with trailing spaces. The character code 5CH (the BACKSLASH “&quot; in ISO-IR 6) shall not be present, as it is used as the delimiter between values in multi-valued data elements. The string shall not have Control Characters except for ESC.</td>
+<td>Default Character Repertoire and/or as defined by (0008,0005) excluding character code 5CH (the BACKSLASH “&quot; in ISO-IR 6),and all Control Characters except ESC when used for ISO 2022 escape sequences.</td>
+<td>2^32 - 2 bytes maximum<br>See Note 2</td>
+</tr>
+<tr>
+<td>UI<br>Unique Identifier (UID)</td>
+<td>A character string containing a UID that is used to uniquely identify a wide variety of items. The UID is a series of numeric components separated by the period “.” character. If a Value Field containing one or more UIDs is an odd number of bytes in length, the Value Field shall be padded with a single trailing NULL (00H) character to ensure that the Value Field is an even number of bytes in length. See Section 9 and Annex B for a complete specification and examples.</td>
+<td>“0”-“9”, “.” of Default Character Repertoire</td>
+<td>64 bytes maximum</td>
+</tr>
+<tr>
+<td>UL<br>Unsigned Long</td>
+<td>Unsigned binary integer 32 bits long. Represents an integer n in the range:<br>0 &lt;= n &lt; 2^32.</td>
+<td>not applicable</td>
+<td>4 bytes fixed</td>
+</tr>
+<tr>
+<td>UN<br>Unknown</td>
+<td>An octet-stream where the encoding of the contents is unknown<br>(see Section 6.2.2).</td>
+<td>not applicable</td>
+<td>Any length valid for any of the other DICOM Value Representations</td>
+</tr>
+<tr>
+<td>UR<br>Universal<br>Resource<br>Identifier or<br>Universal<br>Resource<br>Locator<br>(URI/URL)</td>
+<td>A string of characters that identifies a URI or a URL as defined in [RFC3986]. Leading spaces are not allowed. Trailing spaces shall be ignored. Data Elements with this VR shall not be multi-valued.<br>Note<br>Both absolute and relative URIs are permitted. If the URI is relative, then it is relative to the base URI of the object within which it is contained.</td>
+<td>The subset of the Default Character Repertoire required for the URI as defined in IETF RFC3986 Section 2, plus the space (20H) character permitted only as trailing padding.<br>Characters outside the permitted character set must be “percent encoded”.<br>Note<br>The Backslash (5CH) character is among those disallowed in URIs.</td>
+<td>2^32 - 2 bytes maximum.<br>See Note 2</td>
+</tr>
+<tr>
+<td>US<br>Unsigned Short</td>
+<td>Unsigned binary integer 16 bits long. Represents integer n in the range:<br>0 &lt;= n &lt; 2^16 .</td>
+<td>not applicable</td>
+<td>2 bytes fixed</td>
+</tr>
+<tr>
+<td>UT<br>Unlimited Text</td>
+<td>A character string that may contain one or more paragraphs. It may contain the Graphic Character set and the Control Characters, CR, LF, FF, and ESC. It may be padded with trailing spaces, which may be ignored, but leading spaces are considered to be significant. Data Elements with this VR shall not be multi-valued and therefore character code 5CH (the BACKSLASH “&quot; in ISO-IR 6) may be used.</td>
+<td>Default Character Repertoire and/or as defined by(0008,0005) excluding Control Characters except TAB, LF, FF, CR (and ESC when used for ISO 2022 escape sequences).</td>
+<td>2^32 - 2 bytes maximum<br>See Note 2</td>
+</tr>
+<tr>
+<td>UV<br>Unsigned 64-bit Very Long</td>
+<td>Unsigned binary integer 64 bits long. Represents an integer n in the range:<br>0 &lt;= n &lt; 2^64.</td>
+<td>not applicable</td>
+<td>8 bytes fixed</td>
+</tr>
+</tbody></table>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/13/DICOM-标准各部分基本内容/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/13/DICOM-标准各部分基本内容/" class="post-title-link" itemprop="url">DICOM 标准各部分基本内容</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-13 09:23:58" itemprop="dateCreated datePublished" datetime="2019-08-13T09:23:58+08:00">2019-08-13</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="Part-1-Introduction-and-Overview"><a href="#Part-1-Introduction-and-Overview" class="headerlink" title="Part 1 Introduction and Overview"></a>Part 1 Introduction and Overview</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>引言与概述</p>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>简要介绍了 DICOM 的历史、概念、适用范围及组成。</p>
+<h1 id="Part-2-Conformance"><a href="#Part-2-Conformance" class="headerlink" title="Part 2 Conformance"></a>Part 2 Conformance</h1><h2 id="标题-1"><a href="#标题-1" class="headerlink" title="标题"></a>标题</h2><p>一致性</p>
+<h2 id="内容-1"><a href="#内容-1" class="headerlink" title="内容"></a>内容</h2><p>定义了要求制造商精确地描述的其产品的 DICOM 兼容性，即该产品的 DICOM 兼容性声明。</p>
+<h2 id="重要内容"><a href="#重要内容" class="headerlink" title="重要内容"></a>重要内容</h2><ol>
+<li><strong>Table A.1-2. UID Values</strong>，该表格包含 <strong>UID</strong> 值与 <strong>UID</strong> 名的对应关系。</li>
+</ol>
+<h1 id="Part-3-Information-Object-Definitions"><a href="#Part-3-Information-Object-Definitions" class="headerlink" title="Part 3 Information Object Definitions"></a>Part 3 Information Object Definitions</h1><h2 id="标题-2"><a href="#标题-2" class="headerlink" title="标题"></a>标题</h2><p>信息对象定义</p>
+<h2 id="内容-2"><a href="#内容-2" class="headerlink" title="内容"></a>内容</h2><p>定义了两类信息对象类，即标准型和复合型，对其结构和类型进行了说明。</p>
+<h1 id="Part-4-Service-Class-Specifications"><a href="#Part-4-Service-Class-Specifications" class="headerlink" title="Part 4 Service Class Specifications"></a>Part 4 Service Class Specifications</h1><h2 id="标题-3"><a href="#标题-3" class="headerlink" title="标题"></a>标题</h2><p>服务类规范</p>
+<h2 id="重要内容-1"><a href="#重要内容-1" class="headerlink" title="重要内容"></a>重要内容</h2><ol>
+<li><strong>Table K.6-1. Attributes for the Modality Worklist Information Model</strong></li>
+</ol>
+<h2 id="内容-3"><a href="#内容-3" class="headerlink" title="内容"></a>内容</h2><p>说明了应用于信息对象定义实例操作和处理的许多服务类，详细描述了作用于信息对象上的命令及其产生的结果。定义了可以使用 DICOM 进行通信的类别。</p>
+<h1 id="Part-5-Data-Structures-and-Encoding"><a href="#Part-5-Data-Structures-and-Encoding" class="headerlink" title="Part 5 Data Structures and Encoding"></a>Part 5 Data Structures and Encoding</h1><h2 id="标题-4"><a href="#标题-4" class="headerlink" title="标题"></a>标题</h2><p>数据结构及其编码</p>
+<h2 id="重要内容-2"><a href="#重要内容-2" class="headerlink" title="重要内容"></a>重要内容</h2><ol>
+<li>K.3 Example of Long Text Value Representation in the Chinese Language with GB2312 G1 汉字编码</li>
+</ol>
+<h2 id="内容-4"><a href="#内容-4" class="headerlink" title="内容"></a>内容</h2><p>描述了怎么样对信息对象类和服务类进行构造和编码。</p>
+<h1 id="Part-6-Data-Dictionary"><a href="#Part-6-Data-Dictionary" class="headerlink" title="Part 6 Data Dictionary"></a>Part 6 Data Dictionary</h1><h2 id="标题-5"><a href="#标题-5" class="headerlink" title="标题"></a>标题</h2><p> 数据字典</p>
+<h2 id="内容-5"><a href="#内容-5" class="headerlink" title="内容"></a>内容</h2><p>描述了所有数据元素的标签，名称，关键字，VR，VM 和是否过时。</p>
+<h1 id="Part-7-Message-Exchange"><a href="#Part-7-Message-Exchange" class="headerlink" title="Part 7 Message Exchange"></a>Part 7 Message Exchange</h1><h2 id="标题-6"><a href="#标题-6" class="headerlink" title="标题"></a>标题</h2><p>消息交换</p>
+<h2 id="内容-6"><a href="#内容-6" class="headerlink" title="内容"></a>内容</h2><p>定义了在医学图像环境中进行消息交换通讯的医学图像实体所用到的服务和协议。</p>
+<h1 id="Part-8-Network-Communication-Support-for-Message-Exchange"><a href="#Part-8-Network-Communication-Support-for-Message-Exchange" class="headerlink" title="Part 8 Network Communication Support for Message Exchange"></a>Part 8 Network Communication Support for Message Exchange</h1><h2 id="标题-7"><a href="#标题-7" class="headerlink" title="标题"></a>标题</h2><p>消息交换的网络支持</p>
+<h2 id="内容-7"><a href="#内容-7" class="headerlink" title="内容"></a>内容</h2><p>说明了在网络环境下的通讯服务和支持 DICOM 应用进行消息交换的必要的上层协议。</p>
+<h2 id="重要内容-3"><a href="#重要内容-3" class="headerlink" title="重要内容"></a>重要内容</h2><ol>
+<li>PDU 的结构</li>
+</ol>
+<h1 id="Part-10-Media-Storage-and-File-Format-for-Media-Interchange"><a href="#Part-10-Media-Storage-and-File-Format-for-Media-Interchange" class="headerlink" title="Part 10 Media Storage and File Format for Media Interchange"></a>Part 10 Media Storage and File Format for Media Interchange</h1><h2 id="标题-8"><a href="#标题-8" class="headerlink" title="标题"></a>标题</h2><p>用于媒体交换的媒体存储和文件格式</p>
+<h2 id="内容-8"><a href="#内容-8" class="headerlink" title="内容"></a>内容</h2><p>这部分说明了在可移动存储介质上医学图像信息存储的通用模型。提供了在各种物理存储介质上交换不同类型的医学图像的框架，支持封装任何信息对象定义的文件格式。</p>
+<h1 id="Part-11-Media-Storage-Application-Profiles"><a href="#Part-11-Media-Storage-Application-Profiles" class="headerlink" title="Part 11 Media Storage Application Profiles"></a>Part 11 Media Storage Application Profiles</h1><h2 id="标题-9"><a href="#标题-9" class="headerlink" title="标题"></a>标题</h2><p>媒体存储应用框架</p>
+<h2 id="内容-9"><a href="#内容-9" class="headerlink" title="内容"></a>内容</h2><p>用于医学图像及相关设备信息交换的兼容性申明。</p>
+<h1 id="Part-12-Media-Formats-and-Physical-Media-for-Media-Interchange"><a href="#Part-12-Media-Formats-and-Physical-Media-for-Media-Interchange" class="headerlink" title="Part 12 Media Formats and Physical Media for Media Interchange"></a>Part 12 Media Formats and Physical Media for Media Interchange</h1><h2 id="标题-10"><a href="#标题-10" class="headerlink" title="标题"></a>标题</h2><p>用于媒体交换的物理介质和媒体格式</p>
+<h2 id="内容-10"><a href="#内容-10" class="headerlink" title="内容"></a>内容</h2><p>提供了在医学环境中数字图像计算机之间信息交换的功能。</p>
+<h1 id="Part-14-Grayscale-Standard-Display-Function"><a href="#Part-14-Grayscale-Standard-Display-Function" class="headerlink" title="Part 14 Grayscale Standard Display Function"></a>Part 14 Grayscale Standard Display Function</h1><h2 id="标题-11"><a href="#标题-11" class="headerlink" title="标题"></a>标题</h2><p>灰度显示标准函数</p>
+<h2 id="内容-11"><a href="#内容-11" class="headerlink" title="内容"></a>内容</h2><p>说明了灰度图像的标准显示功能。</p>
+<h1 id="Part-15-Security-and-System-Management-Profiles"><a href="#Part-15-Security-and-System-Management-Profiles" class="headerlink" title="Part 15 Security and System Management Profiles"></a>Part 15 Security and System Management Profiles</h1><h2 id="标题-12"><a href="#标题-12" class="headerlink" title="标题"></a>标题</h2><p>安全和系统管理框架</p>
+<h2 id="内容-12"><a href="#内容-12" class="headerlink" title="内容"></a>内容</h2><p>如题。</p>
+<h1 id="Part-16-Content-Mapping-Resource"><a href="#Part-16-Content-Mapping-Resource" class="headerlink" title="Part 16 Content Mapping Resource"></a>Part 16 Content Mapping Resource</h1><h2 id="标题-13"><a href="#标题-13" class="headerlink" title="标题"></a>标题</h2><p>内容映射标准</p>
+<h2 id="内容-13"><a href="#内容-13" class="headerlink" title="内容"></a>内容</h2><p>定义了标准使用的模板和上下文组。</p>
+<h1 id="Part-17-Explanatory-Information"><a href="#Part-17-Explanatory-Information" class="headerlink" title="Part 17 Explanatory Information"></a>Part 17 Explanatory Information</h1><h2 id="标题-14"><a href="#标题-14" class="headerlink" title="标题"></a>标题</h2><p>说明信息</p>
+<h2 id="内容-14"><a href="#内容-14" class="headerlink" title="内容"></a>内容</h2><p>DICOM 标准的这一部分包含规范性和附录资料形式的解释性信息。</p>
+<h1 id="Part-18-Web-Services"><a href="#Part-18-Web-Services" class="headerlink" title="Part 18 Web Services"></a>Part 18 Web Services</h1><h2 id="标题-15"><a href="#标题-15" class="headerlink" title="标题"></a>标题</h2><p>WEB 服务</p>
+<h2 id="内容-15"><a href="#内容-15" class="headerlink" title="内容"></a>内容</h2><p>指定用于管理和分发DICOM信息对象（如医学图像、注释、报告等）的Web服务。</p>
+<h1 id="Part-19-Application-Hosting"><a href="#Part-19-Application-Hosting" class="headerlink" title="Part 19 Application Hosting"></a>Part 19 Application Hosting</h1><h2 id="标题-16"><a href="#标题-16" class="headerlink" title="标题"></a>标题</h2><p>应用托管</p>
+<h2 id="内容-16"><a href="#内容-16" class="headerlink" title="内容"></a>内容</h2><p>定义两个软件应用程序之间的接口。</p>
+<h1 id="Part-20-Imaging-Reports-using-HL7-Clinical-Document-Architecture"><a href="#Part-20-Imaging-Reports-using-HL7-Clinical-Document-Architecture" class="headerlink" title="Part 20 Imaging Reports using HL7 Clinical Document Architecture"></a>Part 20 Imaging Reports using HL7 Clinical Document Architecture</h1><h2 id="标题-17"><a href="#标题-17" class="headerlink" title="标题"></a>标题</h2><p>采用 HL7 临床文档架构的成像报告。</p>
+<h2 id="内容-17"><a href="#内容-17" class="headerlink" title="内容"></a>内容</h2><p>此部分主要指 DICOM 和 HL7 之间的数据交换。</p>
+<h1 id="Part-21-Transformations-between-DICOM-and-other-Representations"><a href="#Part-21-Transformations-between-DICOM-and-other-Representations" class="headerlink" title="Part 21 Transformations between DICOM and other Representations"></a>Part 21 Transformations between DICOM and other Representations</h1><h2 id="标题-18"><a href="#标题-18" class="headerlink" title="标题"></a>标题</h2><p>DICOM和其他表示之间的转换</p>
+<h2 id="内容-18"><a href="#内容-18" class="headerlink" title="内容"></a>内容</h2><p>如题。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/DICOM-基础知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/12/DICOM-基础知识/" class="post-title-link" itemprop="url">DICOM 基础知识</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-12 15:39:32" itemprop="dateCreated datePublished" datetime="2019-08-12T15:39:32+08:00">2019-08-12</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="数据结构中的包含关系"><a href="#数据结构中的包含关系" class="headerlink" title="数据结构中的包含关系"></a>数据结构中的包含关系</h1><p><img src="/2019/08/12/DICOM-基础知识/Normal-SOP.png" alt="Normal SOP"></p>
+<p>Normal SOP 中只包含一个 IOE。</p>
+<p><img src="/2019/08/12/DICOM-基础知识/Composite-SOP.png" alt="Composite SOP"></p>
+<p>Composite SOP 中包含多个 IOE。</p>
+<h1 id="通信过程"><a href="#通信过程" class="headerlink" title="通信过程"></a>通信过程</h1><p><img src="/2019/08/12/DICOM-基础知识/通信过程.png" alt="通信过程"></p>
+<p>DICOM PDU 的作用在于 AE 间建立基础通信后，AE 间确认建立连接，确认建立连接过程包含“统一”的过程，即双方协商“统一”认可的某些特点条件，经过这个协商，双方才能知道对方的能力和限制，且明确传送的数据编码方式和数据类型。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/DICOM-文件编码/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/12/DICOM-文件编码/" class="post-title-link" itemprop="url">DICOM 文件编码</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-12 13:41:46" itemprop="dateCreated datePublished" datetime="2019-08-12T13:41:46+08:00">2019-08-12</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>剪切出一段 DICOM 文件的编码出来，增强对 DICOM 文件编码的理解。</p>
+<table>
+<thead>
+<tr>
+<th>文件二进制内容（采用十六进制展示）</th>
+<th>Tag</th>
+<th>VR</th>
+<th>VL</th>
+<th>Value</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>00 00 00 …… 00</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>128 字节导言</td>
+</tr>
+<tr>
+<td>44 49 43 4D</td>
+<td></td>
+<td></td>
+<td></td>
+<td>DICM</td>
+<td>DICOM 文件的标志</td>
+</tr>
+<tr>
+<td>02 00 00 00 55 4C 04 00 A8 00 00 00</td>
+<td>0002,0000</td>
+<td>UL</td>
+<td>4</td>
+<td>168</td>
+<td>Group Length</td>
+</tr>
+<tr>
+<td>02 00 01 00 4F 42 00 00 02 00 00 00 00 01</td>
+<td>0002,0001</td>
+<td>OB</td>
+<td>2</td>
+<td>00\01</td>
+<td>File Meta Information Version</td>
+</tr>
+<tr>
+<td>……</td>
+<td>……</td>
+<td>……</td>
+<td>……</td>
+<td></td>
+<td>……</td>
+</tr>
+<tr>
+<td>08 00 20 00 08 00 00 00 31 39  39 35 30 36 30 38</td>
+<td>0008,0020</td>
+<td>DA</td>
+<td>8</td>
+<td>19950608</td>
+<td>Study Data</td>
+</tr>
+<tr>
+<td>……</td>
+<td>……</td>
+<td>……</td>
+<td>……</td>
+<td></td>
+<td>……</td>
+</tr>
+</tbody></table>
+<p>其中前 2 个内容（128 字节全 00 导言 + DICOM 文件标志“DICM”）为标准 DICOM 文件的文件头。</p>
+<p>后续 3 个列出来的内容为数据元素，分别包含显式值表示法 2 字节长的 VL，显式值表示法 4 字节长的 VL 和 隐式值表示法不标明 VL。</p>
+<p>第 1 条 <code>02 00 00 00 55 4C 04 00 A8 00 00 00</code> 的解析：</p>
+<p><code>02 00 00 00 55 4C 04 00 A8 00 00 00</code> 切成：<br><code>02 00 00 00</code>, <code>55 4C</code>, <code>04 00</code>, <code>A8 00 00 00</code></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>二进制值<br>（采用十六进制展示）</th>
+<th>解析值</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tag</td>
+<td>02 00 00 00</td>
+<td>0002,0000</td>
+<td>标签采用 Little Endian 编码，以 2 个字节断开，转码后即 00 02, 00 00</td>
+</tr>
+<tr>
+<td>VR</td>
+<td>55 4C</td>
+<td>UL</td>
+<td>由 ASCII 转码得到结果</td>
+</tr>
+<tr>
+<td>VL</td>
+<td>04 00</td>
+<td>4</td>
+<td>由于是显式值表示法，所以 VL 长度为 2 个字节，采用 Little Endian 编码，转码后即 00 04，得值为 4</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>A8 00 00 00</td>
+<td>168</td>
+<td>采用 Little Endian 编码，转码后即 00 00 00 A8，得值为 168</td>
+</tr>
+</tbody></table>
+<p>第 2 条 <code>02 00 01 00 4F 42 00 00 02 00 00 00 00 01</code> 的解析：</p>
+<p><code>02 00 01 00 4F 42 00 00 02 00 00 00 00 01</code> 切成：<br><code>02 00 01 00</code>, <code>4F 42</code>, <code>00 00 02 00</code>, <code>00 00 00 01</code></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>二进制值<br>（采用十六进制展示）</th>
+<th>解析值</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tag</td>
+<td>02 00 01 00</td>
+<td>0002,0001</td>
+<td>标签采用 Little Endian 编码，以 2 个字节断开，转码后即 00 02, 00 01</td>
+</tr>
+<tr>
+<td>VR</td>
+<td>4F 42</td>
+<td>OB</td>
+<td>由 ASCII 转码得到结果</td>
+</tr>
+<tr>
+<td>VL</td>
+<td>00 00 02 00</td>
+<td>2</td>
+<td>由于是显式值表示法，且 VR 为“OB”（某些 VR 值会导致 VL 长度为 4 个字节），所以 VL 长度为 4 个字节，前面 2 个字节 00 00 丢弃（这是规定），后两个字节采用 Little Endian 编码，转码后即 00 02，得值为 2</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>00 00 00 01</td>
+<td>00\01</td>
+<td>该值无需解析</td>
+</tr>
+</tbody></table>
+<p>第 3 条 <code>08 00 20 00 08 00 00 00 31 39 39 35 30 36 30 38</code> 的解析：</p>
+<p><code>08 00 20 00 08 00 00 00 31 39 39 35 30 36 30 38</code> 切成：<br><code>08 00 20 00</code>, <code>08 00 00 00</code>, <code>31 39 39 35 30 36 30 38</code></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>二进制值<br>（采用十六进制展示）</th>
+<th>解析值</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tag</td>
+<td>08 00 20 00</td>
+<td>0008,0020</td>
+<td>标签采用 Little Endian 编码，以 2 个字节断开，转码后即 00 08, 00 20</td>
+</tr>
+<tr>
+<td>VR</td>
+<td>无</td>
+<td>DA</td>
+<td>由于该标签代表 Study Data（某些标签固定 VR，所以无需显式说明 VR），所以隐式表明 VR 为“DA”</td>
+</tr>
+<tr>
+<td>VL</td>
+<td>08 00 00 00</td>
+<td>8</td>
+<td>由于是隐式值表示法，所以 VL 长度为 4 个字节，采用 Little Endian 编码，转码后即 00 00 00 08，得值为 8</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>31 39 39 35 30 36 30 38</td>
+<td>19950608</td>
+<td>由 ASCII 转码得到结果</td>
+</tr>
+</tbody></table>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/10/DICOM-专业术语列表/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/10/DICOM-专业术语列表/" class="post-title-link" itemprop="url">DICOM 专业术语列表</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-10 12:11:53" itemprop="dateCreated datePublished" datetime="2019-08-10T12:11:53+08:00">2019-08-10</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>给出 DICOM 的一些简写和全称以及翻译，只是个人翻译，如有有更优的翻译或翻译有误，欢迎提出和指正。</p>
+<p><strong>格式：</strong></p>
+<ol>
+<li>符号：&lt;，表示与右前方一格相同。</li>
+<li>符号：-，不表示单词间换行连接符，表其原本语义。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>简写</th>
+<th>全称</th>
+<th>翻译，或包含含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DICOM</td>
+<td>Digital Imaging and Communications in Medicine</td>
+<td>医学数字成像与通信</td>
+</tr>
+<tr>
+<td>PACS</td>
+<td>Picture Archiving and Communication System</td>
+<td>医学影像存档与通信系统</td>
+</tr>
+<tr>
+<td>HIS</td>
+<td>Hospital Information System</td>
+<td>医院信息系统</td>
+</tr>
+<tr>
+<td>RIS</td>
+<td>Radiology Information System</td>
+<td>放射科信息系统</td>
+</tr>
+<tr>
+<td>IOD</td>
+<td>Information Object Definitions</td>
+<td>信息对象定义</td>
+</tr>
+<tr>
+<td>IOE</td>
+<td>Information Object Entity</td>
+<td>信息对象实体。类似于面向对象编程中，IOD 就是类，IOE 就是实例</td>
+</tr>
+<tr>
+<td>Normal IOD</td>
+<td>&lt;</td>
+<td>标准 IOD。只包含单个信息实体的信息对象定义</td>
+</tr>
+<tr>
+<td>Composite IOD</td>
+<td>&lt;</td>
+<td>复合 IOD。包含一个以上的<strong>相关</strong>信息实体的信息对象定义</td>
+</tr>
+<tr>
+<td>VR</td>
+<td>Value Representation</td>
+<td>值表示法。可理解为数据类型，分为隐式值表示法和显式值表示法。隐式值表示法：预先规定表示方法，从数据字典中查找，对应 VL 为 4 个字节。显式值表示法：用两个字符指明表示方法，对应 VL 为 2 个字节，当显式值表示法为 OB、OW、OF、UT、SQ 或 UN 时，VL 拓展为 4 个字节，其中紧跟着的 2 个字节为 0000H</td>
+</tr>
+<tr>
+<td>VM</td>
+<td>Value Multiplicity</td>
+<td>值重度。数据元素的 VM 指定可以在该数据元素的值字段中编码的值的数量。当数据元素具有多个值时，字符串类型的值使用“\”来分隔</td>
+</tr>
+<tr>
+<td>VL</td>
+<td>Value Length</td>
+<td>值长度。其中有未定义长度，一般用于 VR 为 SQ 时，此时 VL 为 FFFFFFFFH</td>
+</tr>
+<tr>
+<td>LUT</td>
+<td>Look Up Table</td>
+<td>查表法</td>
+</tr>
+<tr>
+<td>IOM</td>
+<td>Information Object Module</td>
+<td>信息对象模块</td>
+</tr>
+<tr>
+<td>SCP</td>
+<td>Service Class Provider</td>
+<td>服务提供者</td>
+</tr>
+<tr>
+<td>SCU</td>
+<td>Service Class User</td>
+<td>服务使用者</td>
+</tr>
+<tr>
+<td>DICOM Service Element</td>
+<td>&lt;</td>
+<td>DICOM 服务元素（分为 DIMSE 和 DISSE）</td>
+</tr>
+<tr>
+<td>DIMSE</td>
+<td>DICOM Message Service Elements</td>
+<td>DICOM 消息服务元素。都是证实型服务，包含：DIMSE-C、DIMSE-N</td>
+</tr>
+<tr>
+<td>DISSE</td>
+<td>DICOM Storage Service Elements</td>
+<td>DICOM 存储服务元素</td>
+</tr>
+<tr>
+<td>SE</td>
+<td>Service Element</td>
+<td>服务元素。对特点 SOP 类的信息对象实施的基本操作</td>
+</tr>
+<tr>
+<td>SG</td>
+<td>Service Group</td>
+<td>服务组。属于一个 SOP 类的一组服务元素</td>
+</tr>
+<tr>
+<td>SOP</td>
+<td>Service Object Pair</td>
+<td>服务对象对。（Normal IOD 或 Composite IOD）+ SG（SG 中只含 DIMSE）</td>
+</tr>
+<tr>
+<td>Service Class Specification</td>
+<td>&lt;</td>
+<td>服务类规范。由多个 SOP Class 有规律组成</td>
+</tr>
+<tr>
+<td>AE</td>
+<td>Application Entity</td>
+<td>应用实体。就是各种设备，既可是实体硬件设备，也可是软件</td>
+</tr>
+<tr>
+<td>AET</td>
+<td>Application Entity Title</td>
+<td>应用实体标题</td>
+</tr>
+<tr>
+<td>IE</td>
+<td>Information Entity</td>
+<td>信息实体。现实世界中单一事物（如一幅图像，一个病人等）的一组信息的整体称谓</td>
+</tr>
+<tr>
+<td>Modality</td>
+<td>&lt;</td>
+<td><strong>特指</strong>成像设备</td>
+</tr>
+<tr>
+<td>Study</td>
+<td>&lt;</td>
+<td><strong>特指</strong>一次检查</td>
+</tr>
+<tr>
+<td>DIMSE-C</td>
+<td>DIMSE Composite SOP Service</td>
+<td>DIMSE 对复合 SOP 的服务。一般由一个 DIMSE 服务使用者向另一个对等 DIMSE 服务使用者发起，包含：C-STORE、C-FIND、C-GET、C-MOVE、C-ECHO、C-CANCEL</td>
+</tr>
+<tr>
+<td>C-STORE</td>
+<td>Composite SOP Store</td>
+<td>复合 SOP 请求存储</td>
+</tr>
+<tr>
+<td>C-FIND</td>
+<td>Composite SOP Find</td>
+<td>复合 SOP 请求查找</td>
+</tr>
+<tr>
+<td>C-GET</td>
+<td>Composite SOP Get</td>
+<td>复合 SOP 请求获取</td>
+</tr>
+<tr>
+<td>C-MOVE</td>
+<td>Composite SOP Move</td>
+<td>复合 SOP 请求迁移。只是请求，具体传输需要使用 C-STORE</td>
+</tr>
+<tr>
+<td>C-ECHO</td>
+<td>Composite SOP Echo</td>
+<td>复合 SOP 发现服务。echo 有回声的意思，该服务用于判断对等 DIMSE 服务使用者之间的通讯是否存在</td>
+</tr>
+<tr>
+<td>C-CANCEL</td>
+<td>Composite SOP Cancel</td>
+<td>复合 SOP 取消服务。信息对象实体无操作时返回</td>
+</tr>
+<tr>
+<td>DIMSE-N</td>
+<td>DIMSE Normal SOP Service</td>
+<td>DIMSE 对标准 SOP的服务。一般由一个 DIMSE 服务使用者向另一个对等 DIMSE 服务使用者发起，包含：N-EVENT-REPORT、N-GET、N-SET、N-ACTION、N-CREATE、N-DELETE</td>
+</tr>
+<tr>
+<td>N-EVENT-REPORT</td>
+<td>Normal SOP Event Report</td>
+<td>标准 SOP 报告服务。由一个 DIMSE 服务使用者激活，向对等 DIMSE 服务使用者报告有关某个 SOP 实例的事件，该服务为证实服务，需要等待响应。</td>
+</tr>
+<tr>
+<td>N-GET</td>
+<td>Normal SOP Get</td>
+<td>标准 SOP 请求检索信息</td>
+</tr>
+<tr>
+<td>N-SET</td>
+<td>Normal SOP Set</td>
+<td>标准 SOP 请求修改信息</td>
+</tr>
+<tr>
+<td>N-ACTION</td>
+<td>Normal SOP Action</td>
+<td>标准 SOP 请求执行某个动作</td>
+</tr>
+<tr>
+<td>N-CREATE</td>
+<td>Normal SOP Create</td>
+<td>标准 SOP 请求创建某个 SOP 类的一个实例</td>
+</tr>
+<tr>
+<td>N-DELETE</td>
+<td>Normal SOP Delete</td>
+<td>标准 SOP 请求删除某个 SOP 类的一个实例</td>
+</tr>
+<tr>
+<td>UID</td>
+<td>Unique IDentifier</td>
+<td>唯一标识符</td>
+</tr>
+<tr>
+<td>FSC</td>
+<td>File Set Creator</td>
+<td>文件集生成器</td>
+</tr>
+<tr>
+<td>FSR</td>
+<td>File Set Reader</td>
+<td>文件集阅读器</td>
+</tr>
+<tr>
+<td>FSU</td>
+<td>FIle Set Update</td>
+<td>文件集更新器</td>
+</tr>
+<tr>
+<td>OSI model</td>
+<td>Open System Interconnection Reference Model</td>
+<td>开放式系统互联通信参考模型</td>
+</tr>
+<tr>
+<td>IOS</td>
+<td>International Organization for Standardization</td>
+<td>国际标准化组织</td>
+</tr>
+<tr>
+<td>PCI</td>
+<td>Protocol Control Information</td>
+<td>协议控制信息</td>
+</tr>
+<tr>
+<td>ICI</td>
+<td>Interface Control Information</td>
+<td>接口控制信息</td>
+</tr>
+<tr>
+<td>IDU</td>
+<td>Interface Data Unit</td>
+<td>接口数据单元</td>
+</tr>
+<tr>
+<td>ACSE</td>
+<td>Association Control Service Element</td>
+<td>关联控制服务元素</td>
+</tr>
+<tr>
+<td>ULP</td>
+<td>Upper Layer Protocol</td>
+<td>上层协议</td>
+</tr>
+<tr>
+<td>PDU</td>
+<td>Protocol Data Unit</td>
+<td>协议数据单元</td>
+</tr>
+<tr>
+<td>A-ASSOCIATE</td>
+<td>&lt;</td>
+<td>连接。AE 间建立连接</td>
+</tr>
+<tr>
+<td>A-RELEASE</td>
+<td>&lt;</td>
+<td>释放连接。AE 间释放连接</td>
+</tr>
+<tr>
+<td>A-ABORT</td>
+<td>&lt;</td>
+<td>异常终止。AE 间发现异常后强制终止</td>
+</tr>
+<tr>
+<td>A-DATA</td>
+<td>&lt;</td>
+<td>数据传输。AE 间数据传输</td>
+</tr>
+<tr>
+<td>A-P-ABORT</td>
+<td>&lt;</td>
+<td>通知异常终止。AE 间通知连接的异常终止</td>
+</tr>
+<tr>
+<td>A-ASSOCIATE-RQ</td>
+<td>Associate Request</td>
+<td>连接请求</td>
+</tr>
+<tr>
+<td>A-ASSOCIATE-AC</td>
+<td>Associate Accept</td>
+<td>连接接受</td>
+</tr>
+<tr>
+<td>A-ASSOCIATE-RJ</td>
+<td>Associate Reject</td>
+<td>连接拒绝</td>
+</tr>
+<tr>
+<td>A-RELEASE-RQ</td>
+<td>Release Request</td>
+<td>释放连接请求</td>
+</tr>
+<tr>
+<td>A-RELEASE-RP</td>
+<td>Release Respond</td>
+<td>释放连接回应</td>
+</tr>
+<tr>
+<td>A-ABORT</td>
+<td>Abort</td>
+<td>中断</td>
+</tr>
+<tr>
+<td>P-DATA-TF</td>
+<td>Data Transfer</td>
+<td>数据传输</td>
+</tr>
+<tr>
+<td>PDV</td>
+<td>Presentation Data Value</td>
+<td>表示数据值？表达资料值？演示数据值？</td>
+</tr>
+<tr>
+<td>Little Endian</td>
+<td>&lt;</td>
+<td>低字节序/小端序。按照从低地址到高地址的顺序存放数据的低位字节到高位字节。DICOM 文件中各数据元素排列的顺序按照标签数值 Little Endian 编码</td>
+</tr>
+<tr>
+<td>Big Endian</td>
+<td>&lt;</td>
+<td>高字节序/大端序。按照从低地址到高地址的顺序存放数据的高位字节到低位字节</td>
+</tr>
+<tr>
+<td>MWL</td>
+<td>Modality Worklist</td>
+<td>设备工作清单</td>
+</tr>
+<tr>
+<td>MPPS</td>
+<td>Modality Performed Procedure Step</td>
+<td>设备执行过程的步骤。即能实时查看到设备运行状态</td>
+</tr>
+<tr>
+<td>Storage Commitment</td>
+<td>&lt;</td>
+<td>SCP 的一种服务，让成像设备在删除图像缓存前可以确认 SCP 上已经安全的存储了该图像</td>
+</tr>
+<tr>
+<td>IHE</td>
+<td>Integrating The Healthcare Enterprise</td>
+<td>医疗健康信息集成规范</td>
+</tr>
+</tbody></table>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/09/DICOM-的一些疑问/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/09/DICOM-的一些疑问/" class="post-title-link" itemprop="url">DICOM 的一些疑问</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-09 16:32:25" itemprop="dateCreated datePublished" datetime="2019-08-09T16:32:25+08:00">2019-08-09</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="DIOCM-的标准文件为什么没有-Part-9-和-Part-13"><a href="#DIOCM-的标准文件为什么没有-Part-9-和-Part-13" class="headerlink" title="DIOCM 的标准文件为什么没有 Part 9 和 Part 13"></a>DIOCM 的标准文件为什么没有 Part 9 和 Part 13</h1><p>从 <a href="https://www.dicomstandard.org/current/" target="_blank" rel="noopener">DICOM 官网</a> 下载的标准文件是没有 Part 9 和 Part 13 的，起初我以为是西方人避讳 13 这个数字，但是 9 这个数字应该不是一个不详的数字吧。</p>
+<p>后来在 <a href="http://estore.merge.com/mergecom3/Resources/DICOM/Merge_DICOM_javadoc_v5/doc-files/dicom_intro.html" target="_blank" rel="noopener">这里</a> 找到了答案，原文：</p>
+<blockquote>
+<p>Part 9 is rarely of interest, as it describes how DICOM messages shall be exchanged using the ‘old’ 50-pin point-to-point connection originally specified in the predecessor to DICOM (ACR/NEMA Version 2). This part has been retired from the DICOM standard.</p>
+<p>Part 13 details a point to point protocol for doing print management services. This part has been retired from the DICOM standard.</p>
+</blockquote>
+<p>原来是老技术被淘汰了，所以标准也将这部分去除了。</p>
+<p>顺便把原文全部记下来</p>
+<blockquote>
+<p>The DICOM (Digital Imaging and Communications in Medicine) Standard was originally developed by a joint committee of the American College of Radiology (ACR) and the National Electrical Manufacturers Association (NEMA) to “facilitate the open exchange of information between digital imaging computer systems in medical environments”.</p>
+<p>Since its initial completion in 1993, the standard has taken hold. More and more products are advertising DICOM conformance, and more customers are requiring it. DICOM has also been incorporated as part of a developing European standard by CEN, as a Japanese standard by JIRA, and is increasingly becoming an International Standard.</p>
+<p>DICOM Version 3.0 is composed of several hundreds of pages over sixteen separate parts. Each part of the standard focuses on a different aspect of the DICOM protocol:</p>
+<ul>
+<li>Part 1- Introduction and Overview</li>
+<li>Part 2- Conformance</li>
+<li>Part 3- Information Object Definitions</li>
+<li>Part 4- Service Class Specifications</li>
+<li>Part 5- Data Structures and Encoding</li>
+<li>Part 6- Data Dictionary</li>
+<li>Part 7- Message Exchange</li>
+<li>Part 8- Network Communication Support for Message Exchange</li>
+<li>Part 9- Point-to-Point Communication Support for Message Exchange (retired)</li>
+<li>Part 10- Common Media Storage Functions for Data Interchange</li>
+<li>Part 11- Media Storage Application Profiles</li>
+<li>Part 12- Media Formats and Physical Media for Data Interchange</li>
+<li>Part 13- Print Management Point-to-Point Communication Support (retired)</li>
+<li>Part 14- Grayscale Standard Display Function</li>
+<li>Part 15- Security Profiles</li>
+<li>Part 16- DICOM Content Mapping Resource</li>
+<li>Part 17- Explanatory Information</li>
+<li>Part 18- Web Access to DICOM Persistent Objects (WADO)</li>
+<li>Part 1 of the standard gives an overview of the standard. Since this part was approved before most of the other parts were completed, it is already somewhat outdated and can be confusing.</li>
+</ul>
+<p>Part 2 describes DICOM conformance and how to write a conformance statement. A conformance statement is important because it allows a network administrator to plan or coordinate a network of DICOM applications. For an application to claim DICOM conformance, it must have an accurate conformance statement.</p>
+<p>Parts 3 and 4 define the types of services and information that can be exchanged using DICOM.</p>
+<p>Parts 5 and 6 describe how commands and data shall be encoded so that decoding devices can interpret them.</p>
+<p>Part 7 describes the structure of the DICOM commands, that along with related data, make up a DICOM message. This part also describes the association negotiation process, whereby two DICOM applications mutually agree upon the services they will perform over the network.</p>
+<p>Part 8 describes how the DICOM messages are exchanged over the network using two prominent transport layer protocols; TCP/IP and OSI. This is termed the DICOM Upper Layer Protocol (DICOM UL).</p>
+<p>Part 9 is rarely of interest, as it describes how DICOM messages shall be exchanged using the ‘old’ 50-pin point-to-point connection originally specified in the predecessor to DICOM (ACR/NEMA Version 2). This part has been retired from the DICOM standard.</p>
+<p>Part 10 describes the DICOM model for the storage of medical imaging information on removable media. It specifies the contents of a DICOM File Set, the format of a DICOM File and the policies associated with the maintenance of a DICOM Media Storage Directory (DICOMDIR) structure.</p>
+<p>Part 11 specifies Media Storage Application Profiles that standardizes a number of choices related to a specific clinical need (modality or application). This includes the specification of a specific physical medium and media format (e.g. CD-ROM, 3.5” high-density floppy, …), as well as the types of information (objects) that can be stored within the DICOM File Set. Part 11 also includes useful templates to provide guidance in authoring media application conformance statements.</p>
+<p>Part 12 details the characteristics of various physical medium and media formats that are referenced by the Media Storage Application Profiles of Part 11.</p>
+<p>While parts 11 and 12 of DICOM are expected to evolve along with the introduction of new clinical procedures and the advancement of storage media and file system technology, Part 10 should remain quite stable since it specifies file formats organization independent of medical application or storage technology.</p>
+<p>Part 13 details a point to point protocol for doing print management services. This part has been retired from the DICOM standard.</p>
+<p>Part 14 specifies a standardized display function for display of grayscale images.</p>
+<p>Part 15 specifies Security Profiles to which implementations may claim conformance. Profiles are defined for secure network transfers and secure media.</p>
+<p>Part 16 specifies the DICOM Content Mapping Resource (DCMR) which defines the templates and context groups used elsewhere in the standard.</p>
+<p>Part 17 consolidates informative information previously contained in other parts of the standard. It is composed of several annexes describing the use of the standard.</p>
+<p>Part 18 specifies a web-based service for accessing and presenting DICOM persistent objects (e.g. images, medical imaging reports).</p>
+<p>As a user of this toolkit, you should have access to the DICOM Standard. Merge DICOM Toolkit takes care of most of the details of DICOM for you. However, the standard is the final word. You will probably find Parts 2 to 6 most useful. The DICOM Standard can be ordered from:</p>
+<p>NEMA, 1300 N. 17th Street, Suite 1847, Rosslyn, VA 22209, USA</p>
+<p>or downloaded from <a href="http://medical.nema.org" target="_blank" rel="noopener">http://medical.nema.org</a>.</p>
+<p>The DICOM Standard is typically published every other year. Each version includes approved changes since the last publishing.</p>
+<p>Please note: The DICOM Standard is evolving so rapidly, that additions to the Standard are published as supplements. If you find that this document references a part of the Standard and you cannot find what you are looking for in that part, you probably need to get the proper supplement from NEMA. Other additions to the Standard (e.g., new image objects or documents) will also be published as supplements. NEMA also makes all supplements to the standard freely available on their ftp server.</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/08/记录-Hexo-图片的坑/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/08/记录-Hexo-图片的坑/" class="post-title-link" itemprop="url">记录 Hexo 图片的坑</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-08 18:47:47" itemprop="dateCreated datePublished" datetime="2019-08-08T18:47:47+08:00">2019-08-08</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><table>
+<thead>
+<tr>
+<th>条目</th>
+<th>型号</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>系统</td>
+<td>Windows 10</td>
+<td></td>
+</tr>
+<tr>
+<td>编辑器</td>
+<td>Typora 0.9.73(beta)</td>
+<td></td>
+</tr>
+<tr>
+<td>Hexo</td>
+<td>v3.9.0</td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>今天第一次使用 Hexo，感觉还是棒棒哒。但是，很快蛋疼的事情就出现了，插入图片，不显示。</p>
+<p><img src="/2019/08/08/记录-Hexo-图片的坑/en.jpg" alt></p>
+<p>当时就蒙蔽了，不应该啊，做的这么棒的一款东西，怎么这个还有问题。直接谷歌，发现不是我一个小伙伴出现了这个问题，大家都拿出了自己的解决办法，我试了试，有些地方还是不行，只好自己调教了。</p>
+<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><ol>
+<li>图片上传至 Github。本人不喜欢将图片上传至图床，第一，麻烦；第二，md 文件和资源文件分开放难管理；第三，我鬼知道图床什么时候就 GG 了，😎 Github 总是比图床来的可靠吧！</li>
+<li>完全使用 MarkDown 语法。第一，本人懒，不愿意记那么多；第二，我的 Typora 不认其他奇奇怪怪的语法！</li>
+<li>能够所见即所得。我在我家 Typora 里是什么样，Push 上 Github 里也应该是什么样！</li>
+<li>支持中文！这个，天朝的各位大大都没异议吧！</li>
+<li>愉快的编辑。不要有太多繁琐的操作，图片能拖住丢进去，就绝不会打开资源管理器来选！</li>
+</ol>
+<p><img src="/2019/08/08/记录-Hexo-图片的坑/不要和我说.png" alt></p>
+<p>看到这里如果想直接看解决办法，请直接跳转到 <a href="#总结">总结</a>。</p>
+<h1 id="开撸"><a href="#开撸" class="headerlink" title="开撸"></a>开撸</h1><p>找了一下别人的解决办法，最后发现只有<a href="https://alreadyright.github.io/2019/06/16/aboutHexo/" target="_blank" rel="noopener">这位仁兄</a>的解决办法可能符合我的要求，既然有巨人，那就站他肩膀上，站得高至少也凉快些嘛。</p>
+<h2 id="修改博客配置"><a href="#修改博客配置" class="headerlink" title="修改博客配置"></a>修改博客配置</h2><p>将博客根目录下的文件 <code>_config.yml</code> 中的 <code>post_asset_folder: false</code> 改为 <code>post_asset_folder: true</code>。</p>
+<h2 id="装插件-hexo-asset-image"><a href="#装插件-hexo-asset-image" class="headerlink" title="装插件 hexo-asset-image"></a>装插件 hexo-asset-image</h2><p>装一个可以改写文件路径的插件，图片为什么不显示，就是因为路径的问题。cmd 在博客根目录下 <code>npm install hexo-asset-image -–save</code>。</p>
+<h2 id="发现问题"><a href="#发现问题" class="headerlink" title="发现问题"></a>发现问题</h2><p>装好插件后装逼写一篇博客来，嗯，标题就写《记录-Hexo-图片的坑》，<code>hexo new &quot;记录-Hexo-图片的坑&quot;</code>，在 <code>博客根目录\source\_posts</code>下多了 <code>记录-Hexo-图片的坑.md</code> 和 <code>记录-Hexo-图片的坑</code> 文件夹。打开 <code>记录-Hexo-图片的坑.md</code>插入图片 <code>![](./记录-Hexo-图片的坑/en.jpg)</code>，<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code> 一气呵成，<code>localhost:4000</code> 刷起来，😳😳😳图呢？</p>
+<p>查看一下图片路径，咦，这路径怎么是 <code>.com/xxx.jpg</code>，程序员的直觉告诉我，事情不对！</p>
+<p>再看下<a href="https://alreadyright.github.io/2019/06/16/aboutHexo/" target="_blank" rel="noopener">这位仁兄</a>的博客，奥，插件版本不对，好，改版本！</p>
+<h2 id="修改插件-hexo-asset-image-版本"><a href="#修改插件-hexo-asset-image-版本" class="headerlink" title="修改插件 hexo-asset-image 版本"></a>修改插件 hexo-asset-image 版本</h2><p>将博客根目录下的文件 <code>package.json</code> 中的 <code>&quot;hexo-asset-image&quot;: &quot;1.0.0&quot;</code> 修改为 <code>&quot;hexo-asset-image&quot;: &quot;0.0.3&quot;</code>，别问我😁为什么“这位仁兄”的改是 <code>0.0.1</code>，我改的是 <code>0.0.3</code>，因为我任性！其实是因为试过 <code>0.0.3</code> 也是可以的，高版本总是好一点嘛，不知道这里对不对😂😂😂。</p>
+<p>改完后<code>npm install &amp;&amp; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code> 一气呵成，再 <code>localhost:4000</code> 刷起来，😳😳😳图呢？</p>
+<h2 id="路径写法和中文问题"><a href="#路径写法和中文问题" class="headerlink" title="路径写法和中文问题"></a>路径写法和中文问题</h2><p>卧槽，卧槽，卧槽……</p>
+<p>我的图呢？不应该啊，再看图片路径，怎么会是 <code>/2019/08/08/记录-Hexo-图片的坑/./%E8%AE%B0%E5%BD%95-Hexo-%E5%9B%BE%E7%89%87%E7%9A%84%E5%9D%91/en.jpg</code></p>
+<p>好吧，至少我看到了有部分是对的，没办法，只好看一下插件的源码了。。。。。。</p>
+<p>打开源码文件，位于 <code>博客根目录\node_modules\hexo-asset-image\index.js</code> 。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">var</span> cheerio = <span class="built_in">require</span>(<span class="string">'cheerio'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPosition</span>(<span class="params">str, m, i</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hexo.extend.filter.register(<span class="string">'after_post_render'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> config = hexo.config;</span><br><span class="line">  <span class="keyword">if</span>(config.post_asset_folder)&#123;</span><br><span class="line">    <span class="keyword">var</span> link = data.permalink;</span><br><span class="line">    <span class="keyword">var</span> beginPos = getPosition(link, <span class="string">'/'</span>, <span class="number">3</span>) + <span class="number">1</span>;</span><br><span class="line">    <span class="comment">// In hexo 3.1.1, the permalink of "about" page is like ".../about/index.html".</span></span><br><span class="line">    <span class="keyword">var</span> endPos = link.lastIndexOf(<span class="string">'/'</span>) + <span class="number">1</span>;</span><br><span class="line">    link = link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> toprocess = [<span class="string">'excerpt'</span>, <span class="string">'more'</span>, <span class="string">'content'</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      <span class="keyword">var</span> key = toprocess[i];</span><br><span class="line"> </span><br><span class="line">      <span class="keyword">var</span> $ = cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: <span class="literal">false</span>,</span><br><span class="line">        xmlMode: <span class="literal">false</span>,</span><br><span class="line">        lowerCaseTags: <span class="literal">false</span>,</span><br><span class="line">        decodeEntities: <span class="literal">false</span></span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(<span class="string">'img'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">// For windows style path, we replace '\' to '/'.</span></span><br><span class="line">        <span class="keyword">var</span> src = $(<span class="keyword">this</span>).attr(<span class="string">'src'</span>).replace(<span class="string">'\\'</span>, <span class="string">'/'</span>);   <span class="comment">//---------1</span></span><br><span class="line">        <span class="keyword">if</span>(!<span class="regexp">/http[s]*.*|\/\/.*/</span>.test(src))&#123;</span><br><span class="line">          <span class="comment">// For "about" page, the first part of "src" can't be removed.</span></span><br><span class="line">          <span class="comment">// In addition, to support multi-level local directory.</span></span><br><span class="line">          <span class="keyword">var</span> linkArray = link.split(<span class="string">'/'</span>).filter(<span class="function"><span class="keyword">function</span>(<span class="params">elem</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> elem != <span class="string">''</span>;</span><br><span class="line">          &#125;);</span><br><span class="line">          <span class="keyword">var</span> srcArray = src.split(<span class="string">'/'</span>).filter(<span class="function"><span class="keyword">function</span>(<span class="params">elem</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> elem != <span class="string">''</span>;   <span class="comment">//---------2</span></span><br><span class="line">          &#125;);</span><br><span class="line">          <span class="keyword">if</span>(linkArray[linkArray.length - <span class="number">1</span>] == srcArray[<span class="number">0</span>])   <span class="comment">//---------3</span></span><br><span class="line">            srcArray.shift();</span><br><span class="line">          src = srcArray.join(<span class="string">'/'</span>);</span><br><span class="line">          $(<span class="keyword">this</span>).attr(<span class="string">'src'</span>, <span class="string">'/'</span> + link + src);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] = $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>这代码，应该能改吧，哈哈哈，我承认，第一眼看到，我是蒙蔽的。</p>
+<p>仔细看了一下标记 1 处 <code>var src = $(this).attr(&#39;src&#39;).replace(&#39;\\&#39;, &#39;/&#39;);</code>，猜测 <code>src</code> 应该就是我们写的图片的路径，源码的作用是将 Windows 的文件分隔符改为 Unix 类型的文件分隔符，即将 <code>\</code> 改为 <code>/</code>，这没错，也就是说，我在 Typora 中是可以这样 <code>![](.\记录-Hexo-图片的坑\en.jpg)</code> 写图片路径的，非常好！我的 Typora 支持以相对路径插入图片，非常 nice~！不过需要设置，如图设置：<br><img src="/2019/08/08/记录-Hexo-图片的坑/Typora优先使用相对路径.png" alt="Typora优先使用相对路径"></p>
+<p>设置好，就能愉快的往 Typora 里直接丢图片了，直接拖进去，才是正确的打开方式！</p>
+<p>😳😳😳还是没解决显示图的问题啊！别急，再往下看看，诶！在标记 2 处看出了端倪，原来，我的这种  <code>![](./记录-Hexo-图片的坑/en.jpg)</code> 写法不对！😂😂😂，只能写  <code>![](记录-Hexo-图片的坑/en.jpg)</code> 或   <code>![](/记录-Hexo-图片的坑/en.jpg)</code>，好吧，不支持就不支持吧，那我就写成这样 <code>![](记录-Hexo-图片的坑\en.jpg)</code> 吧。</p>
+<p>再试一下，还是没有图！！！😤😤😤结合图片路径，继续看源码！知道原因了，在标记 3 处，源码作者考虑到了我们需要所见即所得，我们带文件夹的路径写法，在这一步，作者判断了有没有写文件夹，如果我们的 MarkDown 中有写（一般都会写好吧，毕竟能所见即所得啊），他通过判断数组变量 <code>linkArray</code> 最后一个值是否与保存着我们写的路径的数组变量 <code>srcArray</code> 的第一个值相等，如果相等，则删除其中一个，然后拼接，对啊，逻辑没有错啊，为什么我还是看不到图片呢？其实是因为中文的原因，中文图片路径做了 <code>URL</code> 编码，我们看到的 <code>%E8%AE%B0%E5%BD%95-Hexo-%E5%9B%BE%E7%89%87%E7%9A%84%E5%9D%91</code> 其实就是 <code>记录-Hexo-图片的坑</code>，知道原因了，就好解决了。</p>
+<p>将标记 3 处的 <code>var srcArray = src.split(&#39;/&#39;).filter(function(elem){</code> 改为 <code>var srcArray = decodeURI(src).split(&#39;/&#39;).filter(function(elem){</code>，还有其他的改法，但是我怎么简单怎么来，接着再来一遍猛如虎的操作 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>，<code>localhost:4000</code> 刷起来。</p>
+<p>有图片了，舒服~</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
+<li>将博客根目录下的文件 <code>_config.yml</code> 中的 <code>post_asset_folder: false</code> 改为 <code>post_asset_folder: true</code>。</li>
+<li>cmd 在博客根目录下 <code>npm install hexo-asset-image -–save</code>。</li>
+<li>将博客根目录下的文件 <code>package.json</code> 中的 <code>&quot;hexo-asset-image&quot;: &quot;1.0.0&quot;</code> 修改为 <code>&quot;hexo-asset-image&quot;: &quot;0.0.3&quot;</code>，在博客根目录下 cmd <code>npm install</code>；</li>
+<li>修改 <code>博客根目录\node_modules\hexo-asset-image\index.js</code> 文件中的第 38 行为 <code>var srcArray = decodeURI(src).split(&#39;/&#39;).filter(function(elem){</code>；</li>
+<li>在博客根目录下 cmd  <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>，完成。</li>
+</ol>
+<p><strong>注意：图片地址只能写成 <code>/目录/xxx.jpg</code>、<code>目录/xxx.jpg</code>、<code>目录\xxx.jpg</code> 或 <code>\目录\xxx.jpg</code> 的形式，前面不能带 <code>.</code>，且路径中不能含有空格，建议使用 “-” 代替空格。</strong></p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/08/Hexo-GitPage-搭建个人博客/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/08/Hexo-GitPage-搭建个人博客/" class="post-title-link" itemprop="url">Hexo + GitPage 搭建个人博客</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-08 15:38:16" itemprop="dateCreated datePublished" datetime="2019-08-08T15:38:16+08:00">2019-08-08</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><ol>
+<li>npm，意味着需要安装 <a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">Node.js</a>。</li>
+<li>Git，这个不用多说。</li>
+</ol>
+<h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><h2 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h2><p>安装很简单，打开 cmd，运行命令 <code>npm install -g hexo-cli</code>。</p>
+<h2 id="创建本地博客"><a href="#创建本地博客" class="headerlink" title="创建本地博客"></a>创建本地博客</h2><p>Hexo 的原理：</p>
+<ol>
+<li>本地创建博客，写 MarkDown 文件形式的博客；</li>
+<li>Hexo 将 md 文件编译成静态 HTML 文件；</li>
+<li>上传至 Github 仓库；</li>
+<li>通过 GitPage 的功能，实现访问这些静态资源。</li>
+</ol>
+<p>所以需要先在本地创建好博客。创建命令 <code>hexo init &lt;博客名称，建议如下格式：xxx.github.io&gt;</code>，这将会在当前目录下创建文件夹 <code>xxx.github.io</code>。</p>
+<h2 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h2><p>cd 到该目录下 <code>cd xxx.github.io</code>，之后 <code>npm install</code>。</p>
+<p>这个时候本地博客就已经搭建好了。</p>
+<h2 id="打开博客服务器："><a href="#打开博客服务器：" class="headerlink" title="打开博客服务器："></a>打开博客服务器：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 这个是hexo server的简写</span><br><span class="line">hexo s</span><br><span class="line">// 如果需要指定端口号，使用下面这个命令</span><br><span class="line">hexo s -p 端口号</span><br></pre></td></tr></table></figure>
+
+<p>浏览器输入 <code>localhost:4000</code> 即可查看效果。<br>可以换漂亮的主题，目前最受欢迎的主题是 <a href="https://github.com/theme-next/hexo-theme-next.git" target="_blank" rel="noopener">Next</a> 具体怎么使用可以直接访问查看。</p>
+<h1 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h1><p>新建文章也很简单：运行 <code>hexo n &quot;文章标题（同时也是文件名）&quot;</code>。生成后 Hexo 会提示文件位置，直接使用最习惯的 MarkDown 编辑器编辑就好了。</p>
+<h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><h2 id="创建-Github-仓库"><a href="#创建-Github-仓库" class="headerlink" title="创建 Github 仓库"></a>创建 Github 仓库</h2><p>在GitHub上新建一个仓库，仓库名命名的规则是 <code>&lt;Github用户名&gt;.github.io</code>。</p>
+<h2 id="安装-deploy-插件"><a href="#安装-deploy-插件" class="headerlink" title="安装 deploy 插件"></a>安装 <code>deploy</code> 插件</h2><p><code>npm install --save hexo-deployer-git</code>，之后修改文件 <code>_config.yml</code>（文件在 <code>xxx.github.io</code> 下）。<br>搜索 <code>deploy</code>，定位到它。修改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/替换为github仓库地址/xxx.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<h2 id="部署到-Github"><a href="#部署到-Github" class="headerlink" title="部署到 Github"></a>部署到 Github</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// hexo generate 的缩写</span><br><span class="line">hexo g</span><br><span class="line">// hexo deploy 的缩写</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>现在可以通过 <code>&lt;Github用户名&gt;.github.io</code> 来访问了。</p>
+<h1 id="使用自己的域名"><a href="#使用自己的域名" class="headerlink" title="使用自己的域名"></a>使用自己的域名</h1><h2 id="申请域名"><a href="#申请域名" class="headerlink" title="申请域名"></a>申请域名</h2><p>直接去阿里云、腾讯云或者百度云之类的云服务商那里申请。要钱！</p>
+<h2 id="修改域名解析"><a href="#修改域名解析" class="headerlink" title="修改域名解析"></a>修改域名解析</h2><p>这个自行搜索怎么设置。要注意的是：</p>
+<ol>
+<li>记录类型为 <code>A</code>；</li>
+<li>记录值填写 <code>ping github.io</code> 得到的 ip 地址。</li>
+</ol>
+<h2 id="修改仓库设置"><a href="#修改仓库设置" class="headerlink" title="修改仓库设置"></a>修改仓库设置</h2><p>打开 Github 仓库的设置，定位到 <code>GitHub Pages</code> 如图：</p>
+<p><img src="/2019/08/08/Hexo-GitPage-搭建个人博客/GitHub-Pages设置.png" alt="1565255117433"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>步骤较多，但不是很难。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.png"
+      alt="ZHL">
+  <p class="site-author-name" itemprop="name">ZHL</p>
+  <div class="site-description motion-element" itemprop="description">我的博客</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZHL</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.3.0</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+    
+
+</body>
+</html>
