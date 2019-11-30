@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="2019年11月17日 解决 Idea 下 Tomcat 乱码问题现象Idea 中配置好 Tomcat 启动后，控制台 Server，Tomcat Localhost Log，Tomcat Catalina Log 都出现乱码。 分析原因在 CMD 中，尝试使用命令 catalina.bat run 启动 Tomcat。发现输出乱码，可以肯定，CMD 的编码是 GBK 的，使用 chcp 6500">
+  <meta name="description" content="2019年11月17日 解决 Idea 2019.2 下 Tomcat 乱码问题现象Idea 中配置好 Tomcat 启动后，控制台 Server，Tomcat Localhost Log，Tomcat Catalina Log 都出现乱码。 分析原因在 CMD 中，尝试使用命令 catalina.bat run 启动 Tomcat。发现输出乱码，可以肯定，CMD 的编码是 GBK 的，使用 ch">
 <meta name="keywords" content="Idea,Tomcat,乱码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Idea Tomcat9.0 中文乱码问题">
 <meta property="og:url" content="http://yoursite.com/2019/11/17/Idea-Tomcat9-0-中文乱码问题/index.html">
 <meta property="og:site_name" content="ZHL的博客">
-<meta property="og:description" content="2019年11月17日 解决 Idea 下 Tomcat 乱码问题现象Idea 中配置好 Tomcat 启动后，控制台 Server，Tomcat Localhost Log，Tomcat Catalina Log 都出现乱码。 分析原因在 CMD 中，尝试使用命令 catalina.bat run 启动 Tomcat。发现输出乱码，可以肯定，CMD 的编码是 GBK 的，使用 chcp 6500">
+<meta property="og:description" content="2019年11月17日 解决 Idea 2019.2 下 Tomcat 乱码问题现象Idea 中配置好 Tomcat 启动后，控制台 Server，Tomcat Localhost Log，Tomcat Catalina Log 都出现乱码。 分析原因在 CMD 中，尝试使用命令 catalina.bat run 启动 Tomcat。发现输出乱码，可以肯定，CMD 的编码是 GBK 的，使用 ch">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-17T01:12:44.449Z">
+<meta property="og:updated_time" content="2019-11-30T07:28:46.422Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Idea Tomcat9.0 中文乱码问题">
-<meta name="twitter:description" content="2019年11月17日 解决 Idea 下 Tomcat 乱码问题现象Idea 中配置好 Tomcat 启动后，控制台 Server，Tomcat Localhost Log，Tomcat Catalina Log 都出现乱码。 分析原因在 CMD 中，尝试使用命令 catalina.bat run 启动 Tomcat。发现输出乱码，可以肯定，CMD 的编码是 GBK 的，使用 chcp 6500">
+<meta name="twitter:description" content="2019年11月17日 解决 Idea 2019.2 下 Tomcat 乱码问题现象Idea 中配置好 Tomcat 启动后，控制台 Server，Tomcat Localhost Log，Tomcat Catalina Log 都出现乱码。 分析原因在 CMD 中，尝试使用命令 catalina.bat run 启动 Tomcat。发现输出乱码，可以肯定，CMD 的编码是 GBK 的，使用 ch">
   <link rel="canonical" href="http://yoursite.com/2019/11/17/Idea-Tomcat9-0-中文乱码问题/">
 
 
@@ -271,11 +271,19 @@
                 
               
 
-              <time title="创建时间：2019-11-17 08:57:29 / 修改时间：09:12:44" itemprop="dateCreated datePublished" datetime="2019-11-17T08:57:29+08:00">2019-11-17</time>
+              <time title="创建时间：2019-11-17 08:57:29" itemprop="dateCreated datePublished" datetime="2019-11-17T08:57:29+08:00">2019-11-17</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-30 15:28:46" itemprop="dateModified" datetime="2019-11-30T15:28:46+08:00">2019-11-30</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -311,9 +319,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="2019年11月17日-解决-Idea-下-Tomcat-乱码问题"><a href="#2019年11月17日-解决-Idea-下-Tomcat-乱码问题" class="headerlink" title="2019年11月17日 解决 Idea 下 Tomcat 乱码问题"></a>2019年11月17日 解决 Idea 下 Tomcat 乱码问题</h1><h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p>Idea 中配置好 Tomcat 启动后，控制台 <code>Server</code>，<code>Tomcat Localhost Log</code>，<code>Tomcat Catalina Log</code> 都出现乱码。</p>
+        <h1 id="2019年11月17日-解决-Idea-2019-2-下-Tomcat-乱码问题"><a href="#2019年11月17日-解决-Idea-2019-2-下-Tomcat-乱码问题" class="headerlink" title="2019年11月17日 解决 Idea 2019.2 下 Tomcat 乱码问题"></a>2019年11月17日 解决 Idea 2019.2 下 Tomcat 乱码问题</h1><h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p>Idea 中配置好 Tomcat 启动后，控制台 <code>Server</code>，<code>Tomcat Localhost Log</code>，<code>Tomcat Catalina Log</code> 都出现乱码。</p>
 <h2 id="分析原因"><a href="#分析原因" class="headerlink" title="分析原因"></a>分析原因</h2><p>在 CMD 中，尝试使用命令 <code>catalina.bat run</code> 启动 Tomcat。发现输出乱码，可以肯定，CMD 的编码是 <code>GBK</code> 的，使用 <code>chcp 65001</code> 转到 UTF-8 后再尝试启动 Tomcat，发现输出正常。所以猜测是 Idea 控制台输出使用的是 GBK 编码。</p>
 <h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>Idea 菜单栏中 <code>Help -&gt; Edit Custom VM Options</code> 文件最后加一句 <code>-Dfile.encoding=UTF-8</code>，重启 Idea。</p>
+<h1 id="再次更新-2019年11月30日，解决-Idea-2019-3-下-以上设置也无效的问题"><a href="#再次更新-2019年11月30日，解决-Idea-2019-3-下-以上设置也无效的问题" class="headerlink" title="再次更新 2019年11月30日，解决 Idea 2019.3 下 以上设置也无效的问题"></a>再次更新 2019年11月30日，解决 Idea 2019.3 下 以上设置也无效的问题</h1><h2 id="现象-1"><a href="#现象-1" class="headerlink" title="现象"></a>现象</h2><p>更新了一下 Idea，发现 Idea 2019.3 中 Tomcat 再次乱码。</p>
+<h2 id="解决办法-1"><a href="#解决办法-1" class="headerlink" title="解决办法"></a>解决办法</h2><p>Idea 菜单栏中 <code>Help -&gt; Edit Custom Properties</code> ，如果要创建文件则创建，然后文件最后加一句 <code>-Dfile.encoding=UTF-8</code>，重启 Idea。yun</p>
 
     </div>
 
@@ -542,7 +552,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2019年11月17日-解决-Idea-下-Tomcat-乱码问题"><span class="nav-number">1.</span> <span class="nav-text">2019年11月17日 解决 Idea 下 Tomcat 乱码问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#现象"><span class="nav-number">1.1.</span> <span class="nav-text">现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析原因"><span class="nav-number">1.2.</span> <span class="nav-text">分析原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-number">1.3.</span> <span class="nav-text">解决办法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2019年11月17日-解决-Idea-2019-2-下-Tomcat-乱码问题"><span class="nav-number">1.</span> <span class="nav-text">2019年11月17日 解决 Idea 2019.2 下 Tomcat 乱码问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#现象"><span class="nav-number">1.1.</span> <span class="nav-text">现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析原因"><span class="nav-number">1.2.</span> <span class="nav-text">分析原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-number">1.3.</span> <span class="nav-text">解决办法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#再次更新-2019年11月30日，解决-Idea-2019-3-下-以上设置也无效的问题"><span class="nav-number">2.</span> <span class="nav-text">再次更新 2019年11月30日，解决 Idea 2019.3 下 以上设置也无效的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#现象-1"><span class="nav-number">2.1.</span> <span class="nav-text">现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法-1"><span class="nav-number">2.2.</span> <span class="nav-text">解决办法</span></a></li></ol></li></ol></div>
             
 
           </div>
