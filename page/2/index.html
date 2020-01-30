@@ -238,6 +238,838 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/11/DCMTK-工具：wlmscpfs-测试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/09/11/DCMTK-工具：wlmscpfs-测试/" class="post-title-link" itemprop="url">DCMTK 工具：wlmscpfs 测试</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-11 13:15:09" itemprop="dateCreated datePublished" datetime="2019-09-11T13:15:09+08:00">2019-09-11</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/DCMTK/" itemprop="url" rel="index"><span itemprop="name">DCMTK</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/DCMTK/wlmscpfs/" itemprop="url" rel="index"><span itemprop="name">wlmscpfs</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ol>
+<li><a href="https://blog.csdn.net/zssureqh/article/details/38775315" target="_blank" rel="noopener">DICOM医学图像处理：基于DCMTK工具包学习和分析worklist</a></li>
+</ol>
+<p>感谢以上参考文献的作者的辛勤付出~</p>
+<h1 id="系统配置"><a href="#系统配置" class="headerlink" title="系统配置"></a>系统配置</h1><table>
+<thead>
+<tr>
+<th>条目</th>
+<th>型号</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>操作系统</td>
+<td>win 10</td>
+<td></td>
+</tr>
+<tr>
+<td>wlmscpfs</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+<tr>
+<td>findscu</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h1><p>已编译或下载好 dcmtk 工具包，并将其加入到环境变量的 <code>PATH</code> 中（也可不加，但是需要输入所在目录前缀）。</p>
+<p>创建的工作目录中不要有中文及空格。</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h2><p>创建工作目录，如：<code>C:\DICOM_dcmqrscp_test</code>。</p>
+<p>创建 <code>worklist</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\worklist</code>。</p>
+<p>在 <code>worklist</code> 工作目录下，创建 AETable 目录，<br>如创建 <code>OFFIS</code> AETable 目录：<code>C:\DICOM_dcmqrscp_test\worklist\OFFIS</code></p>
+<p>创建 <code>findscu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\findscu</code>，不创建也可以。</p>
+<h2 id="准备需要用到的文件"><a href="#准备需要用到的文件" class="headerlink" title="准备需要用到的文件"></a>准备需要用到的文件</h2><p>1.将 <code>dcmtk 安装目录\share\dcmtk\wlistdb\OFFIS</code> 目录中的所有文件复制到  <code>worklist</code> 工作目录下的 <code>OFFIS</code> AETable 目录。<br>2.由于这些文件是 dump 格式，需要转换成 wlmscpfs 可以使用的 dcm 格式，CMD 转到 <code>C:\DICOM_dcmqrscp_test\worklist\OFFIS</code>，然后运行 <code>for %i in (*.*) do dump2dcm %i %i.wl</code>，生成了 11 个 wl 文件，将其中的 <code>lockfile.wl</code> 删除。</p>
+<h1 id="运行-wlmscpfs-服务"><a href="#运行-wlmscpfs-服务" class="headerlink" title="运行 wlmscpfs 服务"></a>运行 <code>wlmscpfs</code> 服务</h1><p>CMD 转到 <code>C:\DICOM_dcmqrscp_test\wlistdb</code>，然后运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wlmscpfs 11110 --disable-file-reject --debug</span><br></pre></td></tr></table></figure>
+
+<p>如配置无误则出现如下信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D: $dcmtk: wlmscpfs v3.6.4+ DEV $</span><br><span class="line">D:</span><br><span class="line">W: (notice: dcmdata auto correction disabled.)</span><br></pre></td></tr></table></figure>
+
+<p>不要关闭，让其运行。</p>
+<h1 id="运行-findscu-查找"><a href="#运行-findscu-查找" class="headerlink" title="运行 findscu 查找"></a>运行 <code>findscu</code> 查找</h1><p>新开一个 CMD 转到  <code>findscu</code> 工作目录（没有创建的话可不转），运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">findscu 127.0.0.1 11110 ^</span><br><span class="line">--call OFFIS ^</span><br><span class="line">--debug ^</span><br><span class="line">-k 0010,0010</span><br><span class="line">-k 0010,0040</span><br></pre></td></tr></table></figure>
+
+<p>0010,0010 是病人姓名标签，所以整个命令的意思是访问 IP 为 127.0.0.1 端口号为 11110 的 worklist 服务器，从服务器中名为 OFFIS 的 AE 查找所有病人姓名，病人性别。<br>如配置无误则 CMD 打印出 findscu 查找到的信息。<br>如果想要查找指定的病人，则可在 <code>-k</code> 中添加内容，如：<code>-k 0010,0010=病人姓名</code>。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/09/DCMTK-源码中一些名词/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/09/09/DCMTK-源码中一些名词/" class="post-title-link" itemprop="url">DCMTK 源码中一些名词</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-09 19:03:53" itemprop="dateCreated datePublished" datetime="2019-09-09T19:03:53+08:00">2019-09-09</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DCMTK/" itemprop="url" rel="index"><span itemprop="name">DCMTK</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <table>
+<thead>
+<tr>
+<th>词语</th>
+<th>释义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DUL</td>
+<td>DICOM Upper Layer</td>
+<td>在 dcmtk/dcmnet/dul.h 中作为前缀出现</td>
+</tr>
+<tr>
+<td>ASC</td>
+<td>Association 缩写</td>
+<td>在 dcmtk/dcmnet/assoc.h 中作为前缀出现</td>
+</tr>
+<tr>
+<td>FSM</td>
+<td>Finite state machine 的缩写，即有限状态自动机</td>
+<td>在 dcmnet/libsrc/dulpriv.h 中出现</td>
+</tr>
+<tr>
+<td>OF</td>
+<td>OFFIS 取前两个字母</td>
+<td>毕竟是 <a href="http://www.offis.de/" target="_blank" rel="noopener">OFFIS</a> 公司出品的</td>
+</tr>
+</tbody></table>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/30/Qt-iconfont-to-QIcon/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/30/Qt-iconfont-to-QIcon/" class="post-title-link" itemprop="url">Qt iconfont to QIcon</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-30 08:37:28" itemprop="dateCreated datePublished" datetime="2019-08-30T08:37:28+08:00">2019-08-30</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Qt/" itemprop="url" rel="index"><span itemprop="name">Qt</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="普通使用"><a href="#普通使用" class="headerlink" title="普通使用"></a>普通使用</h1><p>使用 <code>iconfont</code> 极大简化了开发中需要使用图标的问题，一般来说使用 <code>iconfont</code> 都是将其作为字符来使用，比如在一个 <code>QLabel</code> 中：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 其中 ICONFONT_PATH 为字体库文件目录。如“*/theme/iconfont.ttf”。</span></span><br><span class="line"><span class="keyword">int</span> fontId = QFontDatabase::addApplicationFont(ICONFONT_PATH);</span><br><span class="line">QFont iconfont;</span><br><span class="line">iconfont.setFamily(QFontDatabase::applicationFontFamilies(fontId).at(<span class="number">0</span>));</span><br><span class="line"><span class="comment">// 设置字体大小</span></span><br><span class="line">iconfont.setPixelSize(<span class="number">16</span>);</span><br><span class="line">QLabel label;</span><br><span class="line">label.setFont(iconfont);</span><br><span class="line"><span class="comment">// 其中 icon_id 是一个 iconfont 的 Unicode 编码，一般在下载下来的字体库介绍中有。</span></span><br><span class="line"><span class="comment">// 形式如下：0x6501，即使用 16 进制。</span></span><br><span class="line">setText(QChar(icon_id));</span><br></pre></td></tr></table></figure>
+
+<h1 id="使用到-QIcon-中"><a href="#使用到-QIcon-中" class="headerlink" title="使用到 QIcon 中"></a>使用到 QIcon 中</h1><p>上面这种使用方式已经能满足大部分需求了，但是，有时候需要将 <code>iconfont</code> 使用到 <code>QIcon</code> 中，比如 <code>QToolButton</code> 的 <code>setIcon</code> 只能使用 <code>QIcon</code> 。要将 <code>iconfont</code> 使用到 <code>QIcon</code> 中，需要借助 <code>QPixmap</code>。一般可以将 <code>iconfont</code> 应用到 <code>Qicon</code> 可以写成一个方法：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 其中 icon_font_id 为字符图标的 ID，w 为要生成的图标的大小，color 为图标颜色。</span></span><br><span class="line">QIcon QIconTool::getIconFromIconFont(<span class="keyword">int</span> icon_font_id, <span class="keyword">int</span> w, QColor color) &#123;</span><br><span class="line">    <span class="comment">// 一般图标为正方形，如果有其他需求，加一个参数，如 h。</span></span><br><span class="line">    <span class="function">QPixmap <span class="title">pixmap</span><span class="params">(w, w)</span></span>;</span><br><span class="line">    pixmap.fill(Qt::transparent);</span><br><span class="line">    QPainter painter;</span><br><span class="line">    painter.begin(&amp;pixmap);</span><br><span class="line">    <span class="comment">// 其中 ICONFONT_PATH 为字体库文件目录。如“*/theme/iconfont.ttf”。</span></span><br><span class="line">    <span class="keyword">int</span> fontId = QFontDatabase::addApplicationFont(ICONFONT_PATH);</span><br><span class="line">    QFont iconfont;</span><br><span class="line">    iconfont.setFamily(QFontDatabase::applicationFontFamilies(fontId).at(<span class="number">0</span>));</span><br><span class="line">    font.setPixelSize(w);</span><br><span class="line">    painter.setFont(font);</span><br><span class="line">    painter.setPen(color);</span><br><span class="line">    painter.drawText(pixmap.rect(), QString(QChar(icon_font_id)));</span><br><span class="line">    painter.end();</span><br><span class="line">    <span class="keyword">return</span> pixmap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/22/DICOM-汉字编码/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/22/DICOM-汉字编码/" class="post-title-link" itemprop="url">DICOM 汉字编码</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-22 17:21:08" itemprop="dateCreated datePublished" datetime="2019-08-22T17:21:08+08:00">2019-08-22</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="DICOM-是可以使用汉字的"><a href="#DICOM-是可以使用汉字的" class="headerlink" title="DICOM 是可以使用汉字的"></a>DICOM 是可以使用汉字的</h1><p>在 DICOM 标准中，Part 5 中 K.3 Example of Long Text Value Representation in the Chinese Language with GB2312 G1 介绍了汉字编码的有关内容，不过使用的是 GB2312，众所周知，GB2312 已经是被淘汰掉了，最新的应该是使用 GB18030，使用 Sante DICOM Editor 软件编辑 DICOM 文件，将 (0008,0005) Specific Character Set 元素改为 <code>GB18030</code>，再将 (0010,0010) Patient’s Name 元素改为中文，最后使用 <code>DCMTK</code> 的 <code>dcmdump</code> 工具验证通过。</p>
+<p>还有可以改为 Unicode 编码。</p>
+<p>即 (0008,0005) Specific Character Set 元素改为 <code>ISO_IR 192</code>。</p>
+<p>在 Part 5 中 6.1 Support of Character Repertoires 有详细说明支持哪些编码。</p>
+<h1 id="使用-GB18030-的顾虑"><a href="#使用-GB18030-的顾虑" class="headerlink" title="使用 GB18030 的顾虑"></a>使用 GB18030 的顾虑</h1><p>虽然 GB18030 是国标，但是兼容性最好的应该还是 Unicode 编码。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/20/DCMTK-工具：dcmqrscp-测试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/20/DCMTK-工具：dcmqrscp-测试/" class="post-title-link" itemprop="url">DCMTK 工具：dcmqrscp 测试</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-20 12:35:26" itemprop="dateCreated datePublished" datetime="2019-08-20T12:35:26+08:00">2019-08-20</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/DCMTK/" itemprop="url" rel="index"><span itemprop="name">DCMTK</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/DCMTK/dcmqrscp/" itemprop="url" rel="index"><span itemprop="name">dcmqrscp</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ol>
+<li><a href="https://blog.csdn.net/zssureqh/article/details/39758969" target="_blank" rel="noopener">DICOM医学图像处理：DCMTK的wiki资料学习之PACS调试</a>（感谢这位大佬的辛勤付出~）；</li>
+<li><a href="https://support.dcmtk.org/redmine/projects/dcmtk/wiki/Howto_PACSDebuggingWithDCMTK" target="_blank" rel="noopener">DCMTK WIKI</a>（感谢开源工作者的辛勤付出~）。</li>
+</ol>
+<h1 id="系统配置"><a href="#系统配置" class="headerlink" title="系统配置"></a>系统配置</h1><table>
+<thead>
+<tr>
+<th>条目</th>
+<th>型号</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>操作系统</td>
+<td>win 10</td>
+<td></td>
+</tr>
+<tr>
+<td>dcmqrscp</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+<tr>
+<td>echoscu</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+<tr>
+<td>storescu</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+<tr>
+<td>findscu</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+<tr>
+<td>dcmdump</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h1><p>已编译或下载好 dcmtk 工具包，并将其加入到环境变量的 <code>PATH</code> 中（也可不加，但是需要输入所在目录前缀）。</p>
+<p>创建的工作目录中不要有中文及空格。</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h2><p>创建工作目录，如：<code>C:\DICOM_dcmqrscp_test</code>。</p>
+<p>创建 <code>dcmqrscp</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\dcmqrscp</code>。</p>
+<p>在 <code>dcmqrscp</code> 工作目录下，创建 AETable 目录，<br>如：<code>C:\DICOM_dcmqrscp_test\dcmqrscp\COMMON</code><br>如：<code>C:\DICOM_dcmqrscp_test\dcmqrscp\ACME_STORE</code>。</p>
+<p>创建 <code>echoscu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\echoscu</code>，不创建也可以，因为 echoscu 只是用于验证服务器是否存在，服务器是否为其服务。</p>
+<p>创建 <code>storescu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\storescu</code> 。</p>
+<p>创建 <code>findscu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\findscu</code>，不创建也可以。</p>
+<p>创建 <code>storescu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\storescu</code> 。</p>
+<h2 id="准备需要用到的文件"><a href="#准备需要用到的文件" class="headerlink" title="准备需要用到的文件"></a>准备需要用到的文件</h2><p>1.将 dcmqrscp 配置文件（位于 <code>dcmtk 安装目录\etc\dcmtk\dcmqrscp.cfg</code>） 复制到 <code>dcmqrscp</code> 工作目录中。<br>2.将一个 dcm 文件复制到 <code>storescu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\storescu\111.DCM</code>。<a href="/111.dcm">我的一个 DCM 文件</a>。</p>
+<h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><p>1.可以修改 <code>NetworkTCPPort</code> 为其他的端口，如： <code>NetworkTCPPort = 11110</code>。<br>2.后面配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">acme1 = (后面请求的 AE Title,请求端的主机名,上面 NetworkTCPPort 的值)</span><br><span class="line">acmeCTcompany = acme1</span><br></pre></td></tr></table></figure>
+
+<p>3.<code>AETable</code> 内的修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">COMMON       C:\DICOM_dcmqrscp_test\dcmqrscp\COMMON       R  (200, 1024mb) ANY</span><br><span class="line">ACME_STORE   C:\DICOM_dcmqrscp_test\dcmqrscp\ACME_STORE   RW (9, 1024mb)</span><br></pre></td></tr></table></figure>
+
+<p>修改后，总的配置如下（删除了注释）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">NetworkTCPPort  = 11110</span><br><span class="line">MaxPDUSize      = 16384</span><br><span class="line">MaxAssociations = 16</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">HostTable BEGIN</span><br><span class="line"></span><br><span class="line">#one_scu = (ONE_SCU,BAIZE,12345)</span><br><span class="line">#acmeCTcompany = one_scu</span><br><span class="line"># 或</span><br><span class="line">acmeCTcompany = (ONE_SCU,BAIZE,12345)</span><br><span class="line"></span><br><span class="line">HostTable END</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">VendorTable BEGIN</span><br><span class="line"></span><br><span class="line">&quot;Acme CT Company&quot;   = acmeCTcompany</span><br><span class="line"></span><br><span class="line">VendorTable END</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">AETable BEGIN</span><br><span class="line"></span><br><span class="line">COMMON       C:\DICOM_dcmqrscp_test\dcmqrscp\COMMON       R  (200, 1024mb) ANY</span><br><span class="line">ACME_STORE   C:\DICOM_dcmqrscp_test\dcmqrscp\ACME_STORE   RW (9, 1024mb)   acmeCTcompany</span><br><span class="line"></span><br><span class="line">AETable END</span><br></pre></td></tr></table></figure>
+
+<h1 id="运行-dcmqrscp-开启服务"><a href="#运行-dcmqrscp-开启服务" class="headerlink" title="运行 dcmqrscp 开启服务"></a>运行 <code>dcmqrscp</code> 开启服务</h1><p>CMD 转到 <code>C:\DICOM_dcmqrscp_test\dcmqrscp</code>，然后运行 <code>dcmqrscp.exe --config dcmqrscp.cfg -d</code>。</p>
+<p>如配置无误则出现如下信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D: $dcmtk: dcmqrscp v3.6.4+ DEV $</span><br><span class="line">D:</span><br><span class="line">D: DcmDataDictionary: Loading file: dcmtk 安装目录\share\dcmtk\dicom.dic</span><br></pre></td></tr></table></figure>
+
+<p>不要关闭，让其运行。</p>
+<h1 id="运行-echoscu-测试服务能否连通"><a href="#运行-echoscu-测试服务能否连通" class="headerlink" title="运行 echoscu 测试服务能否连通"></a>运行 <code>echoscu</code> 测试服务能否连通</h1><p>新开一个 CMD 转到 <code>echoscu</code> ` 工作目录（没有创建的话可不转），运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echoscu.exe -d 127.0.0.1 11110 ^</span><br><span class="line">-aec ACME_STORE ^</span><br><span class="line">-aet ONE_SCU</span><br></pre></td></tr></table></figure>
+
+<p>如配置无误则在 <code>echoscu</code> 端出现如下信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">D: $dcmtk: echoscu v3.6.4+ DEV $</span><br><span class="line">D:</span><br><span class="line">D: DcmDataDictionary: Loading file: dcmtk 安装目录\share\dcmtk\dicom.dic</span><br><span class="line">D: Request Parameters:</span><br><span class="line">D: ====================== BEGIN A-ASSOCIATE-RQ =====================</span><br><span class="line">D: Our Implementation Class UID:      1.2.276.0.7230010.3.0.3.6.4</span><br><span class="line">D: Our Implementation Version Name:   OFFIS_DCMTK_364</span><br><span class="line">D: Their Implementation Class UID:</span><br><span class="line">D: Their Implementation Version Name:</span><br><span class="line">D: Application Context Name:    1.2.840.10008.3.1.1.1</span><br><span class="line">D: Calling Application Name:    ECHOSCU</span><br><span class="line">D: Called Application Name:     ACME_STORE</span><br><span class="line">D: Responding Application Name: ACME_STORE</span><br><span class="line">D: Our Max PDU Receive Size:    16384</span><br><span class="line">D: Their Max PDU Receive Size:  0</span><br><span class="line">D: Presentation Contexts:</span><br><span class="line">D:   Context ID:        1 (Proposed)</span><br><span class="line">D:     Abstract Syntax: =VerificationSOPClass</span><br><span class="line">D:     Proposed SCP/SCU Role: Default</span><br><span class="line">D:     Proposed Transfer Syntax(es):</span><br><span class="line">D:       =LittleEndianImplicit</span><br><span class="line">D: Requested Extended Negotiation: none</span><br><span class="line">D: Accepted Extended Negotiation:  none</span><br><span class="line">D: Requested User Identity Negotiation: none</span><br><span class="line">D: User Identity Negotiation Response:  none</span><br><span class="line">D: ======================= END A-ASSOCIATE-RQ ======================</span><br><span class="line">I: Requesting Association</span><br><span class="line">D: setting network send timeout to 60 seconds</span><br><span class="line">D: setting network receive timeout to 60 seconds</span><br><span class="line">D: Constructing Associate RQ PDU</span><br><span class="line">D: PDU Type: Associate Accept, PDU Length: 184 + 6 bytes PDU header</span><br><span class="line">D:   02  00  00  00  00  b8  00  01  00  00  41  43  4d  45  5f  53</span><br><span class="line">D:   54  4f  52  45  20  20  20  20  20  20  45  43  48  4f  53  43</span><br><span class="line">D:   55  20  20  20  20  20  20  20  20  20  00  00  00  00  00  00</span><br><span class="line">D:   00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00</span><br><span class="line">D:   00  00  00  00  00  00  00  00  00  00  10  00  00  15  31  2e</span><br><span class="line">D:   32  2e  38  34  30  2e  31  30  30  30  38  2e  33  2e  31  2e</span><br><span class="line">D:   31  2e  31  21  00  00  19  01  00  00  00  40  00  00  11  31</span><br><span class="line">D:   2e  32  2e  38  34  30  2e  31  30  30  30  38  2e  31  2e  32</span><br><span class="line">D:   50  00  00  3a  51  00  00  04  00  00  40  00  52  00  00  1b</span><br><span class="line">D:   31  2e  32  2e  32  37  36  2e  30  2e  37  32  33  30  30  31</span><br><span class="line">D:   30  2e  33  2e  30  2e  33  2e  36  2e  34  55  00  00  0f  4f</span><br><span class="line">D:   46  46  49  53  5f  44  43  4d  54  4b  5f  33  36  34</span><br><span class="line">D: Parsing an A-ASSOCIATE PDU</span><br><span class="line">D: Association Parameters Negotiated:</span><br><span class="line">D: ====================== BEGIN A-ASSOCIATE-AC =====================</span><br><span class="line">D: Our Implementation Class UID:      1.2.276.0.7230010.3.0.3.6.4</span><br><span class="line">D: Our Implementation Version Name:   OFFIS_DCMTK_364</span><br><span class="line">D: Their Implementation Class UID:    1.2.276.0.7230010.3.0.3.6.4</span><br><span class="line">D: Their Implementation Version Name: OFFIS_DCMTK_364</span><br><span class="line">D: Application Context Name:    1.2.840.10008.3.1.1.1</span><br><span class="line">D: Calling Application Name:    ECHOSCU</span><br><span class="line">D: Called Application Name:     ACME_STORE</span><br><span class="line">D: Responding Application Name: ACME_STORE</span><br><span class="line">D: Our Max PDU Receive Size:    16384</span><br><span class="line">D: Their Max PDU Receive Size:  16384</span><br><span class="line">D: Presentation Contexts:</span><br><span class="line">D:   Context ID:        1 (Accepted)</span><br><span class="line">D:     Abstract Syntax: =VerificationSOPClass</span><br><span class="line">D:     Proposed SCP/SCU Role: Default</span><br><span class="line">D:     Accepted SCP/SCU Role: Default</span><br><span class="line">D:     Accepted Transfer Syntax: =LittleEndianImplicit</span><br><span class="line">D: Requested Extended Negotiation: none</span><br><span class="line">D: Accepted Extended Negotiation:  none</span><br><span class="line">D: Requested User Identity Negotiation: none</span><br><span class="line">D: User Identity Negotiation Response:  none</span><br><span class="line">D: ======================= END A-ASSOCIATE-AC ======================</span><br><span class="line">I: Association Accepted (Max Send PDV: 16372)</span><br><span class="line">I: Sending Echo Request (MsgID 1)</span><br><span class="line">D: DcmDataset::read() TransferSyntax=&quot;Little Endian Implicit&quot;</span><br><span class="line">I: Received Echo Response (Success)</span><br><span class="line">I: Releasing Association</span><br></pre></td></tr></table></figure>
+
+<p>同时 <code>dcmqrscp</code> 端也出现很多信息。</p>
+<h1 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h1><h2 id="出现参考文献中列举出来的错误"><a href="#出现参考文献中列举出来的错误" class="headerlink" title="出现参考文献中列举出来的错误"></a>出现参考文献中列举出来的错误</h2><p>参照 <a href="https://blog.csdn.net/zssureqh/article/details/39758969" target="_blank" rel="noopener">DICOM医学图像处理：DCMTK的wiki资料学习之PACS调试</a> 或 <a href="https://support.dcmtk.org/redmine/projects/dcmtk/wiki/Howto_PACSDebuggingWithDCMTK" target="_blank" rel="noopener">DCMTK WIKI</a> 进行错误的修改。</p>
+<h2 id="运行-echoscu-出现-index-bat-创建-Handle-错误"><a href="#运行-echoscu-出现-index-bat-创建-Handle-错误" class="headerlink" title="运行 echoscu 出现 index.bat 创建 Handle 错误"></a>运行 <code>echoscu</code> 出现 <code>index.bat</code> 创建 <code>Handle</code> 错误</h2><h3 id="错误提示"><a href="#错误提示" class="headerlink" title="错误提示"></a>错误提示</h3><p>在 <code>dcmqrscp</code> 端最后出现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">D: DB_createHandle () : Handle created for C:\DICOM_dcmqrscp_test\ACME_STORE</span><br><span class="line">D:                      maxStudiesPerStorageArea: 200 maxBytesPerStudy: 1073741824</span><br><span class="line">E: C:\DICOM_dcmqrscp_test\ACME_STORE\index.dat: 操作成功完成。</span><br><span class="line">E: dispatch: cannot create DB Handle</span><br><span class="line">E: DIMSE Failure (aborting association): 000c:0001 Index database error</span><br></pre></td></tr></table></figure>
+
+<h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p>没有正确的创建 AETable 目录 <code>ACME_STORE</code> 文件夹。</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>创建 <code>ACME_STORE</code> 文件夹，<br>如创建：<code>C:\DICOM_dcmqrscp_test\ACME_STORE</code>（需和配置文件一致）。</p>
+<h1 id="运行-storescu-上传-DCM-文件"><a href="#运行-storescu-上传-DCM-文件" class="headerlink" title="运行 storescu 上传 DCM 文件"></a>运行 <code>storescu</code> 上传 DCM 文件</h1><p>新开一个 CMD 转到 <code>storescu</code> 工作目录，运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">storescu.exe -d 127.0.0.1 11110 ^</span><br><span class="line">-aec ACME_STORE ^</span><br><span class="line">-aet ONE_SCU ^</span><br><span class="line">111.dcm</span><br></pre></td></tr></table></figure>
+
+<p>如配置无误则在 <code>C:\DICOM_dcmqrscp_test\ACME_STORE</code> 中可以看到如下图所示结果。</p>
+<p><img src="/2019/08/20/DCMTK-工具：dcmqrscp-测试/stroescu-上传测试.png" alt="stroescu-上传测试"></p>
+<p>这样就表示上传成功。</p>
+<h1 id="运行-findscu-查询-DCM-文件"><a href="#运行-findscu-查询-DCM-文件" class="headerlink" title="运行 findscu 查询 DCM 文件"></a>运行 <code>findscu</code> 查询 DCM 文件</h1><p>新开一个 CMD 转到 <code>findscu</code> 工作目录（没有创建的话可不转），运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">findscu.exe --verbose --study ^</span><br><span class="line">-aec ACME_STORE -aet ONE_SCU ^</span><br><span class="line">127.0.0.1 11110 ^</span><br><span class="line">-k QueryRetrieveLevel=STUDY ^</span><br><span class="line">-k StudyDate ^</span><br><span class="line">-k StudyDescription ^</span><br><span class="line">-k StudyInstanceUID</span><br></pre></td></tr></table></figure>
+
+<p>如配置无误则在 <code>findscu</code> 端出现如下信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">I: Requesting Association</span><br><span class="line">I: Association Accepted (Max Send PDV: 16372)</span><br><span class="line">I: Sending Find Request (MsgID 1)</span><br><span class="line">I: Request Identifiers:</span><br><span class="line">I:</span><br><span class="line">I: # Dicom-Data-Set</span><br><span class="line">I: # Used TransferSyntax: Little Endian Explicit</span><br><span class="line">I: (0008,0020) DA (no value available)                     #   0, 0 StudyDate</span><br><span class="line">I: (0008,0052) CS [STUDY]                                  #   6, 1 QueryRetrieveLevel</span><br><span class="line">I: (0008,1030) LO (no value available)                     #   0, 0 StudyDescription</span><br><span class="line">I: (0020,000d) UI (no value available)                     #   0, 0 StudyInstanceUID</span><br><span class="line">I:</span><br><span class="line">I: ---------------------------</span><br><span class="line">I: Find Response: 1 (Pending)</span><br><span class="line">I:</span><br><span class="line">I: # Dicom-Data-Set</span><br><span class="line">I: # Used TransferSyntax: Little Endian Explicit</span><br><span class="line">I: (0008,0005) CS [ISO_IR 100]                             #  10, 1 SpecificCharacterSet</span><br><span class="line">I: (0008,0020) DA [20100926]                               #   8, 1 StudyDate</span><br><span class="line">I: (0008,0052) CS [STUDY ]                                 #   6, 1 QueryRetrieveLevel</span><br><span class="line">I: (0008,0054) AE [ACME_STORE]                             #  10, 1 RetrieveAETitle</span><br><span class="line">I: (0008,1030) LO [t-12057 ]                               #   8, 1 StudyDescription</span><br><span class="line">I: (0020,000d) UI [1.2.840.113619.2.55.3.2831193967.596.1285460208.406 ] #  52, 1 StudyInstanceUID</span><br><span class="line">I:</span><br><span class="line">I: Received Final Find Response (Success)</span><br><span class="line">I: Releasing Association</span><br></pre></td></tr></table></figure>
+
+<p>可新开一个 CMD 转到 <code>storescu</code> 工作目录，运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dcmdump.exe 111.DCM</span><br></pre></td></tr></table></figure>
+
+<p>可以看到 <code>findscu</code> 查找出来的信息和 <code>dcmdump</code> 出来的信息一致。</p>
+<h1 id="运行-movescu-下载-DCM-文件至本地"><a href="#运行-movescu-下载-DCM-文件至本地" class="headerlink" title="运行 movescu 下载 DCM 文件至本地"></a>运行 <code>movescu</code> 下载 DCM 文件至本地</h1><p><a href="https://support.dcmtk.org/redmine/projects/dcmtk/wiki/Howto_PACSDebuggingWithDCMTK" target="_blank" rel="noopener">DCMTK WIKI</a> 中关于 <code>movescu</code> 的部分原文。</p>
+<blockquote>
+<p>Now we can check a DICOM connection (echoscu), start a PACS (dcmqrscp), store to it (storescu) and query for Studies. The last thing that is missing is actually retrieving data from the PACS. There are two ways to do that, the “C-MOVE” approach or the “C-GET” approach. C-MOVE is more flexible and the most common one found in practice; that’s why we show it here. In DCMTK the tool “movescu” implements the C-MOVE approach. For every of the three Query SOP Classes (Patient Root, Study Root and Patient/Study Only) there is also a related C-MOVE, and a related C-GET SOP Class. We use the C-MOVE Study Root Retrieve SOP Class here (note that the exact SOP Class names are a littlebit different but have been replaced for readability).</p>
+<p>Using C-MOVE one can order a set of images from the PACS. The PACS then transfers them using the Storage SOP Classes that are also used by storescu (see above). Thus, the receiver of images ordered by a C-MOVE command must be a a server (SCP) of the required Storage SOP Classes. In order to receive the images yourself, you must tell the PACS the your own AE Title which is contained in the C-MOVE order message as the “Move Destination”. Now, the special thing about the C-MOVE approach is that you can tell the PACS not only your own AE Title but also any other AE Title on the DICOM network! That way you can not only ask the PACS to send the images to yourself but also to any Storage-enabled DICOM server by providing its AE Title.</p>
+</blockquote>
+<p>大致说明了以下几点：</p>
+<ol>
+<li><code>C-MOVE</code> 比 <code>C-GET</code> 灵活；</li>
+<li>使用 movescu 需要指定 <code>Move Destination</code>；</li>
+<li><code>C-MOVE</code> 不仅可以将 DCM 文件移动到请求端自身，也可以移动到其他具有存储功能的服务端（也就是其他 PACS，使用 <code>Move Destination</code> 来指定 PACS 地址）。</li>
+</ol>
+<p>新开一个 CMD 转到 <code>movescu</code> 工作目录（没有创建的话可不转），运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">movescu.exe --verbose --study ^</span><br><span class="line">-aec ACME_STORE -aet ONE_SCU -aem ONE_SCU ^</span><br><span class="line">127.0.0.1 11110 ^</span><br><span class="line">--port 12345 ^</span><br><span class="line">--output-directory C:\DICOM_dcmqrscp_test\movescu ^</span><br><span class="line">-k QueryRetrieveLevel=STUDY ^</span><br><span class="line">-k PatientName=&quot;病人姓名&quot;</span><br></pre></td></tr></table></figure>
+
+<p>如配置无误则在 <code>C:\DICOM_dcmqrscp_test\movescu</code> 中可以看到如下图所示结果。</p>
+<p><img src="/2019/08/20/DCMTK-工具：dcmqrscp-测试/movescu-下载到本地测试.png" alt="movescu-下载到本地测试"></p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/19/Win10-无法调节亮度，也不能开启夜间模式的解决办法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/19/Win10-无法调节亮度，也不能开启夜间模式的解决办法/" class="post-title-link" itemprop="url">Win10 无法调节亮度，也不能开启夜间模式的解决办法</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-19 09:42:01" itemprop="dateCreated datePublished" datetime="2019-08-19T09:42:01+08:00">2019-08-19</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Win-10/" itemprop="url" rel="index"><span itemprop="name">Win 10</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>前段时候安装了“向日葵远程控制”软件，回来后发现电脑无法开启夜间模式，之后更是发现亮度也不能调节。卸载了“向日葵”后重启电脑，发现并没有用，之后在知乎找到很多解决办法，有一个解决绑法成功解决我的问题，记录一下。</p>
+<p>右击“开始” —— 计算机管理 —— 设备管理器 —— 监视器 —— Generic Monitor (orayOPMS) —— 右击卸载 —— 重启电脑。</p>
+<p>看到其他用户安装了 Teamviewer 后也出现这种情况。因该也可以使用同样的方式解决。</p>
+<blockquote>
+<p>个人猜测原因：远程控制类软件不是采用截屏的方式让远程用户看到桌面，而是采用注册一个显卡与显示器之间的“中间件”来获取屏幕图像信息，就是“Generic Monitor (orayOPMS)”，所以卸载它就好了。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/13/DICOM-PDU-解析/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -906,1220 +1738,11 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/DICOM-文件编码/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/12/DICOM-文件编码/" class="post-title-link" itemprop="url">DICOM 文件编码</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-12 13:41:46" itemprop="dateCreated datePublished" datetime="2019-08-12T13:41:46+08:00">2019-08-12</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <p>剪切出一段 DICOM 文件的编码出来，增强对 DICOM 文件编码的理解。</p>
-<table>
-<thead>
-<tr>
-<th>文件二进制内容（采用十六进制展示）</th>
-<th>Tag</th>
-<th>VR</th>
-<th>VL</th>
-<th>Value</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>00 00 00 …… 00</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>128 字节导言</td>
-</tr>
-<tr>
-<td>44 49 43 4D</td>
-<td></td>
-<td></td>
-<td></td>
-<td>DICM</td>
-<td>DICOM 文件的标志</td>
-</tr>
-<tr>
-<td>02 00 00 00 55 4C 04 00 A8 00 00 00</td>
-<td>0002,0000</td>
-<td>UL</td>
-<td>4</td>
-<td>168</td>
-<td>Group Length</td>
-</tr>
-<tr>
-<td>02 00 01 00 4F 42 00 00 02 00 00 00 00 01</td>
-<td>0002,0001</td>
-<td>OB</td>
-<td>2</td>
-<td>00\01</td>
-<td>File Meta Information Version</td>
-</tr>
-<tr>
-<td>……</td>
-<td>……</td>
-<td>……</td>
-<td>……</td>
-<td></td>
-<td>……</td>
-</tr>
-<tr>
-<td>08 00 20 00 08 00 00 00 31 39  39 35 30 36 30 38</td>
-<td>0008,0020</td>
-<td>DA</td>
-<td>8</td>
-<td>19950608</td>
-<td>Study Data</td>
-</tr>
-<tr>
-<td>……</td>
-<td>……</td>
-<td>……</td>
-<td>……</td>
-<td></td>
-<td>……</td>
-</tr>
-</tbody></table>
-<p>其中前 2 个内容（128 字节全 00 导言 + DICOM 文件标志“DICM”）为标准 DICOM 文件的文件头。</p>
-<p>后续 3 个列出来的内容为数据元素，分别包含显式值表示法 2 字节长的 VL，显式值表示法 4 字节长的 VL 和 隐式值表示法不标明 VL。</p>
-<p>第 1 条 <code>02 00 00 00 55 4C 04 00 A8 00 00 00</code> 的解析：</p>
-<p><code>02 00 00 00 55 4C 04 00 A8 00 00 00</code> 切成：<br><code>02 00 00 00</code>, <code>55 4C</code>, <code>04 00</code>, <code>A8 00 00 00</code></p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>二进制值<br>（采用十六进制展示）</th>
-<th>解析值</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Tag</td>
-<td>02 00 00 00</td>
-<td>0002,0000</td>
-<td>标签采用 Little Endian 编码，以 2 个字节断开，转码后即 00 02, 00 00</td>
-</tr>
-<tr>
-<td>VR</td>
-<td>55 4C</td>
-<td>UL</td>
-<td>由 ASCII 转码得到结果</td>
-</tr>
-<tr>
-<td>VL</td>
-<td>04 00</td>
-<td>4</td>
-<td>由于是显式值表示法，所以 VL 长度为 2 个字节，采用 Little Endian 编码，转码后即 00 04，得值为 4</td>
-</tr>
-<tr>
-<td>Value</td>
-<td>A8 00 00 00</td>
-<td>168</td>
-<td>采用 Little Endian 编码，转码后即 00 00 00 A8，得值为 168</td>
-</tr>
-</tbody></table>
-<p>第 2 条 <code>02 00 01 00 4F 42 00 00 02 00 00 00 00 01</code> 的解析：</p>
-<p><code>02 00 01 00 4F 42 00 00 02 00 00 00 00 01</code> 切成：<br><code>02 00 01 00</code>, <code>4F 42</code>, <code>00 00 02 00</code>, <code>00 00 00 01</code></p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>二进制值<br>（采用十六进制展示）</th>
-<th>解析值</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Tag</td>
-<td>02 00 01 00</td>
-<td>0002,0001</td>
-<td>标签采用 Little Endian 编码，以 2 个字节断开，转码后即 00 02, 00 01</td>
-</tr>
-<tr>
-<td>VR</td>
-<td>4F 42</td>
-<td>OB</td>
-<td>由 ASCII 转码得到结果</td>
-</tr>
-<tr>
-<td>VL</td>
-<td>00 00 02 00</td>
-<td>2</td>
-<td>由于是显式值表示法，且 VR 为“OB”（某些 VR 值会导致 VL 长度为 4 个字节），所以 VL 长度为 4 个字节，前面 2 个字节 00 00 丢弃（这是规定），后两个字节采用 Little Endian 编码，转码后即 00 02，得值为 2</td>
-</tr>
-<tr>
-<td>Value</td>
-<td>00 00 00 01</td>
-<td>00\01</td>
-<td>该值无需解析</td>
-</tr>
-</tbody></table>
-<p>第 3 条 <code>08 00 20 00 08 00 00 00 31 39 39 35 30 36 30 38</code> 的解析：</p>
-<p><code>08 00 20 00 08 00 00 00 31 39 39 35 30 36 30 38</code> 切成：<br><code>08 00 20 00</code>, <code>08 00 00 00</code>, <code>31 39 39 35 30 36 30 38</code></p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>二进制值<br>（采用十六进制展示）</th>
-<th>解析值</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Tag</td>
-<td>08 00 20 00</td>
-<td>0008,0020</td>
-<td>标签采用 Little Endian 编码，以 2 个字节断开，转码后即 00 08, 00 20</td>
-</tr>
-<tr>
-<td>VR</td>
-<td>无</td>
-<td>DA</td>
-<td>由于该标签代表 Study Data（某些标签固定 VR，所以无需显式说明 VR），所以隐式表明 VR 为“DA”</td>
-</tr>
-<tr>
-<td>VL</td>
-<td>08 00 00 00</td>
-<td>8</td>
-<td>由于是隐式值表示法，所以 VL 长度为 4 个字节，采用 Little Endian 编码，转码后即 00 00 00 08，得值为 8</td>
-</tr>
-<tr>
-<td>Value</td>
-<td>31 39 39 35 30 36 30 38</td>
-<td>19950608</td>
-<td>由 ASCII 转码得到结果</td>
-</tr>
-</tbody></table>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/10/DICOM-专业术语列表/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/10/DICOM-专业术语列表/" class="post-title-link" itemprop="url">DICOM 专业术语列表</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-10 12:11:53" itemprop="dateCreated datePublished" datetime="2019-08-10T12:11:53+08:00">2019-08-10</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <p>给出 DICOM 的一些简写和全称以及翻译，只是个人翻译，如有有更优的翻译或翻译有误，欢迎提出和指正。</p>
-<p><strong>格式：</strong></p>
-<ol>
-<li>符号：&lt;，表示与右前方一格相同。</li>
-<li>符号：-，不表示单词间换行连接符，表其原本语义。</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>简写</th>
-<th>全称</th>
-<th>翻译，或包含含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>DICOM</td>
-<td>Digital Imaging and Communications in Medicine</td>
-<td>医学数字成像与通信</td>
-</tr>
-<tr>
-<td>PACS</td>
-<td>Picture Archiving and Communication System</td>
-<td>医学影像存档与通信系统</td>
-</tr>
-<tr>
-<td>HIS</td>
-<td>Hospital Information System</td>
-<td>医院信息系统</td>
-</tr>
-<tr>
-<td>RIS</td>
-<td>Radiology Information System</td>
-<td>放射科信息系统</td>
-</tr>
-<tr>
-<td>IOD</td>
-<td>Information Object Definitions</td>
-<td>信息对象定义</td>
-</tr>
-<tr>
-<td>IOE</td>
-<td>Information Object Entity</td>
-<td>信息对象实体。类似于面向对象编程中，IOD 就是类，IOE 就是实例</td>
-</tr>
-<tr>
-<td>Normal IOD</td>
-<td>&lt;</td>
-<td>标准 IOD。只包含单个信息实体的信息对象定义</td>
-</tr>
-<tr>
-<td>Composite IOD</td>
-<td>&lt;</td>
-<td>复合 IOD。包含一个以上的<strong>相关</strong>信息实体的信息对象定义</td>
-</tr>
-<tr>
-<td>VR</td>
-<td>Value Representation</td>
-<td>值表示法。可理解为数据类型，分为隐式值表示法和显式值表示法。隐式值表示法：预先规定表示方法，从数据字典中查找，对应 VL 为 4 个字节。显式值表示法：用两个字符指明表示方法，对应 VL 为 2 个字节，当显式值表示法为 OB、OW、OF、UT、SQ 或 UN 时，VL 拓展为 4 个字节，其中紧跟着的 2 个字节为 0000H</td>
-</tr>
-<tr>
-<td>VM</td>
-<td>Value Multiplicity</td>
-<td>值重度。数据元素的 VM 指定可以在该数据元素的值字段中编码的值的数量。当数据元素具有多个值时，字符串类型的值使用“\”来分隔</td>
-</tr>
-<tr>
-<td>VL</td>
-<td>Value Length</td>
-<td>值长度。其中有未定义长度，一般用于 VR 为 SQ 时，此时 VL 为 FFFFFFFFH</td>
-</tr>
-<tr>
-<td>LUT</td>
-<td>Look Up Table</td>
-<td>查表法</td>
-</tr>
-<tr>
-<td>IOM</td>
-<td>Information Object Module</td>
-<td>信息对象模块</td>
-</tr>
-<tr>
-<td>SCP</td>
-<td>Service Class Provider</td>
-<td>服务提供者</td>
-</tr>
-<tr>
-<td>SCU</td>
-<td>Service Class User</td>
-<td>服务使用者</td>
-</tr>
-<tr>
-<td>DICOM Service Element</td>
-<td>&lt;</td>
-<td>DICOM 服务元素（分为 DIMSE 和 DISSE）</td>
-</tr>
-<tr>
-<td>DIMSE</td>
-<td>DICOM Message Service Elements</td>
-<td>DICOM 消息服务元素。都是证实型服务，包含：DIMSE-C、DIMSE-N</td>
-</tr>
-<tr>
-<td>DISSE</td>
-<td>DICOM Storage Service Elements</td>
-<td>DICOM 存储服务元素</td>
-</tr>
-<tr>
-<td>SE</td>
-<td>Service Element</td>
-<td>服务元素。对特点 SOP 类的信息对象实施的基本操作</td>
-</tr>
-<tr>
-<td>SG</td>
-<td>Service Group</td>
-<td>服务组。属于一个 SOP 类的一组服务元素</td>
-</tr>
-<tr>
-<td>SOP</td>
-<td>Service Object Pair</td>
-<td>服务对象对。（Normal IOD 或 Composite IOD）+ SG（SG 中只含 DIMSE）</td>
-</tr>
-<tr>
-<td>Service Class Specification</td>
-<td>&lt;</td>
-<td>服务类规范。由多个 SOP Class 有规律组成</td>
-</tr>
-<tr>
-<td>AE</td>
-<td>Application Entity</td>
-<td>应用实体。就是各种设备，既可是实体硬件设备，也可是软件</td>
-</tr>
-<tr>
-<td>AET</td>
-<td>Application Entity Title</td>
-<td>应用实体标题</td>
-</tr>
-<tr>
-<td>IE</td>
-<td>Information Entity</td>
-<td>信息实体。现实世界中单一事物（如一幅图像，一个病人等）的一组信息的整体称谓</td>
-</tr>
-<tr>
-<td>Modality</td>
-<td>&lt;</td>
-<td><strong>特指</strong>成像设备</td>
-</tr>
-<tr>
-<td>Study</td>
-<td>&lt;</td>
-<td><strong>特指</strong>一次检查</td>
-</tr>
-<tr>
-<td>DIMSE-C</td>
-<td>DIMSE Composite SOP Service</td>
-<td>DIMSE 对复合 SOP 的服务。一般由一个 DIMSE 服务使用者向另一个对等 DIMSE 服务使用者发起，包含：C-STORE、C-FIND、C-GET、C-MOVE、C-ECHO、C-CANCEL</td>
-</tr>
-<tr>
-<td>C-STORE</td>
-<td>Composite SOP Store</td>
-<td>复合 SOP 请求存储</td>
-</tr>
-<tr>
-<td>C-FIND</td>
-<td>Composite SOP Find</td>
-<td>复合 SOP 请求查找</td>
-</tr>
-<tr>
-<td>C-GET</td>
-<td>Composite SOP Get</td>
-<td>复合 SOP 请求获取</td>
-</tr>
-<tr>
-<td>C-MOVE</td>
-<td>Composite SOP Move</td>
-<td>复合 SOP 请求迁移。只是请求，具体传输需要使用 C-STORE</td>
-</tr>
-<tr>
-<td>C-ECHO</td>
-<td>Composite SOP Echo</td>
-<td>复合 SOP 发现服务。echo 有回声的意思，该服务用于判断对等 DIMSE 服务使用者之间的通讯是否存在</td>
-</tr>
-<tr>
-<td>C-CANCEL</td>
-<td>Composite SOP Cancel</td>
-<td>复合 SOP 取消服务。信息对象实体无操作时返回</td>
-</tr>
-<tr>
-<td>DIMSE-N</td>
-<td>DIMSE Normal SOP Service</td>
-<td>DIMSE 对标准 SOP的服务。一般由一个 DIMSE 服务使用者向另一个对等 DIMSE 服务使用者发起，包含：N-EVENT-REPORT、N-GET、N-SET、N-ACTION、N-CREATE、N-DELETE</td>
-</tr>
-<tr>
-<td>N-EVENT-REPORT</td>
-<td>Normal SOP Event Report</td>
-<td>标准 SOP 报告服务。由一个 DIMSE 服务使用者激活，向对等 DIMSE 服务使用者报告有关某个 SOP 实例的事件，该服务为证实服务，需要等待响应。</td>
-</tr>
-<tr>
-<td>N-GET</td>
-<td>Normal SOP Get</td>
-<td>标准 SOP 请求检索信息</td>
-</tr>
-<tr>
-<td>N-SET</td>
-<td>Normal SOP Set</td>
-<td>标准 SOP 请求修改信息</td>
-</tr>
-<tr>
-<td>N-ACTION</td>
-<td>Normal SOP Action</td>
-<td>标准 SOP 请求执行某个动作</td>
-</tr>
-<tr>
-<td>N-CREATE</td>
-<td>Normal SOP Create</td>
-<td>标准 SOP 请求创建某个 SOP 类的一个实例</td>
-</tr>
-<tr>
-<td>N-DELETE</td>
-<td>Normal SOP Delete</td>
-<td>标准 SOP 请求删除某个 SOP 类的一个实例</td>
-</tr>
-<tr>
-<td>UID</td>
-<td>Unique IDentifier</td>
-<td>唯一标识符</td>
-</tr>
-<tr>
-<td>FSC</td>
-<td>File Set Creator</td>
-<td>文件集生成器</td>
-</tr>
-<tr>
-<td>FSR</td>
-<td>File Set Reader</td>
-<td>文件集阅读器</td>
-</tr>
-<tr>
-<td>FSU</td>
-<td>FIle Set Update</td>
-<td>文件集更新器</td>
-</tr>
-<tr>
-<td>OSI model</td>
-<td>Open System Interconnection Reference Model</td>
-<td>开放式系统互联通信参考模型</td>
-</tr>
-<tr>
-<td>IOS</td>
-<td>International Organization for Standardization</td>
-<td>国际标准化组织</td>
-</tr>
-<tr>
-<td>PCI</td>
-<td>Protocol Control Information</td>
-<td>协议控制信息</td>
-</tr>
-<tr>
-<td>ICI</td>
-<td>Interface Control Information</td>
-<td>接口控制信息</td>
-</tr>
-<tr>
-<td>IDU</td>
-<td>Interface Data Unit</td>
-<td>接口数据单元</td>
-</tr>
-<tr>
-<td>ACSE</td>
-<td>Association Control Service Element</td>
-<td>关联控制服务元素</td>
-</tr>
-<tr>
-<td>ULP</td>
-<td>Upper Layer Protocol</td>
-<td>上层协议</td>
-</tr>
-<tr>
-<td>PDU</td>
-<td>Protocol Data Unit</td>
-<td>协议数据单元</td>
-</tr>
-<tr>
-<td>A-ASSOCIATE</td>
-<td>&lt;</td>
-<td>连接。AE 间建立连接</td>
-</tr>
-<tr>
-<td>A-RELEASE</td>
-<td>&lt;</td>
-<td>释放连接。AE 间释放连接</td>
-</tr>
-<tr>
-<td>A-ABORT</td>
-<td>&lt;</td>
-<td>异常终止。AE 间发现异常后强制终止</td>
-</tr>
-<tr>
-<td>A-DATA</td>
-<td>&lt;</td>
-<td>数据传输。AE 间数据传输</td>
-</tr>
-<tr>
-<td>A-P-ABORT</td>
-<td>&lt;</td>
-<td>通知异常终止。AE 间通知连接的异常终止</td>
-</tr>
-<tr>
-<td>A-ASSOCIATE-RQ</td>
-<td>Associate Request</td>
-<td>连接请求</td>
-</tr>
-<tr>
-<td>A-ASSOCIATE-AC</td>
-<td>Associate Accept</td>
-<td>连接接受</td>
-</tr>
-<tr>
-<td>A-ASSOCIATE-RJ</td>
-<td>Associate Reject</td>
-<td>连接拒绝</td>
-</tr>
-<tr>
-<td>A-RELEASE-RQ</td>
-<td>Release Request</td>
-<td>释放连接请求</td>
-</tr>
-<tr>
-<td>A-RELEASE-RP</td>
-<td>Release Respond</td>
-<td>释放连接回应</td>
-</tr>
-<tr>
-<td>A-ABORT</td>
-<td>Abort</td>
-<td>中断</td>
-</tr>
-<tr>
-<td>P-DATA-TF</td>
-<td>Data Transfer</td>
-<td>数据传输</td>
-</tr>
-<tr>
-<td>PDV</td>
-<td>Presentation Data Value</td>
-<td>表示数据值？表达资料值？演示数据值？</td>
-</tr>
-<tr>
-<td>Little Endian</td>
-<td>&lt;</td>
-<td>低字节序/小端序。按照从低地址到高地址的顺序存放数据的低位字节到高位字节。DICOM 文件中各数据元素排列的顺序按照标签数值 Little Endian 编码</td>
-</tr>
-<tr>
-<td>Big Endian</td>
-<td>&lt;</td>
-<td>高字节序/大端序。按照从低地址到高地址的顺序存放数据的高位字节到低位字节</td>
-</tr>
-<tr>
-<td>MWL</td>
-<td>Modality Worklist</td>
-<td>设备工作清单</td>
-</tr>
-<tr>
-<td>MPPS</td>
-<td>Modality Performed Procedure Step</td>
-<td>设备执行过程的步骤。即能实时查看到设备运行状态</td>
-</tr>
-<tr>
-<td>Storage Commitment</td>
-<td>&lt;</td>
-<td>SCP 的一种服务，让成像设备在删除图像缓存前可以确认 SCP 上已经安全的存储了该图像</td>
-</tr>
-<tr>
-<td>IHE</td>
-<td>Integrating The Healthcare Enterprise</td>
-<td>医疗健康信息集成规范</td>
-</tr>
-</tbody></table>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/09/DICOM-的一些疑问/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/09/DICOM-的一些疑问/" class="post-title-link" itemprop="url">DICOM 的一些疑问</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-09 16:32:25" itemprop="dateCreated datePublished" datetime="2019-08-09T16:32:25+08:00">2019-08-09</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="DIOCM-的标准文件为什么没有-Part-9-和-Part-13"><a href="#DIOCM-的标准文件为什么没有-Part-9-和-Part-13" class="headerlink" title="DIOCM 的标准文件为什么没有 Part 9 和 Part 13"></a>DIOCM 的标准文件为什么没有 Part 9 和 Part 13</h1><p>从 <a href="https://www.dicomstandard.org/current/" target="_blank" rel="noopener">DICOM 官网</a> 下载的标准文件是没有 Part 9 和 Part 13 的，起初我以为是西方人避讳 13 这个数字，但是 9 这个数字应该不是一个不详的数字吧。</p>
-<p>后来在 <a href="http://estore.merge.com/mergecom3/Resources/DICOM/Merge_DICOM_javadoc_v5/doc-files/dicom_intro.html" target="_blank" rel="noopener">这里</a> 找到了答案，原文：</p>
-<blockquote>
-<p>Part 9 is rarely of interest, as it describes how DICOM messages shall be exchanged using the ‘old’ 50-pin point-to-point connection originally specified in the predecessor to DICOM (ACR/NEMA Version 2). This part has been retired from the DICOM standard.</p>
-<p>Part 13 details a point to point protocol for doing print management services. This part has been retired from the DICOM standard.</p>
-</blockquote>
-<p>原来是老技术被淘汰了，所以标准也将这部分去除了。</p>
-<p>顺便把原文全部记下来</p>
-<blockquote>
-<p>The DICOM (Digital Imaging and Communications in Medicine) Standard was originally developed by a joint committee of the American College of Radiology (ACR) and the National Electrical Manufacturers Association (NEMA) to “facilitate the open exchange of information between digital imaging computer systems in medical environments”.</p>
-<p>Since its initial completion in 1993, the standard has taken hold. More and more products are advertising DICOM conformance, and more customers are requiring it. DICOM has also been incorporated as part of a developing European standard by CEN, as a Japanese standard by JIRA, and is increasingly becoming an International Standard.</p>
-<p>DICOM Version 3.0 is composed of several hundreds of pages over sixteen separate parts. Each part of the standard focuses on a different aspect of the DICOM protocol:</p>
-<ul>
-<li>Part 1- Introduction and Overview</li>
-<li>Part 2- Conformance</li>
-<li>Part 3- Information Object Definitions</li>
-<li>Part 4- Service Class Specifications</li>
-<li>Part 5- Data Structures and Encoding</li>
-<li>Part 6- Data Dictionary</li>
-<li>Part 7- Message Exchange</li>
-<li>Part 8- Network Communication Support for Message Exchange</li>
-<li>Part 9- Point-to-Point Communication Support for Message Exchange (retired)</li>
-<li>Part 10- Common Media Storage Functions for Data Interchange</li>
-<li>Part 11- Media Storage Application Profiles</li>
-<li>Part 12- Media Formats and Physical Media for Data Interchange</li>
-<li>Part 13- Print Management Point-to-Point Communication Support (retired)</li>
-<li>Part 14- Grayscale Standard Display Function</li>
-<li>Part 15- Security Profiles</li>
-<li>Part 16- DICOM Content Mapping Resource</li>
-<li>Part 17- Explanatory Information</li>
-<li>Part 18- Web Access to DICOM Persistent Objects (WADO)</li>
-<li>Part 1 of the standard gives an overview of the standard. Since this part was approved before most of the other parts were completed, it is already somewhat outdated and can be confusing.</li>
-</ul>
-<p>Part 2 describes DICOM conformance and how to write a conformance statement. A conformance statement is important because it allows a network administrator to plan or coordinate a network of DICOM applications. For an application to claim DICOM conformance, it must have an accurate conformance statement.</p>
-<p>Parts 3 and 4 define the types of services and information that can be exchanged using DICOM.</p>
-<p>Parts 5 and 6 describe how commands and data shall be encoded so that decoding devices can interpret them.</p>
-<p>Part 7 describes the structure of the DICOM commands, that along with related data, make up a DICOM message. This part also describes the association negotiation process, whereby two DICOM applications mutually agree upon the services they will perform over the network.</p>
-<p>Part 8 describes how the DICOM messages are exchanged over the network using two prominent transport layer protocols; TCP/IP and OSI. This is termed the DICOM Upper Layer Protocol (DICOM UL).</p>
-<p>Part 9 is rarely of interest, as it describes how DICOM messages shall be exchanged using the ‘old’ 50-pin point-to-point connection originally specified in the predecessor to DICOM (ACR/NEMA Version 2). This part has been retired from the DICOM standard.</p>
-<p>Part 10 describes the DICOM model for the storage of medical imaging information on removable media. It specifies the contents of a DICOM File Set, the format of a DICOM File and the policies associated with the maintenance of a DICOM Media Storage Directory (DICOMDIR) structure.</p>
-<p>Part 11 specifies Media Storage Application Profiles that standardizes a number of choices related to a specific clinical need (modality or application). This includes the specification of a specific physical medium and media format (e.g. CD-ROM, 3.5” high-density floppy, …), as well as the types of information (objects) that can be stored within the DICOM File Set. Part 11 also includes useful templates to provide guidance in authoring media application conformance statements.</p>
-<p>Part 12 details the characteristics of various physical medium and media formats that are referenced by the Media Storage Application Profiles of Part 11.</p>
-<p>While parts 11 and 12 of DICOM are expected to evolve along with the introduction of new clinical procedures and the advancement of storage media and file system technology, Part 10 should remain quite stable since it specifies file formats organization independent of medical application or storage technology.</p>
-<p>Part 13 details a point to point protocol for doing print management services. This part has been retired from the DICOM standard.</p>
-<p>Part 14 specifies a standardized display function for display of grayscale images.</p>
-<p>Part 15 specifies Security Profiles to which implementations may claim conformance. Profiles are defined for secure network transfers and secure media.</p>
-<p>Part 16 specifies the DICOM Content Mapping Resource (DCMR) which defines the templates and context groups used elsewhere in the standard.</p>
-<p>Part 17 consolidates informative information previously contained in other parts of the standard. It is composed of several annexes describing the use of the standard.</p>
-<p>Part 18 specifies a web-based service for accessing and presenting DICOM persistent objects (e.g. images, medical imaging reports).</p>
-<p>As a user of this toolkit, you should have access to the DICOM Standard. Merge DICOM Toolkit takes care of most of the details of DICOM for you. However, the standard is the final word. You will probably find Parts 2 to 6 most useful. The DICOM Standard can be ordered from:</p>
-<p>NEMA, 1300 N. 17th Street, Suite 1847, Rosslyn, VA 22209, USA</p>
-<p>or downloaded from <a href="http://medical.nema.org" target="_blank" rel="noopener">http://medical.nema.org</a>.</p>
-<p>The DICOM Standard is typically published every other year. Each version includes approved changes since the last publishing.</p>
-<p>Please note: The DICOM Standard is evolving so rapidly, that additions to the Standard are published as supplements. If you find that this document references a part of the Standard and you cannot find what you are looking for in that part, you probably need to get the proper supplement from NEMA. Other additions to the Standard (e.g., new image objects or documents) will also be published as supplements. NEMA also makes all supplements to the standard freely available on their ftp server.</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/08/记录-Hexo-图片的坑/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/08/记录-Hexo-图片的坑/" class="post-title-link" itemprop="url">记录 Hexo 图片的坑</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-08 18:47:47" itemprop="dateCreated datePublished" datetime="2019-08-08T18:47:47+08:00">2019-08-08</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><table>
-<thead>
-<tr>
-<th>条目</th>
-<th>型号</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>系统</td>
-<td>Windows 10</td>
-<td></td>
-</tr>
-<tr>
-<td>编辑器</td>
-<td>Typora 0.9.73(beta)</td>
-<td></td>
-</tr>
-<tr>
-<td>Hexo</td>
-<td>v3.9.0</td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>今天第一次使用 Hexo，感觉还是棒棒哒。但是，很快蛋疼的事情就出现了，插入图片，不显示。</p>
-<p><img src="/2019/08/08/记录-Hexo-图片的坑/en.jpg" alt></p>
-<p>当时就蒙蔽了，不应该啊，做的这么棒的一款东西，怎么这个还有问题。直接谷歌，发现不是我一个小伙伴出现了这个问题，大家都拿出了自己的解决办法，我试了试，有些地方还是不行，只好自己调教了。</p>
-<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><ol>
-<li>图片上传至 Github。本人不喜欢将图片上传至图床，第一，麻烦；第二，md 文件和资源文件分开放难管理；第三，我鬼知道图床什么时候就 GG 了，😎 Github 总是比图床来的可靠吧！</li>
-<li>完全使用 MarkDown 语法。第一，本人懒，不愿意记那么多；第二，我的 Typora 不认其他奇奇怪怪的语法！</li>
-<li>能够所见即所得。我在我家 Typora 里是什么样，Push 上 Github 里也应该是什么样！</li>
-<li>支持中文！这个，天朝的各位大大都没异议吧！</li>
-<li>愉快的编辑。不要有太多繁琐的操作，图片能拖住丢进去，就绝不会打开资源管理器来选！</li>
-</ol>
-<p><img src="/2019/08/08/记录-Hexo-图片的坑/不要和我说.png" alt></p>
-<p>看到这里如果想直接看解决办法，请直接跳转到 <a href="#总结">总结</a>。</p>
-<h1 id="开撸"><a href="#开撸" class="headerlink" title="开撸"></a>开撸</h1><p>找了一下别人的解决办法，最后发现只有<a href="https://alreadyright.github.io/2019/06/16/aboutHexo/" target="_blank" rel="noopener">这位仁兄</a>的解决办法可能符合我的要求，既然有巨人，那就站他肩膀上，站得高至少也凉快些嘛。</p>
-<h2 id="修改博客配置"><a href="#修改博客配置" class="headerlink" title="修改博客配置"></a>修改博客配置</h2><p>将博客根目录下的文件 <code>_config.yml</code> 中的 <code>post_asset_folder: false</code> 改为 <code>post_asset_folder: true</code>。</p>
-<h2 id="装插件-hexo-asset-image"><a href="#装插件-hexo-asset-image" class="headerlink" title="装插件 hexo-asset-image"></a>装插件 hexo-asset-image</h2><p>装一个可以改写文件路径的插件，图片为什么不显示，就是因为路径的问题。cmd 在博客根目录下 <code>npm install hexo-asset-image -–save</code>。</p>
-<h2 id="发现问题"><a href="#发现问题" class="headerlink" title="发现问题"></a>发现问题</h2><p>装好插件后装逼写一篇博客来，嗯，标题就写《记录-Hexo-图片的坑》，<code>hexo new &quot;记录-Hexo-图片的坑&quot;</code>，在 <code>博客根目录\source\_posts</code>下多了 <code>记录-Hexo-图片的坑.md</code> 和 <code>记录-Hexo-图片的坑</code> 文件夹。打开 <code>记录-Hexo-图片的坑.md</code>插入图片 <code>![](./记录-Hexo-图片的坑/en.jpg)</code>，<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code> 一气呵成，<code>localhost:4000</code> 刷起来，😳😳😳图呢？</p>
-<p>查看一下图片路径，咦，这路径怎么是 <code>.com/xxx.jpg</code>，程序员的直觉告诉我，事情不对！</p>
-<p>再看下<a href="https://alreadyright.github.io/2019/06/16/aboutHexo/" target="_blank" rel="noopener">这位仁兄</a>的博客，奥，插件版本不对，好，改版本！</p>
-<h2 id="修改插件-hexo-asset-image-版本"><a href="#修改插件-hexo-asset-image-版本" class="headerlink" title="修改插件 hexo-asset-image 版本"></a>修改插件 hexo-asset-image 版本</h2><p>将博客根目录下的文件 <code>package.json</code> 中的 <code>&quot;hexo-asset-image&quot;: &quot;1.0.0&quot;</code> 修改为 <code>&quot;hexo-asset-image&quot;: &quot;0.0.3&quot;</code>，别问我😁为什么“这位仁兄”的改是 <code>0.0.1</code>，我改的是 <code>0.0.3</code>，因为我任性！其实是因为试过 <code>0.0.3</code> 也是可以的，高版本总是好一点嘛，不知道这里对不对😂😂😂。</p>
-<p>改完后<code>npm install &amp;&amp; hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code> 一气呵成，再 <code>localhost:4000</code> 刷起来，😳😳😳图呢？</p>
-<h2 id="路径写法和中文问题"><a href="#路径写法和中文问题" class="headerlink" title="路径写法和中文问题"></a>路径写法和中文问题</h2><p>卧槽，卧槽，卧槽……</p>
-<p>我的图呢？不应该啊，再看图片路径，怎么会是 <code>/2019/08/08/记录-Hexo-图片的坑/./%E8%AE%B0%E5%BD%95-Hexo-%E5%9B%BE%E7%89%87%E7%9A%84%E5%9D%91/en.jpg</code></p>
-<p>好吧，至少我看到了有部分是对的，没办法，只好看一下插件的源码了。。。。。。</p>
-<p>打开源码文件，位于 <code>博客根目录\node_modules\hexo-asset-image\index.js</code> 。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">var</span> cheerio = <span class="built_in">require</span>(<span class="string">'cheerio'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPosition</span>(<span class="params">str, m, i</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hexo.extend.filter.register(<span class="string">'after_post_render'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> config = hexo.config;</span><br><span class="line">  <span class="keyword">if</span>(config.post_asset_folder)&#123;</span><br><span class="line">    <span class="keyword">var</span> link = data.permalink;</span><br><span class="line">    <span class="keyword">var</span> beginPos = getPosition(link, <span class="string">'/'</span>, <span class="number">3</span>) + <span class="number">1</span>;</span><br><span class="line">    <span class="comment">// In hexo 3.1.1, the permalink of "about" page is like ".../about/index.html".</span></span><br><span class="line">    <span class="keyword">var</span> endPos = link.lastIndexOf(<span class="string">'/'</span>) + <span class="number">1</span>;</span><br><span class="line">    link = link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> toprocess = [<span class="string">'excerpt'</span>, <span class="string">'more'</span>, <span class="string">'content'</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      <span class="keyword">var</span> key = toprocess[i];</span><br><span class="line"> </span><br><span class="line">      <span class="keyword">var</span> $ = cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: <span class="literal">false</span>,</span><br><span class="line">        xmlMode: <span class="literal">false</span>,</span><br><span class="line">        lowerCaseTags: <span class="literal">false</span>,</span><br><span class="line">        decodeEntities: <span class="literal">false</span></span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(<span class="string">'img'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">// For windows style path, we replace '\' to '/'.</span></span><br><span class="line">        <span class="keyword">var</span> src = $(<span class="keyword">this</span>).attr(<span class="string">'src'</span>).replace(<span class="string">'\\'</span>, <span class="string">'/'</span>);   <span class="comment">//---------1</span></span><br><span class="line">        <span class="keyword">if</span>(!<span class="regexp">/http[s]*.*|\/\/.*/</span>.test(src))&#123;</span><br><span class="line">          <span class="comment">// For "about" page, the first part of "src" can't be removed.</span></span><br><span class="line">          <span class="comment">// In addition, to support multi-level local directory.</span></span><br><span class="line">          <span class="keyword">var</span> linkArray = link.split(<span class="string">'/'</span>).filter(<span class="function"><span class="keyword">function</span>(<span class="params">elem</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> elem != <span class="string">''</span>;</span><br><span class="line">          &#125;);</span><br><span class="line">          <span class="keyword">var</span> srcArray = src.split(<span class="string">'/'</span>).filter(<span class="function"><span class="keyword">function</span>(<span class="params">elem</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> elem != <span class="string">''</span>;   <span class="comment">//---------2</span></span><br><span class="line">          &#125;);</span><br><span class="line">          <span class="keyword">if</span>(linkArray[linkArray.length - <span class="number">1</span>] == srcArray[<span class="number">0</span>])   <span class="comment">//---------3</span></span><br><span class="line">            srcArray.shift();</span><br><span class="line">          src = srcArray.join(<span class="string">'/'</span>);</span><br><span class="line">          $(<span class="keyword">this</span>).attr(<span class="string">'src'</span>, <span class="string">'/'</span> + link + src);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] = $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>这代码，应该能改吧，哈哈哈，我承认，第一眼看到，我是蒙蔽的。</p>
-<p>仔细看了一下标记 1 处 <code>var src = $(this).attr(&#39;src&#39;).replace(&#39;\\&#39;, &#39;/&#39;);</code>，猜测 <code>src</code> 应该就是我们写的图片的路径，源码的作用是将 Windows 的文件分隔符改为 Unix 类型的文件分隔符，即将 <code>\</code> 改为 <code>/</code>，这没错，也就是说，我在 Typora 中是可以这样 <code>![](.\记录-Hexo-图片的坑\en.jpg)</code> 写图片路径的，非常好！我的 Typora 支持以相对路径插入图片，非常 nice~！不过需要设置，如图设置：<br><img src="/2019/08/08/记录-Hexo-图片的坑/Typora优先使用相对路径.png" alt="Typora优先使用相对路径"></p>
-<p>设置好，就能愉快的往 Typora 里直接丢图片了，直接拖进去，才是正确的打开方式！</p>
-<p>😳😳😳还是没解决显示图的问题啊！别急，再往下看看，诶！在标记 2 处看出了端倪，原来，我的这种  <code>![](./记录-Hexo-图片的坑/en.jpg)</code> 写法不对！😂😂😂，只能写  <code>![](记录-Hexo-图片的坑/en.jpg)</code> 或   <code>![](/记录-Hexo-图片的坑/en.jpg)</code>，好吧，不支持就不支持吧，那我就写成这样 <code>![](记录-Hexo-图片的坑\en.jpg)</code> 吧。</p>
-<p>再试一下，还是没有图！！！😤😤😤结合图片路径，继续看源码！知道原因了，在标记 3 处，源码作者考虑到了我们需要所见即所得，我们带文件夹的路径写法，在这一步，作者判断了有没有写文件夹，如果我们的 MarkDown 中有写（一般都会写好吧，毕竟能所见即所得啊），他通过判断数组变量 <code>linkArray</code> 最后一个值是否与保存着我们写的路径的数组变量 <code>srcArray</code> 的第一个值相等，如果相等，则删除其中一个，然后拼接，对啊，逻辑没有错啊，为什么我还是看不到图片呢？其实是因为中文的原因，中文图片路径做了 <code>URL</code> 编码，我们看到的 <code>%E8%AE%B0%E5%BD%95-Hexo-%E5%9B%BE%E7%89%87%E7%9A%84%E5%9D%91</code> 其实就是 <code>记录-Hexo-图片的坑</code>，知道原因了，就好解决了。</p>
-<p>将标记 3 处的 <code>var srcArray = src.split(&#39;/&#39;).filter(function(elem){</code> 改为 <code>var srcArray = decodeURI(src).split(&#39;/&#39;).filter(function(elem){</code>，还有其他的改法，但是我怎么简单怎么来，接着再来一遍猛如虎的操作 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>，<code>localhost:4000</code> 刷起来。</p>
-<p>有图片了，舒服~</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
-<li>将博客根目录下的文件 <code>_config.yml</code> 中的 <code>post_asset_folder: false</code> 改为 <code>post_asset_folder: true</code>。</li>
-<li>cmd 在博客根目录下 <code>npm install hexo-asset-image -–save</code>。</li>
-<li>将博客根目录下的文件 <code>package.json</code> 中的 <code>&quot;hexo-asset-image&quot;: &quot;1.0.0&quot;</code> 修改为 <code>&quot;hexo-asset-image&quot;: &quot;0.0.3&quot;</code>，在博客根目录下 cmd <code>npm install</code>；</li>
-<li>修改 <code>博客根目录\node_modules\hexo-asset-image\index.js</code> 文件中的第 38 行为 <code>var srcArray = decodeURI(src).split(&#39;/&#39;).filter(function(elem){</code>；</li>
-<li>在博客根目录下 cmd  <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>，完成。</li>
-</ol>
-<p><strong>注意：图片地址只能写成 <code>/目录/xxx.jpg</code>、<code>目录/xxx.jpg</code>、<code>目录\xxx.jpg</code> 或 <code>\目录\xxx.jpg</code> 的形式，前面不能带 <code>.</code>，且路径中不能含有空格，建议使用 “-” 代替空格。</strong></p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/08/Hexo-GitPage-搭建个人博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/08/Hexo-GitPage-搭建个人博客/" class="post-title-link" itemprop="url">Hexo + GitPage 搭建个人博客</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-08 15:38:16" itemprop="dateCreated datePublished" datetime="2019-08-08T15:38:16+08:00">2019-08-08</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><ol>
-<li>npm，意味着需要安装 <a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">Node.js</a>。</li>
-<li>Git，这个不用多说。</li>
-</ol>
-<h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><h2 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h2><p>安装很简单，打开 cmd，运行命令 <code>npm install -g hexo-cli</code>。</p>
-<h2 id="创建本地博客"><a href="#创建本地博客" class="headerlink" title="创建本地博客"></a>创建本地博客</h2><p>Hexo 的原理：</p>
-<ol>
-<li>本地创建博客，写 MarkDown 文件形式的博客；</li>
-<li>Hexo 将 md 文件编译成静态 HTML 文件；</li>
-<li>上传至 Github 仓库；</li>
-<li>通过 GitPage 的功能，实现访问这些静态资源。</li>
-</ol>
-<p>所以需要先在本地创建好博客。创建命令 <code>hexo init &lt;博客名称，建议如下格式：xxx.github.io&gt;</code>，这将会在当前目录下创建文件夹 <code>xxx.github.io</code>。</p>
-<h2 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h2><p>cd 到该目录下 <code>cd xxx.github.io</code>，之后 <code>npm install</code>。</p>
-<p>这个时候本地博客就已经搭建好了。</p>
-<h2 id="打开博客服务器："><a href="#打开博客服务器：" class="headerlink" title="打开博客服务器："></a>打开博客服务器：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 这个是hexo server的简写</span><br><span class="line">hexo s</span><br><span class="line">// 如果需要指定端口号，使用下面这个命令</span><br><span class="line">hexo s -p 端口号</span><br></pre></td></tr></table></figure>
-
-<p>浏览器输入 <code>localhost:4000</code> 即可查看效果。<br>可以换漂亮的主题，目前最受欢迎的主题是 <a href="https://github.com/theme-next/hexo-theme-next.git" target="_blank" rel="noopener">Next</a> 具体怎么使用可以直接访问查看。</p>
-<h1 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h1><p>新建文章也很简单：运行 <code>hexo n &quot;文章标题（同时也是文件名）&quot;</code>。生成后 Hexo 会提示文件位置，直接使用最习惯的 MarkDown 编辑器编辑就好了。</p>
-<h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><h2 id="创建-Github-仓库"><a href="#创建-Github-仓库" class="headerlink" title="创建 Github 仓库"></a>创建 Github 仓库</h2><p>在GitHub上新建一个仓库，仓库名命名的规则是 <code>&lt;Github用户名&gt;.github.io</code>。</p>
-<h2 id="安装-deploy-插件"><a href="#安装-deploy-插件" class="headerlink" title="安装 deploy 插件"></a>安装 <code>deploy</code> 插件</h2><p><code>npm install --save hexo-deployer-git</code>，之后修改文件 <code>_config.yml</code>（文件在 <code>xxx.github.io</code> 下）。<br>搜索 <code>deploy</code>，定位到它。修改为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/替换为github仓库地址/xxx.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<h2 id="部署到-Github"><a href="#部署到-Github" class="headerlink" title="部署到 Github"></a>部署到 Github</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// hexo generate 的缩写</span><br><span class="line">hexo g</span><br><span class="line">// hexo deploy 的缩写</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>现在可以通过 <code>&lt;Github用户名&gt;.github.io</code> 来访问了。</p>
-<h1 id="使用自己的域名"><a href="#使用自己的域名" class="headerlink" title="使用自己的域名"></a>使用自己的域名</h1><h2 id="申请域名"><a href="#申请域名" class="headerlink" title="申请域名"></a>申请域名</h2><p>直接去阿里云、腾讯云或者百度云之类的云服务商那里申请。要钱！</p>
-<h2 id="修改域名解析"><a href="#修改域名解析" class="headerlink" title="修改域名解析"></a>修改域名解析</h2><p>这个自行搜索怎么设置。要注意的是：</p>
-<ol>
-<li>记录类型为 <code>A</code>；</li>
-<li>记录值填写 <code>ping github.io</code> 得到的 ip 地址。</li>
-</ol>
-<h2 id="修改仓库设置"><a href="#修改仓库设置" class="headerlink" title="修改仓库设置"></a>修改仓库设置</h2><p>打开 Github 仓库的设置，定位到 <code>GitHub Pages</code> 如图：</p>
-<p><img src="/2019/08/08/Hexo-GitPage-搭建个人博客/GitHub-Pages设置.png" alt="1565255117433"></p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>步骤较多，但不是很难。</p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -2155,7 +1778,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -2194,7 +1817,19 @@
         
           
         
-        <span class="site-state-item-count">12</span>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -2265,7 +1900,25 @@
         
           
         
-        <span class="site-state-item-count">28</span>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -2287,7 +1940,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

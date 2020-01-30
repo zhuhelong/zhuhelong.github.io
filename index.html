@@ -238,6 +238,790 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/30/Gradle-学习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2020/01/30/Gradle-学习/" class="post-title-link" itemprop="url">Gradle 学习</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-30 20:34:20 / 修改时间：20:34:57" itemprop="dateCreated datePublished" datetime="2020-01-30T20:34:20+08:00">2020-01-30</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Webpack/" itemprop="url" rel="index"><span itemprop="name">Webpack</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/28/Webpack-下网络请求跨域问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/12/28/Webpack-下网络请求跨域问题/" class="post-title-link" itemprop="url">Webpack 下网络请求跨域问题</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-28 10:36:53" itemprop="dateCreated datePublished" datetime="2019-12-28T10:36:53+08:00">2019-12-28</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-29 17:41:46" itemprop="dateModified" datetime="2019-12-29T17:41:46+08:00">2019-12-29</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Webpack/" itemprop="url" rel="index"><span itemprop="name">Webpack</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在使用 Webpack 前后端分离开发的情况下，会遇到跨域访问问题。</p>
+<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>例子使用 Axios 进行说明。</p>
+<ol>
+<li>在 <code>项目目录/config/index.js</code> 中配置：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  dev: &#123;</span><br><span class="line">    ...</span><br><span class="line">    proxyTable: &#123;</span><br><span class="line">      &apos;需要代理的根路径&apos;: &#123;  // 如 “/api”</span><br><span class="line">        target: &apos;接口地址&apos;,  // 如：“http://localhost:8080”，注意，需带上http:// 或 https://</span><br><span class="line">        changeOrigin: true,</span><br><span class="line">        pathRewrite: &#123;  // 路径重写，注意：需要代理的根路径 前面有符号：“^”。</span><br><span class="line">          &apos;^需要代理的根路径&apos;: &apos;接口真实路径&apos;  // 如 需要代理的路径为：“/api”，接口真实路径为：“/”</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    ....</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>在 <code>项目目录/config/dev.env.js</code> 中配置：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">module.exports = merge(prodEnv, &#123;</span><br><span class="line">  ...</span><br><span class="line">  // 如：开发使用的地址为：“http://localhost:8081”，需要代理的根路径为“/api”，</span><br><span class="line">  // 则为：“&apos;http://localhost:8081/api&apos;”，</span><br><span class="line">  // 千万注意：双引号内有单引号（也可使用单引号包含双引号）！</span><br><span class="line">  // 因为这是使用类似 C++ 宏的方式将 BASE_API 替换成 BASE_API 的值。</span><br><span class="line">  BASE_API: &quot;&apos;开发使用地址 + 需要代理的根路径&apos;&quot;,</span><br><span class="line">  ...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// 项目目录/config/index.js</span><br><span class="line">module.exports = &#123;</span><br><span class="line">  dev: &#123;</span><br><span class="line">    ...</span><br><span class="line">    proxyTable: &#123;</span><br><span class="line">      &apos;/api&apos;: &#123;</span><br><span class="line">        target: &apos;http://localhost:8080&apos;,</span><br><span class="line">        changeOrigin: true,</span><br><span class="line">        pathRewrite: &#123;</span><br><span class="line">          &apos;^api&apos;: &apos;/restful_api&apos;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    ....</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 项目目录/config/dev.env.js</span><br><span class="line">module.exports = merge(prodEnv, &#123;</span><br><span class="line">  ...</span><br><span class="line">  BASE_API: &quot;&apos;http://localhost:8081/api&apos;&quot;,</span><br><span class="line">  ...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>上面的例子中，Axios 的使用方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">axios(&apos;/one_action&apos;)</span><br><span class="line">.then(res =&gt; &#123;...&#125;)</span><br><span class="line">.catch(err =&gt; &#123;...&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>则在浏览器中，看到的是向  <code>http://localhost:8081/api/one_action</code> 请求数据，这不是真正的接口地址，但其实代理服务器会将该请求代理至 <code>http://localhost:8080/restful_api/one_action</code>，这才是真正的请求地址，所以可以请求到数据，解决了跨域问题。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/22/Qt-Q-OBJECT-的作用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/12/22/Qt-Q-OBJECT-的作用/" class="post-title-link" itemprop="url">Qt Q_OBJECT 的作用</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-22 15:21:17 / 修改时间：15:24:53" itemprop="dateCreated datePublished" datetime="2019-12-22T15:21:17+08:00">2019-12-22</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/qt/" itemprop="url" rel="index"><span itemprop="name">qt</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">graph TD;</span><br><span class="line">  node1(1. Qt Q_OBJECT 的作用)--&gt;node2(2. 构造函数初始化列表和构造函数体内赋值区别)</span><br><span class="line">  node2--&gt;node3(3. C++ 运算符重载)</span><br><span class="line">  node3--&gt;node4(4. 友元函数)</span><br><span class="line">  node1--&gt;node5(5. 引用和指针的用法区别)</span><br><span class="line">  node5--&gt;node6(6. Model/View)</span><br><span class="line">  node6--&gt;node7(7. 类中成员函数声明后面的const的含义)</span><br></pre></td></tr></table></figure>
+
+<h1 id="1-Qt-Q-OBJECT-的作用"><a href="#1-Qt-Q-OBJECT-的作用" class="headerlink" title="1. Qt Q_OBJECT 的作用"></a>1. Qt Q_OBJECT 的作用</h1><blockquote>
+<p>原文：The Q_OBJECT macro at the beginning of the class definition is necessary for all classes that define signals or slots.</p>
+</blockquote>
+<p>只有加入了Q_OBJECT，才能使用QT中的signal和slot机制，而且Q_OBJECT要放在类的最前面</p>
+<h2 id="1-QT的信号与槽机制介绍"><a href="#1-QT的信号与槽机制介绍" class="headerlink" title="1.QT的信号与槽机制介绍"></a>1.QT的信号与槽机制介绍</h2><h3 id="1-1-信号与槽"><a href="#1-1-信号与槽" class="headerlink" title="1.1 信号与槽"></a>1.1 信号与槽</h3><p>信号和槽机制是 QT 的核心机制，要精通 QT 编程就必须对信号和槽有所了解。信号和槽是一种高级接口，应用于对象之间的通信，它是 QT 的核心特性，也是 QT 区别于其它工具包的重要地方。信号和槽是 QT 自行定义的一种通信机制，它独立于标准的 C/C++ 语言，因此要正确的处理信号和槽，必须借助一个称为 moc（Meta Object Compiler）的 QT 工具，该工具是一个 C++ 预处理程序，它为高层次的事件处理自动生成所需要的附加代码。</p>
+<p>在我们所熟知的很多 GUI 工具包中，==窗口小部件 (widget) 都有一个回调函数用于响应它们能触发的每个动作，这个回调函数通常是一个指向某个函数的指针==。但是，在 QT 中信号和槽取代了这些凌乱的函数指针，使得我们编写这些通信程序更为简洁明了。 信号和槽能携带任意数量和任意类型的参数，他们是类型完全安全的，不会像回调函数那样产生 core dumps。</p>
+<p>所有从 QObject 或其子类 ( 例如 Qwidget) 派生的类都能够包含信号和槽。当对象改变其状态时，信号就由该对象发射 (emit) 出去，这就是对象所要做的全部事情，它不知道另一端是谁在接收这个信号。这就是真正的信息封装，它确保对象被当作一个真正的软件组件来使用。槽用于接收信号，但它们是普通的对象成员函数。一个槽并不知道是否有任何信号与自己相连接。而且，对象并不了解具体的通信机制。</p>
+<p>==可以将很多信号与单个的槽进行连接，也可以将单个的信号与很多的槽进行连接==，甚至于将一个信号与另外一个信号相连接也是可能的，这时无论第一个信号什么时候发射系统都将立刻发射第二个信号。总之，信号与槽构造了一个强大的部件编程机制。</p>
+<h3 id="1-2-信号"><a href="#1-2-信号" class="headerlink" title="1.2 信号"></a>1.2 信号</h3><p>当某个信号对其客户或所有者发生的内部状态发生改变，信号被一个对象发射。只有定义过这个信号的类及其派生类能够发射这个信号。当一个信号被发射时，与其相关联的槽将被立刻执行，就象一个正常的函数调用一样。信号 - 槽机制完全独立于任何 GUI 事件循环。只有当所有的槽返回以后发射函数（emit）才返回。 如果存在多个槽与某个信号相关联，那么，当这个信号被发射时，这些槽将会一个接一个地执行，但是它们执行的顺序将会是随机的、不确定的，我们不能人为地指定哪个先执行、哪个后执行。</p>
+<p>信号的声明是在头文件中进行的，QT 的 signals 关键字指出进入了信号声明区，随后即可声明自己的信号。例如，下面定义了三个信号：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">signals: </span><br><span class="line">  void mySignal();</span><br><span class="line">  void mySignal(int x); </span><br><span class="line">  void mySignalParam(int x,int y);</span><br></pre></td></tr></table></figure>
+
+<p>在上面的定义中，signals 是 QT 的关键字，而非 C/C++ 的。接下来的一行 void mySignal() 定义了信号 mySignal，这个信号没有携带参数；接下来的一行 void mySignal(int x) 定义 了重名信号 mySignal，但是它携带一个整形参数，这有点类似于 C++ 中的虚函数。从形式上 讲信号的声明与普通的 C++ 函数是一样的，但是信号却没有函数体定义，另外，==信号的返回类型都是 void，不要指望能从信号返回什么有用信息==。</p>
+<p>信号由moc自动产生，它们不应该在 .cpp 文件中实现。</p>
+<h3 id="1-3-槽"><a href="#1-3-槽" class="headerlink" title="1.3 槽"></a>1.3 槽</h3><p>槽是普通的 C++ 成员函数，可以被正常调用，它们唯一的特殊性就是很多信号可以与其相关联。当与其关联的信号被发射时，这个槽就会被调用。槽可以有参数，但槽的参数不能有缺省值。</p>
+<p>既然槽是普通的成员函数，因此与其它的函数一样，它们也有存取权限。槽的存取权限决定了谁能够与其相关联。同普通的 C++ 成员函数一样，槽函数也分为三种类型，即 public slots、private slots 和 protected slots。</p>
+<p><strong>public slots</strong>：在这个区内声明的槽意味着任何对象都可将信号与之相连接。这对于组件编程非常有用，可以创建彼此互不了解的对象，将它们的信号与槽进行连接以便信息能够正确的传递。</p>
+<p><strong>protected slots</strong>：在这个区内声明的槽意味着当前类及其子类可以将信号与之相连接。适用于那些槽，它们是类实现的一部分，但是其界面接口却面向外部。</p>
+<p><strong>private slots</strong>：在这个区内声明的槽意味着只有类自己可以将信号与之相连接。适用于联系非常紧密的类。<br>槽也能够声明为虚函数，这也是非常有用的。</p>
+<p>槽的声明也是在头文件中进行的。例如，下面声明了三个槽：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public slots: </span><br><span class="line">  void mySlot(); </span><br><span class="line">  void mySlot(int x); </span><br><span class="line">  void mySlotParam(int x,int y);</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-信号与槽的关联"><a href="#1-4-信号与槽的关联" class="headerlink" title="1.4 信号与槽的关联"></a>1.4 信号与槽的关联</h3><p>通过调用 QObject 对象的 connect 函数来将某个对象的信号与另外一个对象的槽函数相关联，这样当发射者发射信号时，接收者的槽函数将被调用。该函数的定义如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bool QObject::connect ( const QObject * sender, const char * signal,</span><br><span class="line">                        const QObject * receiver, const char * member ) [static]</span><br></pre></td></tr></table></figure>
+
+<p>这个函数的作用就是将发射者 sender 对象中的信号 signal 与接收者 receiver 中的 member 槽函数联系起来。当指定信号 signal 时必须使用 QT 的宏 SIGNAL()，当指定槽函数时必须使用宏 SLOT()。如果发射者与接收者属于同一个对象的话，那么在 connect 调用中接收者参数可以省略。</p>
+<p>例如，下面定义了两个对象：标签对象 label 和滚动条对象 scroll，并将 valueChanged() 信号与标签对象的 setNum() 相关联，另外信号还携带了一个整形参数，这样标签总是显示滚动条所处位置的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">QLabel *label  = new QLabel; </span><br><span class="line">QScrollBar *scroll = new QScrollBar; </span><br><span class="line">QObject::connect( scroll, SIGNAL(valueChanged(int)), label,  SLOT(setNum(int)) );</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-一个小例子"><a href="#2-一个小例子" class="headerlink" title="2.一个小例子"></a>2.一个小例子</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">//tsignal.h </span><br><span class="line"> class TsignalApp:public QMainWindow </span><br><span class="line"> &#123; </span><br><span class="line">	 Q_OBJECT </span><br><span class="line">	 ... </span><br><span class="line">	 // 信号声明区</span><br><span class="line">	 signals: </span><br><span class="line">		 // 声明信号 mySignal() </span><br><span class="line">		 void mySignal(); </span><br><span class="line">		 // 声明信号 mySignal(int) </span><br><span class="line">		 void mySignal(int x); </span><br><span class="line">		 // 声明信号 mySignalParam(int,int) </span><br><span class="line">		 void mySignalParam(int x,int y); </span><br><span class="line">	 // 槽声明区</span><br><span class="line">	 public slots: </span><br><span class="line">		 // 声明槽函数 mySlot() </span><br><span class="line">		 void mySlot(); </span><br><span class="line">		 // 声明槽函数 mySlot(int) </span><br><span class="line">		 void mySlot(int x); </span><br><span class="line">		 // 声明槽函数 mySignalParam (int，int) </span><br><span class="line">		 void mySlotParam(int x,int y); </span><br><span class="line"> &#125; </span><br><span class="line"> ... </span><br><span class="line"> //tsignal.cpp </span><br><span class="line"> ... </span><br><span class="line"> TsignalApp::TsignalApp() </span><br><span class="line"> &#123; </span><br><span class="line">	 ... </span><br><span class="line">	 // 将信号 mySignal() 与槽 mySlot() 相关联</span><br><span class="line">	 connect(this,SIGNAL(mySignal()),SLOT(mySlot())); </span><br><span class="line">	 // 将信号 mySignal(int) 与槽 mySlot(int) 相关联</span><br><span class="line">	 connect(this,SIGNAL(mySignal(int)),SLOT(mySlot(int))); </span><br><span class="line">	 // 将信号 mySignalParam(int,int) 与槽 mySlotParam(int,int) 相关联</span><br><span class="line">	 connect(this,SIGNAL(mySignalParam(int,int)),SLOT(mySlotParam(int,int))); </span><br><span class="line"> &#125; </span><br><span class="line"> // 定义槽函数 mySlot() </span><br><span class="line"> void TsignalApp::mySlot() </span><br><span class="line"> &#123; </span><br><span class="line">	 QMessageBox::about(this,&quot;Tsignal&quot;, &quot;This is a signal/slot sample without parameter.&quot;); </span><br><span class="line"> &#125; </span><br><span class="line"> // 定义槽函数 mySlot(int) </span><br><span class="line"> void TsignalApp::mySlot(int x) </span><br><span class="line"> &#123; </span><br><span class="line">	 QMessageBox::about(this,&quot;Tsignal&quot;, &quot;This is a signal/slot sample with one parameter.&quot;); </span><br><span class="line"> &#125; </span><br><span class="line"> // 定义槽函数 mySlotParam(int,int) </span><br><span class="line"> void TsignalApp::mySlotParam(int x,int y) </span><br><span class="line"> &#123; </span><br><span class="line">	 char s[256]; </span><br><span class="line">	 sprintf(s,&quot;x:%d y:%d&quot;,x,y); </span><br><span class="line">	 QMessageBox::about(this,&quot;Tsignal&quot;, s); </span><br><span class="line"> &#125; </span><br><span class="line"> void TsignalApp::slotFileNew() </span><br><span class="line"> &#123; </span><br><span class="line">	 // 发射信号 mySignal() </span><br><span class="line">	 emit mySignal(); </span><br><span class="line">	 // 发射信号 mySignal(int) </span><br><span class="line">	 emit mySignal(5); </span><br><span class="line">	 // 发射信号 mySignalParam(5，100) </span><br><span class="line">	 emit mySignalParam(5,100); </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-关于元对象工具MOC"><a href="#3-关于元对象工具MOC" class="headerlink" title="3.关于元对象工具MOC"></a>3.关于元对象工具MOC</h2><p>元对象编译器 moc（meta object compiler）对 C++ 文件中的类声明进行分析并产生用于初始化元对象的 C++ 代码，元对象包含全部信号和槽的名字以及指向这些函数的指针。</p>
+<p>==moc 读 C++ 源文件，如果发现有 Q_OBJECT 宏声明的类，它就会生成另外一个 C++ 源文件，这个新生成的文件中包含有该类的元对象代码。<br>例如，假设我们有一个头文件 mysignal.h，在这个文件中包含有信号或槽的声明，那么在编译之前 moc 工具就会根据该文件自动生成一个名为 mysignal.moc.h 的 C++ 源文件并将其提交给编译器；类似地，对应于 mysignal.cpp 文件 moc 工具将自动生成一个名为 mysignal.moc.cpp 文件提交给编译器。==</p>
+<p>==元对象代码是 signal/slot 机制所必须的。用 moc 产生的 C++ 源文件必须与类实现一起进行编译和连接，或者用 #include 语句将其包含到类的源文件中。moc 并不扩展 #include 或者 #define 宏定义 , 它只是简单的跳过所遇到的任何预处理指令。==</p>
+<h1 id="2-构造函数初始化列表和构造函数体内赋值区别"><a href="#2-构造函数初始化列表和构造函数体内赋值区别" class="headerlink" title="2. 构造函数初始化列表和构造函数体内赋值区别"></a>2. 构造函数初始化列表和构造函数体内赋值区别</h1><p>C++类中成员变量的初始化有两种方式：</p>
+<ul>
+<li>构造函数初始化列表</li>
+<li>构造函数体内赋值</li>
+</ul>
+<p>下面看看两种方式有何不同。<br>成员变量初始化的顺序是按照定义的顺序。</p>
+<h2 id="1、内部数据类型（char，int……指针等）"><a href="#1、内部数据类型（char，int……指针等）" class="headerlink" title="1、内部数据类型（char，int……指针等）"></a>1、内部数据类型（char，int……指针等）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Animal</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    Animal(int weight,int height):       //A初始化列表</span><br><span class="line">      m_weight(weight),</span><br><span class="line">      m_height(height)</span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    Animal(int weight,int height)       //B函数体内初始化</span><br><span class="line">    &#123;</span><br><span class="line">        m_weight = weight;</span><br><span class="line">        m_height = height;</span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">    int m_weight;</span><br><span class="line">    int m_height;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>对于这些内部类型来说，基本上是没有区别的，效率上也不存在多大差异。</p>
+<p>==当然A和B方式不能共存==。</p>
+<h2 id="2、无默认构造函数的继承关系中"><a href="#2、无默认构造函数的继承关系中" class="headerlink" title="2、无默认构造函数的继承关系中"></a>2、无默认构造函数的继承关系中</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Animal</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    Animal(int weight,int height):        //没有提供无参的构造函数 </span><br><span class="line">      m_weight(weight),</span><br><span class="line">      m_height(height)</span><br><span class="line">    &#123;</span><br><span class="line">&#125;</span><br><span class="line">private:</span><br><span class="line">    int m_weight;</span><br><span class="line">    int m_height;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">class Dog: public Animal</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    Dog(int weight,int height,int type)   //error 构造函数 父类Animal无合适构造函数</span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">    int m_type;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>上面的子类和父类编译会出错：<br>报错内容：找不到合适的默认构造函数</p>
+<p><img src="/2019/12/22/Qt-Q-OBJECT-的作用/2.3.1.png" alt="2.3.1"></p>
+<p>因为子类Dog初始化之前要进行父类Animal的初始化，但是根据Dog的构造函数，没有给父类传递参数，使用了父类Animal的无参数构造函数。而父类Animal提供了有参数的构造函数，这样编译器就不会给父类Animal提供一个默认的无参数的构造函数了，所以编译时报错，说找不到合适的默认构造函数可用。要么提供一个无参数的构造函数，要么在子类的Dog的初始化列表中给父类Animal传递初始化参数，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Dog: public Animal</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    Dog(int weight,int height,int type):</span><br><span class="line">        Animal(weight,height)         //必须使用初始化列表增加对父类的初始化</span><br><span class="line">    &#123;</span><br><span class="line">        ;</span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">    int m_type;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、类中const常量，必须在初始化列表中初始，不能使用赋值的方式初始化"><a href="#3、类中const常量，必须在初始化列表中初始，不能使用赋值的方式初始化" class="headerlink" title="3、类中const常量，必须在初始化列表中初始，不能使用赋值的方式初始化"></a>3、类中const常量，必须在初始化列表中初始，不能使用赋值的方式初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Dog: public Animal</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    Dog(int weight,int height,int type):</span><br><span class="line">        Animal(weight,height), </span><br><span class="line">        LEGS(4)                //必须在初始化列表中初始化</span><br><span class="line">    &#123;</span><br><span class="line">        //LEGS = 4;           //error</span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">    int m_type;</span><br><span class="line">    const int LEGS;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、包含有自定义数据类型（类）对象的成员初始化"><a href="#4、包含有自定义数据类型（类）对象的成员初始化" class="headerlink" title="4、包含有自定义数据类型（类）对象的成员初始化"></a>4、包含有自定义数据类型（类）对象的成员初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">class Food</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    Food(int type = 10)</span><br><span class="line">    &#123;</span><br><span class="line">        m_type = 10;</span><br><span class="line">    &#125;</span><br><span class="line">    Food(Food &amp;other)                 //拷贝构造函数</span><br><span class="line">    &#123;</span><br><span class="line">        m_type = other.m_type;</span><br><span class="line">    &#125;</span><br><span class="line">    Food &amp; operator =(Food &amp;other)      //重载赋值=函数</span><br><span class="line">    &#123;</span><br><span class="line">        m_type = other.m_type;</span><br><span class="line">        return *this;</span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">    int m_type;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">（1）构造函数赋值方式 初始化成员对象m_food</span><br><span class="line"></span><br><span class="line">class Dog: public Animal</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    Dog(Food &amp;food)</span><br><span class="line">      //:m_food(food)  </span><br><span class="line">    &#123;</span><br><span class="line">        m_food = food;               //初始化 成员对象</span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">    Food m_food;</span><br><span class="line">&#125;;</span><br><span class="line">//使用</span><br><span class="line">Food fd;</span><br><span class="line">Dog dog(fd);   //</span><br><span class="line">Dog dog(fd);</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">先执行了   对象类型构造函数Food(int type = 10)——&gt; </span><br><span class="line">然后在执行 对象类型构造函数Food &amp; operator =(Food &amp;other)</span><br><span class="line">想象是为什么？</span><br><span class="line"> </span><br><span class="line">（2）构造函数初始化列表方式</span><br><span class="line">class Dog: public Animal</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    Dog(Food &amp;food)</span><br><span class="line">      :m_food(food)                  //初始化 成员对象</span><br><span class="line">    &#123;</span><br><span class="line">        //m_food = food;               </span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">    Food m_food;</span><br><span class="line">&#125;;</span><br><span class="line">//使用</span><br><span class="line">Food fd;</span><br><span class="line">Dog dog(fd);   //</span><br><span class="line">Dog dog(fd);</span><br><span class="line">结果：执行Food(Food &amp;other)拷贝构造函数完成初始化</span><br></pre></td></tr></table></figure>
+
+<p>不同的初始化方式得到不同的结果：</p>
+<p>==明显构造函数初始化列表的方式效率更高。==</p>
+<h1 id="3-C-运算符重载"><a href="#3-C-运算符重载" class="headerlink" title="3. C++ 运算符重载"></a>3. C++ 运算符重载</h1><p><a href="https://blog.csdn.net/lishuzhai/article/details/50781753" target="_blank" rel="noopener">太多了，见博客</a></p>
+<h1 id="4-友元函数"><a href="#4-友元函数" class="headerlink" title="4. 友元函数"></a>4. 友元函数</h1><p>类的友元函数是定义在类外部，但有权访问类的所有私有（private）成员和保护（protected）成员。尽管友元函数的原型有在类的定义中出现过，但是友元函数并不是成员函数。</p>
+<p>友元可以是一个函数，该函数被称为友元函数；友元也可以是一个类，该类被称为友元类，在这种情况下，整个类及其所有成员都是友元。</p>
+<h1 id="5-引用和指针的用法区别"><a href="#5-引用和指针的用法区别" class="headerlink" title="5. 引用和指针的用法区别"></a>5. 引用和指针的用法区别</h1><h2 id="5-1-定义"><a href="#5-1-定义" class="headerlink" title="5.1 定义"></a>5.1 定义</h2><p>指针：指针是一个变量，只不过这个变量存储的是一个地址，指向内存的一个存储单元；<br>引用：跟原来的变量实质上是同一个东西，只不过是原变量的一个别名而已。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a=1;</span><br><span class="line">int *p=&amp;a;   // 指针</span><br><span class="line">int &amp;b=a;   //引用</span><br></pre></td></tr></table></figure>
+
+<p>上面定义了一个整形变量和一个指针变量p，该指针变量指向a的存储单元，即p的值是a存储单元的地址。<br>而下面2句定义了一个整形变量a和这个整形a的引用b，事实上a和b是同一个东西，在内存占有同一个存储单元。</p>
+<h2 id="5-2-区别"><a href="#5-2-区别" class="headerlink" title="5.2 区别"></a>5.2 区别</h2><p>(1)指针：指针是一个变量，只不过这个变量存储的是一个地址，指向内存的一个存储单元；引用：跟原来的变量实质上是同一个东西，只不过是原变量的一个别名而已。</p>
+<p>(2)可以有const指针，但是没有const引用；</p>
+<p>(3)指针可以有多级，但是引用只能是一级（int **p；合法 而 int &amp;&amp;a是不合法的），即可以有指向指针的指针，但是没有引用的引用。</p>
+<p>(4)指针的值可以为空，但是引用的值不能为NULL，并且引用在定义的时候必须初始化；</p>
+<p>(5)指针的值在初始化后可以改变，即指向其它的存储单元，而引用在进行初始化后就不会再改变了。</p>
+<p>(6)”sizeof引用”得到的是所指向的变量(对象)的大小，而”sizeof指针”得到的是指针本身的大小；</p>
+<p>(7)指针和引用的自增(++)运算意义不一样；</p>
+<h1 id="7-类中成员函数声明后面的const的含义"><a href="#7-类中成员函数声明后面的const的含义" class="headerlink" title="7. 类中成员函数声明后面的const的含义"></a>7. 类中成员函数声明后面的const的含义</h1><p>这个const一般是对类中成员函数属性的声明，但这个声明怪怪的，只能放在函数声明的尾部，大概是因为其它地方都已经被占用了。这个声明表示任这个函数不会修改类中的数据成员。如果在编写const成员函数时，不慎修改了数据成员，或者调用了其它非const成员函数，编译器将指出错误，这无疑会提高程序的健壮性。<br>以下程序中，类stack的成员函数GetCount仅用于计数，从逻辑上讲GetCount应当为const函数。编译器将指出GetCount函数中的错误。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Stack</span><br><span class="line">&#123;</span><br><span class="line">    public:</span><br><span class="line">        void Push(int elem);</span><br><span class="line">        int Pop(void);</span><br><span class="line">        int GetCount(void) const;   // const 成员函数</span><br><span class="line">    private:</span><br><span class="line">        int m_num;</span><br><span class="line">        int m_data[100];</span><br><span class="line">&#125;;</span><br><span class="line">int Stack::GetCount(void)const</span><br><span class="line">&#123;</span><br><span class="line">    ++m_num;   // 编译错误，企图修改数据成员m_num</span><br><span class="line">    Pop();   // 编译错误，企图调用非const函数</span><br><span class="line">    returnm_num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>关于Const函数的几点规则：<br>a. 在类中被const声明的成员函数只能访问const成员函数，而非const函数可以访问任意的成员函数，包括const成员函数。<br>b. 在类中被const声明的成员函数不可以修改对象的成员数据，不管对象是否具有const性质。编译时会对是否修改成员数据进行检查。<br>c. 加上mutable修饰符的数据成员，对于任何情况下通过任何手段都可修改，自然此时的const成员函数可以修改它。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/17/Centos7-部署遇到的一些问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/12/17/Centos7-部署遇到的一些问题/" class="post-title-link" itemprop="url">Centos7 部署遇到的一些问题</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-17 09:53:37 / 修改时间：19:03:24" itemprop="dateCreated datePublished" datetime="2019-12-17T09:53:37+08:00">2019-12-17</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Centos7/" itemprop="url" rel="index"><span itemprop="name">Centos7</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Centos7/部署/" itemprop="url" rel="index"><span itemprop="name">部署</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="Nginx-安装问题"><a href="#Nginx-安装问题" class="headerlink" title="Nginx 安装问题"></a>Nginx 安装问题</h1><p>按照大多数教程的方式都是使用自编译的方式，可是过程过于繁琐。</p>
+<p>采用以下方式简单一些：</p>
+<ol>
+<li>添加 nginx 存储库，<code>sudo yum install epel-release</code>；</li>
+<li>安装 nginx，<code>yum install nginx</code>。</li>
+</ol>
+<h1 id="Certbot-出错问题"><a href="#Certbot-出错问题" class="headerlink" title="Certbot 出错问题"></a>Certbot 出错问题</h1><h2 id="urllib3-出错"><a href="#urllib3-出错" class="headerlink" title="urllib3 出错"></a>urllib3 出错</h2><p>问题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">[root@iZwz98bpfv23icxqr51jwfZ for_https]# certbot certonly --webroot -w /home/hcgy/project/for_https -d hcgy.top</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;/usr/bin/certbot&quot;, line 9, in &lt;module&gt;</span><br><span class="line">    load_entry_point(&apos;certbot==0.39.0&apos;, &apos;console_scripts&apos;, &apos;certbot&apos;)()</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/pkg_resources/__init__.py&quot;, line 570, in load_entry_point</span><br><span class="line">    return get_distribution(dist).load_entry_point(group, name)</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/pkg_resources/__init__.py&quot;, line 2687, in load_entry_point</span><br><span class="line">    return ep.load()</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/pkg_resources/__init__.py&quot;, line 2341, in load</span><br><span class="line">    return self.resolve()</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/pkg_resources/__init__.py&quot;, line 2347, in resolve</span><br><span class="line">    module = __import__(self.module_name, fromlist=[&apos;__name__&apos;], level=0)</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/certbot/main.py&quot;, line 17, in &lt;module&gt;</span><br><span class="line">    from certbot import account</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/certbot/account.py&quot;, line 17, in &lt;module&gt;</span><br><span class="line">    from acme import messages</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/acme/messages.py&quot;, line 11, in &lt;module&gt;</span><br><span class="line">    from acme import challenges</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/acme/challenges.py&quot;, line 12, in &lt;module&gt;</span><br><span class="line">    import requests</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/requests/__init__.py&quot;, line 58, in &lt;module&gt;</span><br><span class="line">    from . import utils</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/requests/utils.py&quot;, line 32, in &lt;module&gt;</span><br><span class="line">    from .exceptions import InvalidURL</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/requests/exceptions.py&quot;, line 10, in &lt;module&gt;</span><br><span class="line">    from urllib3.exceptions import HTTPError as BaseHTTPError</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/urllib3/__init__.py&quot;, line 10, in &lt;module&gt;</span><br><span class="line">    from .connectionpool import (</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/urllib3/connectionpool.py&quot;, line 31, in &lt;module&gt;</span><br><span class="line">    from .connection import (</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/urllib3/connection.py&quot;, line 45, in &lt;module&gt;</span><br><span class="line">    from .util.ssl_ import (</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/urllib3/util/__init__.py&quot;, line 5, in &lt;module&gt;</span><br><span class="line">    from .request import make_headers</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/urllib3/util/request.py&quot;, line 5, in &lt;module&gt;</span><br><span class="line">    from ..exceptions import UnrewindableBodyError</span><br><span class="line">ImportError: cannot import name UnrewindableBodyError</span><br></pre></td></tr></table></figure>
+
+<p>解决办法：<br>安装新一点的 urllib3 库，<code>pip install urllib3==1.21.1</code>。注：版本号视情况而定！</p>
+<h2 id="pyOpenSSL-出错"><a href="#pyOpenSSL-出错" class="headerlink" title="pyOpenSSL 出错"></a>pyOpenSSL 出错</h2><p>问题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">[root@iZwz98bpfv23icxqr51jwfZ for_https]# certbot certonly --webroot -w /home/hcgy/project/for_https -d hcgy.top</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;/usr/bin/certbot&quot;, line 9, in &lt;module&gt;</span><br><span class="line">    load_entry_point(&apos;certbot==0.39.0&apos;, &apos;console_scripts&apos;, &apos;certbot&apos;)()</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/pkg_resources/__init__.py&quot;, line 570, in load_entry_point</span><br><span class="line">    return get_distribution(dist).load_entry_point(group, name)</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/pkg_resources/__init__.py&quot;, line 2687, in load_entry_point</span><br><span class="line">    return ep.load()</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/pkg_resources/__init__.py&quot;, line 2341, in load</span><br><span class="line">    return self.resolve()</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/pkg_resources/__init__.py&quot;, line 2347, in resolve</span><br><span class="line">    module = __import__(self.module_name, fromlist=[&apos;__name__&apos;], level=0)</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/certbot/main.py&quot;, line 20, in &lt;module&gt;</span><br><span class="line">    from certbot import client</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/certbot/client.py&quot;, line 14, in &lt;module&gt;</span><br><span class="line">    from acme import client as acme_client</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/acme/client.py&quot;, line 37, in &lt;module&gt;</span><br><span class="line">    requests.packages.urllib3.contrib.pyopenssl.inject_into_urllib3()  # type: ignore</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/urllib3/contrib/pyopenssl.py&quot;, line 112, in inject_into_urllib3</span><br><span class="line">    _validate_dependencies_met()</span><br><span class="line">  File &quot;/usr/lib/python2.7/site-packages/urllib3/contrib/pyopenssl.py&quot;, line 147, in _validate_dependencies_met</span><br><span class="line">    raise ImportError(&quot;&apos;pyOpenSSL&apos; module missing required functionality. &quot;</span><br><span class="line">ImportError: &apos;pyOpenSSL&apos; module missing required functionality. Try upgrading to v0.14 or newer.</span><br></pre></td></tr></table></figure>
+
+<p>解决办法：</p>
+<p>在certbot的GitHub上面找到正解：<a href="https://github.com/certbot/certbot/issues/5534" target="_blank" rel="noopener">https://github.com/certbot/certbot/issues/5534</a></p>
+<p>使用 <code>pip install --upgrade --force-reinstall &#39;requests==2.6.0&#39;</code> 命令解决。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/26/Ubuntu18-下部署/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/11/26/Ubuntu18-下部署/" class="post-title-link" itemprop="url">Ubuntu18 下部署</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-26 19:03:19" itemprop="dateCreated datePublished" datetime="2019-11-26T19:03:19+08:00">2019-11-26</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-30 20:37:22" itemprop="dateModified" datetime="2020-01-30T20:37:22+08:00">2020-01-30</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/部署/" itemprop="url" rel="index"><span itemprop="name">部署</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="开启-root"><a href="#开启-root" class="headerlink" title="开启 root"></a>开启 root</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd root  // 之后按照提示输入密码</span><br></pre></td></tr></table></figure>
+
+<h1 id="root-使用规则"><a href="#root-使用规则" class="headerlink" title="root 使用规则"></a>root 使用规则</h1><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">su root  // 使用 root</span><br><span class="line">exit  // 用完后退出，root 权限很高，不建议全部都使用 root 操作</span><br></pre></td></tr></table></figure>
+
+<h2 id="远程登录（不建议使用）"><a href="#远程登录（不建议使用）" class="headerlink" title="远程登录（不建议使用）"></a>远程登录（不建议使用）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/ssh/sshd_config</span><br><span class="line">// 将</span><br><span class="line">#PermitRootLogin prohibit-password</span><br><span class="line">// 修改为</span><br><span class="line">PermitRootLogin yes</span><br><span class="line">// 如果已开启 ssh 服务，则需要重启 ssh</span><br><span class="line">sudo systemctl restart ssh</span><br></pre></td></tr></table></figure>
+
+<h1 id="开启-SSH"><a href="#开启-SSH" class="headerlink" title="开启 SSH"></a>开启 SSH</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssh-server</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl status ssh</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置开机自启"><a href="#配置开机自启" class="headerlink" title="配置开机自启"></a>配置开机自启</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable ssh</span><br></pre></td></tr></table></figure>
+
+<h1 id="开启防火墙"><a href="#开启防火墙" class="headerlink" title="开启防火墙"></a>开启防火墙</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">su root</span><br><span class="line">ufw enable</span><br></pre></td></tr></table></figure>
+
+<h2 id="开启-22-端口"><a href="#开启-22-端口" class="headerlink" title="开启 22 端口"></a>开启 22 端口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ufw allow 22</span><br></pre></td></tr></table></figure>
+
+<h1 id="配置-MySQL"><a href="#配置-MySQL" class="headerlink" title="配置 MySQL"></a>配置 MySQL</h1><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update  // 更新软件清单</span><br><span class="line">sudo apt-get install mysql-server  // 安装 MySQL-Server</span><br></pre></td></tr></table></figure>
+
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql_secure_installation  // 之后根据提示操作</span><br></pre></td></tr></table></figure>
+
+<h2 id="检查服务状态"><a href="#检查服务状态" class="headerlink" title="检查服务状态"></a>检查服务状态</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status mysql</span><br></pre></td></tr></table></figure>
+
+<h2 id="远程访问"><a href="#远程访问" class="headerlink" title="远程访问"></a>远程访问</h2><h3 id="服务配置"><a href="#服务配置" class="headerlink" title="服务配置"></a>服务配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/mysql/mysql.conf.d/mysqld.cnf</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 将</span><br><span class="line">bind-address		= 127.0.0.1</span><br><span class="line"># 修改为</span><br><span class="line">bind-address        = 0.0.0.0</span><br></pre></td></tr></table></figure>
+
+<p>重启 MySQL</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart mysql</span><br></pre></td></tr></table></figure>
+
+<h3 id="新建远程账户（不建议使用-root-用户远程）"><a href="#新建远程账户（不建议使用-root-用户远程）" class="headerlink" title="新建远程账户（不建议使用 root 用户远程）"></a>新建远程账户（不建议使用 root 用户远程）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GRANT 权限（ALL PRIVILEGES 代表所有权限） ON 数据库（* 代表所有）.表名（* 代表所有） TO 用户名@&quot;允许远程的 IP（% 代表允许所有）&quot; IDENTIFIED BY &quot;密码&quot;;</span><br><span class="line"></span><br><span class="line">FLUSH PRIVILEGES;  -- 刷新权限</span><br></pre></td></tr></table></figure>
+
+<h2 id="开启-3306-端口"><a href="#开启-3306-端口" class="headerlink" title="开启 3306 端口"></a>开启 3306 端口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">su root</span><br><span class="line">ufw allow 3306</span><br></pre></td></tr></table></figure>
+
+<h2 id="测试远程连接"><a href="#测试远程连接" class="headerlink" title="测试远程连接"></a>测试远程连接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -h 【MySQL-Server 所在主机IP 】 -P 【MySQL 开启端口】 -u 账号 -p</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置开机自启-1"><a href="#配置开机自启-1" class="headerlink" title="配置开机自启"></a>配置开机自启</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable mysql</span><br></pre></td></tr></table></figure>
+
+<h1 id="配置-Java"><a href="#配置-Java" class="headerlink" title="配置 Java"></a>配置 Java</h1><h2 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install openjdk-11-jre-headless</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看-Java-安装是否成功"><a href="#查看-Java-安装是否成功" class="headerlink" title="查看 Java 安装是否成功"></a>查看 Java 安装是否成功</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<h1 id="配置-Nginx"><a href="#配置-Nginx" class="headerlink" title="配置 Nginx"></a>配置 Nginx</h1><h2 id="安装-3"><a href="#安装-3" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nginx  // 安装</span><br><span class="line">systemctl start nginx  // 启动</span><br></pre></td></tr></table></figure>
+
+<h2 id="开启-80-和-443-端口"><a href="#开启-80-和-443-端口" class="headerlink" title="开启 80 和 443 端口"></a>开启 80 和 443 端口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">su root</span><br><span class="line">ufw allow 80</span><br><span class="line">ufw allow 443</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置开机自启-2"><a href="#配置开机自启-2" class="headerlink" title="配置开机自启"></a>配置开机自启</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable nginx</span><br></pre></td></tr></table></figure>
+
+<h1 id="配置域名"><a href="#配置域名" class="headerlink" title="配置域名"></a>配置域名</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将域名 A 记录指向 IP</span><br></pre></td></tr></table></figure>
+
+<h1 id="使用-Let’s-Encrypt-配置-SSL"><a href="#使用-Let’s-Encrypt-配置-SSL" class="headerlink" title="使用 Let’s Encrypt 配置 SSL"></a>使用 Let’s Encrypt 配置 SSL</h1><h2 id="新建一个-80-访问目录，以便-Let’s-encrypt-验证使用"><a href="#新建一个-80-访问目录，以便-Let’s-encrypt-验证使用" class="headerlink" title="新建一个 80 访问目录，以便 Let’s encrypt 验证使用"></a>新建一个 80 访问目录，以便 Let’s encrypt 验证使用</h2><h2 id="查看-Nginx-配置文件地址"><a href="#查看-Nginx-配置文件地址" class="headerlink" title="查看 Nginx 配置文件地址"></a>查看 Nginx 配置文件地址</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nginx -t</span><br><span class="line"></span><br><span class="line">// 如果不需要，可以将 nignx 配置文件目录下/sites-available/default 删除</span><br><span class="line"></span><br><span class="line">vim 【nignx 配置文件目录下/sites-available/default】</span><br></pre></td></tr></table></figure>
+
+<p>修改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80 default_server;</span><br><span class="line">    listen [::]:80 default_server;</span><br><span class="line"></span><br><span class="line">    root 【80 访问目录】;</span><br><span class="line">    </span><br><span class="line">    index index.html index.htm;</span><br><span class="line">    </span><br><span class="line">    server_name 【域名】;</span><br><span class="line">    </span><br><span class="line">    location / &#123;</span><br><span class="line">        # First attempt to serve request as file, then</span><br><span class="line">        # as directory, then fall back to displaying a 404.</span><br><span class="line">        try_files $uri $uri/ =404;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在 80 访问目录中新建一个 index.html 文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">vim index.html</span><br><span class="line">// 写点内容，比如</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot; /&gt;</span><br><span class="line">    &lt;title&gt;Hello&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h1&gt;Hello world!&lt;/h1&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line">或者</span><br><span class="line">&lt;script&gt;window.location=&quot;https://域名&quot;;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 测试 nginx 配置</span><br><span class="line">nginx -t</span><br><span class="line">// 重启 nginx 服务</span><br><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看-Nginx-配置是否正确"><a href="#查看-Nginx-配置是否正确" class="headerlink" title="查看 Nginx 配置是否正确"></a>查看 Nginx 配置是否正确</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">浏览器中输入 IP，查看显示是否为 index.html 内容</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装-openssl"><a href="#安装-openssl" class="headerlink" title="安装  openssl"></a>安装  openssl</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssl</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装-certbot"><a href="#安装-certbot" class="headerlink" title="安装  certbot"></a>安装  certbot</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install certbot</span><br></pre></td></tr></table></figure>
+
+<h3 id="申请证书"><a href="#申请证书" class="headerlink" title="申请证书"></a>申请证书</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">certbot certonly \</span><br><span class="line">--webroot -w 80 访问目录 \</span><br><span class="line">-d 域名</span><br><span class="line">// 根据提示填写相关信息</span><br></pre></td></tr></table></figure>
+
+<h3 id="生成Perfect-Forward-Security（PFS）键值"><a href="#生成Perfect-Forward-Security（PFS）键值" class="headerlink" title="生成Perfect Forward Security（PFS）键值"></a>生成Perfect Forward Security（PFS）键值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">openssl dhparam 2048 -out /etc/ssl/private/dhparam.pem  // 生成，一般需要很长时间，耐心等候</span><br><span class="line">有时会生成失败，多试几次，另参见</span><br><span class="line">openssl dhparam -dsaparam -out dhparam.pem 4096</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><a href="https://link.jianshu.com?t=https://wiki.openssl.org/index.php/Manual:Dhparam(1)#OPTIONS" target="_blank" rel="noopener">This option instructs OpenSSL to produce “DSA-like” DH parameters</a> (<em>p</em> is such that <em>p</em>-1 is a multiple of a smaller prime <em>q</em>, and the generator has multiplicative order <em>q</em>). This is considerably faster because it does not need to nest the primality tests, and thus only thousands, not millions, of candidates will be generated and tested.<br> As far as academics know, DSA-like parameters for DH are equally secure; there is no actual advantage to using “strong primes” (the terminology is traditional and does not actually imply some extra strength).<br> Similarly, you may also use a 2048-bit modulus, which is already very far into the “cannot break it zone”. The 4096-bit modulus will make DH computations slower (which is not a real problem for a VPN; these occur only at the start of the connection), but won’t actually improve security.<br> To some extent, a 4096-bit modulus may woo auditors, but auditors are unlikely to be much impressed by a Raspberry-Pi, which is way too cheap anyway.</p>
+</blockquote>
+<h2 id="配置-Nginx-启用-https"><a href="#配置-Nginx-启用-https" class="headerlink" title="配置 Nginx 启用 https"></a>配置 Nginx 启用 https</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">/etc/nginx/sites-available 目录下新建配置文件，如 MySite.cnf</span><br><span class="line"></span><br><span class="line">// 将以下配置写入</span><br><span class="line">// 如果是静态网页</span><br><span class="line">server &#123;</span><br><span class="line">    listen       443   ssl;</span><br><span class="line">    server_name  【域名】;</span><br><span class="line"></span><br><span class="line">    charset utf-8;</span><br><span class="line"></span><br><span class="line">    access_log  【log 路径】/access_log.log;</span><br><span class="line">    error_log   【log 路径】/error_log.log;</span><br><span class="line"></span><br><span class="line">    # 可不配置</span><br><span class="line">    location / &#123;</span><br><span class="line">        root   【80 访问目录】;</span><br><span class="line">        index  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ssl_certificate        /etc/letsencrypt/live/【域名】/fullchain.pem;</span><br><span class="line">    ssl_certificate_key    /etc/letsencrypt/live/【域名】/privkey.pem;</span><br><span class="line"></span><br><span class="line">    ssl_session_timeout 1d;</span><br><span class="line">    ssl_session_cache shared:SSL:50m;</span><br><span class="line">    ssl_session_tickets on;</span><br><span class="line"></span><br><span class="line">    ssl_dhparam /etc/ssl/private/dhparam.pem;</span><br><span class="line"></span><br><span class="line">    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line"></span><br><span class="line">    # 一般推荐使用的ssl_ciphers值: https://wiki.mozilla.org/Security/Server_Side_TLS</span><br><span class="line">    ssl_ciphers &apos;ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128:AES256:AES:DES-CBC3-SHA:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK&apos;;</span><br><span class="line"></span><br><span class="line">    ssl_prefer_server_ciphers on;</span><br><span class="line"></span><br><span class="line">    error_page  404              /404.html;</span><br><span class="line">    error_page  500 502 503 504  /50x.html;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 如果是代理</span><br><span class="line">server &#123;</span><br><span class="line">    listen        443   ssl;</span><br><span class="line">    server_name   【域名】;</span><br><span class="line">    location /&#123;</span><br><span class="line">        proxy_redirect off;</span><br><span class="line">        proxy_set_header Host $host;</span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">        proxy_pass http://127.0.0.1:【端口】;</span><br><span class="line">    &#125;</span><br><span class="line">    location /static&#123;</span><br><span class="line">        // 注意“/”的使用</span><br><span class="line">        alias   【static 路径】/;</span><br><span class="line">        index  index.html;</span><br><span class="line">    &#125;</span><br><span class="line">    access_log  【log 路径】/access_log.log;</span><br><span class="line">    error_log   【log 路径】/error_log.log;</span><br><span class="line"></span><br><span class="line">    ssl_certificate        /etc/letsencrypt/live/【域名】/fullchain.pem;</span><br><span class="line">        ssl_certificate_key    /etc/letsencrypt/live/【域名】/privkey.pem;</span><br><span class="line"></span><br><span class="line">        ssl_session_timeout 1d;</span><br><span class="line">        ssl_session_cache shared:SSL:50m;</span><br><span class="line">        ssl_session_tickets on;</span><br><span class="line"></span><br><span class="line">        ssl_dhparam /etc/ssl/private/dhparam.pem;</span><br><span class="line"></span><br><span class="line">        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line"></span><br><span class="line">        # 一般推荐使用的ssl_ciphers值: https://wiki.mozilla.org/Security/Server_Side_TLS</span><br><span class="line">        ssl_ciphers &apos;ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128:AES256:AES:DES-CBC3-SHA:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK&apos;;</span><br><span class="line"></span><br><span class="line">        ssl_prefer_server_ciphers on;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 测试 nginx 配置</span><br><span class="line">nginx -t</span><br><span class="line">// 重启 nginx 服务</span><br><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/23/解决-Idea-下-Tomcat-出现-“至少有一个JAR被扫描用于TLD但尚未包含TLD。”/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/11/23/解决-Idea-下-Tomcat-出现-“至少有一个JAR被扫描用于TLD但尚未包含TLD。”/" class="post-title-link" itemprop="url">解决 Idea 下 Tomcat 出现 “至少有一个JAR被扫描用于TLD但尚未包含TLD。”</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-23 08:33:22" itemprop="dateCreated datePublished" datetime="2019-11-23T08:33:22+08:00">2019-11-23</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-30 20:37:41" itemprop="dateModified" datetime="2020-01-30T20:37:41+08:00">2020-01-30</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tomcat/" itemprop="url" rel="index"><span itemprop="name">Tomcat</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="https://blog.csdn.net/qqqnzhky/article/details/80563823" target="_blank" rel="noopener">什么是.tld文件</a></li>
+<li><a href="https://oomake.com/question/4033038" target="_blank" rel="noopener">如何修复JSP编译器警告：一个JAR被扫描用于TLD但尚未包含TLD？</a></li>
+</ol>
+<p>感谢以上作者的分享</p>
+<h1 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h1><p>启动 Tomcat 很慢，出现 “至少有一个JAR被扫描用于TLD但尚未包含TLD”提示。</p>
+<h1 id="分析原因"><a href="#分析原因" class="headerlink" title="分析原因"></a>分析原因</h1><p>TLD(Tag library descriptors)，即“标签库描述文件”，页面中实现 JSP 标签，必须首先定义实现标签的类，然后在标签库描述文件（TLD）中将写好的类映射成 JSP 标签,最后在 JSP 文件中使用定义好的标签，就可以生成动态的 JSP 内容【1】。</p>
+<p>出现此现象，Tomcat 也给出了建议：为此记录器启用调试日志记录，以获取已扫描但未在其中找到 TLD 的完整 JAR 列表。 在扫描期间跳过不需要的 JAR 可以缩短启动时间和 JSP 编译时间。</p>
+<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><ol>
+<li>启用调试日志记录：在 Tomcat 安装目录/conf/logging.properties 文件末尾添加 <code>org.apache.jasper.servlet.TldScanner.level = FINE</code>。再启动 Tomcat 后出现很多扫描了但是不包含 TLD 的 jar。</li>
+<li>将这些 jar 添加到 Tomcat 安装目录/conf/catalina.properties 文件的 <code>tomcat.util.scan.StandardJarScanFilter.jarsToSkip</code> 标签中。</li>
+</ol>
+<p>注意：如果你没有使用 JSP，那可以直接设置 <code>tomcat.util.scan.StandardJarScanFilter.jarsToSkip = *.jar</code>。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/17/Idea-Tomcat9-0-中文乱码问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -834,843 +1618,11 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/11/DCMTK-工具：wlmscpfs-测试/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/09/11/DCMTK-工具：wlmscpfs-测试/" class="post-title-link" itemprop="url">DCMTK 工具：wlmscpfs 测试</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-09-11 13:15:09" itemprop="dateCreated datePublished" datetime="2019-09-11T13:15:09+08:00">2019-09-11</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/DCMTK/" itemprop="url" rel="index"><span itemprop="name">DCMTK</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/DCMTK/wlmscpfs/" itemprop="url" rel="index"><span itemprop="name">wlmscpfs</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ol>
-<li><a href="https://blog.csdn.net/zssureqh/article/details/38775315" target="_blank" rel="noopener">DICOM医学图像处理：基于DCMTK工具包学习和分析worklist</a></li>
-</ol>
-<p>感谢以上参考文献的作者的辛勤付出~</p>
-<h1 id="系统配置"><a href="#系统配置" class="headerlink" title="系统配置"></a>系统配置</h1><table>
-<thead>
-<tr>
-<th>条目</th>
-<th>型号</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>操作系统</td>
-<td>win 10</td>
-<td></td>
-</tr>
-<tr>
-<td>wlmscpfs</td>
-<td>v3.6.4+ DEV</td>
-<td></td>
-</tr>
-<tr>
-<td>findscu</td>
-<td>v3.6.4+ DEV</td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h1><p>已编译或下载好 dcmtk 工具包，并将其加入到环境变量的 <code>PATH</code> 中（也可不加，但是需要输入所在目录前缀）。</p>
-<p>创建的工作目录中不要有中文及空格。</p>
-<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h2><p>创建工作目录，如：<code>C:\DICOM_dcmqrscp_test</code>。</p>
-<p>创建 <code>worklist</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\worklist</code>。</p>
-<p>在 <code>worklist</code> 工作目录下，创建 AETable 目录，<br>如创建 <code>OFFIS</code> AETable 目录：<code>C:\DICOM_dcmqrscp_test\worklist\OFFIS</code></p>
-<p>创建 <code>findscu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\findscu</code>，不创建也可以。</p>
-<h2 id="准备需要用到的文件"><a href="#准备需要用到的文件" class="headerlink" title="准备需要用到的文件"></a>准备需要用到的文件</h2><p>1.将 <code>dcmtk 安装目录\share\dcmtk\wlistdb\OFFIS</code> 目录中的所有文件复制到  <code>worklist</code> 工作目录下的 <code>OFFIS</code> AETable 目录。<br>2.由于这些文件是 dump 格式，需要转换成 wlmscpfs 可以使用的 dcm 格式，CMD 转到 <code>C:\DICOM_dcmqrscp_test\worklist\OFFIS</code>，然后运行 <code>for %i in (*.*) do dump2dcm %i %i.wl</code>，生成了 11 个 wl 文件，将其中的 <code>lockfile.wl</code> 删除。</p>
-<h1 id="运行-wlmscpfs-服务"><a href="#运行-wlmscpfs-服务" class="headerlink" title="运行 wlmscpfs 服务"></a>运行 <code>wlmscpfs</code> 服务</h1><p>CMD 转到 <code>C:\DICOM_dcmqrscp_test\wlistdb</code>，然后运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wlmscpfs 11110 --disable-file-reject --debug</span><br></pre></td></tr></table></figure>
-
-<p>如配置无误则出现如下信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D: $dcmtk: wlmscpfs v3.6.4+ DEV $</span><br><span class="line">D:</span><br><span class="line">W: (notice: dcmdata auto correction disabled.)</span><br></pre></td></tr></table></figure>
-
-<p>不要关闭，让其运行。</p>
-<h1 id="运行-findscu-查找"><a href="#运行-findscu-查找" class="headerlink" title="运行 findscu 查找"></a>运行 <code>findscu</code> 查找</h1><p>新开一个 CMD 转到  <code>findscu</code> 工作目录（没有创建的话可不转），运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">findscu 127.0.0.1 11110 ^</span><br><span class="line">--call OFFIS ^</span><br><span class="line">--debug ^</span><br><span class="line">-k 0010,0010</span><br><span class="line">-k 0010,0040</span><br></pre></td></tr></table></figure>
-
-<p>0010,0010 是病人姓名标签，所以整个命令的意思是访问 IP 为 127.0.0.1 端口号为 11110 的 worklist 服务器，从服务器中名为 OFFIS 的 AE 查找所有病人姓名，病人性别。<br>如配置无误则 CMD 打印出 findscu 查找到的信息。<br>如果想要查找指定的病人，则可在 <code>-k</code> 中添加内容，如：<code>-k 0010,0010=病人姓名</code>。</p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/09/DCMTK-源码中一些名词/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/09/09/DCMTK-源码中一些名词/" class="post-title-link" itemprop="url">DCMTK 源码中一些名词</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-09-09 19:03:53" itemprop="dateCreated datePublished" datetime="2019-09-09T19:03:53+08:00">2019-09-09</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DCMTK/" itemprop="url" rel="index"><span itemprop="name">DCMTK</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <table>
-<thead>
-<tr>
-<th>词语</th>
-<th>释义</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>DUL</td>
-<td>DICOM Upper Layer</td>
-<td>在 dcmtk/dcmnet/dul.h 中作为前缀出现</td>
-</tr>
-<tr>
-<td>ASC</td>
-<td>Association 缩写</td>
-<td>在 dcmtk/dcmnet/assoc.h 中作为前缀出现</td>
-</tr>
-<tr>
-<td>FSM</td>
-<td>Finite state machine 的缩写，即有限状态自动机</td>
-<td>在 dcmnet/libsrc/dulpriv.h 中出现</td>
-</tr>
-<tr>
-<td>OF</td>
-<td>OFFIS 取前两个字母</td>
-<td>毕竟是 <a href="http://www.offis.de/" target="_blank" rel="noopener">OFFIS</a> 公司出品的</td>
-</tr>
-</tbody></table>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/30/Qt-iconfont-to-QIcon/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/30/Qt-iconfont-to-QIcon/" class="post-title-link" itemprop="url">Qt iconfont to QIcon</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-30 08:37:28" itemprop="dateCreated datePublished" datetime="2019-08-30T08:37:28+08:00">2019-08-30</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Qt/" itemprop="url" rel="index"><span itemprop="name">Qt</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="普通使用"><a href="#普通使用" class="headerlink" title="普通使用"></a>普通使用</h1><p>使用 <code>iconfont</code> 极大简化了开发中需要使用图标的问题，一般来说使用 <code>iconfont</code> 都是将其作为字符来使用，比如在一个 <code>QLabel</code> 中：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 其中 ICONFONT_PATH 为字体库文件目录。如“*/theme/iconfont.ttf”。</span></span><br><span class="line"><span class="keyword">int</span> fontId = QFontDatabase::addApplicationFont(ICONFONT_PATH);</span><br><span class="line">QFont iconfont;</span><br><span class="line">iconfont.setFamily(QFontDatabase::applicationFontFamilies(fontId).at(<span class="number">0</span>));</span><br><span class="line"><span class="comment">// 设置字体大小</span></span><br><span class="line">iconfont.setPixelSize(<span class="number">16</span>);</span><br><span class="line">QLabel label;</span><br><span class="line">label.setFont(iconfont);</span><br><span class="line"><span class="comment">// 其中 icon_id 是一个 iconfont 的 Unicode 编码，一般在下载下来的字体库介绍中有。</span></span><br><span class="line"><span class="comment">// 形式如下：0x6501，即使用 16 进制。</span></span><br><span class="line">setText(QChar(icon_id));</span><br></pre></td></tr></table></figure>
-
-<h1 id="使用到-QIcon-中"><a href="#使用到-QIcon-中" class="headerlink" title="使用到 QIcon 中"></a>使用到 QIcon 中</h1><p>上面这种使用方式已经能满足大部分需求了，但是，有时候需要将 <code>iconfont</code> 使用到 <code>QIcon</code> 中，比如 <code>QToolButton</code> 的 <code>setIcon</code> 只能使用 <code>QIcon</code> 。要将 <code>iconfont</code> 使用到 <code>QIcon</code> 中，需要借助 <code>QPixmap</code>。一般可以将 <code>iconfont</code> 应用到 <code>Qicon</code> 可以写成一个方法：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 其中 icon_font_id 为字符图标的 ID，w 为要生成的图标的大小，color 为图标颜色。</span></span><br><span class="line">QIcon QIconTool::getIconFromIconFont(<span class="keyword">int</span> icon_font_id, <span class="keyword">int</span> w, QColor color) &#123;</span><br><span class="line">    <span class="comment">// 一般图标为正方形，如果有其他需求，加一个参数，如 h。</span></span><br><span class="line">    <span class="function">QPixmap <span class="title">pixmap</span><span class="params">(w, w)</span></span>;</span><br><span class="line">    pixmap.fill(Qt::transparent);</span><br><span class="line">    QPainter painter;</span><br><span class="line">    painter.begin(&amp;pixmap);</span><br><span class="line">    <span class="comment">// 其中 ICONFONT_PATH 为字体库文件目录。如“*/theme/iconfont.ttf”。</span></span><br><span class="line">    <span class="keyword">int</span> fontId = QFontDatabase::addApplicationFont(ICONFONT_PATH);</span><br><span class="line">    QFont iconfont;</span><br><span class="line">    iconfont.setFamily(QFontDatabase::applicationFontFamilies(fontId).at(<span class="number">0</span>));</span><br><span class="line">    font.setPixelSize(w);</span><br><span class="line">    painter.setFont(font);</span><br><span class="line">    painter.setPen(color);</span><br><span class="line">    painter.drawText(pixmap.rect(), QString(QChar(icon_font_id)));</span><br><span class="line">    painter.end();</span><br><span class="line">    <span class="keyword">return</span> pixmap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/22/DICOM-汉字编码/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/22/DICOM-汉字编码/" class="post-title-link" itemprop="url">DICOM 汉字编码</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-22 17:21:08" itemprop="dateCreated datePublished" datetime="2019-08-22T17:21:08+08:00">2019-08-22</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="DICOM-是可以使用汉字的"><a href="#DICOM-是可以使用汉字的" class="headerlink" title="DICOM 是可以使用汉字的"></a>DICOM 是可以使用汉字的</h1><p>在 DICOM 标准中，Part 5 中 K.3 Example of Long Text Value Representation in the Chinese Language with GB2312 G1 介绍了汉字编码的有关内容，不过使用的是 GB2312，众所周知，GB2312 已经是被淘汰掉了，最新的应该是使用 GB18030，使用 Sante DICOM Editor 软件编辑 DICOM 文件，将 (0008,0005) Specific Character Set 元素改为 <code>GB18030</code>，再将 (0010,0010) Patient’s Name 元素改为中文，最后使用 <code>DCMTK</code> 的 <code>dcmdump</code> 工具验证通过。</p>
-<p>还有可以改为 Unicode 编码。</p>
-<p>即 (0008,0005) Specific Character Set 元素改为 <code>ISO_IR 192</code>。</p>
-<p>在 Part 5 中 6.1 Support of Character Repertoires 有详细说明支持哪些编码。</p>
-<h1 id="使用-GB18030-的顾虑"><a href="#使用-GB18030-的顾虑" class="headerlink" title="使用 GB18030 的顾虑"></a>使用 GB18030 的顾虑</h1><p>虽然 GB18030 是国标，但是兼容性最好的应该还是 Unicode 编码。</p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/20/DCMTK-工具：dcmqrscp-测试/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/20/DCMTK-工具：dcmqrscp-测试/" class="post-title-link" itemprop="url">DCMTK 工具：dcmqrscp 测试</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-20 12:35:26" itemprop="dateCreated datePublished" datetime="2019-08-20T12:35:26+08:00">2019-08-20</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/DCMTK/" itemprop="url" rel="index"><span itemprop="name">DCMTK</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/DCMTK/dcmqrscp/" itemprop="url" rel="index"><span itemprop="name">dcmqrscp</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ol>
-<li><a href="https://blog.csdn.net/zssureqh/article/details/39758969" target="_blank" rel="noopener">DICOM医学图像处理：DCMTK的wiki资料学习之PACS调试</a>（感谢这位大佬的辛勤付出~）；</li>
-<li><a href="https://support.dcmtk.org/redmine/projects/dcmtk/wiki/Howto_PACSDebuggingWithDCMTK" target="_blank" rel="noopener">DCMTK WIKI</a>（感谢开源工作者的辛勤付出~）。</li>
-</ol>
-<h1 id="系统配置"><a href="#系统配置" class="headerlink" title="系统配置"></a>系统配置</h1><table>
-<thead>
-<tr>
-<th>条目</th>
-<th>型号</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>操作系统</td>
-<td>win 10</td>
-<td></td>
-</tr>
-<tr>
-<td>dcmqrscp</td>
-<td>v3.6.4+ DEV</td>
-<td></td>
-</tr>
-<tr>
-<td>echoscu</td>
-<td>v3.6.4+ DEV</td>
-<td></td>
-</tr>
-<tr>
-<td>storescu</td>
-<td>v3.6.4+ DEV</td>
-<td></td>
-</tr>
-<tr>
-<td>findscu</td>
-<td>v3.6.4+ DEV</td>
-<td></td>
-</tr>
-<tr>
-<td>dcmdump</td>
-<td>v3.6.4+ DEV</td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h1><p>已编译或下载好 dcmtk 工具包，并将其加入到环境变量的 <code>PATH</code> 中（也可不加，但是需要输入所在目录前缀）。</p>
-<p>创建的工作目录中不要有中文及空格。</p>
-<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h2><p>创建工作目录，如：<code>C:\DICOM_dcmqrscp_test</code>。</p>
-<p>创建 <code>dcmqrscp</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\dcmqrscp</code>。</p>
-<p>在 <code>dcmqrscp</code> 工作目录下，创建 AETable 目录，<br>如：<code>C:\DICOM_dcmqrscp_test\dcmqrscp\COMMON</code><br>如：<code>C:\DICOM_dcmqrscp_test\dcmqrscp\ACME_STORE</code>。</p>
-<p>创建 <code>echoscu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\echoscu</code>，不创建也可以，因为 echoscu 只是用于验证服务器是否存在，服务器是否为其服务。</p>
-<p>创建 <code>storescu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\storescu</code> 。</p>
-<p>创建 <code>findscu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\findscu</code>，不创建也可以。</p>
-<p>创建 <code>storescu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\storescu</code> 。</p>
-<h2 id="准备需要用到的文件"><a href="#准备需要用到的文件" class="headerlink" title="准备需要用到的文件"></a>准备需要用到的文件</h2><p>1.将 dcmqrscp 配置文件（位于 <code>dcmtk 安装目录\etc\dcmtk\dcmqrscp.cfg</code>） 复制到 <code>dcmqrscp</code> 工作目录中。<br>2.将一个 dcm 文件复制到 <code>storescu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\storescu\111.DCM</code>。<a href="/111.dcm">我的一个 DCM 文件</a>。</p>
-<h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><p>1.可以修改 <code>NetworkTCPPort</code> 为其他的端口，如： <code>NetworkTCPPort = 11110</code>。<br>2.后面配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">acme1 = (后面请求的 AE Title,请求端的主机名,上面 NetworkTCPPort 的值)</span><br><span class="line">acmeCTcompany = acme1</span><br></pre></td></tr></table></figure>
-
-<p>3.<code>AETable</code> 内的修改：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">COMMON       C:\DICOM_dcmqrscp_test\dcmqrscp\COMMON       R  (200, 1024mb) ANY</span><br><span class="line">ACME_STORE   C:\DICOM_dcmqrscp_test\dcmqrscp\ACME_STORE   RW (9, 1024mb)</span><br></pre></td></tr></table></figure>
-
-<p>修改后，总的配置如下（删除了注释）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">NetworkTCPPort  = 11110</span><br><span class="line">MaxPDUSize      = 16384</span><br><span class="line">MaxAssociations = 16</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">HostTable BEGIN</span><br><span class="line"></span><br><span class="line">#one_scu = (ONE_SCU,BAIZE,12345)</span><br><span class="line">#acmeCTcompany = one_scu</span><br><span class="line"># 或</span><br><span class="line">acmeCTcompany = (ONE_SCU,BAIZE,12345)</span><br><span class="line"></span><br><span class="line">HostTable END</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">VendorTable BEGIN</span><br><span class="line"></span><br><span class="line">&quot;Acme CT Company&quot;   = acmeCTcompany</span><br><span class="line"></span><br><span class="line">VendorTable END</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">AETable BEGIN</span><br><span class="line"></span><br><span class="line">COMMON       C:\DICOM_dcmqrscp_test\dcmqrscp\COMMON       R  (200, 1024mb) ANY</span><br><span class="line">ACME_STORE   C:\DICOM_dcmqrscp_test\dcmqrscp\ACME_STORE   RW (9, 1024mb)   acmeCTcompany</span><br><span class="line"></span><br><span class="line">AETable END</span><br></pre></td></tr></table></figure>
-
-<h1 id="运行-dcmqrscp-开启服务"><a href="#运行-dcmqrscp-开启服务" class="headerlink" title="运行 dcmqrscp 开启服务"></a>运行 <code>dcmqrscp</code> 开启服务</h1><p>CMD 转到 <code>C:\DICOM_dcmqrscp_test\dcmqrscp</code>，然后运行 <code>dcmqrscp.exe --config dcmqrscp.cfg -d</code>。</p>
-<p>如配置无误则出现如下信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D: $dcmtk: dcmqrscp v3.6.4+ DEV $</span><br><span class="line">D:</span><br><span class="line">D: DcmDataDictionary: Loading file: dcmtk 安装目录\share\dcmtk\dicom.dic</span><br></pre></td></tr></table></figure>
-
-<p>不要关闭，让其运行。</p>
-<h1 id="运行-echoscu-测试服务能否连通"><a href="#运行-echoscu-测试服务能否连通" class="headerlink" title="运行 echoscu 测试服务能否连通"></a>运行 <code>echoscu</code> 测试服务能否连通</h1><p>新开一个 CMD 转到 <code>echoscu</code> ` 工作目录（没有创建的话可不转），运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echoscu.exe -d 127.0.0.1 11110 ^</span><br><span class="line">-aec ACME_STORE ^</span><br><span class="line">-aet ONE_SCU</span><br></pre></td></tr></table></figure>
-
-<p>如配置无误则在 <code>echoscu</code> 端出现如下信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">D: $dcmtk: echoscu v3.6.4+ DEV $</span><br><span class="line">D:</span><br><span class="line">D: DcmDataDictionary: Loading file: dcmtk 安装目录\share\dcmtk\dicom.dic</span><br><span class="line">D: Request Parameters:</span><br><span class="line">D: ====================== BEGIN A-ASSOCIATE-RQ =====================</span><br><span class="line">D: Our Implementation Class UID:      1.2.276.0.7230010.3.0.3.6.4</span><br><span class="line">D: Our Implementation Version Name:   OFFIS_DCMTK_364</span><br><span class="line">D: Their Implementation Class UID:</span><br><span class="line">D: Their Implementation Version Name:</span><br><span class="line">D: Application Context Name:    1.2.840.10008.3.1.1.1</span><br><span class="line">D: Calling Application Name:    ECHOSCU</span><br><span class="line">D: Called Application Name:     ACME_STORE</span><br><span class="line">D: Responding Application Name: ACME_STORE</span><br><span class="line">D: Our Max PDU Receive Size:    16384</span><br><span class="line">D: Their Max PDU Receive Size:  0</span><br><span class="line">D: Presentation Contexts:</span><br><span class="line">D:   Context ID:        1 (Proposed)</span><br><span class="line">D:     Abstract Syntax: =VerificationSOPClass</span><br><span class="line">D:     Proposed SCP/SCU Role: Default</span><br><span class="line">D:     Proposed Transfer Syntax(es):</span><br><span class="line">D:       =LittleEndianImplicit</span><br><span class="line">D: Requested Extended Negotiation: none</span><br><span class="line">D: Accepted Extended Negotiation:  none</span><br><span class="line">D: Requested User Identity Negotiation: none</span><br><span class="line">D: User Identity Negotiation Response:  none</span><br><span class="line">D: ======================= END A-ASSOCIATE-RQ ======================</span><br><span class="line">I: Requesting Association</span><br><span class="line">D: setting network send timeout to 60 seconds</span><br><span class="line">D: setting network receive timeout to 60 seconds</span><br><span class="line">D: Constructing Associate RQ PDU</span><br><span class="line">D: PDU Type: Associate Accept, PDU Length: 184 + 6 bytes PDU header</span><br><span class="line">D:   02  00  00  00  00  b8  00  01  00  00  41  43  4d  45  5f  53</span><br><span class="line">D:   54  4f  52  45  20  20  20  20  20  20  45  43  48  4f  53  43</span><br><span class="line">D:   55  20  20  20  20  20  20  20  20  20  00  00  00  00  00  00</span><br><span class="line">D:   00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00</span><br><span class="line">D:   00  00  00  00  00  00  00  00  00  00  10  00  00  15  31  2e</span><br><span class="line">D:   32  2e  38  34  30  2e  31  30  30  30  38  2e  33  2e  31  2e</span><br><span class="line">D:   31  2e  31  21  00  00  19  01  00  00  00  40  00  00  11  31</span><br><span class="line">D:   2e  32  2e  38  34  30  2e  31  30  30  30  38  2e  31  2e  32</span><br><span class="line">D:   50  00  00  3a  51  00  00  04  00  00  40  00  52  00  00  1b</span><br><span class="line">D:   31  2e  32  2e  32  37  36  2e  30  2e  37  32  33  30  30  31</span><br><span class="line">D:   30  2e  33  2e  30  2e  33  2e  36  2e  34  55  00  00  0f  4f</span><br><span class="line">D:   46  46  49  53  5f  44  43  4d  54  4b  5f  33  36  34</span><br><span class="line">D: Parsing an A-ASSOCIATE PDU</span><br><span class="line">D: Association Parameters Negotiated:</span><br><span class="line">D: ====================== BEGIN A-ASSOCIATE-AC =====================</span><br><span class="line">D: Our Implementation Class UID:      1.2.276.0.7230010.3.0.3.6.4</span><br><span class="line">D: Our Implementation Version Name:   OFFIS_DCMTK_364</span><br><span class="line">D: Their Implementation Class UID:    1.2.276.0.7230010.3.0.3.6.4</span><br><span class="line">D: Their Implementation Version Name: OFFIS_DCMTK_364</span><br><span class="line">D: Application Context Name:    1.2.840.10008.3.1.1.1</span><br><span class="line">D: Calling Application Name:    ECHOSCU</span><br><span class="line">D: Called Application Name:     ACME_STORE</span><br><span class="line">D: Responding Application Name: ACME_STORE</span><br><span class="line">D: Our Max PDU Receive Size:    16384</span><br><span class="line">D: Their Max PDU Receive Size:  16384</span><br><span class="line">D: Presentation Contexts:</span><br><span class="line">D:   Context ID:        1 (Accepted)</span><br><span class="line">D:     Abstract Syntax: =VerificationSOPClass</span><br><span class="line">D:     Proposed SCP/SCU Role: Default</span><br><span class="line">D:     Accepted SCP/SCU Role: Default</span><br><span class="line">D:     Accepted Transfer Syntax: =LittleEndianImplicit</span><br><span class="line">D: Requested Extended Negotiation: none</span><br><span class="line">D: Accepted Extended Negotiation:  none</span><br><span class="line">D: Requested User Identity Negotiation: none</span><br><span class="line">D: User Identity Negotiation Response:  none</span><br><span class="line">D: ======================= END A-ASSOCIATE-AC ======================</span><br><span class="line">I: Association Accepted (Max Send PDV: 16372)</span><br><span class="line">I: Sending Echo Request (MsgID 1)</span><br><span class="line">D: DcmDataset::read() TransferSyntax=&quot;Little Endian Implicit&quot;</span><br><span class="line">I: Received Echo Response (Success)</span><br><span class="line">I: Releasing Association</span><br></pre></td></tr></table></figure>
-
-<p>同时 <code>dcmqrscp</code> 端也出现很多信息。</p>
-<h1 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h1><h2 id="出现参考文献中列举出来的错误"><a href="#出现参考文献中列举出来的错误" class="headerlink" title="出现参考文献中列举出来的错误"></a>出现参考文献中列举出来的错误</h2><p>参照 <a href="https://blog.csdn.net/zssureqh/article/details/39758969" target="_blank" rel="noopener">DICOM医学图像处理：DCMTK的wiki资料学习之PACS调试</a> 或 <a href="https://support.dcmtk.org/redmine/projects/dcmtk/wiki/Howto_PACSDebuggingWithDCMTK" target="_blank" rel="noopener">DCMTK WIKI</a> 进行错误的修改。</p>
-<h2 id="运行-echoscu-出现-index-bat-创建-Handle-错误"><a href="#运行-echoscu-出现-index-bat-创建-Handle-错误" class="headerlink" title="运行 echoscu 出现 index.bat 创建 Handle 错误"></a>运行 <code>echoscu</code> 出现 <code>index.bat</code> 创建 <code>Handle</code> 错误</h2><h3 id="错误提示"><a href="#错误提示" class="headerlink" title="错误提示"></a>错误提示</h3><p>在 <code>dcmqrscp</code> 端最后出现：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">D: DB_createHandle () : Handle created for C:\DICOM_dcmqrscp_test\ACME_STORE</span><br><span class="line">D:                      maxStudiesPerStorageArea: 200 maxBytesPerStudy: 1073741824</span><br><span class="line">E: C:\DICOM_dcmqrscp_test\ACME_STORE\index.dat: 操作成功完成。</span><br><span class="line">E: dispatch: cannot create DB Handle</span><br><span class="line">E: DIMSE Failure (aborting association): 000c:0001 Index database error</span><br></pre></td></tr></table></figure>
-
-<h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p>没有正确的创建 AETable 目录 <code>ACME_STORE</code> 文件夹。</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>创建 <code>ACME_STORE</code> 文件夹，<br>如创建：<code>C:\DICOM_dcmqrscp_test\ACME_STORE</code>（需和配置文件一致）。</p>
-<h1 id="运行-storescu-上传-DCM-文件"><a href="#运行-storescu-上传-DCM-文件" class="headerlink" title="运行 storescu 上传 DCM 文件"></a>运行 <code>storescu</code> 上传 DCM 文件</h1><p>新开一个 CMD 转到 <code>storescu</code> 工作目录，运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">storescu.exe -d 127.0.0.1 11110 ^</span><br><span class="line">-aec ACME_STORE ^</span><br><span class="line">-aet ONE_SCU ^</span><br><span class="line">111.dcm</span><br></pre></td></tr></table></figure>
-
-<p>如配置无误则在 <code>C:\DICOM_dcmqrscp_test\ACME_STORE</code> 中可以看到如下图所示结果。</p>
-<p><img src="/2019/08/20/DCMTK-工具：dcmqrscp-测试/stroescu-上传测试.png" alt="stroescu-上传测试"></p>
-<p>这样就表示上传成功。</p>
-<h1 id="运行-findscu-查询-DCM-文件"><a href="#运行-findscu-查询-DCM-文件" class="headerlink" title="运行 findscu 查询 DCM 文件"></a>运行 <code>findscu</code> 查询 DCM 文件</h1><p>新开一个 CMD 转到 <code>findscu</code> 工作目录（没有创建的话可不转），运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">findscu.exe --verbose --study ^</span><br><span class="line">-aec ACME_STORE -aet ONE_SCU ^</span><br><span class="line">127.0.0.1 11110 ^</span><br><span class="line">-k QueryRetrieveLevel=STUDY ^</span><br><span class="line">-k StudyDate ^</span><br><span class="line">-k StudyDescription ^</span><br><span class="line">-k StudyInstanceUID</span><br></pre></td></tr></table></figure>
-
-<p>如配置无误则在 <code>findscu</code> 端出现如下信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">I: Requesting Association</span><br><span class="line">I: Association Accepted (Max Send PDV: 16372)</span><br><span class="line">I: Sending Find Request (MsgID 1)</span><br><span class="line">I: Request Identifiers:</span><br><span class="line">I:</span><br><span class="line">I: # Dicom-Data-Set</span><br><span class="line">I: # Used TransferSyntax: Little Endian Explicit</span><br><span class="line">I: (0008,0020) DA (no value available)                     #   0, 0 StudyDate</span><br><span class="line">I: (0008,0052) CS [STUDY]                                  #   6, 1 QueryRetrieveLevel</span><br><span class="line">I: (0008,1030) LO (no value available)                     #   0, 0 StudyDescription</span><br><span class="line">I: (0020,000d) UI (no value available)                     #   0, 0 StudyInstanceUID</span><br><span class="line">I:</span><br><span class="line">I: ---------------------------</span><br><span class="line">I: Find Response: 1 (Pending)</span><br><span class="line">I:</span><br><span class="line">I: # Dicom-Data-Set</span><br><span class="line">I: # Used TransferSyntax: Little Endian Explicit</span><br><span class="line">I: (0008,0005) CS [ISO_IR 100]                             #  10, 1 SpecificCharacterSet</span><br><span class="line">I: (0008,0020) DA [20100926]                               #   8, 1 StudyDate</span><br><span class="line">I: (0008,0052) CS [STUDY ]                                 #   6, 1 QueryRetrieveLevel</span><br><span class="line">I: (0008,0054) AE [ACME_STORE]                             #  10, 1 RetrieveAETitle</span><br><span class="line">I: (0008,1030) LO [t-12057 ]                               #   8, 1 StudyDescription</span><br><span class="line">I: (0020,000d) UI [1.2.840.113619.2.55.3.2831193967.596.1285460208.406 ] #  52, 1 StudyInstanceUID</span><br><span class="line">I:</span><br><span class="line">I: Received Final Find Response (Success)</span><br><span class="line">I: Releasing Association</span><br></pre></td></tr></table></figure>
-
-<p>可新开一个 CMD 转到 <code>storescu</code> 工作目录，运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dcmdump.exe 111.DCM</span><br></pre></td></tr></table></figure>
-
-<p>可以看到 <code>findscu</code> 查找出来的信息和 <code>dcmdump</code> 出来的信息一致。</p>
-<h1 id="运行-movescu-下载-DCM-文件至本地"><a href="#运行-movescu-下载-DCM-文件至本地" class="headerlink" title="运行 movescu 下载 DCM 文件至本地"></a>运行 <code>movescu</code> 下载 DCM 文件至本地</h1><p><a href="https://support.dcmtk.org/redmine/projects/dcmtk/wiki/Howto_PACSDebuggingWithDCMTK" target="_blank" rel="noopener">DCMTK WIKI</a> 中关于 <code>movescu</code> 的部分原文。</p>
-<blockquote>
-<p>Now we can check a DICOM connection (echoscu), start a PACS (dcmqrscp), store to it (storescu) and query for Studies. The last thing that is missing is actually retrieving data from the PACS. There are two ways to do that, the “C-MOVE” approach or the “C-GET” approach. C-MOVE is more flexible and the most common one found in practice; that’s why we show it here. In DCMTK the tool “movescu” implements the C-MOVE approach. For every of the three Query SOP Classes (Patient Root, Study Root and Patient/Study Only) there is also a related C-MOVE, and a related C-GET SOP Class. We use the C-MOVE Study Root Retrieve SOP Class here (note that the exact SOP Class names are a littlebit different but have been replaced for readability).</p>
-<p>Using C-MOVE one can order a set of images from the PACS. The PACS then transfers them using the Storage SOP Classes that are also used by storescu (see above). Thus, the receiver of images ordered by a C-MOVE command must be a a server (SCP) of the required Storage SOP Classes. In order to receive the images yourself, you must tell the PACS the your own AE Title which is contained in the C-MOVE order message as the “Move Destination”. Now, the special thing about the C-MOVE approach is that you can tell the PACS not only your own AE Title but also any other AE Title on the DICOM network! That way you can not only ask the PACS to send the images to yourself but also to any Storage-enabled DICOM server by providing its AE Title.</p>
-</blockquote>
-<p>大致说明了以下几点：</p>
-<ol>
-<li><code>C-MOVE</code> 比 <code>C-GET</code> 灵活；</li>
-<li>使用 movescu 需要指定 <code>Move Destination</code>；</li>
-<li><code>C-MOVE</code> 不仅可以将 DCM 文件移动到请求端自身，也可以移动到其他具有存储功能的服务端（也就是其他 PACS，使用 <code>Move Destination</code> 来指定 PACS 地址）。</li>
-</ol>
-<p>新开一个 CMD 转到 <code>movescu</code> 工作目录（没有创建的话可不转），运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">movescu.exe --verbose --study ^</span><br><span class="line">-aec ACME_STORE -aet ONE_SCU -aem ONE_SCU ^</span><br><span class="line">127.0.0.1 11110 ^</span><br><span class="line">--port 12345 ^</span><br><span class="line">--output-directory C:\DICOM_dcmqrscp_test\movescu ^</span><br><span class="line">-k QueryRetrieveLevel=STUDY ^</span><br><span class="line">-k PatientName=&quot;病人姓名&quot;</span><br></pre></td></tr></table></figure>
-
-<p>如配置无误则在 <code>C:\DICOM_dcmqrscp_test\movescu</code> 中可以看到如下图所示结果。</p>
-<p><img src="/2019/08/20/DCMTK-工具：dcmqrscp-测试/movescu-下载到本地测试.png" alt="movescu-下载到本地测试"></p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/19/Win10-无法调节亮度，也不能开启夜间模式的解决办法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/19/Win10-无法调节亮度，也不能开启夜间模式的解决办法/" class="post-title-link" itemprop="url">Win10 无法调节亮度，也不能开启夜间模式的解决办法</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-19 09:42:01" itemprop="dateCreated datePublished" datetime="2019-08-19T09:42:01+08:00">2019-08-19</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Win-10/" itemprop="url" rel="index"><span itemprop="name">Win 10</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <p>前段时候安装了“向日葵远程控制”软件，回来后发现电脑无法开启夜间模式，之后更是发现亮度也不能调节。卸载了“向日葵”后重启电脑，发现并没有用，之后在知乎找到很多解决办法，有一个解决绑法成功解决我的问题，记录一下。</p>
-<p>右击“开始” —— 计算机管理 —— 设备管理器 —— 监视器 —— Generic Monitor (orayOPMS) —— 右击卸载 —— 重启电脑。</p>
-<p>看到其他用户安装了 Teamviewer 后也出现这种情况。因该也可以使用同样的方式解决。</p>
-<blockquote>
-<p>个人猜测原因：远程控制类软件不是采用截屏的方式让远程用户看到桌面，而是采用注册一个显卡与显示器之间的“中间件”来获取屏幕图像信息，就是“Generic Monitor (orayOPMS)”，所以卸载它就好了。</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1706,7 +1658,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1745,7 +1697,19 @@
         
           
         
-        <span class="site-state-item-count">12</span>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -1816,7 +1780,25 @@
         
           
         
-        <span class="site-state-item-count">28</span>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -1838,7 +1820,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

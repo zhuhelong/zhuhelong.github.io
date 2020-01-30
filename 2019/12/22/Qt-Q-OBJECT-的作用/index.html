@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-x16.ico?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="1234567graph TD;  node1(1. Qt Q_OBJECT 的作用)--&amp;gt;node2(2. 构造函数初始化列表和构造函数体内赋值区别)  node2--&amp;gt;node3(3. C++ 运算符重载)  node3--&amp;gt;node4(4. 友元函数)  node1--&amp;gt;node5(5. 引用和指针的用法区别)  node5--&amp;gt;node6(6. Model/V">
+<meta name="keywords" content="Qt,Q_OBJECT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Qt Q_OBJECT 的作用">
+<meta property="og:url" content="http://yoursite.com/2019/12/22/Qt-Q-OBJECT-的作用/index.html">
+<meta property="og:site_name" content="ZHL的博客">
+<meta property="og:description" content="1234567graph TD;  node1(1. Qt Q_OBJECT 的作用)--&amp;gt;node2(2. 构造函数初始化列表和构造函数体内赋值区别)  node2--&amp;gt;node3(3. C++ 运算符重载)  node3--&amp;gt;node4(4. 友元函数)  node1--&amp;gt;node5(5. 引用和指针的用法区别)  node5--&amp;gt;node6(6. Model/V">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2019/12/22/Qt-Q-OBJECT-的作用/2.3.1.png">
+<meta property="og:updated_time" content="2019-12-22T07:24:53.097Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Qt Q_OBJECT 的作用">
+<meta name="twitter:description" content="1234567graph TD;  node1(1. Qt Q_OBJECT 的作用)--&amp;gt;node2(2. 构造函数初始化列表和构造函数体内赋值区别)  node2--&amp;gt;node3(3. C++ 运算符重载)  node3--&amp;gt;node4(4. 友元函数)  node1--&amp;gt;node5(5. 引用和指针的用法区别)  node5--&amp;gt;node6(6. Model/V">
+<meta name="twitter:image" content="http://yoursite.com/2019/12/22/Qt-Q-OBJECT-的作用/2.3.1.png">
+  <link rel="canonical" href="http://yoursite.com/2019/12/22/Qt-Q-OBJECT-的作用/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Qt Q_OBJECT 的作用 | ZHL的博客</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9fd3e2a7c57b3971f3439f9713354241";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ZHL的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">love-wh</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/22/Qt-Q-OBJECT-的作用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">Qt Q_OBJECT 的作用
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-22 15:21:17 / 修改时间：15:24:53" itemprop="dateCreated datePublished" datetime="2019-12-22T15:21:17+08:00">2019-12-22</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/qt/" itemprop="url" rel="index"><span itemprop="name">qt</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">graph TD;</span><br><span class="line">  node1(1. Qt Q_OBJECT 的作用)--&gt;node2(2. 构造函数初始化列表和构造函数体内赋值区别)</span><br><span class="line">  node2--&gt;node3(3. C++ 运算符重载)</span><br><span class="line">  node3--&gt;node4(4. 友元函数)</span><br><span class="line">  node1--&gt;node5(5. 引用和指针的用法区别)</span><br><span class="line">  node5--&gt;node6(6. Model/View)</span><br><span class="line">  node6--&gt;node7(7. 类中成员函数声明后面的const的含义)</span><br></pre></td></tr></table></figure>
+
+<h1 id="1-Qt-Q-OBJECT-的作用"><a href="#1-Qt-Q-OBJECT-的作用" class="headerlink" title="1. Qt Q_OBJECT 的作用"></a>1. Qt Q_OBJECT 的作用</h1><blockquote>
+<p>原文：The Q_OBJECT macro at the beginning of the class definition is necessary for all classes that define signals or slots.</p>
+</blockquote>
+<p>只有加入了Q_OBJECT，才能使用QT中的signal和slot机制，而且Q_OBJECT要放在类的最前面</p>
+<h2 id="1-QT的信号与槽机制介绍"><a href="#1-QT的信号与槽机制介绍" class="headerlink" title="1.QT的信号与槽机制介绍"></a>1.QT的信号与槽机制介绍</h2><h3 id="1-1-信号与槽"><a href="#1-1-信号与槽" class="headerlink" title="1.1 信号与槽"></a>1.1 信号与槽</h3><p>信号和槽机制是 QT 的核心机制，要精通 QT 编程就必须对信号和槽有所了解。信号和槽是一种高级接口，应用于对象之间的通信，它是 QT 的核心特性，也是 QT 区别于其它工具包的重要地方。信号和槽是 QT 自行定义的一种通信机制，它独立于标准的 C/C++ 语言，因此要正确的处理信号和槽，必须借助一个称为 moc（Meta Object Compiler）的 QT 工具，该工具是一个 C++ 预处理程序，它为高层次的事件处理自动生成所需要的附加代码。</p>
+<p>在我们所熟知的很多 GUI 工具包中，==窗口小部件 (widget) 都有一个回调函数用于响应它们能触发的每个动作，这个回调函数通常是一个指向某个函数的指针==。但是，在 QT 中信号和槽取代了这些凌乱的函数指针，使得我们编写这些通信程序更为简洁明了。 信号和槽能携带任意数量和任意类型的参数，他们是类型完全安全的，不会像回调函数那样产生 core dumps。</p>
+<p>所有从 QObject 或其子类 ( 例如 Qwidget) 派生的类都能够包含信号和槽。当对象改变其状态时，信号就由该对象发射 (emit) 出去，这就是对象所要做的全部事情，它不知道另一端是谁在接收这个信号。这就是真正的信息封装，它确保对象被当作一个真正的软件组件来使用。槽用于接收信号，但它们是普通的对象成员函数。一个槽并不知道是否有任何信号与自己相连接。而且，对象并不了解具体的通信机制。</p>
+<p>==可以将很多信号与单个的槽进行连接，也可以将单个的信号与很多的槽进行连接==，甚至于将一个信号与另外一个信号相连接也是可能的，这时无论第一个信号什么时候发射系统都将立刻发射第二个信号。总之，信号与槽构造了一个强大的部件编程机制。</p>
+<h3 id="1-2-信号"><a href="#1-2-信号" class="headerlink" title="1.2 信号"></a>1.2 信号</h3><p>当某个信号对其客户或所有者发生的内部状态发生改变，信号被一个对象发射。只有定义过这个信号的类及其派生类能够发射这个信号。当一个信号被发射时，与其相关联的槽将被立刻执行，就象一个正常的函数调用一样。信号 - 槽机制完全独立于任何 GUI 事件循环。只有当所有的槽返回以后发射函数（emit）才返回。 如果存在多个槽与某个信号相关联，那么，当这个信号被发射时，这些槽将会一个接一个地执行，但是它们执行的顺序将会是随机的、不确定的，我们不能人为地指定哪个先执行、哪个后执行。</p>
+<p>信号的声明是在头文件中进行的，QT 的 signals 关键字指出进入了信号声明区，随后即可声明自己的信号。例如，下面定义了三个信号：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">signals: </span><br><span class="line">  void mySignal();</span><br><span class="line">  void mySignal(int x); </span><br><span class="line">  void mySignalParam(int x,int y);</span><br></pre></td></tr></table></figure>
+
+<p>在上面的定义中，signals 是 QT 的关键字，而非 C/C++ 的。接下来的一行 void mySignal() 定义了信号 mySignal，这个信号没有携带参数；接下来的一行 void mySignal(int x) 定义 了重名信号 mySignal，但是它携带一个整形参数，这有点类似于 C++ 中的虚函数。从形式上 讲信号的声明与普通的 C++ 函数是一样的，但是信号却没有函数体定义，另外，==信号的返回类型都是 void，不要指望能从信号返回什么有用信息==。</p>
+<p>信号由moc自动产生，它们不应该在 .cpp 文件中实现。</p>
+<h3 id="1-3-槽"><a href="#1-3-槽" class="headerlink" title="1.3 槽"></a>1.3 槽</h3><p>槽是普通的 C++ 成员函数，可以被正常调用，它们唯一的特殊性就是很多信号可以与其相关联。当与其关联的信号被发射时，这个槽就会被调用。槽可以有参数，但槽的参数不能有缺省值。</p>
+<p>既然槽是普通的成员函数，因此与其它的函数一样，它们也有存取权限。槽的存取权限决定了谁能够与其相关联。同普通的 C++ 成员函数一样，槽函数也分为三种类型，即 public slots、private slots 和 protected slots。</p>
+<p><strong>public slots</strong>：在这个区内声明的槽意味着任何对象都可将信号与之相连接。这对于组件编程非常有用，可以创建彼此互不了解的对象，将它们的信号与槽进行连接以便信息能够正确的传递。</p>
+<p><strong>protected slots</strong>：在这个区内声明的槽意味着当前类及其子类可以将信号与之相连接。适用于那些槽，它们是类实现的一部分，但是其界面接口却面向外部。</p>
+<p><strong>private slots</strong>：在这个区内声明的槽意味着只有类自己可以将信号与之相连接。适用于联系非常紧密的类。<br>槽也能够声明为虚函数，这也是非常有用的。</p>
+<p>槽的声明也是在头文件中进行的。例如，下面声明了三个槽：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public slots: </span><br><span class="line">  void mySlot(); </span><br><span class="line">  void mySlot(int x); </span><br><span class="line">  void mySlotParam(int x,int y);</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-信号与槽的关联"><a href="#1-4-信号与槽的关联" class="headerlink" title="1.4 信号与槽的关联"></a>1.4 信号与槽的关联</h3><p>通过调用 QObject 对象的 connect 函数来将某个对象的信号与另外一个对象的槽函数相关联，这样当发射者发射信号时，接收者的槽函数将被调用。该函数的定义如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bool QObject::connect ( const QObject * sender, const char * signal,</span><br><span class="line">                        const QObject * receiver, const char * member ) [static]</span><br></pre></td></tr></table></figure>
+
+<p>这个函数的作用就是将发射者 sender 对象中的信号 signal 与接收者 receiver 中的 member 槽函数联系起来。当指定信号 signal 时必须使用 QT 的宏 SIGNAL()，当指定槽函数时必须使用宏 SLOT()。如果发射者与接收者属于同一个对象的话，那么在 connect 调用中接收者参数可以省略。</p>
+<p>例如，下面定义了两个对象：标签对象 label 和滚动条对象 scroll，并将 valueChanged() 信号与标签对象的 setNum() 相关联，另外信号还携带了一个整形参数，这样标签总是显示滚动条所处位置的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">QLabel *label  = new QLabel; </span><br><span class="line">QScrollBar *scroll = new QScrollBar; </span><br><span class="line">QObject::connect( scroll, SIGNAL(valueChanged(int)), label,  SLOT(setNum(int)) );</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-一个小例子"><a href="#2-一个小例子" class="headerlink" title="2.一个小例子"></a>2.一个小例子</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">//tsignal.h </span><br><span class="line"> class TsignalApp:public QMainWindow </span><br><span class="line"> &#123; </span><br><span class="line">	 Q_OBJECT </span><br><span class="line">	 ... </span><br><span class="line">	 // 信号声明区</span><br><span class="line">	 signals: </span><br><span class="line">		 // 声明信号 mySignal() </span><br><span class="line">		 void mySignal(); </span><br><span class="line">		 // 声明信号 mySignal(int) </span><br><span class="line">		 void mySignal(int x); </span><br><span class="line">		 // 声明信号 mySignalParam(int,int) </span><br><span class="line">		 void mySignalParam(int x,int y); </span><br><span class="line">	 // 槽声明区</span><br><span class="line">	 public slots: </span><br><span class="line">		 // 声明槽函数 mySlot() </span><br><span class="line">		 void mySlot(); </span><br><span class="line">		 // 声明槽函数 mySlot(int) </span><br><span class="line">		 void mySlot(int x); </span><br><span class="line">		 // 声明槽函数 mySignalParam (int，int) </span><br><span class="line">		 void mySlotParam(int x,int y); </span><br><span class="line"> &#125; </span><br><span class="line"> ... </span><br><span class="line"> //tsignal.cpp </span><br><span class="line"> ... </span><br><span class="line"> TsignalApp::TsignalApp() </span><br><span class="line"> &#123; </span><br><span class="line">	 ... </span><br><span class="line">	 // 将信号 mySignal() 与槽 mySlot() 相关联</span><br><span class="line">	 connect(this,SIGNAL(mySignal()),SLOT(mySlot())); </span><br><span class="line">	 // 将信号 mySignal(int) 与槽 mySlot(int) 相关联</span><br><span class="line">	 connect(this,SIGNAL(mySignal(int)),SLOT(mySlot(int))); </span><br><span class="line">	 // 将信号 mySignalParam(int,int) 与槽 mySlotParam(int,int) 相关联</span><br><span class="line">	 connect(this,SIGNAL(mySignalParam(int,int)),SLOT(mySlotParam(int,int))); </span><br><span class="line"> &#125; </span><br><span class="line"> // 定义槽函数 mySlot() </span><br><span class="line"> void TsignalApp::mySlot() </span><br><span class="line"> &#123; </span><br><span class="line">	 QMessageBox::about(this,&quot;Tsignal&quot;, &quot;This is a signal/slot sample without parameter.&quot;); </span><br><span class="line"> &#125; </span><br><span class="line"> // 定义槽函数 mySlot(int) </span><br><span class="line"> void TsignalApp::mySlot(int x) </span><br><span class="line"> &#123; </span><br><span class="line">	 QMessageBox::about(this,&quot;Tsignal&quot;, &quot;This is a signal/slot sample with one parameter.&quot;); </span><br><span class="line"> &#125; </span><br><span class="line"> // 定义槽函数 mySlotParam(int,int) </span><br><span class="line"> void TsignalApp::mySlotParam(int x,int y) </span><br><span class="line"> &#123; </span><br><span class="line">	 char s[256]; </span><br><span class="line">	 sprintf(s,&quot;x:%d y:%d&quot;,x,y); </span><br><span class="line">	 QMessageBox::about(this,&quot;Tsignal&quot;, s); </span><br><span class="line"> &#125; </span><br><span class="line"> void TsignalApp::slotFileNew() </span><br><span class="line"> &#123; </span><br><span class="line">	 // 发射信号 mySignal() </span><br><span class="line">	 emit mySignal(); </span><br><span class="line">	 // 发射信号 mySignal(int) </span><br><span class="line">	 emit mySignal(5); </span><br><span class="line">	 // 发射信号 mySignalParam(5，100) </span><br><span class="line">	 emit mySignalParam(5,100); </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-关于元对象工具MOC"><a href="#3-关于元对象工具MOC" class="headerlink" title="3.关于元对象工具MOC"></a>3.关于元对象工具MOC</h2><p>元对象编译器 moc（meta object compiler）对 C++ 文件中的类声明进行分析并产生用于初始化元对象的 C++ 代码，元对象包含全部信号和槽的名字以及指向这些函数的指针。</p>
+<p>==moc 读 C++ 源文件，如果发现有 Q_OBJECT 宏声明的类，它就会生成另外一个 C++ 源文件，这个新生成的文件中包含有该类的元对象代码。<br>例如，假设我们有一个头文件 mysignal.h，在这个文件中包含有信号或槽的声明，那么在编译之前 moc 工具就会根据该文件自动生成一个名为 mysignal.moc.h 的 C++ 源文件并将其提交给编译器；类似地，对应于 mysignal.cpp 文件 moc 工具将自动生成一个名为 mysignal.moc.cpp 文件提交给编译器。==</p>
+<p>==元对象代码是 signal/slot 机制所必须的。用 moc 产生的 C++ 源文件必须与类实现一起进行编译和连接，或者用 #include 语句将其包含到类的源文件中。moc 并不扩展 #include 或者 #define 宏定义 , 它只是简单的跳过所遇到的任何预处理指令。==</p>
+<h1 id="2-构造函数初始化列表和构造函数体内赋值区别"><a href="#2-构造函数初始化列表和构造函数体内赋值区别" class="headerlink" title="2. 构造函数初始化列表和构造函数体内赋值区别"></a>2. 构造函数初始化列表和构造函数体内赋值区别</h1><p>C++类中成员变量的初始化有两种方式：</p>
+<ul>
+<li>构造函数初始化列表</li>
+<li>构造函数体内赋值</li>
+</ul>
+<p>下面看看两种方式有何不同。<br>成员变量初始化的顺序是按照定义的顺序。</p>
+<h2 id="1、内部数据类型（char，int……指针等）"><a href="#1、内部数据类型（char，int……指针等）" class="headerlink" title="1、内部数据类型（char，int……指针等）"></a>1、内部数据类型（char，int……指针等）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Animal</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    Animal(int weight,int height):       //A初始化列表</span><br><span class="line">      m_weight(weight),</span><br><span class="line">      m_height(height)</span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    Animal(int weight,int height)       //B函数体内初始化</span><br><span class="line">    &#123;</span><br><span class="line">        m_weight = weight;</span><br><span class="line">        m_height = height;</span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">    int m_weight;</span><br><span class="line">    int m_height;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>对于这些内部类型来说，基本上是没有区别的，效率上也不存在多大差异。</p>
+<p>==当然A和B方式不能共存==。</p>
+<h2 id="2、无默认构造函数的继承关系中"><a href="#2、无默认构造函数的继承关系中" class="headerlink" title="2、无默认构造函数的继承关系中"></a>2、无默认构造函数的继承关系中</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Animal</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    Animal(int weight,int height):        //没有提供无参的构造函数 </span><br><span class="line">      m_weight(weight),</span><br><span class="line">      m_height(height)</span><br><span class="line">    &#123;</span><br><span class="line">&#125;</span><br><span class="line">private:</span><br><span class="line">    int m_weight;</span><br><span class="line">    int m_height;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">class Dog: public Animal</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    Dog(int weight,int height,int type)   //error 构造函数 父类Animal无合适构造函数</span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">    int m_type;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>上面的子类和父类编译会出错：<br>报错内容：找不到合适的默认构造函数</p>
+<p><img src="/2019/12/22/Qt-Q-OBJECT-的作用/2.3.1.png" alt="2.3.1"></p>
+<p>因为子类Dog初始化之前要进行父类Animal的初始化，但是根据Dog的构造函数，没有给父类传递参数，使用了父类Animal的无参数构造函数。而父类Animal提供了有参数的构造函数，这样编译器就不会给父类Animal提供一个默认的无参数的构造函数了，所以编译时报错，说找不到合适的默认构造函数可用。要么提供一个无参数的构造函数，要么在子类的Dog的初始化列表中给父类Animal传递初始化参数，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Dog: public Animal</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    Dog(int weight,int height,int type):</span><br><span class="line">        Animal(weight,height)         //必须使用初始化列表增加对父类的初始化</span><br><span class="line">    &#123;</span><br><span class="line">        ;</span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">    int m_type;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、类中const常量，必须在初始化列表中初始，不能使用赋值的方式初始化"><a href="#3、类中const常量，必须在初始化列表中初始，不能使用赋值的方式初始化" class="headerlink" title="3、类中const常量，必须在初始化列表中初始，不能使用赋值的方式初始化"></a>3、类中const常量，必须在初始化列表中初始，不能使用赋值的方式初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Dog: public Animal</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    Dog(int weight,int height,int type):</span><br><span class="line">        Animal(weight,height), </span><br><span class="line">        LEGS(4)                //必须在初始化列表中初始化</span><br><span class="line">    &#123;</span><br><span class="line">        //LEGS = 4;           //error</span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">    int m_type;</span><br><span class="line">    const int LEGS;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、包含有自定义数据类型（类）对象的成员初始化"><a href="#4、包含有自定义数据类型（类）对象的成员初始化" class="headerlink" title="4、包含有自定义数据类型（类）对象的成员初始化"></a>4、包含有自定义数据类型（类）对象的成员初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">class Food</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    Food(int type = 10)</span><br><span class="line">    &#123;</span><br><span class="line">        m_type = 10;</span><br><span class="line">    &#125;</span><br><span class="line">    Food(Food &amp;other)                 //拷贝构造函数</span><br><span class="line">    &#123;</span><br><span class="line">        m_type = other.m_type;</span><br><span class="line">    &#125;</span><br><span class="line">    Food &amp; operator =(Food &amp;other)      //重载赋值=函数</span><br><span class="line">    &#123;</span><br><span class="line">        m_type = other.m_type;</span><br><span class="line">        return *this;</span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">    int m_type;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">（1）构造函数赋值方式 初始化成员对象m_food</span><br><span class="line"></span><br><span class="line">class Dog: public Animal</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    Dog(Food &amp;food)</span><br><span class="line">      //:m_food(food)  </span><br><span class="line">    &#123;</span><br><span class="line">        m_food = food;               //初始化 成员对象</span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">    Food m_food;</span><br><span class="line">&#125;;</span><br><span class="line">//使用</span><br><span class="line">Food fd;</span><br><span class="line">Dog dog(fd);   //</span><br><span class="line">Dog dog(fd);</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">先执行了   对象类型构造函数Food(int type = 10)——&gt; </span><br><span class="line">然后在执行 对象类型构造函数Food &amp; operator =(Food &amp;other)</span><br><span class="line">想象是为什么？</span><br><span class="line"> </span><br><span class="line">（2）构造函数初始化列表方式</span><br><span class="line">class Dog: public Animal</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">    Dog(Food &amp;food)</span><br><span class="line">      :m_food(food)                  //初始化 成员对象</span><br><span class="line">    &#123;</span><br><span class="line">        //m_food = food;               </span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">    Food m_food;</span><br><span class="line">&#125;;</span><br><span class="line">//使用</span><br><span class="line">Food fd;</span><br><span class="line">Dog dog(fd);   //</span><br><span class="line">Dog dog(fd);</span><br><span class="line">结果：执行Food(Food &amp;other)拷贝构造函数完成初始化</span><br></pre></td></tr></table></figure>
+
+<p>不同的初始化方式得到不同的结果：</p>
+<p>==明显构造函数初始化列表的方式效率更高。==</p>
+<h1 id="3-C-运算符重载"><a href="#3-C-运算符重载" class="headerlink" title="3. C++ 运算符重载"></a>3. C++ 运算符重载</h1><p><a href="https://blog.csdn.net/lishuzhai/article/details/50781753" target="_blank" rel="noopener">太多了，见博客</a></p>
+<h1 id="4-友元函数"><a href="#4-友元函数" class="headerlink" title="4. 友元函数"></a>4. 友元函数</h1><p>类的友元函数是定义在类外部，但有权访问类的所有私有（private）成员和保护（protected）成员。尽管友元函数的原型有在类的定义中出现过，但是友元函数并不是成员函数。</p>
+<p>友元可以是一个函数，该函数被称为友元函数；友元也可以是一个类，该类被称为友元类，在这种情况下，整个类及其所有成员都是友元。</p>
+<h1 id="5-引用和指针的用法区别"><a href="#5-引用和指针的用法区别" class="headerlink" title="5. 引用和指针的用法区别"></a>5. 引用和指针的用法区别</h1><h2 id="5-1-定义"><a href="#5-1-定义" class="headerlink" title="5.1 定义"></a>5.1 定义</h2><p>指针：指针是一个变量，只不过这个变量存储的是一个地址，指向内存的一个存储单元；<br>引用：跟原来的变量实质上是同一个东西，只不过是原变量的一个别名而已。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a=1;</span><br><span class="line">int *p=&amp;a;   // 指针</span><br><span class="line">int &amp;b=a;   //引用</span><br></pre></td></tr></table></figure>
+
+<p>上面定义了一个整形变量和一个指针变量p，该指针变量指向a的存储单元，即p的值是a存储单元的地址。<br>而下面2句定义了一个整形变量a和这个整形a的引用b，事实上a和b是同一个东西，在内存占有同一个存储单元。</p>
+<h2 id="5-2-区别"><a href="#5-2-区别" class="headerlink" title="5.2 区别"></a>5.2 区别</h2><p>(1)指针：指针是一个变量，只不过这个变量存储的是一个地址，指向内存的一个存储单元；引用：跟原来的变量实质上是同一个东西，只不过是原变量的一个别名而已。</p>
+<p>(2)可以有const指针，但是没有const引用；</p>
+<p>(3)指针可以有多级，但是引用只能是一级（int **p；合法 而 int &amp;&amp;a是不合法的），即可以有指向指针的指针，但是没有引用的引用。</p>
+<p>(4)指针的值可以为空，但是引用的值不能为NULL，并且引用在定义的时候必须初始化；</p>
+<p>(5)指针的值在初始化后可以改变，即指向其它的存储单元，而引用在进行初始化后就不会再改变了。</p>
+<p>(6)”sizeof引用”得到的是所指向的变量(对象)的大小，而”sizeof指针”得到的是指针本身的大小；</p>
+<p>(7)指针和引用的自增(++)运算意义不一样；</p>
+<h1 id="7-类中成员函数声明后面的const的含义"><a href="#7-类中成员函数声明后面的const的含义" class="headerlink" title="7. 类中成员函数声明后面的const的含义"></a>7. 类中成员函数声明后面的const的含义</h1><p>这个const一般是对类中成员函数属性的声明，但这个声明怪怪的，只能放在函数声明的尾部，大概是因为其它地方都已经被占用了。这个声明表示任这个函数不会修改类中的数据成员。如果在编写const成员函数时，不慎修改了数据成员，或者调用了其它非const成员函数，编译器将指出错误，这无疑会提高程序的健壮性。<br>以下程序中，类stack的成员函数GetCount仅用于计数，从逻辑上讲GetCount应当为const函数。编译器将指出GetCount函数中的错误。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Stack</span><br><span class="line">&#123;</span><br><span class="line">    public:</span><br><span class="line">        void Push(int elem);</span><br><span class="line">        int Pop(void);</span><br><span class="line">        int GetCount(void) const;   // const 成员函数</span><br><span class="line">    private:</span><br><span class="line">        int m_num;</span><br><span class="line">        int m_data[100];</span><br><span class="line">&#125;;</span><br><span class="line">int Stack::GetCount(void)const</span><br><span class="line">&#123;</span><br><span class="line">    ++m_num;   // 编译错误，企图修改数据成员m_num</span><br><span class="line">    Pop();   // 编译错误，企图调用非const函数</span><br><span class="line">    returnm_num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>关于Const函数的几点规则：<br>a. 在类中被const声明的成员函数只能访问const成员函数，而非const函数可以访问任意的成员函数，包括const成员函数。<br>b. 在类中被const声明的成员函数不可以修改对象的成员数据，不管对象是否具有const性质。编译时会对是否修改成员数据进行检查。<br>c. 加上mutable修饰符的数据成员，对于任何情况下通过任何手段都可修改，自然此时的const成员函数可以修改它。</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Qt/" rel="tag"># Qt</a>
+            
+              <a href="/tags/Q-OBJECT/" rel="tag"># Q_OBJECT</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/12/17/Centos7-部署遇到的一些问题/" rel="next" title="Centos7 部署遇到的一些问题">
+                  <i class="fa fa-chevron-left"></i> Centos7 部署遇到的一些问题
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/12/28/Webpack-下网络请求跨域问题/" rel="prev" title="Webpack 下网络请求跨域问题">
+                  Webpack 下网络请求跨域问题 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="gitalk-container"></div>
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.png"
+      alt="ZHL">
+  <p class="site-author-name" itemprop="name">ZHL</p>
+  <div class="site-description motion-element" itemprop="description">我的博客</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Qt-Q-OBJECT-的作用"><span class="nav-number">1.</span> <span class="nav-text">1. Qt Q_OBJECT 的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-QT的信号与槽机制介绍"><span class="nav-number">1.1.</span> <span class="nav-text">1.QT的信号与槽机制介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-信号与槽"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 信号与槽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-信号"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 信号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-槽"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3 槽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-信号与槽的关联"><span class="nav-number">1.1.4.</span> <span class="nav-text">1.4 信号与槽的关联</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-一个小例子"><span class="nav-number">1.2.</span> <span class="nav-text">2.一个小例子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-关于元对象工具MOC"><span class="nav-number">1.3.</span> <span class="nav-text">3.关于元对象工具MOC</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-构造函数初始化列表和构造函数体内赋值区别"><span class="nav-number">2.</span> <span class="nav-text">2. 构造函数初始化列表和构造函数体内赋值区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、内部数据类型（char，int……指针等）"><span class="nav-number">2.1.</span> <span class="nav-text">1、内部数据类型（char，int……指针等）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、无默认构造函数的继承关系中"><span class="nav-number">2.2.</span> <span class="nav-text">2、无默认构造函数的继承关系中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、类中const常量，必须在初始化列表中初始，不能使用赋值的方式初始化"><span class="nav-number">2.3.</span> <span class="nav-text">3、类中const常量，必须在初始化列表中初始，不能使用赋值的方式初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、包含有自定义数据类型（类）对象的成员初始化"><span class="nav-number">2.4.</span> <span class="nav-text">4、包含有自定义数据类型（类）对象的成员初始化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-C-运算符重载"><span class="nav-number">3.</span> <span class="nav-text">3. C++ 运算符重载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-友元函数"><span class="nav-number">4.</span> <span class="nav-text">4. 友元函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-引用和指针的用法区别"><span class="nav-number">5.</span> <span class="nav-text">5. 引用和指针的用法区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-定义"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-区别"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 区别</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-类中成员函数声明后面的const的含义"><span class="nav-number">6.</span> <span class="nav-text">7. 类中成员函数声明后面的const的含义</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZHL</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.3.0</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+    var gitalk = new Gitalk({
+      clientID: '1422018403cef567d9ea',
+      clientSecret: 'cff6b3aa554481268305af952f14f47e7acd7b19',
+      repo: 'Gitalk',
+      owner: 'zhuhelong',
+      admin: ['zhuhelong'],
+      id: 'aaa98063e0b27b7d7bdf18a059b8086b',
+        language: 'zh-CN',
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
+
+</body>
+</html>
