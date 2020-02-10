@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="我的博客">
+  <meta name="description" content="前言学习使用 Gradle，并使用的是 Gradle Kotlin DSL。 暂处在学习阶段，一点点完善内容。 依赖管理依赖版本号的管理使用方法在 org.gradle.api.plugins.ExtraPropertiesExtension文档 中可以看到。 1234567891011121314151617181920212223// build.gradle.kts.../** * 设置额外">
 <meta name="keywords" content="Gradle,学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Gradle 学习">
 <meta property="og:url" content="http://yoursite.com/2020/01/30/Gradle-学习/index.html">
 <meta property="og:site_name" content="ZHL的博客">
-<meta property="og:description" content="我的博客">
+<meta property="og:description" content="前言学习使用 Gradle，并使用的是 Gradle Kotlin DSL。 暂处在学习阶段，一点点完善内容。 依赖管理依赖版本号的管理使用方法在 org.gradle.api.plugins.ExtraPropertiesExtension文档 中可以看到。 1234567891011121314151617181920212223// build.gradle.kts.../** * 设置额外">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-01-30T12:34:57.594Z">
+<meta property="og:updated_time" content="2020-01-30T13:34:39.970Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gradle 学习">
-<meta name="twitter:description" content="我的博客">
+<meta name="twitter:description" content="前言学习使用 Gradle，并使用的是 Gradle Kotlin DSL。 暂处在学习阶段，一点点完善内容。 依赖管理依赖版本号的管理使用方法在 org.gradle.api.plugins.ExtraPropertiesExtension文档 中可以看到。 1234567891011121314151617181920212223// build.gradle.kts.../** * 设置额外">
   <link rel="canonical" href="http://yoursite.com/2020/01/30/Gradle-学习/">
 
 
@@ -271,7 +271,7 @@
                 
               
 
-              <time title="创建时间：2020-01-30 20:34:20 / 修改时间：20:34:57" itemprop="dateCreated datePublished" datetime="2020-01-30T20:34:20+08:00">2020-01-30</time>
+              <time title="创建时间：2020-01-30 20:34:20 / 修改时间：21:34:39" itemprop="dateCreated datePublished" datetime="2020-01-30T20:34:20+08:00">2020-01-30</time>
             </span>
           
             
@@ -311,7 +311,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>学习使用 Gradle，并使用的是 Gradle Kotlin DSL。</p>
+<p>暂处在学习阶段，一点点完善内容。</p>
+<h1 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理</h1><h2 id="依赖版本号的管理"><a href="#依赖版本号的管理" class="headerlink" title="依赖版本号的管理"></a>依赖版本号的管理</h2><p>使用方法在 <code>org.gradle.api.plugins.ExtraPropertiesExtension</code>文档 中可以看到。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// build.gradle.kts</span></span><br><span class="line">...</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 设置额外的配置，一般用于 依赖的版本号</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">// 第 1 种方法，设置额外的配置</span></span><br><span class="line"><span class="comment">//ext &#123;</span></span><br><span class="line"><span class="comment">//    set("junit_version", "4.13")</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第 2 种方法，设置额外的配置</span></span><br><span class="line"><span class="comment">//ext["junit_version"] = "4.12"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第 3 种方法，设置额外的配置</span></span><br><span class="line"><span class="comment">//extra["junit_version"] = "4.12"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第 4 种方法，设置额外的配置</span></span><br><span class="line">project.ext.<span class="keyword">set</span>(<span class="string">"junit_version"</span>, <span class="string">"4.13"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在 dependencies 中的使用</span></span><br><span class="line">dependencies &#123;</span><br><span class="line">    testImplementation(<span class="string">"junit:junit:<span class="subst">$&#123;project.extra["junit_version"]&#125;</span>"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>疑问：</strong></p>
+<ol>
+<li><p>为什么 ext 和 extra 表现的一样。猜测与 <code>org.gradle.api.plugins.ExtraPropertiesExtension</code> 中的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * The name of this extension in all</span></span><br><span class="line"><span class="comment"> * &#123;<span class="doctag">@link</span> ExtensionContainer ExtensionContainers&#125;, &#123;<span class="doctag">@value</span>&#125;.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">String EXTENSION_NAME = <span class="string">"ext"</span>;</span><br></pre></td></tr></table></figure>
+
+<p>有关。</p>
+</li>
+</ol>
+
     </div>
 
     
@@ -348,6 +361,10 @@
 
             <div class="post-nav-prev post-nav-item">
               
+                <a href="/2020/02/01/Jenkins-卡在-Please-wait-界面/" rel="prev" title="Jenkins 卡在 Please wait ... 界面">
+                  Jenkins 卡在 Please wait ... 界面 <i class="fa fa-chevron-right"></i>
+                </a>
+              
             </div>
           </div>
         
@@ -381,8 +398,17 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -397,7 +423,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -448,7 +474,9 @@
         
           
         
-        <span class="site-state-item-count">18</span>
+          
+        
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -537,7 +565,11 @@
         
           
         
-        <span class="site-state-item-count">37</span>
+          
+        
+          
+        
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -548,6 +580,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#依赖管理"><span class="nav-number">2.</span> <span class="nav-text">依赖管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖版本号的管理"><span class="nav-number">2.1.</span> <span class="nav-text">依赖版本号的管理</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>

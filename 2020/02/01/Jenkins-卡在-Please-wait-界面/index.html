@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-x16.ico?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="War 方式安装全局使用清华大学开源软件镜像站/jenkins。 安装下载 War 包下载链接 启动1java -jar jenkins.war  启动后信息在 &amp;lt;user-home&amp;gt;/.jenkins 文件夹下生成相关文件。 访问 Jenkins浏览器打开 http://127.0.0.1:8080 出现错误一直处于 Please wait while Jenkins is gett">
+<meta name="keywords" content="Jenkins,卡住">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jenkins 卡在 Please wait ... 界面">
+<meta property="og:url" content="http://yoursite.com/2020/02/01/Jenkins-卡在-Please-wait-界面/index.html">
+<meta property="og:site_name" content="ZHL的博客">
+<meta property="og:description" content="War 方式安装全局使用清华大学开源软件镜像站/jenkins。 安装下载 War 包下载链接 启动1java -jar jenkins.war  启动后信息在 &amp;lt;user-home&amp;gt;/.jenkins 文件夹下生成相关文件。 访问 Jenkins浏览器打开 http://127.0.0.1:8080 出现错误一直处于 Please wait while Jenkins is gett">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-02-01T16:12:38.448Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jenkins 卡在 Please wait ... 界面">
+<meta name="twitter:description" content="War 方式安装全局使用清华大学开源软件镜像站/jenkins。 安装下载 War 包下载链接 启动1java -jar jenkins.war  启动后信息在 &amp;lt;user-home&amp;gt;/.jenkins 文件夹下生成相关文件。 访问 Jenkins浏览器打开 http://127.0.0.1:8080 出现错误一直处于 Please wait while Jenkins is gett">
+  <link rel="canonical" href="http://yoursite.com/2020/02/01/Jenkins-卡在-Please-wait-界面/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Jenkins 卡在 Please wait ... 界面 | ZHL的博客</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9fd3e2a7c57b3971f3439f9713354241";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ZHL的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">love-wh</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/01/Jenkins-卡在-Please-wait-界面/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">Jenkins 卡在 Please wait ... 界面
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-01 14:16:25" itemprop="dateCreated datePublished" datetime="2020-02-01T14:16:25+08:00">2020-02-01</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-02 00:12:38" itemprop="dateModified" datetime="2020-02-02T00:12:38+08:00">2020-02-02</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Jenkins-安装/" itemprop="url" rel="index"><span itemprop="name">Jenkins 安装</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="War-方式安装"><a href="#War-方式安装" class="headerlink" title="War 方式安装"></a>War 方式安装</h1><p>全局使用<a href="https://mirrors.tuna.tsinghua.edu.cn/jenkins/" target="_blank" rel="noopener">清华大学开源软件镜像站/jenkins</a>。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="下载-War-包"><a href="#下载-War-包" class="headerlink" title="下载 War 包"></a>下载 War 包</h3><p><a href="https://mirrors.tuna.tsinghua.edu.cn/jenkins/war/latest/jenkins.war" target="_blank" rel="noopener">下载链接</a></p>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar jenkins.war</span><br></pre></td></tr></table></figure>
+
+<h2 id="启动后信息"><a href="#启动后信息" class="headerlink" title="启动后信息"></a>启动后信息</h2><p>在 <code>&lt;user-home&gt;/.jenkins</code> 文件夹下生成相关文件。</p>
+<h2 id="访问-Jenkins"><a href="#访问-Jenkins" class="headerlink" title="访问 Jenkins"></a>访问 Jenkins</h2><p>浏览器打开 <a href="http://127.0.0.1:8080" target="_blank" rel="noopener">http://127.0.0.1:8080</a></p>
+<h2 id="出现错误"><a href="#出现错误" class="headerlink" title="出现错误"></a>出现错误</h2><p>一直处于 Please wait while Jenkins is getting ready to work… 界面。</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>停止服务，修改 <code>&lt;user-home&gt;/.jenkins/hudson.model.UpdateCenter.xml</code> 文件，改为：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version='1.1' encoding='UTF-8'?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">sites</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">site</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>default<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">site</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">sites</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>重启后再使用浏览器进入，在出现 <strong>解锁 Jenkins</strong> 界面后不要继续操作。</p>
+<p><strong>因为更换源后下载插件还是走的官方的源，那是因为 <code>update-center.json</code> 文件内的插件的地址是官方的（这里吐槽一下清华源，做事不做完！）。</strong></p>
+<p>有两种解决办法。</p>
+<h3 id="第一种，替换-update-center-json-中插件地址"><a href="#第一种，替换-update-center-json-中插件地址" class="headerlink" title="第一种，替换 update-center.json 中插件地址"></a>第一种，替换 <code>update-center.json</code> 中插件地址</h3><p>文件 <code>update-center.json</code> 位于 <code>your_device_jenkins_directory/updates/update-center.json</code>。将其中的 <code>http://updates.jenkins-ci.org/download/</code> 替换为 <code>https://mirrors.tuna.tsinghua.edu.cn/jenkins/</code></p>
+<p><strong>但是：这只是权宜之计，后续会出现问题。</strong></p>
+<h3 id="第二种，使用代理，比如-Nignx-代理"><a href="#第二种，使用代理，比如-Nignx-代理" class="headerlink" title="第二种，使用代理，比如 Nignx 代理"></a>第二种，使用代理，比如 Nignx 代理</h3><p>host 配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.255.255.254 updates.jenkins-ci.org  # 不占用 127.0.0.1 ip</span><br></pre></td></tr></table></figure>
+
+<p>nginx.conf 配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">	listen 80;</span><br><span class="line">	server_name 127.255.255.254;</span><br><span class="line">	location /download/plugins &#123;  # 代理插件的地址</span><br><span class="line">        proxy_next_upstream http_502 http_504 error timeout invalid_header;</span><br><span class="line">        proxy_set_header Host mirrors.tuna.tsinghua.edu.cn;</span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; </span><br><span class="line">        rewrite /download/plugins(.*) /jenkins/plugins/$1 break;</span><br><span class="line">        proxy_pass https://mirrors.tuna.tsinghua.edu.cn;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location /download/war &#123;  # 代理更新包的地址</span><br><span class="line">        proxy_next_upstream http_502 http_504 error timeout invalid_header;</span><br><span class="line">        proxy_set_header Host mirrors.tuna.tsinghua.edu.cn;</span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; </span><br><span class="line">        rewrite /download/war(.*) /jenkins/war/latest/jenkins.war break;</span><br><span class="line">        proxy_pass https://mirrors.tuna.tsinghua.edu.cn;</span><br><span class="line">    &#125;</span><br><span class="line">    # 后续如有其他也可以自行添加</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这种方式也有缺点，比如，不能代理 https。</p>
+<h1 id="Docker-方式安装"><a href="#Docker-方式安装" class="headerlink" title="Docker 方式安装"></a>Docker 方式安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">  -u root \</span><br><span class="line">  --rm \  <span class="comment"># 1</span></span><br><span class="line">  -d \  <span class="comment"># 2</span></span><br><span class="line">  -p 54321:8080 \  <span class="comment"># 3</span></span><br><span class="line">  -p 50000:50000 \  <span class="comment"># 4</span></span><br><span class="line">  -v your_device_jenkins_directory:/var/jenkins_home \  <span class="comment"># 5</span></span><br><span class="line">  -v /var/run/docker.sock:/var/run/docker.sock \  <span class="comment"># 6</span></span><br><span class="line">  jenkinsci/blueocean</span><br></pre></td></tr></table></figure>
+
+<h2 id="命令解释"><a href="#命令解释" class="headerlink" title="命令解释"></a>命令解释</h2><ol>
+<li><p>（可选） jenkinsci/blueocean 关闭时自动删除Docker容器（下图为实例）。如果您需要退出Jenkins，这可以保持整洁。</p>
+</li>
+<li><p>（可选）jenkinsci/blueocean 在后台运行容器（即“分离”模式）并输出容器ID。如果您不指定此选项， 则在终端窗口中输出正在运行的此容器的Docker日志。</p>
+</li>
+<li><p>映射（例如“发布”）jenkinsci/blueocean 容器的端口8080到主机上的端口8080。 第一个数字代表主机上的端口，而最后一个代表容器的端口。因此，如果您为此选项指定 -p 54321:8080 ，您将通过端口54321访问主机上的Jenkins。</p>
+</li>
+<li><p>（可选）将 <code>jenkinsci/blueocean</code> 容器的端口50000 映射到主机上的端口50000。 如果您在其他机器上设置了一个或多个基于JNLP的Jenkins代理程序，而这些代理程序又与 <code>jenkinsci/blueocean</code> 容器交互（充当“主”Jenkins服务器，或者简称为“Jenkins主”）， 则这是必需的。默认情况下，基于JNLP的Jenkins代理通过TCP端口50000与Jenkins主站进行通信。 您可以通过“ 配置全局安全性” 页面更改Jenkins主服务器上的端口号。如果您要将您的Jenkins主机的JNLP代理端口的TCP端口 值更改为51000（例如），那么您需要重新运行Jenkins（通过此 docker run …命令）并指定此“发布”选项 -p 52000:51000，其中最后一个值与Jenkins master上的这个更改值相匹配，第一个值是Jenkins主机的主机上的端口号， 通过它，基于JNLP的Jenkins代理与Jenkins主机进行通信 - 例如52000。</p>
+</li>
+<li><p>（可选，但强烈建议）映射在容器中的<code>/var/jenkins_home</code> 目录到具有名字 <code>jenkins-data</code> 的<a href="https://docs.docker.com/engine/admin/volumes/volumes/" target="_blank" rel="noopener">volume</a>。 如果这个卷不存在，那么这个 <code>docker run</code> 命令会自动为你创建卷。 如果您希望每次重新启动Jenkins（通过此 <code>docker run ...</code> 命令）时保持Jenkins状态，则此选项是必需的 。 如果你没有指定这个选项，那么在每次重新启动后，Jenkins将有效地重置为新的实例。<br><strong>注意:</strong> 所述的 <code>jenkins-data</code> 卷也可以 <a href="https://docs.docker.com/engine/reference/commandline/volume_create/" target="_blank" rel="noopener"><code>docker volume create</code></a>命令创建： <code>docker volume create jenkins-data</code> 代替映射 <code>/var/jenkins_home</code> 目录转换为Docker卷，还 可以将此目录映射到计算机本地文件系统上的目录。 例如，指定该选项 <code>-v $HOME/jenkins:/var/jenkins_home</code> 会将容器的 <code>/var/jenkins_home</code> 目录映射 到 本地计算机上目录中的 <code>jenkins</code> 子目录， 该$HOME目录通常是 <code>/Users//jenkins</code> 或<code>/home/&lt;your-username&gt;/jenkins</code> 。</p>
+</li>
+<li><p>（可选 /var/run/docker.sock 表示Docker守护程序通过其监听的基于Unix的套接字。 该映射允许 jenkinsci/blueocean 容器与Docker守护进程通信， 如果 jenkinsci/blueocean 容器需要实例化其他Docker容器，则该守护进程是必需的。 如果运行声明式管道，其语法包含agent部分用 docker<br>• 例如， <a href="https://jenkins.io/zh/doc/book/installing/#pipeline/syntax#agent" target="_blank" rel="noopener">agent</a> { docker { … } } 此选项是必需的。 在<a href="https://jenkins.io/zh/doc/book/installing/#pipeline/syntax#" target="_blank" rel="noopener">Pipeline Syntax</a> 页面上阅读更多关于这个的信息 。<br>jenkinsci/blueocean Docker镜像本身。如果此镜像尚未下载，则此 docker run 命令 将自动为您下载镜像。此外，如果自上次运行此命令后发布了此镜像的任何更新， 则再次运行此命令将自动为您下载这些已发布的镜像更新。 注意：这个Docker镜像也可以使用以下 docker pull命令独立下载（或更新） ： docker pull jenkinsci/blueocean</p>
+</li>
+</ol>
+<h2 id="启动后信息-1"><a href="#启动后信息-1" class="headerlink" title="启动后信息"></a>启动后信息</h2><p>在 your_device_jenkins_directory 文件夹下生成如下内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">// your_device_jenkins_directory</span><br><span class="line">-rw-r--r--  1 root root   477 2月   1 12:13 com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml</span><br><span class="line">-rw-r--r--  1 root root  1643 2月   1 14:13 config.xml</span><br><span class="line">-rw-r--r--  1 root root  4179 2月   1 14:13 copy_reference_file.log</span><br><span class="line">-rw-r--r--  1 root root   182 2月   1 14:13 hudson.model.UpdateCenter.xml</span><br><span class="line">-rw-r--r--  1 root root   370 2月   1 12:13 hudson.plugins.git.GitTool.xml</span><br><span class="line">-rw-------  1 root root  1712 2月   1 12:13 identity.key.enc</span><br><span class="line">-rw-r--r--  1 root root     7 2月   1 14:13 jenkins.install.UpgradeWizard.state</span><br><span class="line">-rw-r--r--  1 root root   171 2月   1 12:13 jenkins.telemetry.Correlator.xml</span><br><span class="line">drwxr-xr-x  2 root root  4096 2月   1 12:12 jobs</span><br><span class="line">drwxr-xr-x  4 root root  4096 2月   1 12:13 logs</span><br><span class="line">-rw-r--r--  1 root root   907 2月   1 14:13 nodeMonitors.xml</span><br><span class="line">drwxr-xr-x  2 root root  4096 2月   1 12:13 nodes</span><br><span class="line">drwxr-xr-x 88 root root 24576 2月   1 12:12 plugins</span><br><span class="line">-rw-r--r--  1 root root   129 2月   1 14:12 queue.xml.bak</span><br><span class="line">-rw-r--r--  1 root root    64 2月   1 12:12 secret.key</span><br><span class="line">-rw-r--r--  1 root root     0 2月   1 12:12 secret.key.not-so-secret</span><br><span class="line">drwx------  4 root root  4096 2月   1 12:13 secrets</span><br><span class="line">drwxr-xr-x  2 root root  4096 2月   1 14:13 updates</span><br><span class="line">drwxr-xr-x  2 root root  4096 2月   1 12:13 userContent</span><br><span class="line">drwxr-xr-x  3 root root  4096 2月   1 12:13 users</span><br><span class="line">drwxr-xr-x 11 root root  4096 2月   1 12:12 war</span><br><span class="line">drwxr-xr-x  2 root root  4096 2月   1 12:13 workflow-libs</span><br></pre></td></tr></table></figure>
+
+<h2 id="访问-Jenkins-1"><a href="#访问-Jenkins-1" class="headerlink" title="访问 Jenkins"></a>访问 Jenkins</h2><p>浏览器打开 <a href="http://127.0.0.1:54321" target="_blank" rel="noopener">http://127.0.0.1:54321</a></p>
+<h2 id="出现错误-1"><a href="#出现错误-1" class="headerlink" title="出现错误"></a>出现错误</h2><p>一直处于 Please wait while Jenkins is getting ready to work… 界面。</p>
+<h2 id="解决办法-1"><a href="#解决办法-1" class="headerlink" title="解决办法"></a>解决办法</h2><p>待续。。。。。。</p>
+<p>停止服务，修改 <code>your_device_jenkins_directory/hudson.model.UpdateCenter.xml</code> 文件，改为：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version='1.1' encoding='UTF-8'?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">sites</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">site</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>default<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">site</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">sites</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用清华的源。</p>
+<p>重启后再使用浏览器进入，在出现 <strong>解锁 Jenkins</strong> 界面后不要继续操作。</p>
+<p><strong>因为更换源后下载插件还是走的官方的源，那是因为 <code>update-center.json</code> 文件内的插件的地址是官方的（这里吐槽一下清华源，做事不做完！）。</strong></p>
+<p>有两种解决办法。</p>
+<h3 id="替换-update-center-json-中插件地址"><a href="#替换-update-center-json-中插件地址" class="headerlink" title="替换 update-center.json 中插件地址"></a>替换 <code>update-center.json</code> 中插件地址</h3><p>文件 <code>update-center.json</code> 位于 <code>your_device_jenkins_directory/updates/update-center.json</code>。将其中的 <code>http://updates.jenkins-ci.org/download/</code> 替换为 <code>https://mirrors.tuna.tsinghua.edu.cn/jenkins/</code></p>
+<p><strong>但是：这只是权宜之计，会出现很多问题。</strong></p>
+<h3 id="使用代理，比如-Nignx-代理"><a href="#使用代理，比如-Nignx-代理" class="headerlink" title="使用代理，比如 Nignx 代理"></a>使用代理，比如 Nignx 代理</h3><p>host 配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.255.255.254 updates.jenkins-ci.org  # 不占用 127.0.0.1 ip</span><br></pre></td></tr></table></figure>
+
+<p>nginx.conf 配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># updates.jenkins-ci.org 代理</span><br><span class="line">server &#123;</span><br><span class="line">	listen 80;</span><br><span class="line">	server_name 127.255.255.254;</span><br><span class="line">	location /download/plugins &#123;</span><br><span class="line">        proxy_next_upstream http_502 http_504 error timeout invalid_header;</span><br><span class="line">        proxy_set_header Host mirrors.tuna.tsinghua.edu.cn;</span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; </span><br><span class="line">        rewrite /download/plugins(.*) /jenkins/plugins/$1 break;</span><br><span class="line">        proxy_pass https://mirrors.tuna.tsinghua.edu.cn;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Jenkins/" rel="tag"># Jenkins</a>
+            
+              <a href="/tags/卡住/" rel="tag"># 卡住</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/01/30/Gradle-学习/" rel="next" title="Gradle 学习">
+                  <i class="fa fa-chevron-left"></i> Gradle 学习
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="gitalk-container"></div>
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.png"
+      alt="ZHL">
+  <p class="site-author-name" itemprop="name">ZHL</p>
+  <div class="site-description motion-element" itemprop="description">我的博客</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">39</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#War-方式安装"><span class="nav-number">1.</span> <span class="nav-text">War 方式安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载-War-包"><span class="nav-number">1.1.1.</span> <span class="nav-text">下载 War 包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动"><span class="nav-number">1.1.2.</span> <span class="nav-text">启动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动后信息"><span class="nav-number">1.2.</span> <span class="nav-text">启动后信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问-Jenkins"><span class="nav-number">1.3.</span> <span class="nav-text">访问 Jenkins</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#出现错误"><span class="nav-number">1.4.</span> <span class="nav-text">出现错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-number">1.5.</span> <span class="nav-text">解决办法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一种，替换-update-center-json-中插件地址"><span class="nav-number">1.5.1.</span> <span class="nav-text">第一种，替换 update-center.json 中插件地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二种，使用代理，比如-Nignx-代理"><span class="nav-number">1.5.2.</span> <span class="nav-text">第二种，使用代理，比如 Nignx 代理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker-方式安装"><span class="nav-number">2.</span> <span class="nav-text">Docker 方式安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令解释"><span class="nav-number">2.1.</span> <span class="nav-text">命令解释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动后信息-1"><span class="nav-number">2.2.</span> <span class="nav-text">启动后信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问-Jenkins-1"><span class="nav-number">2.3.</span> <span class="nav-text">访问 Jenkins</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#出现错误-1"><span class="nav-number">2.4.</span> <span class="nav-text">出现错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法-1"><span class="nav-number">2.5.</span> <span class="nav-text">解决办法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#替换-update-center-json-中插件地址"><span class="nav-number">2.5.1.</span> <span class="nav-text">替换 update-center.json 中插件地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用代理，比如-Nignx-代理"><span class="nav-number">2.5.2.</span> <span class="nav-text">使用代理，比如 Nignx 代理</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZHL</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.3.0</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+    var gitalk = new Gitalk({
+      clientID: '1422018403cef567d9ea',
+      clientSecret: 'cff6b3aa554481268305af952f14f47e7acd7b19',
+      repo: 'Gitalk',
+      owner: 'zhuhelong',
+      admin: ['zhuhelong'],
+      id: 'ce77a24f3dc6d970f21a0499ebb3f12f',
+        language: 'zh-CN',
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
+
+</body>
+</html>
