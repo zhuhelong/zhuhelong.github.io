@@ -238,6 +238,461 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/17/Idea-Tomcat9-0-中文乱码问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/11/17/Idea-Tomcat9-0-中文乱码问题/" class="post-title-link" itemprop="url">Idea Tomcat9.0 中文乱码问题</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-17 08:57:29" itemprop="dateCreated datePublished" datetime="2019-11-17T08:57:29+08:00">2019-11-17</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-30 15:28:46" itemprop="dateModified" datetime="2019-11-30T15:28:46+08:00">2019-11-30</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Idea/" itemprop="url" rel="index"><span itemprop="name">Idea</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="2019年11月17日-解决-Idea-2019-2-下-Tomcat-乱码问题"><a href="#2019年11月17日-解决-Idea-2019-2-下-Tomcat-乱码问题" class="headerlink" title="2019年11月17日 解决 Idea 2019.2 下 Tomcat 乱码问题"></a>2019年11月17日 解决 Idea 2019.2 下 Tomcat 乱码问题</h1><h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p>Idea 中配置好 Tomcat 启动后，控制台 <code>Server</code>，<code>Tomcat Localhost Log</code>，<code>Tomcat Catalina Log</code> 都出现乱码。</p>
+<h2 id="分析原因"><a href="#分析原因" class="headerlink" title="分析原因"></a>分析原因</h2><p>在 CMD 中，尝试使用命令 <code>catalina.bat run</code> 启动 Tomcat。发现输出乱码，可以肯定，CMD 的编码是 <code>GBK</code> 的，使用 <code>chcp 65001</code> 转到 UTF-8 后再尝试启动 Tomcat，发现输出正常。所以猜测是 Idea 控制台输出使用的是 GBK 编码。</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>Idea 菜单栏中 <code>Help -&gt; Edit Custom VM Options</code> 文件最后加一句 <code>-Dfile.encoding=UTF-8</code>，重启 Idea。</p>
+<h1 id="再次更新-2019年11月30日，解决-Idea-2019-3-下-以上设置也无效的问题"><a href="#再次更新-2019年11月30日，解决-Idea-2019-3-下-以上设置也无效的问题" class="headerlink" title="再次更新 2019年11月30日，解决 Idea 2019.3 下 以上设置也无效的问题"></a>再次更新 2019年11月30日，解决 Idea 2019.3 下 以上设置也无效的问题</h1><h2 id="现象-1"><a href="#现象-1" class="headerlink" title="现象"></a>现象</h2><p>更新了一下 Idea，发现 Idea 2019.3 中 Tomcat 再次乱码。</p>
+<h2 id="解决办法-1"><a href="#解决办法-1" class="headerlink" title="解决办法"></a>解决办法</h2><p>Idea 菜单栏中 <code>Help -&gt; Edit Custom Properties</code> ，如果要创建文件则创建，然后文件最后加一句 <code>-Dfile.encoding=UTF-8</code>，重启 Idea。yun</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/27/Git-记录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/09/27/Git-记录/" class="post-title-link" itemprop="url">Git 记录</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-27 20:22:08" itemprop="dateCreated datePublished" datetime="2019-09-27T20:22:08+08:00">2019-09-27</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h1><p>用了很久的 Git 了，但是也只是会基本的一些东西。不过就算是基本的，也可以记录下来。</p>
+<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><ol>
+<li>下载最新版的 Git。</li>
+</ol>
+<h1 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h1><p>命令格式：<code>git init</code>。</p>
+<hr>
+<ol>
+<li>创建项目文件夹 <code>D:/Test/GitTraining</code>。</li>
+<li>Git Bash 转到该文件下，运行命令 <code>git init</code>。</li>
+</ol>
+<p>效果：创建了一个名为 GitTraining 的 Git 仓库。同时 GitTraining 文件夹下出现一个名为 <code>.git</code> 的隐藏文件夹。</p>
+<p><img src="/2019/09/27/Git-记录/git-init-1.png" alt="git-init-1"></p>
+<p><strong>创建第一个文件</strong></p>
+<p>创建好文件 <code>1.txt</code>，并写点代码。</p>
+<p>内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">111111111</span><br></pre></td></tr></table></figure>
+
+<h1 id="添加文件到-Git-仓库"><a href="#添加文件到-Git-仓库" class="headerlink" title="添加文件到 Git 仓库"></a>添加文件到 Git 仓库</h1><p>命令格式：<code>git add 文件名或通配符</code>。</p>
+<hr>
+<p><code>git add 1.txt 或者 git add .</code></p>
+<h1 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h1><p>命令格式：<code>git commit -m &quot;代码提交信息&quot;</code>。</p>
+<hr>
+<p><code>git commit -m &quot;No.1 commit&quot;</code></p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[master (root-commit) 7ccaacc] No.1 commit</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line"> create mode 100644 1.txt</span><br></pre></td></tr></table></figure>
+
+<p>修改文件 <code>1.txt</code>，内容改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br></pre></td></tr></table></figure>
+
+<h1 id="查看文件改动"><a href="#查看文件改动" class="headerlink" title="查看文件改动"></a>查看文件改动</h1><p>命令格式：<code>git status [参数]</code>。</p>
+<hr>
+<p><code>git status</code></p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">On branch master</span><br><span class="line">Changes not staged for commit:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span><br><span class="line">  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</span><br><span class="line"></span><br><span class="line">        modified:   1.txt</span><br><span class="line"></span><br><span class="line">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span><br></pre></td></tr></table></figure>
+
+<h1 id="查看文件内容更改详情"><a href="#查看文件内容更改详情" class="headerlink" title="查看文件内容更改详情"></a>查看文件内容更改详情</h1><p>命令格式：<code>git diff</code>。</p>
+<hr>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">diff --git a/1.txt b/1.txt</span><br><span class="line">index 15c36bc..4825c6a 100644</span><br><span class="line">--- a/1.txt</span><br><span class="line">+++ b/1.txt</span><br><span class="line">@@ -1 +1,2 @@</span><br><span class="line"> 1111111111</span><br><span class="line">+2222222222</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>再次提交：<code>git add 1.txt | git commit -m &quot;No.2 commit&quot;</code></p>
+<p>多加一行再提交，文件内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br></pre></td></tr></table></figure>
+
+<p>再次提交：<code>git add * | git commit -m &quot;No.3 commit&quot;</code></p>
+<h1 id="查看提交图表"><a href="#查看提交图表" class="headerlink" title="查看提交图表"></a>查看提交图表</h1><p>命令格式：<code>git log --graph</code>。</p>
+<hr>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">* commit 1c3a383eb6cc11d7c7539b6dd86b8c8d66bd8f54 (HEAD -&gt; master)</span><br><span class="line">| Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| Date:   Sat Sep 28 10:45:00 2019 +0800</span><br><span class="line">|</span><br><span class="line">|     No.3 commit</span><br><span class="line">|</span><br><span class="line">* commit f7dd549756103ea808715a5701d564832c9c3cc3</span><br><span class="line">| Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| Date:   Sat Sep 28 10:44:37 2019 +0800</span><br><span class="line">|</span><br><span class="line">|     No.2 commit</span><br><span class="line">|</span><br><span class="line">* commit a1d3d012538055e561688160bb144aa7c1f5b098</span><br><span class="line">  Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">  Date:   Sat Sep 28 10:43:04 2019 +0800</span><br><span class="line"></span><br><span class="line">      No.1 commit</span><br></pre></td></tr></table></figure>
+
+<h1 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h1><p>命令格式：<code>git branch [分支名]</code>。</p>
+<p><code>git branch no_1_branch</code></p>
+<h1 id="切换到分支"><a href="#切换到分支" class="headerlink" title="切换到分支"></a>切换到分支</h1><p>命令格式：<code>git checkout [分支名]</code>。</p>
+<p><strong>上面 创建分支 + 切换到分支 也可以合成一条命令：</strong> <code>git checkout -b [分支名]</code></p>
+<hr>
+<p><code>git checkout no_1_branch</code></p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Switched to branch &apos;no_1_branch&apos;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>修改文件 <code>1.txt</code>，内容改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line"></span><br><span class="line">no_1_branch:</span><br><span class="line">1111111111</span><br></pre></td></tr></table></figure>
+
+<p>提交 <code>git add * &amp;&amp; git commit -m &quot;No.1 no_1_branch commit&quot;</code>。</p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[no_1_branch ebfda7b] No.1 no_1_branch commit</span><br><span class="line"> 1 file changed, 3 insertions(+)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>切回到 <code>master</code> 分支。</p>
+<p><code>git checkout master</code>。</p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Switched to branch &apos;master&apos;</span><br></pre></td></tr></table></figure>
+
+<p>同时文件内容被改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>修改文件 <code>1.txt</code>，内容改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line">4444444444</span><br></pre></td></tr></table></figure>
+
+<p>提交 <code>git add * &amp;&amp; git commit -m &quot;No.4 commit&quot;</code>。</p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[master 81f36b4] No.4 commit</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>切回到 <code>no_1_branch</code> 分支。</p>
+<p><code>git checkout no_1_branch</code>。</p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Switched to branch &apos;no_1_branch&apos;</span><br></pre></td></tr></table></figure>
+
+<p>同时文件内容被改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line"></span><br><span class="line">no_1_branch:</span><br><span class="line">1111111111</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>修改文件 <code>1.txt</code>，内容改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line"></span><br><span class="line">no_1_branch:</span><br><span class="line">1111111111</span><br><span class="line">2222222222</span><br></pre></td></tr></table></figure>
+
+<p>提交 <code>git add * &amp;&amp; git commit -m &quot;No.2 no_1_branch commit&quot;</code>。</p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[no_1_branch c04f92b] No.2 no_1_branch commit</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br></pre></td></tr></table></figure>
+
+<h1 id="合并分支（merge-方式）"><a href="#合并分支（merge-方式）" class="headerlink" title="合并分支（merge 方式）"></a>合并分支（merge 方式）</h1><p>命令格式：<code>git merge [被合并的分支名]</code>。</p>
+<hr>
+<p>合并分支到 <code>master</code> 分支。</p>
+<p><code>git checkout master &amp;&amp; git merge no_1_branch</code></p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Switched to branch &apos;master&apos;</span><br><span class="line">Auto-merging 1.txt</span><br><span class="line">CONFLICT (content): Merge conflict in 1.txt</span><br><span class="line">Automatic merge failed; fix conflicts and then commit the result.</span><br></pre></td></tr></table></figure>
+
+<h1 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h1><p>不同的分支修改了相同的文件就会产生冲突。手动修改冲突。</p>
+<hr>
+<p>这时发现文件 <code>1.txt</code>，内容为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">4444444444</span><br><span class="line">=======</span><br><span class="line"></span><br><span class="line">no_1_branch:</span><br><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; no_1_branch</span><br></pre></td></tr></table></figure>
+
+<p>将 <code>1.txt</code> 修改为 <code>no_1_branch</code> 的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line"></span><br><span class="line">no_1_branch:</span><br><span class="line">1111111111</span><br><span class="line">2222222222</span><br></pre></td></tr></table></figure>
+
+<p>解决好冲突了，提交合并 <code>git add 1.txt &amp;&amp; git commit</code></p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[master f7cfe75] Merge branch &apos;no_1_branch&apos;</span><br></pre></td></tr></table></figure>
+
+<p>再查看一下图表 <code>git log --graph</code></p>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">*   commit f7cfe75956357f88880a612f16f479052f430de0 (HEAD -&gt; master)</span><br><span class="line">|\  Merge: 93d30f6 424a126</span><br><span class="line">| | Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| | Date:   Sat Sep 28 11:36:54 2019 +0800</span><br><span class="line">| |</span><br><span class="line">| |     Merge branch &apos;no_1_branch&apos;</span><br><span class="line">| |</span><br><span class="line">| * commit 424a126b4d6fbb76954bca34e9fcdf4e3d09f182 (no_1_branch)</span><br><span class="line">| | Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| | Date:   Sat Sep 28 10:49:22 2019 +0800</span><br><span class="line">| |</span><br><span class="line">| |     No.2 no_1_branch commit</span><br><span class="line">| |</span><br><span class="line">| * commit 298a3ef8bb439964e6ab908f1b52cf0878225eef</span><br><span class="line">| | Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| | Date:   Sat Sep 28 10:46:29 2019 +0800</span><br><span class="line">| |</span><br><span class="line">| |     No.1 no_1_branch commit</span><br><span class="line">| |</span><br><span class="line">* | commit 93d30f64faf96f75febe5ac43309bf67563c9fe0</span><br><span class="line">|/  Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">|   Date:   Sat Sep 28 10:48:33 2019 +0800</span><br><span class="line">|</span><br><span class="line">|       No.4 commit</span><br><span class="line">|</span><br><span class="line">* commit 1c3a383eb6cc11d7c7539b6dd86b8c8d66bd8f54</span><br><span class="line">| Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| Date:   Sat Sep 28 10:45:00 2019 +0800</span><br><span class="line">|</span><br><span class="line">|     No.3 commit</span><br><span class="line">|</span><br><span class="line">* commit f7dd549756103ea808715a5701d564832c9c3cc3</span><br><span class="line">| Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| Date:   Sat Sep 28 10:44:37 2019 +0800</span><br><span class="line">|</span><br><span class="line">|     No.2 commit</span><br><span class="line">|</span><br><span class="line">* commit a1d3d012538055e561688160bb144aa7c1f5b098</span><br><span class="line">  Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">  Date:   Sat Sep 28 10:43:04 2019 +0800</span><br><span class="line"></span><br><span class="line">      No.1 commit</span><br></pre></td></tr></table></figure>
+
+<h1 id="合并分支（rebase-方式）"><a href="#合并分支（rebase-方式）" class="headerlink" title="合并分支（rebase 方式）"></a>合并分支（rebase 方式）</h1><p>命令格式：<code>git merge [被合并的分支名]</code>。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/26/Qt-智能指针/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/09/26/Qt-智能指针/" class="post-title-link" itemprop="url">Qt 智能指针</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-26 16:30:12" itemprop="dateCreated datePublished" datetime="2019-09-26T16:30:12+08:00">2019-09-26</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Qt/" itemprop="url" rel="index"><span itemprop="name">Qt</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Qt/智能指针/" itemprop="url" rel="index"><span itemprop="name">智能指针</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>由于使用的是 Qt，所以决定不适用标准库的智能指针，改用 Qt 的智能指针。</p>
+<p>结合 Qt 中的容器进行测试，使用的容器是 <code>QList</code>。在容器中，如果保存的是指针，那么一般来所指针所指的对象应该保存在堆中，所以使用完后需要清除释放，Qt 容器都带有 <code>public void clear()</code> 方法，但是该方法实际上只是清除了容器所保存的指针，并未清除释放掉指针所指内存。所以要寻找合适的方法。</p>
+<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>创建好 Qt 项目。这里直接使用的是 UI 项目。</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 文件：mainwidow.h</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> MAINWINDOW_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAINWINDOW_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QMainWindow&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> Ui &#123;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">MainWindow</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainWindow</span> :</span> <span class="keyword">public</span> QMainWindow &#123;</span><br><span class="line">        Q_OBJECT</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">explicit</span> <span class="title">MainWindow</span><span class="params">(QWidget *parent = <span class="literal">nullptr</span>)</span></span>;</span><br><span class="line">        ~MainWindow();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> slots:</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">on_clear_push_button_clicked</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">on_delete_push_button_clicked</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">on_smart_pointer_push_button_clicked</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">        Ui::MainWindow *ui;</span><br><span class="line">        QList&lt;QString *&gt; *<span class="built_in">list</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> <span class="comment">// MAINWINDOW_H</span></span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 文件：mainwindowcpp</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"mainwindow.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"ui_mainwindow.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QDebug&gt;</span></span></span><br><span class="line"></span><br><span class="line">MainWindow::MainWindow(QWidget *parent) :</span><br><span class="line">    QMainWindow(parent),</span><br><span class="line">    ui(<span class="keyword">new</span> Ui::MainWindow) &#123;</span><br><span class="line">    ui-&gt;setupUi(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">MainWindow::~MainWindow() &#123;</span><br><span class="line">    <span class="keyword">delete</span> ui;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> MainWindow::on_clear_push_button_clicked() &#123;</span><br><span class="line">    <span class="comment">// 使用容器自带的 clear 函数</span></span><br><span class="line">    <span class="keyword">int</span> delete_times = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">list</span> = <span class="keyword">new</span> QList&lt;QString *&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; ++i) &#123;</span><br><span class="line">        <span class="built_in">list</span>-&gt;append(<span class="keyword">new</span> QString(QString::number(i)));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>((i + <span class="number">1</span>) % <span class="number">1000</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            qDebug() &lt;&lt; <span class="string">"start delete! delete time: "</span> &lt;&lt; ++delete_times;</span><br><span class="line">            <span class="built_in">list</span>-&gt;clear();  <span class="comment">// 根本没有清除内存</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> MainWindow::on_delete_push_button_clicked() &#123;</span><br><span class="line">    <span class="comment">// 普通指针，使用 delete</span></span><br><span class="line">    <span class="keyword">int</span> delete_times = <span class="number">0</span>;</span><br><span class="line">    QString *<span class="built_in">string</span>;</span><br><span class="line">    <span class="built_in">list</span> = <span class="keyword">new</span> QList&lt;QString *&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000000</span>; ++i) &#123;</span><br><span class="line">        <span class="built_in">list</span>-&gt;append(<span class="keyword">new</span> QString(QString::number(i)));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>((i + <span class="number">1</span>) % <span class="number">1000</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            qDebug() &lt;&lt; <span class="string">"start delete! delete time: "</span> &lt;&lt; ++delete_times;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">1000</span>; ++j) &#123;</span><br><span class="line">                <span class="built_in">string</span> = <span class="built_in">list</span>-&gt;last();</span><br><span class="line">                <span class="keyword">delete</span> <span class="built_in">string</span>;</span><br><span class="line">                <span class="built_in">string</span> = <span class="literal">nullptr</span>;</span><br><span class="line">                <span class="built_in">list</span>-&gt;removeLast();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> MainWindow::on_smart_pointer_push_button_clicked() &#123;</span><br><span class="line">    <span class="comment">// 智能指针</span></span><br><span class="line">    <span class="keyword">int</span> delete_times = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">list</span> = <span class="keyword">new</span> QList&lt;QString *&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; ++i) &#123;</span><br><span class="line">        QSharedPointer&lt;QString&gt; <span class="built_in">string</span>(<span class="keyword">new</span> QString(QString::number(<span class="number">100</span>)));</span><br><span class="line">        <span class="built_in">list</span>-&gt;append(<span class="built_in">string</span>.data());</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>((i + <span class="number">1</span>) % <span class="number">1000</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            qDebug() &lt;&lt; <span class="string">"start delete! delete time: "</span> &lt;&lt; ++delete_times;</span><br><span class="line">            <span class="built_in">list</span>-&gt;clear();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h1><p>使用采用每次点完按钮后都重启再测下一项的方式。</p>
+<p>初始打开程序后内存用量。</p>
+<p><img src="/2019/09/26/Qt-智能指针/初始打开界面的内存用量.png" alt="初始打开界面的内存用量"></p>
+<p>使用容器自带的 clear 函数后内存用量。</p>
+<p><img src="/2019/09/26/Qt-智能指针/使用-clear-后内存用量.png" alt="使用-clear-后内存用量"></p>
+<p>使用普通指针和 delete 后内存用量。</p>
+<p><img src="/2019/09/26/Qt-智能指针/使用普通指针和-delete-后内存用量.png" alt="使用普通指针和-delete-后内存用量"></p>
+<p>使用智能指针后内存用量。</p>
+<p><img src="/2019/09/26/Qt-智能指针/使用智能指针后内存用量.png" alt="使用智能指针后内存用量"></p>
+<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>使用智能指针，方便！</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/25/C-继承/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1211,575 +1666,6 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/13/DICOM-PDU-解析/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/13/DICOM-PDU-解析/" class="post-title-link" itemprop="url">DICOM PDU 解析</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-13 21:14:25" itemprop="dateCreated datePublished" datetime="2019-08-13T21:14:25+08:00">2019-08-13</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <p>使用 wlmscpfs 作为 Worklist SCP。<br>使用 findscu 作为 SCU 获取 Worklist，这是其中的一次 A-ASSOCIATE-RQ 请求。</p>
-<p>对其进行解析。</p>
-<p>PDU Length: 256 + 6 bytes PDU header</p>
-<p><img src="/2019/08/13/DICOM-PDU-解析/PDU-解析.png" alt="PDU-解析"></p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/13/DICOM-VR-表/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/13/DICOM-VR-表/" class="post-title-link" itemprop="url">DICOM VR 表</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-13 11:18:18" itemprop="dateCreated datePublished" datetime="2019-08-13T11:18:18+08:00">2019-08-13</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <p>DICOM 标准（2019年）一共包含 34 种 VR。</p>
-<table>
-<thead>
-<tr>
-<th>VR Name<br>值表示法名称</th>
-<th>Definition<br>定义</th>
-<th>Character Repertoire<br>字符集</th>
-<th>Length of Value<br>值长度</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>AE<br>Application Entity</td>
-<td>A string of characters that identifies an Application Entity with leading and trailing spaces (20H) being non-significant. A value consisting solely of spaces shall not be used.</td>
-<td>Default Character Repertoire excluding character code 5CH(the BACKSLASH “&quot; in ISO-IR6), and all control characters.</td>
-<td>16 bytes maximum</td>
-</tr>
-<tr>
-<td>AS<br>Age String</td>
-<td>A string of characters with one of the following formats – nnnD,nnnW, nnnM, nnnY; where nnn shall contain the number of daysfor D, weeks for W, months for M, or years for Y.<br>Example: “018M” would represent an age of 18 months.</td>
-<td>“0”-“9”, “D”, “W”, “M”, “Y” of Default Character Repertoire</td>
-<td>4 bytes fixed</td>
-</tr>
-<tr>
-<td>AT<br>Attribute Tag</td>
-<td>Ordered pair of 16-bit unsigned integers that is the value of a DataElement Tag.<br>Example: A Data Element Tag of (0018,00FF) would be encodedas a series of 4 bytes in a Little-Endian Transfer Syntax as18H,00H,FFH,00H.<br>Note<br>The encoding of an AT value is exactly the same as the encoding of a Data Element Tag as defined in Section7.</td>
-<td>not applicable</td>
-<td>4 bytes fixed</td>
-</tr>
-<tr>
-<td>CS<br>Code String</td>
-<td>A string of characters identifying a controlled concept. Leading or trailing spaces (20H) are not significant.</td>
-<td>Uppercase characters, “0”-“9”, the SPACE character, and underscore “_”, of the Default Character Repertoire</td>
-<td>16 bytes maximum</td>
-</tr>
-<tr>
-<td>DA<br>Date</td>
-<td>A string of characters of the format YYYYMMDD; where YYYY shall contain year, MM shall contain the month, and DD shall contain the day, interpreted as a date of the Gregorian calendarsystem.<br>Example:<br>“19930822” would represent August 22, 1993.<br>Note<br>1. The ACR-NEMA Standard 300 (predecessor to DICOM) supported a string of characters of the format YYYY.MM.DD for this VR. Use of this format is not compliant.<br>2. See also DT VR in this table.<br>3. Dates before year 1582, e.g., used for dating historical or archeological items, are interpreted as proleptic Gregorian calendar dates, unless otherwise specified.</td>
-<td>“0”-“9” of Default Character Repertoire<br>In the context of a Query with range matching (see PS3.4), the character “-“ is allowed,and a trailing SPACE character is allowed for padding.</td>
-<td>8 bytes fixed<br>In the context of a Query with range matching (seePS3.4), the lengthis 18 bytes maximum.</td>
-</tr>
-<tr>
-<td>DS<br>Decimal String</td>
-<td>A string of characters representing either a fixed point number or a floating point number. A fixed point number shall contain only the characters 0-9 with an optional leading “+” or “-“ and an optional “.” to mark the decimal point. A floating point number shall be conveyed as defined in ANSI X3.9, with an “E” or “e” to indicate the start of the exponent. Decimal Strings may be padded with leading or trailing spaces. Embedded spaces are not allowed.<br>Note<br>Data Elements with multiple values using this VR may not be properly encoded if Explicit-VR Transfer Syntax is used and the VL of this attribute exceeds 65534 bytes.</td>
-<td>“0”-“9”, “+”, “-“, “E”, “e”, “.” and the SPACE character of Default Character Repertoire</td>
-<td>16 bytes maximum</td>
-</tr>
-<tr>
-<td>DT<br>Date Time</td>
-<td>A concatenated date-time character string in the format:<br>YYYYMMDDHHMMSS.FFFFFF&amp;ZZXX<br>The components of this string, from left to right, are YYYY = Year, MM = Month, DD = Day, HH = Hour (range “00” - “23”), MM = Minute (range “00” - “59”), SS = Second (range “00” - “60”).<br>FFFFFF = Fractional Second contains a fractional part of a second as small as 1 millionth of a second (range “000000” - “999999”).<br>&amp;ZZXX is an optional suffix for offset from Coordinated Universal Time (UTC), where &amp; = “+” or “-“, and ZZ = Hours and XX = Minutes of offset.<br>The year, month, and day shall be interpreted as a date of the Gregorian calendar system.<br>A 24-hour clock is used. Midnight shall be represented by only “0000” since “2400” would violate the hour range.<br>The Fractional Second component, if present, shall contain 1 to 6 digits. If Fractional Second is unspecified the preceding “.” shall not be included. The offset suffix, if present, shall contain 4 digits. The string may be padded with trailing SPACE characters. Leading and embedded spaces are not allowed.<br>A component that is omitted from the string is termed a null component. Trailing null components of Date Time indicate that the value is not precise to the precision of those components. The YYYY component shall not be null. Non-trailing null components are prohibited. The optional suffix is not considered as acomponent.<br>A Date Time value without the optional suffix is interpreted to be in the local time zone of the application creating the Data Element, unless explicitly specified by the Timezone Offset From UTC (0008,0201).<br>UTC offsets are calculated as “local time minus UTC”. The offset for a Date Time value in UTC shall be +0000.<br>Note<br>1.The range of the offset is -1200 to +1400. The offset for United States Eastern Standard Time is -0500. The offset for Japan Standard Time is +0900.<br>2.The RFC 2822 use of -0000 as an offset to indicate local time is not allowed.<br>3.A Date Time value of 195308 means August 1953, not specific to particular day. A Date Time value of 19530827111300.0 means August 27, 1953, 11;13 a.m. accurate to 1/10th second.<br>4.The Second component may have a value of 60 only for a leap second.<br>5.The offset may be included regardless of null components; e.g., 2007-0500 is a legal value.</td>
-<td>“0”-“9”, “+”, “-“, “.” and the SPACE character of Default Character Repertoire</td>
-<td>26 bytes maximum<br>In the context of a Query with range matching (see PS3.4), the length is 54 bytes maximum.</td>
-</tr>
-<tr>
-<td>FL<br>Floating Point Single</td>
-<td>Single precision binary floating point number represented in IEEE 754:1985 32-bit Floating Point Number Format.</td>
-<td>not applicable</td>
-<td>4 bytes fixed</td>
-</tr>
-<tr>
-<td>FD<br>Floating Point Double</td>
-<td>Double precision binary floating point number represented in IEEE 754:1985 64-bit Floating Point Number Format.</td>
-<td>not applicable</td>
-<td>8 bytes fixed</td>
-</tr>
-<tr>
-<td>IS<br>Integer String</td>
-<td>A string of characters representing an Integer in base-10 (decimal), shall contain only the characters 0 - 9, with an optional leading “+” or “-“. It may be padded with leading and/or trailing spaces.Embedded spaces are not allowed.<br>The integer, n, represented shall be in the range:<br>-2^31 &lt;= n &lt;= (2^31 -1).</td>
-<td>“0”-“9”, “+”, “-“ and the SPACE character of Default Character Repertoire</td>
-<td>12 bytes maximum</td>
-</tr>
-<tr>
-<td>LO<br>Long String</td>
-<td>A character string that may be padded with leading and/or trailing spaces. The character code 5CH (the BACKSLASH “&quot; in ISO-IR 6) shall not be present, as it is used as the delimiter between values in multi-valued data elements. The string shall not have Control Characters except for ESC.</td>
-<td>Default Character Repertoire and/or as defined by (0008,0005) excluding character code 5CH (the BACKSLASH “&quot; in ISO-IR 6), and all Control Characters except ESC when used for ISO 2022 escape sequences.</td>
-<td>64 chars maximum<br>(see Note in Section 6.2)</td>
-</tr>
-<tr>
-<td>LT<br>Long Text</td>
-<td>A character string that may contain one or more paragraphs. It may contain the Graphic Character set and the Control Characters, CR, LF, FF, and ESC. It may be padded with trailing spaces, which may be ignored, but leading spaces are considered to be significant. Data Elements with this VR shall not be multi-valued and therefore character code 5CH (the BACKSLASH “&quot; in ISO-IR 6) may be used.</td>
-<td>Default Character Repertoire and/or as defined by (0008,0005) excluding Control Characters except TAB, LF, FF, CR (and ESC when used for ISO 2022 escapesequences).</td>
-<td>10240 chars maximum<br>(seeNote in Section6.2)</td>
-</tr>
-<tr>
-<td>OB<br>Other Byte</td>
-<td>An octet-stream where the encoding of the contents is specified by the negotiated Transfer Syntax. OB is a VR that is insensitive to byte ordering (see Section 7.3). The octet-stream shall be padded with a single trailing NULL byte value (00H) when necessary to achieve even length.</td>
-<td>not applicable</td>
-<td>see Transfer<br>Syntax definition</td>
-</tr>
-<tr>
-<td>OD<br>Other Double</td>
-<td>A stream of 64-bit IEEE 754:1985 floating point words. OD is a VR that requires byte swapping within each 64-bit word when changing byte ordering (see Section 7.3).</td>
-<td>not applicable</td>
-<td>2^32 - 8 bytes maximum</td>
-</tr>
-<tr>
-<td>OF<br>Other Float</td>
-<td>A stream of 32-bit IEEE 754:1985 floating point words. OF is a VR that requires byte swapping within each 32-bit word when changing byte ordering (see Section 7.3).</td>
-<td>not applicable</td>
-<td>2^32 - 4 bytes maximum</td>
-</tr>
-<tr>
-<td>OL<br>Other Long</td>
-<td>A stream of 32-bit words where the encoding of the contents is specified by the negotiated Transfer Syntax. OL is a VR that requires byte swapping within each word when changing byte ordering (see Section 7.3).</td>
-<td>not applicable</td>
-<td>see Transfer<br>Syntax definition</td>
-</tr>
-<tr>
-<td>OV<br>Other 64-bit Very Long</td>
-<td>A stream of 64-bit words where the encoding of the contents is specified by the negotiated Transfer Syntax. OV is a VR that requires byte swapping within each word when changing byte ordering (see Section 7.3).</td>
-<td>not applicable</td>
-<td>see Transfer<br>Syntax definition</td>
-</tr>
-<tr>
-<td>OW<br>Other Word</td>
-<td>A stream of 16-bit words where the encoding of the contents is specified by the negotiated Transfer Syntax. OW is a VR that requires byte swapping within each word when changing byte ordering (see Section 7.3).</td>
-<td>not applicable</td>
-<td>see Transfer<br>Syntax definition</td>
-</tr>
-<tr>
-<td>PN<br>Person Name</td>
-<td>A character string encoded using a 5 component convention. The character code 5CH (the BACKSLASH “&quot; in ISO-IR 6) shall not be present, as it is used as the delimiter between values in multi-valued data elements. The string may be padded with trailing spaces. For human use, the five components in their order of occurrence are: family name complex, given name complex, middle name, name prefix, name suffix.<br>Note<br>HL7 prohibits leading spaces within a component; DICOM allows leading and trailing spaces and considers them insignificant.<br>Any of the five components may be an empty string. The component delimiter shall be the caret “^” character (5EH). There shall be no more than four component delimiters, i.e., none after the last component if all components are present. Delimiters are required for interior null components. Trailing null components and their delimiters may be omitted. Multiple entries are permitted in each component and are encoded as natural text strings, in the format preferred by the named person.<br>For veterinary use, the first two of the five components in their order of occurrence are: responsible party family name or responsible organization name, patient name. The remaining components are not used and shall not be present.<br>This group of five components is referred to as a Person Name component group.<br>For the purpose of writing names in ideographic characters and in phonetic characters, up to 3 groups of components (see Annex H, Annex I and Annex J) may be used. The delimiter for component groups shall be the equals character “=” (3DH). There shall be no more than two component group delimiters, i.e., none after the last component group if all component groups are present. The three component groups of components in their order of occurrence are: an alphabetic representation, an ideographic representation, and a phonetic representation.<br>Any component group may be absent, including the first component group. In this case, the person name may start with one or more “=” delimiters. Delimiters are required for interior null component groups. Trailing null component groups and their delimiters may be omitted.<br>Precise semantics are defined for each component group. See Section 6.2.1.2.<br>For examples and notes, see Section 6.2.1.1.</td>
-<td>Default Character Repertoire and/or as defined by (0008,0005) excluding character code 5CH (the BACKSLASH “&quot; in ISO-IR 6) and all Control Characters except ESC when used for ISO 2022 escape sequences.</td>
-<td>64 chars maximum per component group<br>(see Note inSection 6.2)</td>
-</tr>
-<tr>
-<td>SH<br>Short String</td>
-<td>A character string that may be padded with leading and/or trailing spaces. The character code 05CH (the BACKSLASH “&quot; in ISO-IR 6) shall not be present, as it is used as the delimiter between values for multiple data elements. The string shall not have Control Characters except ESC.</td>
-<td>Default Character Repertoire and/or as defined by(0008,0005) excluding character code 5CH (the BACKSLASH “&quot; in ISO-IR 6)and all Control Characters except ESC when used for ISO 2022 escape sequences.</td>
-<td>16 chars maximum<br>(see Note in Section 6.2)</td>
-</tr>
-<tr>
-<td>SL<br>Signed Long</td>
-<td>Signed binary integer 32 bits long in 2’s complement form.<br>Represents an integer, n, in the range:<br>-2^31 &lt;= n &lt;= 2^31 - 1.</td>
-<td>not applicable</td>
-<td>4 bytes fixed</td>
-</tr>
-<tr>
-<td>SQ<br>Sequence of Items</td>
-<td>Value is a Sequence of zero or more Items, as defined in Section 7.5.</td>
-<td>not applicable (see Section 7.5)</td>
-<td>not applicable (see Section 7.5)</td>
-</tr>
-<tr>
-<td>SS<br>Signed Short</td>
-<td>Signed binary integer 16 bits long in 2’s complement form.<br>Represents an integer n in the range:<br>-2^15 &lt;= n &lt;= 2^15 - 1.</td>
-<td>not applicable</td>
-<td>2 bytes fixed</td>
-</tr>
-<tr>
-<td>ST<br>Short Text</td>
-<td>A character string that may contain one or more paragraphs. It may contain the Graphic Character set and the Control Characters, CR, LF, FF, and ESC. It may be padded with trailing spaces, which may be ignored, but leading spaces are considered to be significant. Data Elements with this VR shall not be multi-valued and therefore character code 5CH (the BACKSLASH “&quot; in ISO-IR 6) may be used.</td>
-<td>Default Character Repertoireand/or as defined by (0008,0005) excluding Control Characters except TAB, LF,FF, CR (and ESC when used for ISO 2022 escape sequences).</td>
-<td>1024 chars maximum<br>(see Note in Section 6.2)</td>
-</tr>
-<tr>
-<td>SV<br>Signed 64-bitVery Long</td>
-<td>Signed binary integer 64 bits long. Represents an integer n in the range:<br>-2^63 &lt;= n &lt;= 2^63 - 1.</td>
-<td>not applicable</td>
-<td>8 bytes fixed</td>
-</tr>
-<tr>
-<td>TM<br>Time</td>
-<td>A string of characters of the format HHMMSS.FFFFFF; where HH contains hours (range “00” - “23”), MM contains minutes (range “00” - “59”), SS contains seconds (range “00” - “60”), and FFFFFF contains a fractional part of a second as small as 1 millionth of a second (range “000000” - “999999”). A 24-hour clock is used. Midnight shall be represented by only “0000” since “2400” would violate the hour range. The string may be padded with trailing spaces. Leading and embedded spaces are not allowed.<br>One or more of the components MM, SS, or FFFFFF may be unspecified as long as every component to the right of an unspecified component is also unspecified, which indicates that the value is not precise to the precision of those unspecified components.<br>The FFFFFF component, if present, shall contain 1 to 6 digits. If FFFFFF is unspecified the preceding “.” shall not be included.<br>Examples:<br>1.”070907.0705 “ represents a time of 7 hours, 9 minutes and 7.0705 seconds.<br>2.”1010” represents a time of 10 hours, and 10 minutes.<br>3.”021 “ is an invalid value.<br>Note<br>1.The ACR-NEMA Standard 300 (predecessor to DICOM) supported a string of characters of the format HH:MM:SS.frac for this VR. Use of this format is not compliant.<br>2.See also DT VR in this table.<br>3.The SS component may have a value of 60 only for a leap second.</td>
-<td>“0”-“9”, “.” and the SPACE character of Default Character Repertoire<br>In the context of a Query with range matching (see PS3.4), the character “-“ is allowed.</td>
-<td>14 bytes maximum<br>In the context of a Query with range matching (see PS3.4), the length is 28 bytes maximum.</td>
-</tr>
-<tr>
-<td>UC<br>Unlimited Characters</td>
-<td>A character string that may be of unlimited length that may be padded with trailing spaces. The character code 5CH (the BACKSLASH “&quot; in ISO-IR 6) shall not be present, as it is used as the delimiter between values in multi-valued data elements. The string shall not have Control Characters except for ESC.</td>
-<td>Default Character Repertoire and/or as defined by (0008,0005) excluding character code 5CH (the BACKSLASH “&quot; in ISO-IR 6),and all Control Characters except ESC when used for ISO 2022 escape sequences.</td>
-<td>2^32 - 2 bytes maximum<br>See Note 2</td>
-</tr>
-<tr>
-<td>UI<br>Unique Identifier (UID)</td>
-<td>A character string containing a UID that is used to uniquely identify a wide variety of items. The UID is a series of numeric components separated by the period “.” character. If a Value Field containing one or more UIDs is an odd number of bytes in length, the Value Field shall be padded with a single trailing NULL (00H) character to ensure that the Value Field is an even number of bytes in length. See Section 9 and Annex B for a complete specification and examples.</td>
-<td>“0”-“9”, “.” of Default Character Repertoire</td>
-<td>64 bytes maximum</td>
-</tr>
-<tr>
-<td>UL<br>Unsigned Long</td>
-<td>Unsigned binary integer 32 bits long. Represents an integer n in the range:<br>0 &lt;= n &lt; 2^32.</td>
-<td>not applicable</td>
-<td>4 bytes fixed</td>
-</tr>
-<tr>
-<td>UN<br>Unknown</td>
-<td>An octet-stream where the encoding of the contents is unknown<br>(see Section 6.2.2).</td>
-<td>not applicable</td>
-<td>Any length valid for any of the other DICOM Value Representations</td>
-</tr>
-<tr>
-<td>UR<br>Universal<br>Resource<br>Identifier or<br>Universal<br>Resource<br>Locator<br>(URI/URL)</td>
-<td>A string of characters that identifies a URI or a URL as defined in [RFC3986]. Leading spaces are not allowed. Trailing spaces shall be ignored. Data Elements with this VR shall not be multi-valued.<br>Note<br>Both absolute and relative URIs are permitted. If the URI is relative, then it is relative to the base URI of the object within which it is contained.</td>
-<td>The subset of the Default Character Repertoire required for the URI as defined in IETF RFC3986 Section 2, plus the space (20H) character permitted only as trailing padding.<br>Characters outside the permitted character set must be “percent encoded”.<br>Note<br>The Backslash (5CH) character is among those disallowed in URIs.</td>
-<td>2^32 - 2 bytes maximum.<br>See Note 2</td>
-</tr>
-<tr>
-<td>US<br>Unsigned Short</td>
-<td>Unsigned binary integer 16 bits long. Represents integer n in the range:<br>0 &lt;= n &lt; 2^16 .</td>
-<td>not applicable</td>
-<td>2 bytes fixed</td>
-</tr>
-<tr>
-<td>UT<br>Unlimited Text</td>
-<td>A character string that may contain one or more paragraphs. It may contain the Graphic Character set and the Control Characters, CR, LF, FF, and ESC. It may be padded with trailing spaces, which may be ignored, but leading spaces are considered to be significant. Data Elements with this VR shall not be multi-valued and therefore character code 5CH (the BACKSLASH “&quot; in ISO-IR 6) may be used.</td>
-<td>Default Character Repertoire and/or as defined by(0008,0005) excluding Control Characters except TAB, LF, FF, CR (and ESC when used for ISO 2022 escape sequences).</td>
-<td>2^32 - 2 bytes maximum<br>See Note 2</td>
-</tr>
-<tr>
-<td>UV<br>Unsigned 64-bit Very Long</td>
-<td>Unsigned binary integer 64 bits long. Represents an integer n in the range:<br>0 &lt;= n &lt; 2^64.</td>
-<td>not applicable</td>
-<td>8 bytes fixed</td>
-</tr>
-</tbody></table>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/13/DICOM-标准各部分基本内容/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/13/DICOM-标准各部分基本内容/" class="post-title-link" itemprop="url">DICOM 标准各部分基本内容</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-13 09:23:58" itemprop="dateCreated datePublished" datetime="2019-08-13T09:23:58+08:00">2019-08-13</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="Part-1-Introduction-and-Overview"><a href="#Part-1-Introduction-and-Overview" class="headerlink" title="Part 1 Introduction and Overview"></a>Part 1 Introduction and Overview</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>引言与概述</p>
-<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>简要介绍了 DICOM 的历史、概念、适用范围及组成。</p>
-<h1 id="Part-2-Conformance"><a href="#Part-2-Conformance" class="headerlink" title="Part 2 Conformance"></a>Part 2 Conformance</h1><h2 id="标题-1"><a href="#标题-1" class="headerlink" title="标题"></a>标题</h2><p>一致性</p>
-<h2 id="内容-1"><a href="#内容-1" class="headerlink" title="内容"></a>内容</h2><p>定义了要求制造商精确地描述的其产品的 DICOM 兼容性，即该产品的 DICOM 兼容性声明。</p>
-<h2 id="重要内容"><a href="#重要内容" class="headerlink" title="重要内容"></a>重要内容</h2><ol>
-<li><strong>Table A.1-2. UID Values</strong>，该表格包含 <strong>UID</strong> 值与 <strong>UID</strong> 名的对应关系。</li>
-</ol>
-<h1 id="Part-3-Information-Object-Definitions"><a href="#Part-3-Information-Object-Definitions" class="headerlink" title="Part 3 Information Object Definitions"></a>Part 3 Information Object Definitions</h1><h2 id="标题-2"><a href="#标题-2" class="headerlink" title="标题"></a>标题</h2><p>信息对象定义</p>
-<h2 id="内容-2"><a href="#内容-2" class="headerlink" title="内容"></a>内容</h2><p>定义了两类信息对象类，即标准型和复合型，对其结构和类型进行了说明。</p>
-<h1 id="Part-4-Service-Class-Specifications"><a href="#Part-4-Service-Class-Specifications" class="headerlink" title="Part 4 Service Class Specifications"></a>Part 4 Service Class Specifications</h1><h2 id="标题-3"><a href="#标题-3" class="headerlink" title="标题"></a>标题</h2><p>服务类规范</p>
-<h2 id="重要内容-1"><a href="#重要内容-1" class="headerlink" title="重要内容"></a>重要内容</h2><ol>
-<li><strong>Table K.6-1. Attributes for the Modality Worklist Information Model</strong></li>
-</ol>
-<h2 id="内容-3"><a href="#内容-3" class="headerlink" title="内容"></a>内容</h2><p>说明了应用于信息对象定义实例操作和处理的许多服务类，详细描述了作用于信息对象上的命令及其产生的结果。定义了可以使用 DICOM 进行通信的类别。</p>
-<h1 id="Part-5-Data-Structures-and-Encoding"><a href="#Part-5-Data-Structures-and-Encoding" class="headerlink" title="Part 5 Data Structures and Encoding"></a>Part 5 Data Structures and Encoding</h1><h2 id="标题-4"><a href="#标题-4" class="headerlink" title="标题"></a>标题</h2><p>数据结构及其编码</p>
-<h2 id="重要内容-2"><a href="#重要内容-2" class="headerlink" title="重要内容"></a>重要内容</h2><ol>
-<li>K.3 Example of Long Text Value Representation in the Chinese Language with GB2312 G1 汉字编码</li>
-</ol>
-<h2 id="内容-4"><a href="#内容-4" class="headerlink" title="内容"></a>内容</h2><p>描述了怎么样对信息对象类和服务类进行构造和编码。</p>
-<h1 id="Part-6-Data-Dictionary"><a href="#Part-6-Data-Dictionary" class="headerlink" title="Part 6 Data Dictionary"></a>Part 6 Data Dictionary</h1><h2 id="标题-5"><a href="#标题-5" class="headerlink" title="标题"></a>标题</h2><p> 数据字典</p>
-<h2 id="内容-5"><a href="#内容-5" class="headerlink" title="内容"></a>内容</h2><p>描述了所有数据元素的标签，名称，关键字，VR，VM 和是否过时。</p>
-<h1 id="Part-7-Message-Exchange"><a href="#Part-7-Message-Exchange" class="headerlink" title="Part 7 Message Exchange"></a>Part 7 Message Exchange</h1><h2 id="标题-6"><a href="#标题-6" class="headerlink" title="标题"></a>标题</h2><p>消息交换</p>
-<h2 id="内容-6"><a href="#内容-6" class="headerlink" title="内容"></a>内容</h2><p>定义了在医学图像环境中进行消息交换通讯的医学图像实体所用到的服务和协议。</p>
-<h1 id="Part-8-Network-Communication-Support-for-Message-Exchange"><a href="#Part-8-Network-Communication-Support-for-Message-Exchange" class="headerlink" title="Part 8 Network Communication Support for Message Exchange"></a>Part 8 Network Communication Support for Message Exchange</h1><h2 id="标题-7"><a href="#标题-7" class="headerlink" title="标题"></a>标题</h2><p>消息交换的网络支持</p>
-<h2 id="内容-7"><a href="#内容-7" class="headerlink" title="内容"></a>内容</h2><p>说明了在网络环境下的通讯服务和支持 DICOM 应用进行消息交换的必要的上层协议。</p>
-<h2 id="重要内容-3"><a href="#重要内容-3" class="headerlink" title="重要内容"></a>重要内容</h2><ol>
-<li>PDU 的结构</li>
-</ol>
-<h1 id="Part-10-Media-Storage-and-File-Format-for-Media-Interchange"><a href="#Part-10-Media-Storage-and-File-Format-for-Media-Interchange" class="headerlink" title="Part 10 Media Storage and File Format for Media Interchange"></a>Part 10 Media Storage and File Format for Media Interchange</h1><h2 id="标题-8"><a href="#标题-8" class="headerlink" title="标题"></a>标题</h2><p>用于媒体交换的媒体存储和文件格式</p>
-<h2 id="内容-8"><a href="#内容-8" class="headerlink" title="内容"></a>内容</h2><p>这部分说明了在可移动存储介质上医学图像信息存储的通用模型。提供了在各种物理存储介质上交换不同类型的医学图像的框架，支持封装任何信息对象定义的文件格式。</p>
-<h1 id="Part-11-Media-Storage-Application-Profiles"><a href="#Part-11-Media-Storage-Application-Profiles" class="headerlink" title="Part 11 Media Storage Application Profiles"></a>Part 11 Media Storage Application Profiles</h1><h2 id="标题-9"><a href="#标题-9" class="headerlink" title="标题"></a>标题</h2><p>媒体存储应用框架</p>
-<h2 id="内容-9"><a href="#内容-9" class="headerlink" title="内容"></a>内容</h2><p>用于医学图像及相关设备信息交换的兼容性申明。</p>
-<h1 id="Part-12-Media-Formats-and-Physical-Media-for-Media-Interchange"><a href="#Part-12-Media-Formats-and-Physical-Media-for-Media-Interchange" class="headerlink" title="Part 12 Media Formats and Physical Media for Media Interchange"></a>Part 12 Media Formats and Physical Media for Media Interchange</h1><h2 id="标题-10"><a href="#标题-10" class="headerlink" title="标题"></a>标题</h2><p>用于媒体交换的物理介质和媒体格式</p>
-<h2 id="内容-10"><a href="#内容-10" class="headerlink" title="内容"></a>内容</h2><p>提供了在医学环境中数字图像计算机之间信息交换的功能。</p>
-<h1 id="Part-14-Grayscale-Standard-Display-Function"><a href="#Part-14-Grayscale-Standard-Display-Function" class="headerlink" title="Part 14 Grayscale Standard Display Function"></a>Part 14 Grayscale Standard Display Function</h1><h2 id="标题-11"><a href="#标题-11" class="headerlink" title="标题"></a>标题</h2><p>灰度显示标准函数</p>
-<h2 id="内容-11"><a href="#内容-11" class="headerlink" title="内容"></a>内容</h2><p>说明了灰度图像的标准显示功能。</p>
-<h1 id="Part-15-Security-and-System-Management-Profiles"><a href="#Part-15-Security-and-System-Management-Profiles" class="headerlink" title="Part 15 Security and System Management Profiles"></a>Part 15 Security and System Management Profiles</h1><h2 id="标题-12"><a href="#标题-12" class="headerlink" title="标题"></a>标题</h2><p>安全和系统管理框架</p>
-<h2 id="内容-12"><a href="#内容-12" class="headerlink" title="内容"></a>内容</h2><p>如题。</p>
-<h1 id="Part-16-Content-Mapping-Resource"><a href="#Part-16-Content-Mapping-Resource" class="headerlink" title="Part 16 Content Mapping Resource"></a>Part 16 Content Mapping Resource</h1><h2 id="标题-13"><a href="#标题-13" class="headerlink" title="标题"></a>标题</h2><p>内容映射标准</p>
-<h2 id="内容-13"><a href="#内容-13" class="headerlink" title="内容"></a>内容</h2><p>定义了标准使用的模板和上下文组。</p>
-<h1 id="Part-17-Explanatory-Information"><a href="#Part-17-Explanatory-Information" class="headerlink" title="Part 17 Explanatory Information"></a>Part 17 Explanatory Information</h1><h2 id="标题-14"><a href="#标题-14" class="headerlink" title="标题"></a>标题</h2><p>说明信息</p>
-<h2 id="内容-14"><a href="#内容-14" class="headerlink" title="内容"></a>内容</h2><p>DICOM 标准的这一部分包含规范性和附录资料形式的解释性信息。</p>
-<h1 id="Part-18-Web-Services"><a href="#Part-18-Web-Services" class="headerlink" title="Part 18 Web Services"></a>Part 18 Web Services</h1><h2 id="标题-15"><a href="#标题-15" class="headerlink" title="标题"></a>标题</h2><p>WEB 服务</p>
-<h2 id="内容-15"><a href="#内容-15" class="headerlink" title="内容"></a>内容</h2><p>指定用于管理和分发DICOM信息对象（如医学图像、注释、报告等）的Web服务。</p>
-<h1 id="Part-19-Application-Hosting"><a href="#Part-19-Application-Hosting" class="headerlink" title="Part 19 Application Hosting"></a>Part 19 Application Hosting</h1><h2 id="标题-16"><a href="#标题-16" class="headerlink" title="标题"></a>标题</h2><p>应用托管</p>
-<h2 id="内容-16"><a href="#内容-16" class="headerlink" title="内容"></a>内容</h2><p>定义两个软件应用程序之间的接口。</p>
-<h1 id="Part-20-Imaging-Reports-using-HL7-Clinical-Document-Architecture"><a href="#Part-20-Imaging-Reports-using-HL7-Clinical-Document-Architecture" class="headerlink" title="Part 20 Imaging Reports using HL7 Clinical Document Architecture"></a>Part 20 Imaging Reports using HL7 Clinical Document Architecture</h1><h2 id="标题-17"><a href="#标题-17" class="headerlink" title="标题"></a>标题</h2><p>采用 HL7 临床文档架构的成像报告。</p>
-<h2 id="内容-17"><a href="#内容-17" class="headerlink" title="内容"></a>内容</h2><p>此部分主要指 DICOM 和 HL7 之间的数据交换。</p>
-<h1 id="Part-21-Transformations-between-DICOM-and-other-Representations"><a href="#Part-21-Transformations-between-DICOM-and-other-Representations" class="headerlink" title="Part 21 Transformations between DICOM and other Representations"></a>Part 21 Transformations between DICOM and other Representations</h1><h2 id="标题-18"><a href="#标题-18" class="headerlink" title="标题"></a>标题</h2><p>DICOM和其他表示之间的转换</p>
-<h2 id="内容-18"><a href="#内容-18" class="headerlink" title="内容"></a>内容</h2><p>如题。</p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </section>
 
   
@@ -1820,7 +1706,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1873,7 +1759,11 @@
         
           
         
-        <span class="site-state-item-count">19</span>
+          
+        
+          
+        
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -1966,7 +1856,19 @@
         
           
         
-        <span class="site-state-item-count">39</span>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">45</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

@@ -238,6 +238,453 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/19/Win10-Office-激活/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2020/02/19/Win10-Office-激活/" class="post-title-link" itemprop="url">Win10 & Office 激活</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-19 21:43:29 / 修改时间：21:44:30" itemprop="dateCreated datePublished" datetime="2020-02-19T21:43:29+08:00">2020-02-19</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/激活/" itemprop="url" rel="index"><span itemprop="name">激活</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="手动-KMS-激活-Win-10"><a href="#手动-KMS-激活-Win-10" class="headerlink" title="手动 KMS 激活 Win 10"></a>手动 KMS 激活 Win 10</h1><p><strong>步骤:</strong></p>
+<ol>
+<li><p>使用<strong>管理员权限</strong>打开 <code>cmd</code></p>
+</li>
+<li><p>卸载当前电脑的密钥</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr.vbs /upk</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装密钥</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置 <code>kms</code> 服务器地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr /skms zh.us.to</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>连接到 <code>kms</code> 服务器进行 <code>windows</code> 激活</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr /ato</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p><strong>备注：</strong></p>
+<ol>
+<li>如密钥是该密钥，可只输入后两行命令</li>
+</ol>
+<h1 id="手动-Office-激活（尝试未激活）"><a href="#手动-Office-激活（尝试未激活）" class="headerlink" title="手动 Office 激活（尝试未激活）"></a>手动 Office 激活（尝试未激活）</h1><p><strong>步骤:</strong></p>
+<ol>
+<li><p>使用<strong>管理员权限</strong>打开 <code>cmd</code>。</p>
+</li>
+<li><p>进入到 Office 目录。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &apos;C:\Program Files (x86)\Microsoft Office\Office16&apos;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装 KMS 秘钥</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp.vbs /inpkey:NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置 KMS 服务器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp.vbs /sethst:kms9.MSGuides.com</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>激活</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp.vbs /act</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看激活状态</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp.vbs /dstatus</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p><strong>备注：</strong></p>
+<ol>
+<li>截止到 2019年1月2日，有效的 <code>kms</code> 服务器地址（能 <code>ping</code> 通便是有效的）：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>地址</th>
+<th>有效性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>zh.us.to</td>
+<td>有效</td>
+</tr>
+<tr>
+<td>kms.chinancce.com</td>
+<td>有效</td>
+</tr>
+<tr>
+<td>kms.shuax.com</td>
+<td>有效（延迟较高）</td>
+</tr>
+<tr>
+<td>kms.dwhd.org</td>
+<td>有效</td>
+</tr>
+<tr>
+<td>kms.luody.info</td>
+<td>有效</td>
+</tr>
+<tr>
+<td>kms.digiboy.ir</td>
+<td>有效</td>
+</tr>
+<tr>
+<td><a href="http://www.zgbs.cc" target="_blank" rel="noopener">www.zgbs.cc</a></td>
+<td>有效</td>
+</tr>
+<tr>
+<td>cy2617.jios.org</td>
+<td>有效</td>
+</tr>
+<tr>
+<td>kms.luody.info</td>
+<td>有效</td>
+</tr>
+<tr>
+<td>kms7.MSGuides.com</td>
+<td>有效</td>
+</tr>
+<tr>
+<td>kms8.MSGuides.com</td>
+<td>有效</td>
+</tr>
+<tr>
+<td>kms9.MSGuides.com</td>
+<td>有效</td>
+</tr>
+<tr>
+<td>cy2617.jios.org</td>
+<td>有效</td>
+</tr>
+<tr>
+<td>kms.shuax.com</td>
+<td>有效</td>
+</tr>
+<tr>
+<td>122.226.152.230</td>
+<td>有效</td>
+</tr>
+<tr>
+<td>kms.vtrois.com</td>
+<td>有效</td>
+</tr>
+<tr>
+<td>kms.digiboy.ir</td>
+<td>有效</td>
+</tr>
+<tr>
+<td>kms.library.hk</td>
+<td>有效</td>
+</tr>
+<tr>
+<td>kms.bluskai.com</td>
+<td>有效</td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li>截止到 2019年1月2日，有效的 <code>Office 2019</code> 的 <code>key</code> 有：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>地址</th>
+<th>有效性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>W8W6K-3N7KK-PXB9H-8TD8W-BWTH9</td>
+<td>有效</td>
+</tr>
+</tbody></table>
+<h1 id="Batch-激活-Office"><a href="#Batch-激活-Office" class="headerlink" title="Batch 激活 Office"></a>Batch 激活 Office</h1><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">(<span class="built_in">cd</span> /d "%~dp0")&amp;&amp;(<span class="built_in">NET</span> FILE||(powershell <span class="built_in">start</span>-process -FilePath '%<span class="number">0</span>' -verb runas)&amp;&amp;(<span class="keyword">exit</span> /B)) &gt;<span class="built_in">NUL</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br><span class="line"><span class="built_in">title</span> Office <span class="number">2019</span> Activator r/Piracy</span><br><span class="line"><span class="built_in">echo</span> Converting... &amp; <span class="built_in">mode</span> <span class="number">40</span>,<span class="number">25</span></span><br><span class="line">(<span class="keyword">if</span> <span class="keyword">exist</span> "<span class="variable">%ProgramFiles%</span>\Microsoft Office\Office16\ospp.vbs" <span class="built_in">cd</span> /d "<span class="variable">%ProgramFiles%</span>\Microsoft Office\Office16")&amp;(<span class="keyword">if</span> <span class="keyword">exist</span> "<span class="variable">%ProgramFiles(x86)%</span>\Microsoft Office\Office16\ospp.vbs" <span class="built_in">cd</span> /d "<span class="variable">%ProgramFiles(x86)%</span>\Microsoft Office\Office16")&amp;(<span class="keyword">for</span> /f <span class="variable">%%x</span> <span class="keyword">in</span> ('<span class="built_in">dir</span> /b ..\root\Licenses16\ProPlus2019VL*.xrm-ms') <span class="keyword">do</span> cscript ospp.vbs /inslic:"..\root\Licenses16\<span class="variable">%%x</span>" &gt;<span class="built_in">nul</span>)&amp;(<span class="keyword">for</span> /f <span class="variable">%%x</span> <span class="keyword">in</span> ('<span class="built_in">dir</span> /b ..\root\Licenses16\ProPlus2019VL*.xrm-ms') <span class="keyword">do</span> cscript ospp.vbs /inslic:"..\root\Licenses16\<span class="variable">%%x</span>" &gt;<span class="built_in">nul</span>)</span><br><span class="line">cscript //nologo ospp.vbs /unpkey:<span class="number">6</span>MWKP &gt;<span class="built_in">nul</span>&amp;cscript //nologo ospp.vbs /inpkey:NMMKJ-<span class="number">6</span>RK4F-KMJVX-<span class="number">8</span>D9MJ-<span class="number">6</span>MWKP &gt;<span class="built_in">nul</span>&amp;<span class="built_in">set</span> i=<span class="number">1</span></span><br><span class="line">:server</span><br><span class="line"><span class="keyword">if</span> <span class="variable">%i%</span>==<span class="number">1</span> <span class="built_in">set</span> KMS_Sev=kms7.MSGuides.com</span><br><span class="line"><span class="keyword">if</span> <span class="variable">%i%</span>==<span class="number">2</span> <span class="built_in">set</span> KMS_Sev=kms8.MSGuides.com</span><br><span class="line"><span class="keyword">if</span> <span class="variable">%i%</span>==<span class="number">3</span> <span class="built_in">set</span> KMS_Sev=kms9.MSGuides.com</span><br><span class="line">cscript //nologo ospp.vbs /sethst:<span class="variable">%KMS_Sev%</span> &gt;<span class="built_in">nul</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%KMS_Sev%</span> &amp; <span class="built_in">echo</span> Activating...</span><br><span class="line">cscript //nologo ospp.vbs /act | <span class="built_in">find</span> /i "successful" &amp;&amp; (<span class="built_in">echo</span> Complete) || (<span class="built_in">echo</span> Trying another KMS Server &amp; <span class="built_in">set</span> /a i+=<span class="number">1</span> &amp; <span class="keyword">goto</span> server)</span><br><span class="line"><span class="built_in">pause</span> &gt;<span class="built_in">nul</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="Office-2019激活"><a href="#Office-2019激活" class="headerlink" title="Office 2019激活"></a>Office 2019激活</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">title Activate Microsoft Office 2019 ALL versions for FREE!&amp;cls&amp;echo ============================================================================&amp;echo #Project: Activating Microsoft software products for FREE without software&amp;echo ============================================================================&amp;echo.&amp;echo #Supported products:&amp;echo - Microsoft Office Standard 2019&amp;echo - Microsoft Office Professional Plus 2019&amp;echo.&amp;echo.&amp;(if exist &quot;%ProgramFiles%\Microsoft Office\Office16\ospp.vbs&quot; cd /d &quot;%ProgramFiles%\Microsoft Office\Office16&quot;)&amp;(if exist &quot;%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs&quot; cd /d &quot;%ProgramFiles(x86)%\Microsoft Office\Office16&quot;)&amp;(for /f %%x in (&apos;dir /b ..\root\Licenses16\ProPlus2019VL*.xrm-ms&apos;) do cscript ospp.vbs /inslic:&quot;..\root\Licenses16\%%x&quot; &gt;nul)&amp;(for /f %%x in (&apos;dir /b ..\root\Licenses16\ProPlus2019VL*.xrm-ms&apos;) do cscript ospp.vbs /inslic:&quot;..\root\Licenses16\%%x&quot; &gt;nul)&amp;echo.&amp;echo ============================================================================&amp;echo Activating your Office...&amp;cscript //nologo ospp.vbs /unpkey:6MWKP &gt;nul&amp;cscript //nologo ospp.vbs /inpkey:NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP &gt;nul&amp;set i=1</span><br><span class="line">:server</span><br><span class="line">if %i%==1 set KMS_Sev=kms8.MSGuides.com</span><br><span class="line">if %i%==2 set KMS_Sev=kms9.MSGuides.com</span><br><span class="line">if %i%==3 set KMS_Sev=kms7.MSGuides.com</span><br><span class="line">if %i%==4 goto notsupported</span><br><span class="line">cscript //nologo ospp.vbs /sethst:%KMS_Sev% &gt;nul&amp;echo ============================================================================&amp;echo.&amp;echo.</span><br><span class="line">cscript //nologo ospp.vbs /act | find /i &quot;successful&quot; &amp;&amp; (echo.&amp;echo ============================================================================&amp;echo.&amp;echo #My official blog: MSGuides.com&amp;echo.&amp;echo #How it works: bit.ly/kms-server&amp;echo.&amp;echo #Please feel free to contact me at msguides.com@gmail.com if you have any questions or concerns.&amp;echo.&amp;echo #Please consider supporting this project: donate.msguides.com&amp;echo #Your support is helping me keep my servers running everyday!&amp;echo.&amp;echo ============================================================================&amp;choice /n /c YN /m &quot;Would you like to visit my blog [Y,N]?&quot; &amp; if errorlevel 2 exit) || (echo The connection to my KMS server failed! Trying to connect to another one... &amp; echo Please wait... &amp; echo. &amp; echo. &amp; set /a i+=1 &amp; goto server)</span><br><span class="line">explorer &quot;http://MSGuides.com&quot;&amp;goto halt</span><br><span class="line">:notsupported</span><br><span class="line">echo.&amp;echo ============================================================================&amp;echo Sorry! Your version is not supported.&amp;echo Please try installing the latest version here: bit.ly/aiomsp</span><br><span class="line">:halt</span><br><span class="line">pause &gt;nul</span><br></pre></td></tr></table></figure>
+
+<h1 id="Visio-2019激活"><a href="#Visio-2019激活" class="headerlink" title="Visio 2019激活"></a>Visio 2019激活</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">title Activate Microsoft Visio 2019 ALL versions for FREE!&amp;cls&amp;echo ============================================================================&amp;echo #Visio: Activating Microsoft software products for FREE without software&amp;echo ============================================================================&amp;echo.&amp;echo #Supported products:&amp;echo - Microsoft Visio Standard 2019&amp;echo - Microsoft Visio Professional Plus 2019&amp;echo.&amp;echo.&amp;(if exist &quot;%ProgramFiles%\Microsoft Office\Office16\ospp.vbs&quot; cd /d &quot;%ProgramFiles%\Microsoft Office\Office16&quot;)&amp;(if exist &quot;%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs&quot; cd /d &quot;%ProgramFiles(x86)%\Microsoft Office\Office16&quot;)&amp;cscript //nologo ospp.vbs /inslic:&quot;..\root\Licenses16\pkeyconfig-office.xrm-ms&quot; &gt;nul&amp;(for /f %%x in (&apos;dir /b ..\root\Licenses16\client-issuance*.xrm-ms&apos;) do cscript ospp.vbs /inslic:&quot;..\root\Licenses16\%%x&quot; &gt;nul)&amp;(for /f %%x in (&apos;dir /b ..\root\Licenses16\visioprovl_kms*.xrm-ms&apos;) do cscript ospp.vbs /inslic:&quot;..\root\Licenses16\%%x&quot; &gt;nul)&amp;(for /f %%x in (&apos;dir /b ..\root\Licenses16\visiopro2019vl_kms*.xrm-ms&apos;) do cscript ospp.vbs /inslic:&quot;..\root\Licenses16\%%x&quot; &gt;nul)&amp;echo.&amp;echo ============================================================================&amp;echo Activating your Visio...&amp;cscript //nologo slmgr.vbs /ckms &gt;nul&amp;cscript //nologo ospp.vbs /setprt:1688 &gt;nul&amp;cscript //nologo ospp.vbs /unpkey:7VCBB &gt;nul&amp;cscript //nologo ospp.vbs /inpkey:9BGNQ-K37YR-RQHF2-38RQ3-7VCBB &gt;nul&amp;set i=1</span><br><span class="line">:server</span><br><span class="line">if %i%==1 set KMS_Sev=kms8.MSGuides.com</span><br><span class="line">if %i%==2 set KMS_Sev=kms9.MSGuides.com</span><br><span class="line">if %i%==3 set KMS_Sev=kms7.MSGuides.com</span><br><span class="line">if %i%==4 goto notsupported</span><br><span class="line">cscript //nologo ospp.vbs /sethst:%KMS_Sev% &gt;nul&amp;echo ============================================================================&amp;echo.&amp;echo.</span><br><span class="line">cscript //nologo ospp.vbs /act | find /i &quot;successful&quot; &amp;&amp; (echo.&amp;echo ============================================================================&amp;echo.&amp;echo #My official blog: MSGuides.com&amp;echo.&amp;echo #How it works: bit.ly/kms-server&amp;echo.&amp;echo #Please feel free to contact me at msguides.com@gmail.com if you have any questions or concerns.&amp;echo.&amp;echo #Please consider supporting this project: donate.msguides.com&amp;echo #Your support is helping me keep my servers running everyday!&amp;echo.&amp;echo ============================================================================&amp;choice /n /c YN /m &quot;Would you like to visit my blog [Y,N]?&quot; &amp; if errorlevel 2 exit) || (echo The connection to my KMS server failed! Trying to connect to another one... &amp; echo Please wait... &amp; echo. &amp; echo. &amp; set /a i+=1 &amp; goto server)</span><br><span class="line">explorer &quot;http://MSGuides.com&quot;&amp;goto halt</span><br><span class="line">:notsupported</span><br><span class="line">echo.&amp;echo ============================================================================&amp;echo Sorry! Your version is not supported.&amp;echo Please try installing the latest version here: bit.ly/odt2k16</span><br><span class="line">:halt</span><br><span class="line">pause &gt;nul</span><br></pre></td></tr></table></figure>
+
+<h1 id="Project-2019激活"><a href="#Project-2019激活" class="headerlink" title="Project 2019激活"></a>Project 2019激活</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">title Activate Microsoft Project 2019 ALL versions for FREE!&amp;cls&amp;echo ============================================================================&amp;echo #Project: Activating Microsoft software products for FREE without software&amp;echo ============================================================================&amp;echo.&amp;echo #Supported products:&amp;echo - Microsoft Project Standard 2019&amp;echo - Microsoft Project Professional Plus 2019&amp;echo.&amp;echo.&amp;(if exist &quot;%ProgramFiles%\Microsoft Office\Office16\ospp.vbs&quot; cd /d &quot;%ProgramFiles%\Microsoft Office\Office16&quot;)&amp;(if exist &quot;%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs&quot; cd /d &quot;%ProgramFiles(x86)%\Microsoft Office\Office16&quot;)&amp;cscript //nologo ospp.vbs /inslic:&quot;..\root\Licenses16\pkeyconfig-office.xrm-ms&quot; &gt;nul&amp;(for /f %%x in (&apos;dir /b ..\root\Licenses16\client-issuance*.xrm-ms&apos;) do cscript ospp.vbs /inslic:&quot;..\root\Licenses16\%%x&quot; &gt;nul)&amp;(for /f %%x in (&apos;dir /b ..\root\Licenses16\projectprovl_kms*.xrm-ms&apos;) do cscript ospp.vbs /inslic:&quot;..\root\Licenses16\%%x&quot; &gt;nul)&amp;(for /f %%x in (&apos;dir /b ..\root\Licenses16\projectpro2019vl_kms*.xrm-ms&apos;) do cscript ospp.vbs /inslic:&quot;..\root\Licenses16\%%x&quot; &gt;nul)&amp;echo.&amp;echo ============================================================================&amp;echo Activating your Project...&amp;cscript //nologo slmgr.vbs /ckms &gt;nul&amp;cscript //nologo ospp.vbs /setprt:1688 &gt;nul&amp;cscript //nologo ospp.vbs /unpkey:PKD2B &gt;nul&amp;cscript //nologo ospp.vbs /inpkey:B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B &gt;nul&amp;set i=1</span><br><span class="line">:server</span><br><span class="line">if %i%==1 set KMS_Sev=kms8.MSGuides.com</span><br><span class="line">if %i%==2 set KMS_Sev=kms9.MSGuides.com</span><br><span class="line">if %i%==3 set KMS_Sev=kms7.MSGuides.com</span><br><span class="line">if %i%==4 goto notsupported</span><br><span class="line">cscript //nologo ospp.vbs /sethst:%KMS_Sev% &gt;nul&amp;echo ============================================================================&amp;echo.&amp;echo.</span><br><span class="line">cscript //nologo ospp.vbs /act | find /i &quot;successful&quot; &amp;&amp; (echo.&amp;echo ============================================================================&amp;echo.&amp;echo #My official blog: MSGuides.com&amp;echo.&amp;echo #How it works: bit.ly/kms-server&amp;echo.&amp;echo #Please feel free to contact me at msguides.com@gmail.com if you have any questions or concerns.&amp;echo.&amp;echo #Please consider supporting this project: donate.msguides.com&amp;echo #Your support is helping me keep my servers running everyday!&amp;echo.&amp;echo ============================================================================&amp;choice /n /c YN /m &quot;Would you like to visit my blog [Y,N]?&quot; &amp; if errorlevel 2 exit) || (echo The connection to my KMS server failed! Trying to connect to another one... &amp; echo Please wait... &amp; echo. &amp; echo. &amp; set /a i+=1 &amp; goto server)</span><br><span class="line">explorer &quot;http://MSGuides.com&quot;&amp;goto halt</span><br><span class="line">:notsupported</span><br><span class="line">echo.&amp;echo ============================================================================&amp;echo Sorry! Your version is not supported.&amp;echo Please try installing the latest version here: bit.ly/odt2k16</span><br><span class="line">:halt</span><br><span class="line">pause &gt;nul</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/19/Qt-TLS-SSL-HTTPS-错误/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2020/02/19/Qt-TLS-SSL-HTTPS-错误/" class="post-title-link" itemprop="url">Qt TLS SSL HTTPS 错误</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-19 13:29:42 / 修改时间：21:42:51" itemprop="dateCreated datePublished" datetime="2020-02-19T13:29:42+08:00">2020-02-19</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Qt/" itemprop="url" rel="index"><span itemprop="name">Qt</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h1>
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/15/Qt-代码格式化，使用-Artistic-Style/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2020/02/15/Qt-代码格式化，使用-Artistic-Style/" class="post-title-link" itemprop="url">Qt 代码格式化，使用 Artistic Style</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-15 12:32:02 / 修改时间：12:42:54" itemprop="dateCreated datePublished" datetime="2020-02-15T12:32:02+08:00">2020-02-15</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Artistic-Style/" itemprop="url" rel="index"><span itemprop="name">Artistic Style</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="Qt-打开插件"><a href="#Qt-打开插件" class="headerlink" title="Qt 打开插件"></a>Qt 打开插件</h1><p>菜单栏 –&gt; 帮助 –&gt; 关于插件</p>
+<p><img src="/2020/02/15/Qt-代码格式化，使用-Artistic-Style/打开插件.png" alt="打开插件"></p>
+<h1 id="下载-Artistic-Style"><a href="#下载-Artistic-Style" class="headerlink" title="下载 Artistic Style"></a>下载 Artistic Style</h1><p><a href="http://astyle.sourceforge.net/" target="_blank" rel="noopener">官网（可能要翻墙）</a></p>
+<p>安装比较简单，随意解压后放置一个目录。</p>
+<h1 id="Qt-配置-Artistic-Style"><a href="#Qt-配置-Artistic-Style" class="headerlink" title="Qt 配置 Artistic Style"></a>Qt 配置 Artistic Style</h1><p>菜单栏 –&gt; 工具 –&gt; 选项</p>
+<ol>
+<li>启用代码格式化</li>
+</ol>
+<p><img src="/2020/02/15/Qt-代码格式化，使用-Artistic-Style/Qt配置ArtisticStyle.png" alt="Qt配置ArtisticStyle"></p>
+<ol start="2">
+<li>配置 Artistic Style</li>
+</ol>
+<p><img src="/2020/02/15/Qt-代码格式化，使用-Artistic-Style/配置ArtisticStyle.png" alt="配置ArtisticStyle"></p>
+<h1 id="Artistic-Style-配置文件"><a href="#Artistic-Style-配置文件" class="headerlink" title="Artistic Style 配置文件"></a>Artistic Style 配置文件</h1><p>在 Qt 里有 4 种配置 Artistic Style 的方式，配置文件的方式更加方便。</p>
+<p>我喜欢的风格配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 基本风格</span><br><span class="line">style=java</span><br><span class="line">#style=attach</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 制表符选项</span><br><span class="line">indent=spaces=4</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/01/Jenkins-卡在-Please-wait-界面/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1191,461 +1638,6 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/17/Idea-Tomcat9-0-中文乱码问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/11/17/Idea-Tomcat9-0-中文乱码问题/" class="post-title-link" itemprop="url">Idea Tomcat9.0 中文乱码问题</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-11-17 08:57:29" itemprop="dateCreated datePublished" datetime="2019-11-17T08:57:29+08:00">2019-11-17</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-30 15:28:46" itemprop="dateModified" datetime="2019-11-30T15:28:46+08:00">2019-11-30</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Idea/" itemprop="url" rel="index"><span itemprop="name">Idea</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="2019年11月17日-解决-Idea-2019-2-下-Tomcat-乱码问题"><a href="#2019年11月17日-解决-Idea-2019-2-下-Tomcat-乱码问题" class="headerlink" title="2019年11月17日 解决 Idea 2019.2 下 Tomcat 乱码问题"></a>2019年11月17日 解决 Idea 2019.2 下 Tomcat 乱码问题</h1><h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p>Idea 中配置好 Tomcat 启动后，控制台 <code>Server</code>，<code>Tomcat Localhost Log</code>，<code>Tomcat Catalina Log</code> 都出现乱码。</p>
-<h2 id="分析原因"><a href="#分析原因" class="headerlink" title="分析原因"></a>分析原因</h2><p>在 CMD 中，尝试使用命令 <code>catalina.bat run</code> 启动 Tomcat。发现输出乱码，可以肯定，CMD 的编码是 <code>GBK</code> 的，使用 <code>chcp 65001</code> 转到 UTF-8 后再尝试启动 Tomcat，发现输出正常。所以猜测是 Idea 控制台输出使用的是 GBK 编码。</p>
-<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>Idea 菜单栏中 <code>Help -&gt; Edit Custom VM Options</code> 文件最后加一句 <code>-Dfile.encoding=UTF-8</code>，重启 Idea。</p>
-<h1 id="再次更新-2019年11月30日，解决-Idea-2019-3-下-以上设置也无效的问题"><a href="#再次更新-2019年11月30日，解决-Idea-2019-3-下-以上设置也无效的问题" class="headerlink" title="再次更新 2019年11月30日，解决 Idea 2019.3 下 以上设置也无效的问题"></a>再次更新 2019年11月30日，解决 Idea 2019.3 下 以上设置也无效的问题</h1><h2 id="现象-1"><a href="#现象-1" class="headerlink" title="现象"></a>现象</h2><p>更新了一下 Idea，发现 Idea 2019.3 中 Tomcat 再次乱码。</p>
-<h2 id="解决办法-1"><a href="#解决办法-1" class="headerlink" title="解决办法"></a>解决办法</h2><p>Idea 菜单栏中 <code>Help -&gt; Edit Custom Properties</code> ，如果要创建文件则创建，然后文件最后加一句 <code>-Dfile.encoding=UTF-8</code>，重启 Idea。yun</p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/27/Git-记录/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/09/27/Git-记录/" class="post-title-link" itemprop="url">Git 记录</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-09-27 20:22:08" itemprop="dateCreated datePublished" datetime="2019-09-27T20:22:08+08:00">2019-09-27</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h1><p>用了很久的 Git 了，但是也只是会基本的一些东西。不过就算是基本的，也可以记录下来。</p>
-<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><ol>
-<li>下载最新版的 Git。</li>
-</ol>
-<h1 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h1><p>命令格式：<code>git init</code>。</p>
-<hr>
-<ol>
-<li>创建项目文件夹 <code>D:/Test/GitTraining</code>。</li>
-<li>Git Bash 转到该文件下，运行命令 <code>git init</code>。</li>
-</ol>
-<p>效果：创建了一个名为 GitTraining 的 Git 仓库。同时 GitTraining 文件夹下出现一个名为 <code>.git</code> 的隐藏文件夹。</p>
-<p><img src="/2019/09/27/Git-记录/git-init-1.png" alt="git-init-1"></p>
-<p><strong>创建第一个文件</strong></p>
-<p>创建好文件 <code>1.txt</code>，并写点代码。</p>
-<p>内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">111111111</span><br></pre></td></tr></table></figure>
-
-<h1 id="添加文件到-Git-仓库"><a href="#添加文件到-Git-仓库" class="headerlink" title="添加文件到 Git 仓库"></a>添加文件到 Git 仓库</h1><p>命令格式：<code>git add 文件名或通配符</code>。</p>
-<hr>
-<p><code>git add 1.txt 或者 git add .</code></p>
-<h1 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h1><p>命令格式：<code>git commit -m &quot;代码提交信息&quot;</code>。</p>
-<hr>
-<p><code>git commit -m &quot;No.1 commit&quot;</code></p>
-<p>输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[master (root-commit) 7ccaacc] No.1 commit</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line"> create mode 100644 1.txt</span><br></pre></td></tr></table></figure>
-
-<p>修改文件 <code>1.txt</code>，内容改为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br></pre></td></tr></table></figure>
-
-<h1 id="查看文件改动"><a href="#查看文件改动" class="headerlink" title="查看文件改动"></a>查看文件改动</h1><p>命令格式：<code>git status [参数]</code>。</p>
-<hr>
-<p><code>git status</code></p>
-<p>输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">On branch master</span><br><span class="line">Changes not staged for commit:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span><br><span class="line">  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</span><br><span class="line"></span><br><span class="line">        modified:   1.txt</span><br><span class="line"></span><br><span class="line">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span><br></pre></td></tr></table></figure>
-
-<h1 id="查看文件内容更改详情"><a href="#查看文件内容更改详情" class="headerlink" title="查看文件内容更改详情"></a>查看文件内容更改详情</h1><p>命令格式：<code>git diff</code>。</p>
-<hr>
-<p>输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">diff --git a/1.txt b/1.txt</span><br><span class="line">index 15c36bc..4825c6a 100644</span><br><span class="line">--- a/1.txt</span><br><span class="line">+++ b/1.txt</span><br><span class="line">@@ -1 +1,2 @@</span><br><span class="line"> 1111111111</span><br><span class="line">+2222222222</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>再次提交：<code>git add 1.txt | git commit -m &quot;No.2 commit&quot;</code></p>
-<p>多加一行再提交，文件内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br></pre></td></tr></table></figure>
-
-<p>再次提交：<code>git add * | git commit -m &quot;No.3 commit&quot;</code></p>
-<h1 id="查看提交图表"><a href="#查看提交图表" class="headerlink" title="查看提交图表"></a>查看提交图表</h1><p>命令格式：<code>git log --graph</code>。</p>
-<hr>
-<p>输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">* commit 1c3a383eb6cc11d7c7539b6dd86b8c8d66bd8f54 (HEAD -&gt; master)</span><br><span class="line">| Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| Date:   Sat Sep 28 10:45:00 2019 +0800</span><br><span class="line">|</span><br><span class="line">|     No.3 commit</span><br><span class="line">|</span><br><span class="line">* commit f7dd549756103ea808715a5701d564832c9c3cc3</span><br><span class="line">| Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| Date:   Sat Sep 28 10:44:37 2019 +0800</span><br><span class="line">|</span><br><span class="line">|     No.2 commit</span><br><span class="line">|</span><br><span class="line">* commit a1d3d012538055e561688160bb144aa7c1f5b098</span><br><span class="line">  Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">  Date:   Sat Sep 28 10:43:04 2019 +0800</span><br><span class="line"></span><br><span class="line">      No.1 commit</span><br></pre></td></tr></table></figure>
-
-<h1 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h1><p>命令格式：<code>git branch [分支名]</code>。</p>
-<p><code>git branch no_1_branch</code></p>
-<h1 id="切换到分支"><a href="#切换到分支" class="headerlink" title="切换到分支"></a>切换到分支</h1><p>命令格式：<code>git checkout [分支名]</code>。</p>
-<p><strong>上面 创建分支 + 切换到分支 也可以合成一条命令：</strong> <code>git checkout -b [分支名]</code></p>
-<hr>
-<p><code>git checkout no_1_branch</code></p>
-<p>输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Switched to branch &apos;no_1_branch&apos;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>修改文件 <code>1.txt</code>，内容改为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line"></span><br><span class="line">no_1_branch:</span><br><span class="line">1111111111</span><br></pre></td></tr></table></figure>
-
-<p>提交 <code>git add * &amp;&amp; git commit -m &quot;No.1 no_1_branch commit&quot;</code>。</p>
-<p>输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[no_1_branch ebfda7b] No.1 no_1_branch commit</span><br><span class="line"> 1 file changed, 3 insertions(+)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>切回到 <code>master</code> 分支。</p>
-<p><code>git checkout master</code>。</p>
-<p>输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Switched to branch &apos;master&apos;</span><br></pre></td></tr></table></figure>
-
-<p>同时文件内容被改为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>修改文件 <code>1.txt</code>，内容改为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line">4444444444</span><br></pre></td></tr></table></figure>
-
-<p>提交 <code>git add * &amp;&amp; git commit -m &quot;No.4 commit&quot;</code>。</p>
-<p>输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[master 81f36b4] No.4 commit</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>切回到 <code>no_1_branch</code> 分支。</p>
-<p><code>git checkout no_1_branch</code>。</p>
-<p>输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Switched to branch &apos;no_1_branch&apos;</span><br></pre></td></tr></table></figure>
-
-<p>同时文件内容被改为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line"></span><br><span class="line">no_1_branch:</span><br><span class="line">1111111111</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>修改文件 <code>1.txt</code>，内容改为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line"></span><br><span class="line">no_1_branch:</span><br><span class="line">1111111111</span><br><span class="line">2222222222</span><br></pre></td></tr></table></figure>
-
-<p>提交 <code>git add * &amp;&amp; git commit -m &quot;No.2 no_1_branch commit&quot;</code>。</p>
-<p>输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[no_1_branch c04f92b] No.2 no_1_branch commit</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br></pre></td></tr></table></figure>
-
-<h1 id="合并分支（merge-方式）"><a href="#合并分支（merge-方式）" class="headerlink" title="合并分支（merge 方式）"></a>合并分支（merge 方式）</h1><p>命令格式：<code>git merge [被合并的分支名]</code>。</p>
-<hr>
-<p>合并分支到 <code>master</code> 分支。</p>
-<p><code>git checkout master &amp;&amp; git merge no_1_branch</code></p>
-<p>输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Switched to branch &apos;master&apos;</span><br><span class="line">Auto-merging 1.txt</span><br><span class="line">CONFLICT (content): Merge conflict in 1.txt</span><br><span class="line">Automatic merge failed; fix conflicts and then commit the result.</span><br></pre></td></tr></table></figure>
-
-<h1 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h1><p>不同的分支修改了相同的文件就会产生冲突。手动修改冲突。</p>
-<hr>
-<p>这时发现文件 <code>1.txt</code>，内容为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">4444444444</span><br><span class="line">=======</span><br><span class="line"></span><br><span class="line">no_1_branch:</span><br><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; no_1_branch</span><br></pre></td></tr></table></figure>
-
-<p>将 <code>1.txt</code> 修改为 <code>no_1_branch</code> 的内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1111111111</span><br><span class="line">2222222222</span><br><span class="line">3333333333</span><br><span class="line"></span><br><span class="line">no_1_branch:</span><br><span class="line">1111111111</span><br><span class="line">2222222222</span><br></pre></td></tr></table></figure>
-
-<p>解决好冲突了，提交合并 <code>git add 1.txt &amp;&amp; git commit</code></p>
-<p>输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[master f7cfe75] Merge branch &apos;no_1_branch&apos;</span><br></pre></td></tr></table></figure>
-
-<p>再查看一下图表 <code>git log --graph</code></p>
-<p>输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">*   commit f7cfe75956357f88880a612f16f479052f430de0 (HEAD -&gt; master)</span><br><span class="line">|\  Merge: 93d30f6 424a126</span><br><span class="line">| | Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| | Date:   Sat Sep 28 11:36:54 2019 +0800</span><br><span class="line">| |</span><br><span class="line">| |     Merge branch &apos;no_1_branch&apos;</span><br><span class="line">| |</span><br><span class="line">| * commit 424a126b4d6fbb76954bca34e9fcdf4e3d09f182 (no_1_branch)</span><br><span class="line">| | Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| | Date:   Sat Sep 28 10:49:22 2019 +0800</span><br><span class="line">| |</span><br><span class="line">| |     No.2 no_1_branch commit</span><br><span class="line">| |</span><br><span class="line">| * commit 298a3ef8bb439964e6ab908f1b52cf0878225eef</span><br><span class="line">| | Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| | Date:   Sat Sep 28 10:46:29 2019 +0800</span><br><span class="line">| |</span><br><span class="line">| |     No.1 no_1_branch commit</span><br><span class="line">| |</span><br><span class="line">* | commit 93d30f64faf96f75febe5ac43309bf67563c9fe0</span><br><span class="line">|/  Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">|   Date:   Sat Sep 28 10:48:33 2019 +0800</span><br><span class="line">|</span><br><span class="line">|       No.4 commit</span><br><span class="line">|</span><br><span class="line">* commit 1c3a383eb6cc11d7c7539b6dd86b8c8d66bd8f54</span><br><span class="line">| Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| Date:   Sat Sep 28 10:45:00 2019 +0800</span><br><span class="line">|</span><br><span class="line">|     No.3 commit</span><br><span class="line">|</span><br><span class="line">* commit f7dd549756103ea808715a5701d564832c9c3cc3</span><br><span class="line">| Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">| Date:   Sat Sep 28 10:44:37 2019 +0800</span><br><span class="line">|</span><br><span class="line">|     No.2 commit</span><br><span class="line">|</span><br><span class="line">* commit a1d3d012538055e561688160bb144aa7c1f5b098</span><br><span class="line">  Author: 朱合隆 &lt;zhuhelong@foxmail.com&gt;</span><br><span class="line">  Date:   Sat Sep 28 10:43:04 2019 +0800</span><br><span class="line"></span><br><span class="line">      No.1 commit</span><br></pre></td></tr></table></figure>
-
-<h1 id="合并分支（rebase-方式）"><a href="#合并分支（rebase-方式）" class="headerlink" title="合并分支（rebase 方式）"></a>合并分支（rebase 方式）</h1><p>命令格式：<code>git merge [被合并的分支名]</code>。</p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/26/Qt-智能指针/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/09/26/Qt-智能指针/" class="post-title-link" itemprop="url">Qt 智能指针</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-09-26 16:30:12" itemprop="dateCreated datePublished" datetime="2019-09-26T16:30:12+08:00">2019-09-26</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Qt/" itemprop="url" rel="index"><span itemprop="name">Qt</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Qt/智能指针/" itemprop="url" rel="index"><span itemprop="name">智能指针</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>由于使用的是 Qt，所以决定不适用标准库的智能指针，改用 Qt 的智能指针。</p>
-<p>结合 Qt 中的容器进行测试，使用的容器是 <code>QList</code>。在容器中，如果保存的是指针，那么一般来所指针所指的对象应该保存在堆中，所以使用完后需要清除释放，Qt 容器都带有 <code>public void clear()</code> 方法，但是该方法实际上只是清除了容器所保存的指针，并未清除释放掉指针所指内存。所以要寻找合适的方法。</p>
-<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>创建好 Qt 项目。这里直接使用的是 UI 项目。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 文件：mainwidow.h</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> MAINWINDOW_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAINWINDOW_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QMainWindow&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> Ui &#123;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">MainWindow</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainWindow</span> :</span> <span class="keyword">public</span> QMainWindow &#123;</span><br><span class="line">        Q_OBJECT</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="keyword">explicit</span> <span class="title">MainWindow</span><span class="params">(QWidget *parent = <span class="literal">nullptr</span>)</span></span>;</span><br><span class="line">        ~MainWindow();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> slots:</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">on_clear_push_button_clicked</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">on_delete_push_button_clicked</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">on_smart_pointer_push_button_clicked</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">        Ui::MainWindow *ui;</span><br><span class="line">        QList&lt;QString *&gt; *<span class="built_in">list</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> <span class="comment">// MAINWINDOW_H</span></span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 文件：mainwindowcpp</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"mainwindow.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"ui_mainwindow.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QDebug&gt;</span></span></span><br><span class="line"></span><br><span class="line">MainWindow::MainWindow(QWidget *parent) :</span><br><span class="line">    QMainWindow(parent),</span><br><span class="line">    ui(<span class="keyword">new</span> Ui::MainWindow) &#123;</span><br><span class="line">    ui-&gt;setupUi(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">MainWindow::~MainWindow() &#123;</span><br><span class="line">    <span class="keyword">delete</span> ui;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> MainWindow::on_clear_push_button_clicked() &#123;</span><br><span class="line">    <span class="comment">// 使用容器自带的 clear 函数</span></span><br><span class="line">    <span class="keyword">int</span> delete_times = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">list</span> = <span class="keyword">new</span> QList&lt;QString *&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; ++i) &#123;</span><br><span class="line">        <span class="built_in">list</span>-&gt;append(<span class="keyword">new</span> QString(QString::number(i)));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>((i + <span class="number">1</span>) % <span class="number">1000</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            qDebug() &lt;&lt; <span class="string">"start delete! delete time: "</span> &lt;&lt; ++delete_times;</span><br><span class="line">            <span class="built_in">list</span>-&gt;clear();  <span class="comment">// 根本没有清除内存</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> MainWindow::on_delete_push_button_clicked() &#123;</span><br><span class="line">    <span class="comment">// 普通指针，使用 delete</span></span><br><span class="line">    <span class="keyword">int</span> delete_times = <span class="number">0</span>;</span><br><span class="line">    QString *<span class="built_in">string</span>;</span><br><span class="line">    <span class="built_in">list</span> = <span class="keyword">new</span> QList&lt;QString *&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000000</span>; ++i) &#123;</span><br><span class="line">        <span class="built_in">list</span>-&gt;append(<span class="keyword">new</span> QString(QString::number(i)));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>((i + <span class="number">1</span>) % <span class="number">1000</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            qDebug() &lt;&lt; <span class="string">"start delete! delete time: "</span> &lt;&lt; ++delete_times;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">1000</span>; ++j) &#123;</span><br><span class="line">                <span class="built_in">string</span> = <span class="built_in">list</span>-&gt;last();</span><br><span class="line">                <span class="keyword">delete</span> <span class="built_in">string</span>;</span><br><span class="line">                <span class="built_in">string</span> = <span class="literal">nullptr</span>;</span><br><span class="line">                <span class="built_in">list</span>-&gt;removeLast();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> MainWindow::on_smart_pointer_push_button_clicked() &#123;</span><br><span class="line">    <span class="comment">// 智能指针</span></span><br><span class="line">    <span class="keyword">int</span> delete_times = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">list</span> = <span class="keyword">new</span> QList&lt;QString *&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; ++i) &#123;</span><br><span class="line">        QSharedPointer&lt;QString&gt; <span class="built_in">string</span>(<span class="keyword">new</span> QString(QString::number(<span class="number">100</span>)));</span><br><span class="line">        <span class="built_in">list</span>-&gt;append(<span class="built_in">string</span>.data());</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>((i + <span class="number">1</span>) % <span class="number">1000</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            qDebug() &lt;&lt; <span class="string">"start delete! delete time: "</span> &lt;&lt; ++delete_times;</span><br><span class="line">            <span class="built_in">list</span>-&gt;clear();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h1><p>使用采用每次点完按钮后都重启再测下一项的方式。</p>
-<p>初始打开程序后内存用量。</p>
-<p><img src="/2019/09/26/Qt-智能指针/初始打开界面的内存用量.png" alt="初始打开界面的内存用量"></p>
-<p>使用容器自带的 clear 函数后内存用量。</p>
-<p><img src="/2019/09/26/Qt-智能指针/使用-clear-后内存用量.png" alt="使用-clear-后内存用量"></p>
-<p>使用普通指针和 delete 后内存用量。</p>
-<p><img src="/2019/09/26/Qt-智能指针/使用普通指针和-delete-后内存用量.png" alt="使用普通指针和-delete-后内存用量"></p>
-<p>使用智能指针后内存用量。</p>
-<p><img src="/2019/09/26/Qt-智能指针/使用智能指针后内存用量.png" alt="使用智能指针后内存用量"></p>
-<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>使用智能指针，方便！</p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </section>
 
   
@@ -1686,7 +1678,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1739,7 +1731,11 @@
         
           
         
-        <span class="site-state-item-count">19</span>
+          
+        
+          
+        
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -1832,7 +1828,19 @@
         
           
         
-        <span class="site-state-item-count">39</span>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">45</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
