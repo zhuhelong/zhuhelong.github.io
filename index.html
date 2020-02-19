@@ -516,7 +516,7 @@
                 
               
 
-              <time title="创建时间：2020-02-19 13:29:42 / 修改时间：21:42:51" itemprop="dateCreated datePublished" datetime="2020-02-19T13:29:42+08:00">2020-02-19</time>
+              <time title="创建时间：2020-02-19 13:29:42 / 修改时间：22:10:10" itemprop="dateCreated datePublished" datetime="2020-02-19T13:29:42+08:00">2020-02-19</time>
             </span>
           
             
@@ -549,7 +549,15 @@
 
       
           
-            <h1 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h1>
+            <h1 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h1><p>Qt 5.14 MinGW 出现错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qt.network.ssl: QSslSocket::connectToHostEncrypted: TLS initialization failed</span><br></pre></td></tr></table></figure>
+
+<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>按照网上多数博主的说法，如 <a href="https://blog.csdn.net/lsylovezsl/article/details/89601416" target="_blank" rel="noopener">qt.network.ssl: QSslSocket::connectToHostEncrypted: TLS initialization failed</a>，只要在程序运行目录添加对应的 <code>ssleay32.dll</code>，<code>libeay32.dll</code> 即可。</p>
+<p>但是我尝试过发现不行。</p>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>直觉认为应该是缺少 OpenSSL 的运行库。</p>
+<h1 id="最终解决办法"><a href="#最终解决办法" class="headerlink" title="最终解决办法"></a>最终解决办法</h1><p>Qt 根目录打开 <code>MaintenanceTool</code>，在 Qt 资源网站：<a href="http://download.qt.io/online/qtsdkrepository/windows_x86/desktop" target="_blank" rel="noopener">http://download.qt.io/online/qtsdkrepository/windows_x86/desktop</a> 中找到对应的 OpenSSL，<a href="http://download.qt.io/online/qtsdkrepository/windows_x86/desktop/tools_openssl_x86/" target="_blank" rel="noopener">tools_openssl_x86/</a> 和 <a href="http://download.qt.io/online/qtsdkrepository/windows_x86/desktop/tools_openssl_x64/" target="_blank" rel="noopener">tools_openssl_x64/</a>。在  <code>MaintenanceTool</code> 有效的存储库的临时目录中添加以上两个网址。然后安装好。</p>
+<p>最后还需要在程序运行目录添加之前下载的 OpenSSL 的两个运行库 <code>libcrypto-1_1.dll</code>，<code>libssl-1_1.dll</code>（不需要添加  <code>ssleay32.dll</code>，<code>libeay32.dll</code> ）。</p>
+
           
         
       
