@@ -238,6 +238,197 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/08/Linux-Deploy-Ubuntu-部署/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2020/03/08/Linux-Deploy-Ubuntu-部署/" class="post-title-link" itemprop="url">Linux Deploy Ubuntu 部署</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-03-08 22:34:14" itemprop="dateCreated datePublished" datetime="2020-03-08T22:34:14+08:00">2020-03-08</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-09 00:11:03" itemprop="dateModified" datetime="2020-03-09T00:11:03+08:00">2020-03-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux-Deploy/" itemprop="url" rel="index"><span itemprop="name">Linux Deploy</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="手机安装-Linux-Deploy"><a href="#手机安装-Linux-Deploy" class="headerlink" title="手机安装 Linux Deploy"></a>手机安装 Linux Deploy</h1><p>手上刚好有一台闲置的手机，把它刷成了魔趣，闲着也是闲着，耍起来~</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>型号</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>手机</td>
+<td>LEX820</td>
+<td></td>
+</tr>
+<tr>
+<td>Android</td>
+<td>8.1.0</td>
+<td></td>
+</tr>
+<tr>
+<td>魔趣</td>
+<td>MK81.0-x2-200215-HISTORY</td>
+<td></td>
+</tr>
+<tr>
+<td>Kernel</td>
+<td>3.18.109-mokee-gae88e076ad8</td>
+<td></td>
+</tr>
+<tr>
+<td>Linux Deploy</td>
+<td>2.6.0-259</td>
+<td></td>
+</tr>
+<tr>
+<td>Ubuntu</td>
+<td>18.04 LTS</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>前提：</p>
+<ol>
+<li>手机需要 root，我使用的是 <code>Magisk Manager</code>，在<a href="https://www.mokeedev.com/guide/getting_started.html" target="_blank" rel="noopener">魔趣的刷机快速上手</a>中有介绍如何安装。</li>
+<li>安装好 <code>Linux Deploy</code>、<code>BusyBox</code>（Linux Deploy 官方建议安装）、选装 <code>Hacker&#39;s Keyboard</code>、<code>JuiceSSH</code>（个人认为 Android 下最好用的 SSH 终端）。</li>
+</ol>
+<p>这些软件都能在 <strong>Google Play 商店</strong>中找到，所以强烈建议安装 <code>Google Play 商店</code>，在魔趣中可以直接刷入 <code>OpenGapps</code> 。</p>
+<h1 id="安装-Ubuntu"><a href="#安装-Ubuntu" class="headerlink" title="安装 Ubuntu"></a>安装 Ubuntu</h1><p>Linux Deploy 中安装 Ubuntu 非常简单。</p>
+<h2 id="创建并选择配置文件"><a href="#创建并选择配置文件" class="headerlink" title="创建并选择配置文件"></a>创建并选择配置文件</h2><p>右上角打开菜单，打开配置文件选项，新建一个配置文件，我安装的是 Ubuntu，所以直接将配置文件命名为 Ubuntu。</p>
+<p><img src="/2020/03/08/Linux-Deploy-Ubuntu-部署/1.png" alt="1"></p>
+<h2 id="设置配置文件属性"><a href="#设置配置文件属性" class="headerlink" title="设置配置文件属性"></a>设置配置文件属性</h2><p>从上一步返回到 Linux Deploy 的主界面，点击右下角的设置按钮。我的是按照如下配置的。</p>
+<p><img src="/2020/03/08/Linux-Deploy-Ubuntu-部署/2.png" alt="2"></p>
+<p><img src="/2020/03/08/Linux-Deploy-Ubuntu-部署/3.png" alt="3"></p>
+<p>这里有几点要注意，其中架构可以点击主界面的右上角的信息菜单中的状态选项查看，当然，一般 Android 的机器都是 arm 架构。发行版选择 bionic 为最新。源地址要特别注意，选择国内源，我选的是清华源：<a href="http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/" target="_blank" rel="noopener">http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/</a> 。安装类型之后的选项请参考<a href="https://github.com/meefik/linuxdeploy" target="_blank" rel="noopener">官网</a>自己做选择。请一定勾选启用 SSH 服务器，不然无法和 Linux 交互。</p>
+<h1 id="安装部署软件"><a href="#安装部署软件" class="headerlink" title="安装部署软件"></a>安装部署软件</h1><h2 id="安装-nginx"><a href="#安装-nginx" class="headerlink" title="安装 nginx"></a>安装 nginx</h2><p><code>sudo apt install nginx</code></p>
+<p>之后启动</p>
+<p><code>sudo service nginx start</code></p>
+<p>注：Linux Deploy 无法使用 systemctl，详情请了解 chroot。</p>
+<h2 id="安装-jdk"><a href="#安装-jdk" class="headerlink" title="安装 jdk"></a>安装 jdk</h2><p>官网下载 arm 架构的 jdk，我使用的是 jdk 1.8，注意后缀一定要包含 <code>linux-arm32</code> 或 <code>linux-arm64</code>，32 还是 64 取决于你的手机 CPU 架构。</p>
+<p>update-alternatives 连接一下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives --install /usr/bin/java  java  ***/jdk1.8.0_202/bin/java  0800202</span><br><span class="line">sudo update-alternatives --install /usr/bin/javac javac ***/jdk1.8.0_202/bin/javac 0800202</span><br><span class="line">sudo update-alternatives --install /usr/bin/jar   jar   ***/jdk1.8.0_202/bin/jar   0800202</span><br><span class="line">sudo update-alternatives --install /usr/bin/javah javah ***/jdk1.8.0_202/bin/javah 0800202</span><br><span class="line">sudo update-alternatives --install /usr/bin/javap javap ***/jdk1.8.0_202/bin/javap 0800202</span><br></pre></td></tr></table></figure>
+
+<p>然后写个 Hello World 测试一下。</p>
+<h2 id="安装-Mysql"><a href="#安装-Mysql" class="headerlink" title="安装 Mysql"></a>安装 Mysql</h2><p>这个是出了点小问题的。</p>
+<p>安装： <code>sudo apt install mysql-server</code>。</p>
+<p>安装到后面会出现如下问题。</p>
+<p><img src="/2020/03/08/Linux-Deploy-Ubuntu-部署/4.png" alt="4"></p>
+<p>我采取的办法是，忽略它，继续后面的操作，毕竟实在没时间深究。</p>
+<p>启动：<code>sudo service mysql start</code>。</p>
+<p>启动会失败。。。</p>
+<p><img src="/2020/03/08/Linux-Deploy-Ubuntu-部署/5.png" alt="5"></p>
+<p>解决办法：<code>sudo usermod -d /var/lib/mysql/ mysql</code>。</p>
+<p>再次启动，还是出错，这一次更狠，连错误都不打印了。</p>
+<p><img src="/2020/03/08/Linux-Deploy-Ubuntu-部署/7.png" alt="7"></p>
+<p>只能查看错误日志：<code>sudo cat /var/log/mysql/error.log</code>。</p>
+<p>然后发现了：</p>
+<p><img src="/2020/03/08/Linux-Deploy-Ubuntu-部署/6.png" alt="6"></p>
+<p>解决办法：<code>sudo usermod -a -G aid_inet,aid_net_raw mysql</code></p>
+<p>再次启动，OK了。</p>
+<h1 id="开机自启"><a href="#开机自启" class="headerlink" title="开机自启"></a>开机自启</h1><p>总不能每次开机都要启动一下这些服务吧。</p>
+<p>使用开机自启吧。</p>
+<p><strong>注：要使用开机启动，则需要在设置配置文件属性中启用“允许使用初始化系统”。</strong>即如图：勾选即可</p>
+<p><img src="/2020/03/08/Linux-Deploy-Ubuntu-部署/8.png" alt="8"></p>
+<p>然后：<code>sudo vim /etc/rc.local</code>。</p>
+<p>之后在 vim 中加入以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/bin/sh -e</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># rc.local</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This script is executed at the end of each multiuser runlevel.</span></span><br><span class="line"><span class="comment"># Make sure that the script will "exit 0" on success or any other</span></span><br><span class="line"><span class="comment"># value on error.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># In order to enable or disable this script just change the execution</span></span><br><span class="line"><span class="comment"># bits.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># By default this script does nothing.</span></span><br><span class="line"></span><br><span class="line">service nginx start</span><br><span class="line">service mysql start</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>
+
+<p>要自启什么，就在 <code>exit 0</code> 之前加入启动命令。</p>
+<p>然后给与执行权限：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chown root:root /etc/rc.local</span><br><span class="line">sudo chmod 755 /etc/rc.local</span><br></pre></td></tr></table></figure>
+
+<p>再次启动系统就可以看到效果了。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/02/java-复习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1511,187 +1702,11 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/26/Ubuntu18-下部署/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/11/26/Ubuntu18-下部署/" class="post-title-link" itemprop="url">Ubuntu18 下部署</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-11-26 19:03:19" itemprop="dateCreated datePublished" datetime="2019-11-26T19:03:19+08:00">2019-11-26</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-11 00:14:14" itemprop="dateModified" datetime="2020-02-11T00:14:14+08:00">2020-02-11</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/部署/" itemprop="url" rel="index"><span itemprop="name">部署</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="开启-root"><a href="#开启-root" class="headerlink" title="开启 root"></a>开启 root</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd root  // 之后按照提示输入密码</span><br></pre></td></tr></table></figure>
-
-<h1 id="root-使用规则"><a href="#root-使用规则" class="headerlink" title="root 使用规则"></a>root 使用规则</h1><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">su root  // 使用 root</span><br><span class="line">exit  // 用完后退出，root 权限很高，不建议全部都使用 root 操作</span><br></pre></td></tr></table></figure>
-
-<h2 id="远程登录（不建议使用）"><a href="#远程登录（不建议使用）" class="headerlink" title="远程登录（不建议使用）"></a>远程登录（不建议使用）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/ssh/sshd_config</span><br><span class="line">// 将</span><br><span class="line">#PermitRootLogin prohibit-password</span><br><span class="line">// 修改为</span><br><span class="line">PermitRootLogin yes</span><br><span class="line">// 如果已开启 ssh 服务，则需要重启 ssh</span><br><span class="line">sudo systemctl restart ssh</span><br></pre></td></tr></table></figure>
-
-<h1 id="开启-SSH"><a href="#开启-SSH" class="headerlink" title="开启 SSH"></a>开启 SSH</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssh-server</span><br></pre></td></tr></table></figure>
-
-<h2 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl status ssh</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置开机自启"><a href="#配置开机自启" class="headerlink" title="配置开机自启"></a>配置开机自启</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable ssh</span><br></pre></td></tr></table></figure>
-
-<h1 id="开启防火墙"><a href="#开启防火墙" class="headerlink" title="开启防火墙"></a>开启防火墙</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">su root</span><br><span class="line">ufw enable</span><br></pre></td></tr></table></figure>
-
-<h2 id="开启-22-端口"><a href="#开启-22-端口" class="headerlink" title="开启 22 端口"></a>开启 22 端口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ufw allow 22</span><br></pre></td></tr></table></figure>
-
-<h1 id="配置-MySQL"><a href="#配置-MySQL" class="headerlink" title="配置 MySQL"></a>配置 MySQL</h1><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update  // 更新软件清单</span><br><span class="line">sudo apt-get install mysql-server  // 安装 MySQL-Server</span><br></pre></td></tr></table></figure>
-
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql_secure_installation  // 之后根据提示操作</span><br></pre></td></tr></table></figure>
-
-<h2 id="检查服务状态"><a href="#检查服务状态" class="headerlink" title="检查服务状态"></a>检查服务状态</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status mysql</span><br></pre></td></tr></table></figure>
-
-<h2 id="远程访问"><a href="#远程访问" class="headerlink" title="远程访问"></a>远程访问</h2><h3 id="服务配置"><a href="#服务配置" class="headerlink" title="服务配置"></a>服务配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/mysql/mysql.conf.d/mysqld.cnf</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 将</span><br><span class="line">bind-address		= 127.0.0.1</span><br><span class="line"># 修改为</span><br><span class="line">bind-address        = 0.0.0.0</span><br></pre></td></tr></table></figure>
-
-<p>重启 MySQL</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart mysql</span><br></pre></td></tr></table></figure>
-
-<h3 id="新建远程账户（不建议使用-root-用户远程）"><a href="#新建远程账户（不建议使用-root-用户远程）" class="headerlink" title="新建远程账户（不建议使用 root 用户远程）"></a>新建远程账户（不建议使用 root 用户远程）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GRANT 权限（ALL PRIVILEGES 代表所有权限） ON 数据库（* 代表所有）.表名（* 代表所有） TO 用户名@&quot;允许远程的 IP（% 代表允许所有）&quot; IDENTIFIED BY &quot;密码&quot;;</span><br><span class="line"></span><br><span class="line">FLUSH PRIVILEGES;  -- 刷新权限</span><br></pre></td></tr></table></figure>
-
-<h2 id="开启-3306-端口"><a href="#开启-3306-端口" class="headerlink" title="开启 3306 端口"></a>开启 3306 端口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">su root</span><br><span class="line">ufw allow 3306</span><br></pre></td></tr></table></figure>
-
-<h2 id="测试远程连接"><a href="#测试远程连接" class="headerlink" title="测试远程连接"></a>测试远程连接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -h 【MySQL-Server 所在主机IP 】 -P 【MySQL 开启端口】 -u 账号 -p</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置开机自启-1"><a href="#配置开机自启-1" class="headerlink" title="配置开机自启"></a>配置开机自启</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable mysql</span><br></pre></td></tr></table></figure>
-
-<h1 id="配置-Java"><a href="#配置-Java" class="headerlink" title="配置 Java"></a>配置 Java</h1><h2 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install openjdk-11-jre-headless</span><br></pre></td></tr></table></figure>
-
-<h2 id="查看-Java-安装是否成功"><a href="#查看-Java-安装是否成功" class="headerlink" title="查看 Java 安装是否成功"></a>查看 Java 安装是否成功</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-<h1 id="配置-Nginx"><a href="#配置-Nginx" class="headerlink" title="配置 Nginx"></a>配置 Nginx</h1><h2 id="安装-3"><a href="#安装-3" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nginx  // 安装</span><br><span class="line">systemctl start nginx  // 启动</span><br></pre></td></tr></table></figure>
-
-<h2 id="开启-80-和-443-端口"><a href="#开启-80-和-443-端口" class="headerlink" title="开启 80 和 443 端口"></a>开启 80 和 443 端口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">su root</span><br><span class="line">ufw allow 80</span><br><span class="line">ufw allow 443</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置开机自启-2"><a href="#配置开机自启-2" class="headerlink" title="配置开机自启"></a>配置开机自启</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable nginx</span><br></pre></td></tr></table></figure>
-
-<h1 id="配置域名"><a href="#配置域名" class="headerlink" title="配置域名"></a>配置域名</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将域名 A 记录指向 IP</span><br></pre></td></tr></table></figure>
-
-<h1 id="使用-Let’s-Encrypt-配置-SSL"><a href="#使用-Let’s-Encrypt-配置-SSL" class="headerlink" title="使用 Let’s Encrypt 配置 SSL"></a>使用 Let’s Encrypt 配置 SSL</h1><h2 id="新建一个-80的访问目录，以便-Let’s-encrypt-验证使用"><a href="#新建一个-80的访问目录，以便-Let’s-encrypt-验证使用" class="headerlink" title="新建一个 80的访问目录，以便 Let’s encrypt 验证使用"></a>新建一个 80的访问目录，以便 Let’s encrypt 验证使用</h2><h2 id="查看-Nginx-配置文件地址"><a href="#查看-Nginx-配置文件地址" class="headerlink" title="查看 Nginx 配置文件地址"></a>查看 Nginx 配置文件地址</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nginx -t</span><br><span class="line"></span><br><span class="line">// 如果不需要，可以将 nignx 配置文件目录下/sites-available/default 删除</span><br><span class="line"></span><br><span class="line">vim 【nignx 配置文件目录下/sites-available/default】</span><br></pre></td></tr></table></figure>
-
-<p>修改为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    listen [::]:80;</span><br><span class="line"></span><br><span class="line">    root 【80的访问目录】;</span><br><span class="line">    </span><br><span class="line">    index index.html index.htm;</span><br><span class="line">    </span><br><span class="line">    server_name 【域名】;</span><br><span class="line">    </span><br><span class="line">    location / &#123;</span><br><span class="line">        # First attempt to serve request as file, then</span><br><span class="line">        # as directory, then fall back to displaying a 404.</span><br><span class="line">        try_files $uri $uri/ =404;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在 80 访问目录中新建一个 index.html 文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">vim index.html</span><br><span class="line">// 写点内容，比如</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot; /&gt;</span><br><span class="line">    &lt;title&gt;Hello&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h1&gt;Hello world!&lt;/h1&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line">或者</span><br><span class="line">&lt;script&gt;window.location.replace(&apos;https&apos; + window.location.href.substr(4));&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 测试 nginx 配置</span><br><span class="line">nginx -t</span><br><span class="line">// 重启 nginx 服务</span><br><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
-
-<h2 id="查看-Nginx-配置是否正确"><a href="#查看-Nginx-配置是否正确" class="headerlink" title="查看 Nginx 配置是否正确"></a>查看 Nginx 配置是否正确</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">浏览器中输入 IP，查看显示是否为 index.html 内容</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装-openssl"><a href="#安装-openssl" class="headerlink" title="安装  openssl"></a>安装  openssl</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssl</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装-certbot"><a href="#安装-certbot" class="headerlink" title="安装  certbot"></a>安装  certbot</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install certbot</span><br></pre></td></tr></table></figure>
-
-<h3 id="申请证书"><a href="#申请证书" class="headerlink" title="申请证书"></a>申请证书</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">certbot certonly \</span><br><span class="line">--webroot -w 80的访问目录 \</span><br><span class="line">-d 域名</span><br><span class="line">// 根据提示填写相关信息</span><br></pre></td></tr></table></figure>
-
-<h3 id="生成Perfect-Forward-Security（PFS）键值"><a href="#生成Perfect-Forward-Security（PFS）键值" class="headerlink" title="生成Perfect Forward Security（PFS）键值"></a>生成Perfect Forward Security（PFS）键值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">openssl dhparam 2048 -out /etc/ssl/private/dhparam.pem  // 生成，一般需要很长时间，耐心等候</span><br><span class="line">有时会生成失败，多试几次，如果生成不了，尝试</span><br><span class="line">cd /etc/ssl/private</span><br><span class="line">openssl dhparam -dsaparam -out dhparam.pem 4096</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><a href="https://link.jianshu.com?t=https://wiki.openssl.org/index.php/Manual:Dhparam(1)#OPTIONS" target="_blank" rel="noopener">This option instructs OpenSSL to produce “DSA-like” DH parameters</a> (<em>p</em> is such that <em>p</em>-1 is a multiple of a smaller prime <em>q</em>, and the generator has multiplicative order <em>q</em>). This is considerably faster because it does not need to nest the primality tests, and thus only thousands, not millions, of candidates will be generated and tested.<br> As far as academics know, DSA-like parameters for DH are equally secure; there is no actual advantage to using “strong primes” (the terminology is traditional and does not actually imply some extra strength).<br> Similarly, you may also use a 2048-bit modulus, which is already very far into the “cannot break it zone”. The 4096-bit modulus will make DH computations slower (which is not a real problem for a VPN; these occur only at the start of the connection), but won’t actually improve security.<br> To some extent, a 4096-bit modulus may woo auditors, but auditors are unlikely to be much impressed by a Raspberry-Pi, which is way too cheap anyway.</p>
-</blockquote>
-<h2 id="配置-Nginx-启用-https"><a href="#配置-Nginx-启用-https" class="headerlink" title="配置 Nginx 启用 https"></a>配置 Nginx 启用 https</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">/etc/nginx/sites-available 目录下新建配置文件，如 MySite.cnf</span><br><span class="line"></span><br><span class="line">// 将以下配置写入</span><br><span class="line">// 如果是静态网页</span><br><span class="line">server &#123;</span><br><span class="line">    listen       443   ssl;</span><br><span class="line">    server_name  【域名】;</span><br><span class="line"></span><br><span class="line">    charset utf-8;</span><br><span class="line"></span><br><span class="line">    access_log  【log 路径】/access_log.log;</span><br><span class="line">    error_log   【log 路径】/error_log.log;</span><br><span class="line"></span><br><span class="line">    # 可不配置</span><br><span class="line">    location / &#123;</span><br><span class="line">        root   【80的访问目录】;</span><br><span class="line">        index  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ssl_certificate        /etc/letsencrypt/live/【域名】/fullchain.pem;</span><br><span class="line">    ssl_certificate_key    /etc/letsencrypt/live/【域名】/privkey.pem;</span><br><span class="line"></span><br><span class="line">    ssl_session_timeout 1d;</span><br><span class="line">    ssl_session_cache shared:SSL:50m;</span><br><span class="line">    ssl_session_tickets on;</span><br><span class="line"></span><br><span class="line">    ssl_dhparam /etc/ssl/private/dhparam.pem;</span><br><span class="line"></span><br><span class="line">    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line"></span><br><span class="line">    # 一般推荐使用的ssl_ciphers值: https://wiki.mozilla.org/Security/Server_Side_TLS</span><br><span class="line">    ssl_ciphers &apos;ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128:AES256:AES:DES-CBC3-SHA:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK&apos;;</span><br><span class="line"></span><br><span class="line">    ssl_prefer_server_ciphers on;</span><br><span class="line"></span><br><span class="line">    error_page  404              /404.html;</span><br><span class="line">    error_page  500 502 503 504  /50x.html;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 如果是代理</span><br><span class="line">server &#123;</span><br><span class="line">    listen        443   ssl;</span><br><span class="line">    server_name   【域名】;</span><br><span class="line">    location /&#123;</span><br><span class="line">        proxy_redirect off;</span><br><span class="line">        proxy_set_header Host $host;</span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">        proxy_pass http://127.0.0.1:【端口】;</span><br><span class="line">    &#125;</span><br><span class="line">    location /static&#123;</span><br><span class="line">        // 注意“/”的使用</span><br><span class="line">        alias   【static 路径】/;</span><br><span class="line">        index  index.html;</span><br><span class="line">    &#125;</span><br><span class="line">    access_log  【log 路径】/access_log.log;</span><br><span class="line">    error_log   【log 路径】/error_log.log;</span><br><span class="line"></span><br><span class="line">    ssl_certificate        /etc/letsencrypt/live/【域名】/fullchain.pem;</span><br><span class="line">        ssl_certificate_key    /etc/letsencrypt/live/【域名】/privkey.pem;</span><br><span class="line"></span><br><span class="line">        ssl_session_timeout 1d;</span><br><span class="line">        ssl_session_cache shared:SSL:50m;</span><br><span class="line">        ssl_session_tickets on;</span><br><span class="line"></span><br><span class="line">        ssl_dhparam /etc/ssl/private/dhparam.pem;</span><br><span class="line"></span><br><span class="line">        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line"></span><br><span class="line">        # 一般推荐使用的ssl_ciphers值: https://wiki.mozilla.org/Security/Server_Side_TLS</span><br><span class="line">        ssl_ciphers &apos;ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128:AES256:AES:DES-CBC3-SHA:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK&apos;;</span><br><span class="line"></span><br><span class="line">        ssl_prefer_server_ciphers on;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 测试 nginx 配置</span><br><span class="line">nginx -t</span><br><span class="line">// 重启 nginx 服务</span><br><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1727,7 +1742,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1786,7 +1801,9 @@
         
           
         
-        <span class="site-state-item-count">22</span>
+          
+        
+        <span class="site-state-item-count">23</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -1893,7 +1910,11 @@
         
           
         
-        <span class="site-state-item-count">46</span>
+          
+        
+          
+        
+        <span class="site-state-item-count">48</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

@@ -238,6 +238,232 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/20/DCMTK-工具：dcmqrscp-测试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/20/DCMTK-工具：dcmqrscp-测试/" class="post-title-link" itemprop="url">DCMTK 工具：dcmqrscp 测试</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-20 12:35:26" itemprop="dateCreated datePublished" datetime="2019-08-20T12:35:26+08:00">2019-08-20</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/" itemprop="url" rel="index"><span itemprop="name">DICOM</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/DCMTK/" itemprop="url" rel="index"><span itemprop="name">DCMTK</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DICOM/DCMTK/dcmqrscp/" itemprop="url" rel="index"><span itemprop="name">dcmqrscp</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ol>
+<li><a href="https://blog.csdn.net/zssureqh/article/details/39758969" target="_blank" rel="noopener">DICOM医学图像处理：DCMTK的wiki资料学习之PACS调试</a>（感谢这位大佬的辛勤付出~）；</li>
+<li><a href="https://support.dcmtk.org/redmine/projects/dcmtk/wiki/Howto_PACSDebuggingWithDCMTK" target="_blank" rel="noopener">DCMTK WIKI</a>（感谢开源工作者的辛勤付出~）。</li>
+</ol>
+<h1 id="系统配置"><a href="#系统配置" class="headerlink" title="系统配置"></a>系统配置</h1><table>
+<thead>
+<tr>
+<th>条目</th>
+<th>型号</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>操作系统</td>
+<td>win 10</td>
+<td></td>
+</tr>
+<tr>
+<td>dcmqrscp</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+<tr>
+<td>echoscu</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+<tr>
+<td>storescu</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+<tr>
+<td>findscu</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+<tr>
+<td>dcmdump</td>
+<td>v3.6.4+ DEV</td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h1><p>已编译或下载好 dcmtk 工具包，并将其加入到环境变量的 <code>PATH</code> 中（也可不加，但是需要输入所在目录前缀）。</p>
+<p>创建的工作目录中不要有中文及空格。</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h2><p>创建工作目录，如：<code>C:\DICOM_dcmqrscp_test</code>。</p>
+<p>创建 <code>dcmqrscp</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\dcmqrscp</code>。</p>
+<p>在 <code>dcmqrscp</code> 工作目录下，创建 AETable 目录，<br>如：<code>C:\DICOM_dcmqrscp_test\dcmqrscp\COMMON</code><br>如：<code>C:\DICOM_dcmqrscp_test\dcmqrscp\ACME_STORE</code>。</p>
+<p>创建 <code>echoscu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\echoscu</code>，不创建也可以，因为 echoscu 只是用于验证服务器是否存在，服务器是否为其服务。</p>
+<p>创建 <code>storescu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\storescu</code> 。</p>
+<p>创建 <code>findscu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\findscu</code>，不创建也可以。</p>
+<p>创建 <code>storescu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\storescu</code> 。</p>
+<h2 id="准备需要用到的文件"><a href="#准备需要用到的文件" class="headerlink" title="准备需要用到的文件"></a>准备需要用到的文件</h2><p>1.将 dcmqrscp 配置文件（位于 <code>dcmtk 安装目录\etc\dcmtk\dcmqrscp.cfg</code>） 复制到 <code>dcmqrscp</code> 工作目录中。<br>2.将一个 dcm 文件复制到 <code>storescu</code> 工作目录，如：<code>C:\DICOM_dcmqrscp_test\storescu\111.DCM</code>。<a href="/111.dcm">我的一个 DCM 文件</a>。</p>
+<h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><p>1.可以修改 <code>NetworkTCPPort</code> 为其他的端口，如： <code>NetworkTCPPort = 11110</code>。<br>2.后面配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">acme1 = (后面请求的 AE Title,请求端的主机名,上面 NetworkTCPPort 的值)</span><br><span class="line">acmeCTcompany = acme1</span><br></pre></td></tr></table></figure>
+
+<p>3.<code>AETable</code> 内的修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">COMMON       C:\DICOM_dcmqrscp_test\dcmqrscp\COMMON       R  (200, 1024mb) ANY</span><br><span class="line">ACME_STORE   C:\DICOM_dcmqrscp_test\dcmqrscp\ACME_STORE   RW (9, 1024mb)</span><br></pre></td></tr></table></figure>
+
+<p>修改后，总的配置如下（删除了注释）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">NetworkTCPPort  = 11110</span><br><span class="line">MaxPDUSize      = 16384</span><br><span class="line">MaxAssociations = 16</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">HostTable BEGIN</span><br><span class="line"></span><br><span class="line">#one_scu = (ONE_SCU,BAIZE,12345)</span><br><span class="line">#acmeCTcompany = one_scu</span><br><span class="line"># 或</span><br><span class="line">acmeCTcompany = (ONE_SCU,BAIZE,12345)</span><br><span class="line"></span><br><span class="line">HostTable END</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">VendorTable BEGIN</span><br><span class="line"></span><br><span class="line">&quot;Acme CT Company&quot;   = acmeCTcompany</span><br><span class="line"></span><br><span class="line">VendorTable END</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">AETable BEGIN</span><br><span class="line"></span><br><span class="line">COMMON       C:\DICOM_dcmqrscp_test\dcmqrscp\COMMON       R  (200, 1024mb) ANY</span><br><span class="line">ACME_STORE   C:\DICOM_dcmqrscp_test\dcmqrscp\ACME_STORE   RW (9, 1024mb)   acmeCTcompany</span><br><span class="line"></span><br><span class="line">AETable END</span><br></pre></td></tr></table></figure>
+
+<h1 id="运行-dcmqrscp-开启服务"><a href="#运行-dcmqrscp-开启服务" class="headerlink" title="运行 dcmqrscp 开启服务"></a>运行 <code>dcmqrscp</code> 开启服务</h1><p>CMD 转到 <code>C:\DICOM_dcmqrscp_test\dcmqrscp</code>，然后运行 <code>dcmqrscp.exe --config dcmqrscp.cfg -d</code>。</p>
+<p>如配置无误则出现如下信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D: $dcmtk: dcmqrscp v3.6.4+ DEV $</span><br><span class="line">D:</span><br><span class="line">D: DcmDataDictionary: Loading file: dcmtk 安装目录\share\dcmtk\dicom.dic</span><br></pre></td></tr></table></figure>
+
+<p>不要关闭，让其运行。</p>
+<h1 id="运行-echoscu-测试服务能否连通"><a href="#运行-echoscu-测试服务能否连通" class="headerlink" title="运行 echoscu 测试服务能否连通"></a>运行 <code>echoscu</code> 测试服务能否连通</h1><p>新开一个 CMD 转到 <code>echoscu</code> ` 工作目录（没有创建的话可不转），运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echoscu.exe -d 127.0.0.1 11110 ^</span><br><span class="line">-aec ACME_STORE ^</span><br><span class="line">-aet ONE_SCU</span><br></pre></td></tr></table></figure>
+
+<p>如配置无误则在 <code>echoscu</code> 端出现如下信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">D: $dcmtk: echoscu v3.6.4+ DEV $</span><br><span class="line">D:</span><br><span class="line">D: DcmDataDictionary: Loading file: dcmtk 安装目录\share\dcmtk\dicom.dic</span><br><span class="line">D: Request Parameters:</span><br><span class="line">D: ====================== BEGIN A-ASSOCIATE-RQ =====================</span><br><span class="line">D: Our Implementation Class UID:      1.2.276.0.7230010.3.0.3.6.4</span><br><span class="line">D: Our Implementation Version Name:   OFFIS_DCMTK_364</span><br><span class="line">D: Their Implementation Class UID:</span><br><span class="line">D: Their Implementation Version Name:</span><br><span class="line">D: Application Context Name:    1.2.840.10008.3.1.1.1</span><br><span class="line">D: Calling Application Name:    ECHOSCU</span><br><span class="line">D: Called Application Name:     ACME_STORE</span><br><span class="line">D: Responding Application Name: ACME_STORE</span><br><span class="line">D: Our Max PDU Receive Size:    16384</span><br><span class="line">D: Their Max PDU Receive Size:  0</span><br><span class="line">D: Presentation Contexts:</span><br><span class="line">D:   Context ID:        1 (Proposed)</span><br><span class="line">D:     Abstract Syntax: =VerificationSOPClass</span><br><span class="line">D:     Proposed SCP/SCU Role: Default</span><br><span class="line">D:     Proposed Transfer Syntax(es):</span><br><span class="line">D:       =LittleEndianImplicit</span><br><span class="line">D: Requested Extended Negotiation: none</span><br><span class="line">D: Accepted Extended Negotiation:  none</span><br><span class="line">D: Requested User Identity Negotiation: none</span><br><span class="line">D: User Identity Negotiation Response:  none</span><br><span class="line">D: ======================= END A-ASSOCIATE-RQ ======================</span><br><span class="line">I: Requesting Association</span><br><span class="line">D: setting network send timeout to 60 seconds</span><br><span class="line">D: setting network receive timeout to 60 seconds</span><br><span class="line">D: Constructing Associate RQ PDU</span><br><span class="line">D: PDU Type: Associate Accept, PDU Length: 184 + 6 bytes PDU header</span><br><span class="line">D:   02  00  00  00  00  b8  00  01  00  00  41  43  4d  45  5f  53</span><br><span class="line">D:   54  4f  52  45  20  20  20  20  20  20  45  43  48  4f  53  43</span><br><span class="line">D:   55  20  20  20  20  20  20  20  20  20  00  00  00  00  00  00</span><br><span class="line">D:   00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00</span><br><span class="line">D:   00  00  00  00  00  00  00  00  00  00  10  00  00  15  31  2e</span><br><span class="line">D:   32  2e  38  34  30  2e  31  30  30  30  38  2e  33  2e  31  2e</span><br><span class="line">D:   31  2e  31  21  00  00  19  01  00  00  00  40  00  00  11  31</span><br><span class="line">D:   2e  32  2e  38  34  30  2e  31  30  30  30  38  2e  31  2e  32</span><br><span class="line">D:   50  00  00  3a  51  00  00  04  00  00  40  00  52  00  00  1b</span><br><span class="line">D:   31  2e  32  2e  32  37  36  2e  30  2e  37  32  33  30  30  31</span><br><span class="line">D:   30  2e  33  2e  30  2e  33  2e  36  2e  34  55  00  00  0f  4f</span><br><span class="line">D:   46  46  49  53  5f  44  43  4d  54  4b  5f  33  36  34</span><br><span class="line">D: Parsing an A-ASSOCIATE PDU</span><br><span class="line">D: Association Parameters Negotiated:</span><br><span class="line">D: ====================== BEGIN A-ASSOCIATE-AC =====================</span><br><span class="line">D: Our Implementation Class UID:      1.2.276.0.7230010.3.0.3.6.4</span><br><span class="line">D: Our Implementation Version Name:   OFFIS_DCMTK_364</span><br><span class="line">D: Their Implementation Class UID:    1.2.276.0.7230010.3.0.3.6.4</span><br><span class="line">D: Their Implementation Version Name: OFFIS_DCMTK_364</span><br><span class="line">D: Application Context Name:    1.2.840.10008.3.1.1.1</span><br><span class="line">D: Calling Application Name:    ECHOSCU</span><br><span class="line">D: Called Application Name:     ACME_STORE</span><br><span class="line">D: Responding Application Name: ACME_STORE</span><br><span class="line">D: Our Max PDU Receive Size:    16384</span><br><span class="line">D: Their Max PDU Receive Size:  16384</span><br><span class="line">D: Presentation Contexts:</span><br><span class="line">D:   Context ID:        1 (Accepted)</span><br><span class="line">D:     Abstract Syntax: =VerificationSOPClass</span><br><span class="line">D:     Proposed SCP/SCU Role: Default</span><br><span class="line">D:     Accepted SCP/SCU Role: Default</span><br><span class="line">D:     Accepted Transfer Syntax: =LittleEndianImplicit</span><br><span class="line">D: Requested Extended Negotiation: none</span><br><span class="line">D: Accepted Extended Negotiation:  none</span><br><span class="line">D: Requested User Identity Negotiation: none</span><br><span class="line">D: User Identity Negotiation Response:  none</span><br><span class="line">D: ======================= END A-ASSOCIATE-AC ======================</span><br><span class="line">I: Association Accepted (Max Send PDV: 16372)</span><br><span class="line">I: Sending Echo Request (MsgID 1)</span><br><span class="line">D: DcmDataset::read() TransferSyntax=&quot;Little Endian Implicit&quot;</span><br><span class="line">I: Received Echo Response (Success)</span><br><span class="line">I: Releasing Association</span><br></pre></td></tr></table></figure>
+
+<p>同时 <code>dcmqrscp</code> 端也出现很多信息。</p>
+<h1 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h1><h2 id="出现参考文献中列举出来的错误"><a href="#出现参考文献中列举出来的错误" class="headerlink" title="出现参考文献中列举出来的错误"></a>出现参考文献中列举出来的错误</h2><p>参照 <a href="https://blog.csdn.net/zssureqh/article/details/39758969" target="_blank" rel="noopener">DICOM医学图像处理：DCMTK的wiki资料学习之PACS调试</a> 或 <a href="https://support.dcmtk.org/redmine/projects/dcmtk/wiki/Howto_PACSDebuggingWithDCMTK" target="_blank" rel="noopener">DCMTK WIKI</a> 进行错误的修改。</p>
+<h2 id="运行-echoscu-出现-index-bat-创建-Handle-错误"><a href="#运行-echoscu-出现-index-bat-创建-Handle-错误" class="headerlink" title="运行 echoscu 出现 index.bat 创建 Handle 错误"></a>运行 <code>echoscu</code> 出现 <code>index.bat</code> 创建 <code>Handle</code> 错误</h2><h3 id="错误提示"><a href="#错误提示" class="headerlink" title="错误提示"></a>错误提示</h3><p>在 <code>dcmqrscp</code> 端最后出现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">D: DB_createHandle () : Handle created for C:\DICOM_dcmqrscp_test\ACME_STORE</span><br><span class="line">D:                      maxStudiesPerStorageArea: 200 maxBytesPerStudy: 1073741824</span><br><span class="line">E: C:\DICOM_dcmqrscp_test\ACME_STORE\index.dat: 操作成功完成。</span><br><span class="line">E: dispatch: cannot create DB Handle</span><br><span class="line">E: DIMSE Failure (aborting association): 000c:0001 Index database error</span><br></pre></td></tr></table></figure>
+
+<h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p>没有正确的创建 AETable 目录 <code>ACME_STORE</code> 文件夹。</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>创建 <code>ACME_STORE</code> 文件夹，<br>如创建：<code>C:\DICOM_dcmqrscp_test\ACME_STORE</code>（需和配置文件一致）。</p>
+<h1 id="运行-storescu-上传-DCM-文件"><a href="#运行-storescu-上传-DCM-文件" class="headerlink" title="运行 storescu 上传 DCM 文件"></a>运行 <code>storescu</code> 上传 DCM 文件</h1><p>新开一个 CMD 转到 <code>storescu</code> 工作目录，运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">storescu.exe -d 127.0.0.1 11110 ^</span><br><span class="line">-aec ACME_STORE ^</span><br><span class="line">-aet ONE_SCU ^</span><br><span class="line">111.dcm</span><br></pre></td></tr></table></figure>
+
+<p>如配置无误则在 <code>C:\DICOM_dcmqrscp_test\ACME_STORE</code> 中可以看到如下图所示结果。</p>
+<p><img src="/2019/08/20/DCMTK-工具：dcmqrscp-测试/stroescu-上传测试.png" alt="stroescu-上传测试"></p>
+<p>这样就表示上传成功。</p>
+<h1 id="运行-findscu-查询-DCM-文件"><a href="#运行-findscu-查询-DCM-文件" class="headerlink" title="运行 findscu 查询 DCM 文件"></a>运行 <code>findscu</code> 查询 DCM 文件</h1><p>新开一个 CMD 转到 <code>findscu</code> 工作目录（没有创建的话可不转），运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">findscu.exe --verbose --study ^</span><br><span class="line">-aec ACME_STORE -aet ONE_SCU ^</span><br><span class="line">127.0.0.1 11110 ^</span><br><span class="line">-k QueryRetrieveLevel=STUDY ^</span><br><span class="line">-k StudyDate ^</span><br><span class="line">-k StudyDescription ^</span><br><span class="line">-k StudyInstanceUID</span><br></pre></td></tr></table></figure>
+
+<p>如配置无误则在 <code>findscu</code> 端出现如下信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">I: Requesting Association</span><br><span class="line">I: Association Accepted (Max Send PDV: 16372)</span><br><span class="line">I: Sending Find Request (MsgID 1)</span><br><span class="line">I: Request Identifiers:</span><br><span class="line">I:</span><br><span class="line">I: # Dicom-Data-Set</span><br><span class="line">I: # Used TransferSyntax: Little Endian Explicit</span><br><span class="line">I: (0008,0020) DA (no value available)                     #   0, 0 StudyDate</span><br><span class="line">I: (0008,0052) CS [STUDY]                                  #   6, 1 QueryRetrieveLevel</span><br><span class="line">I: (0008,1030) LO (no value available)                     #   0, 0 StudyDescription</span><br><span class="line">I: (0020,000d) UI (no value available)                     #   0, 0 StudyInstanceUID</span><br><span class="line">I:</span><br><span class="line">I: ---------------------------</span><br><span class="line">I: Find Response: 1 (Pending)</span><br><span class="line">I:</span><br><span class="line">I: # Dicom-Data-Set</span><br><span class="line">I: # Used TransferSyntax: Little Endian Explicit</span><br><span class="line">I: (0008,0005) CS [ISO_IR 100]                             #  10, 1 SpecificCharacterSet</span><br><span class="line">I: (0008,0020) DA [20100926]                               #   8, 1 StudyDate</span><br><span class="line">I: (0008,0052) CS [STUDY ]                                 #   6, 1 QueryRetrieveLevel</span><br><span class="line">I: (0008,0054) AE [ACME_STORE]                             #  10, 1 RetrieveAETitle</span><br><span class="line">I: (0008,1030) LO [t-12057 ]                               #   8, 1 StudyDescription</span><br><span class="line">I: (0020,000d) UI [1.2.840.113619.2.55.3.2831193967.596.1285460208.406 ] #  52, 1 StudyInstanceUID</span><br><span class="line">I:</span><br><span class="line">I: Received Final Find Response (Success)</span><br><span class="line">I: Releasing Association</span><br></pre></td></tr></table></figure>
+
+<p>可新开一个 CMD 转到 <code>storescu</code> 工作目录，运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dcmdump.exe 111.DCM</span><br></pre></td></tr></table></figure>
+
+<p>可以看到 <code>findscu</code> 查找出来的信息和 <code>dcmdump</code> 出来的信息一致。</p>
+<h1 id="运行-movescu-下载-DCM-文件至本地"><a href="#运行-movescu-下载-DCM-文件至本地" class="headerlink" title="运行 movescu 下载 DCM 文件至本地"></a>运行 <code>movescu</code> 下载 DCM 文件至本地</h1><p><a href="https://support.dcmtk.org/redmine/projects/dcmtk/wiki/Howto_PACSDebuggingWithDCMTK" target="_blank" rel="noopener">DCMTK WIKI</a> 中关于 <code>movescu</code> 的部分原文。</p>
+<blockquote>
+<p>Now we can check a DICOM connection (echoscu), start a PACS (dcmqrscp), store to it (storescu) and query for Studies. The last thing that is missing is actually retrieving data from the PACS. There are two ways to do that, the “C-MOVE” approach or the “C-GET” approach. C-MOVE is more flexible and the most common one found in practice; that’s why we show it here. In DCMTK the tool “movescu” implements the C-MOVE approach. For every of the three Query SOP Classes (Patient Root, Study Root and Patient/Study Only) there is also a related C-MOVE, and a related C-GET SOP Class. We use the C-MOVE Study Root Retrieve SOP Class here (note that the exact SOP Class names are a littlebit different but have been replaced for readability).</p>
+<p>Using C-MOVE one can order a set of images from the PACS. The PACS then transfers them using the Storage SOP Classes that are also used by storescu (see above). Thus, the receiver of images ordered by a C-MOVE command must be a a server (SCP) of the required Storage SOP Classes. In order to receive the images yourself, you must tell the PACS the your own AE Title which is contained in the C-MOVE order message as the “Move Destination”. Now, the special thing about the C-MOVE approach is that you can tell the PACS not only your own AE Title but also any other AE Title on the DICOM network! That way you can not only ask the PACS to send the images to yourself but also to any Storage-enabled DICOM server by providing its AE Title.</p>
+</blockquote>
+<p>大致说明了以下几点：</p>
+<ol>
+<li><code>C-MOVE</code> 比 <code>C-GET</code> 灵活；</li>
+<li>使用 movescu 需要指定 <code>Move Destination</code>；</li>
+<li><code>C-MOVE</code> 不仅可以将 DCM 文件移动到请求端自身，也可以移动到其他具有存储功能的服务端（也就是其他 PACS，使用 <code>Move Destination</code> 来指定 PACS 地址）。</li>
+</ol>
+<p>新开一个 CMD 转到 <code>movescu</code> 工作目录（没有创建的话可不转），运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">movescu.exe --verbose --study ^</span><br><span class="line">-aec ACME_STORE -aet ONE_SCU -aem ONE_SCU ^</span><br><span class="line">127.0.0.1 11110 ^</span><br><span class="line">--port 12345 ^</span><br><span class="line">--output-directory C:\DICOM_dcmqrscp_test\movescu ^</span><br><span class="line">-k QueryRetrieveLevel=STUDY ^</span><br><span class="line">-k PatientName=&quot;病人姓名&quot;</span><br></pre></td></tr></table></figure>
+
+<p>如配置无误则在 <code>C:\DICOM_dcmqrscp_test\movescu</code> 中可以看到如下图所示结果。</p>
+<p><img src="/2019/08/20/DCMTK-工具：dcmqrscp-测试/movescu-下载到本地测试.png" alt="movescu-下载到本地测试"></p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/19/Win10-无法调节亮度，也不能开启夜间模式的解决办法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2086,146 +2312,11 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/08/Hexo-GitPage-搭建个人博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHL">
-      <meta itemprop="description" content="我的博客">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZHL的博客">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/08/Hexo-GitPage-搭建个人博客/" class="post-title-link" itemprop="url">Hexo + GitPage 搭建个人博客</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-08 15:38:16" itemprop="dateCreated datePublished" datetime="2019-08-08T15:38:16+08:00">2019-08-08</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-09 21:28:17" itemprop="dateModified" datetime="2019-10-09T21:28:17+08:00">2019-10-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><ol>
-<li>npm，意味着需要安装 <a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">Node.js</a>。</li>
-<li>Git，这个不用多说。</li>
-</ol>
-<h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><h2 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h2><p>安装很简单，打开 cmd，运行命令 <code>npm install -g hexo-cli</code>。</p>
-<h2 id="创建本地博客"><a href="#创建本地博客" class="headerlink" title="创建本地博客"></a>创建本地博客</h2><p>Hexo 的原理：</p>
-<ol>
-<li>本地创建博客，写 MarkDown 文件形式的博客；</li>
-<li>Hexo 将 md 文件编译成静态 HTML 文件；</li>
-<li>上传至 Github 仓库；</li>
-<li>通过 GitPage 的功能，实现访问这些静态资源。</li>
-</ol>
-<p>所以需要先在本地创建好博客。创建命令 <code>hexo init &lt;博客名称，建议如下格式：xxx.github.io&gt;</code>，这将会在当前目录下创建文件夹 <code>xxx.github.io</code>。</p>
-<h2 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h2><p>cd 到该目录下 <code>cd xxx.github.io</code>，之后 <code>npm install</code>。</p>
-<p>这个时候本地博客就已经搭建好了。</p>
-<h2 id="打开博客服务器："><a href="#打开博客服务器：" class="headerlink" title="打开博客服务器："></a>打开博客服务器：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 这个是hexo server的简写</span><br><span class="line">hexo s</span><br><span class="line">// 如果需要指定端口号，使用下面这个命令</span><br><span class="line">hexo s -p 端口号</span><br></pre></td></tr></table></figure>
-
-<p>浏览器输入 <code>localhost:4000</code> 即可查看效果。<br>可以换漂亮的主题，目前最受欢迎的主题是 <a href="https://github.com/theme-next/hexo-theme-next.git" target="_blank" rel="noopener">Next</a> 具体怎么使用可以直接访问查看。</p>
-<h1 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h1><p>新建文章也很简单：运行 <code>hexo n &quot;文章标题（同时也是文件名）&quot;</code>。生成后 Hexo 会提示文件位置，直接使用最习惯的 MarkDown 编辑器编辑就好了。</p>
-<h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><h2 id="创建-Github-仓库"><a href="#创建-Github-仓库" class="headerlink" title="创建 Github 仓库"></a>创建 Github 仓库</h2><p>在GitHub上新建一个仓库，仓库名命名的规则是 <code>&lt;Github用户名&gt;.github.io</code>。</p>
-<h2 id="安装-deploy-插件"><a href="#安装-deploy-插件" class="headerlink" title="安装 deploy 插件"></a>安装 <code>deploy</code> 插件</h2><p><code>npm install --save hexo-deployer-git</code>，之后修改文件 <code>_config.yml</code>（文件在 <code>xxx.github.io</code> 下）。<br>搜索 <code>deploy</code>，定位到它。修改为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/替换为github仓库地址/xxx.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<h2 id="部署到-Github"><a href="#部署到-Github" class="headerlink" title="部署到 Github"></a>部署到 Github</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// hexo generate 的缩写</span><br><span class="line">hexo g</span><br><span class="line">// hexo deploy 的缩写</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>现在可以通过 <code>&lt;Github用户名&gt;.github.io</code> 来访问了。</p>
-<h1 id="使用自己的域名"><a href="#使用自己的域名" class="headerlink" title="使用自己的域名"></a>使用自己的域名</h1><h2 id="申请域名"><a href="#申请域名" class="headerlink" title="申请域名"></a>申请域名</h2><p>直接去阿里云、腾讯云或者百度云之类的云服务商那里申请。要钱！</p>
-<h2 id="修改域名解析"><a href="#修改域名解析" class="headerlink" title="修改域名解析"></a>修改域名解析</h2><p>这个自行搜索怎么设置。要注意的是：</p>
-<ol>
-<li>记录类型为 <code>A</code>；</li>
-<li>记录值填写 <code>ping github.io</code> 得到的 ip 地址。</li>
-</ol>
-<h2 id="修改仓库设置"><a href="#修改仓库设置" class="headerlink" title="修改仓库设置"></a>修改仓库设置</h2><p>打开 Github 仓库的设置，定位到 <code>GitHub Pages</code> 如图：</p>
-<p><img src="/2019/08/08/Hexo-GitPage-搭建个人博客/GitHub-Pages设置.png" alt="1565255117433"></p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>步骤较多，但不是很难。</p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -2261,7 +2352,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -2320,7 +2411,9 @@
         
           
         
-        <span class="site-state-item-count">22</span>
+          
+        
+        <span class="site-state-item-count">23</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -2427,7 +2520,11 @@
         
           
         
-        <span class="site-state-item-count">46</span>
+          
+        
+          
+        
+        <span class="site-state-item-count">48</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

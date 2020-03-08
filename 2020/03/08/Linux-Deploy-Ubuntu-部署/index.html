@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-x16.ico?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="手机安装 Linux Deploy手上刚好有一台闲置的手机，把它刷成了魔趣，闲着也是闲着，耍起来~    项目 型号 备注    手机 LEX820    Android 8.1.0    魔趣 MK81.0-x2-200215-HISTORY    Kernel 3.18.109-mokee-gae88e076ad8    Linux Deploy 2.6.0-259    Ubuntu 18.">
+<meta name="keywords" content="Linux,Linux Deploy,Ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux Deploy Ubuntu 部署">
+<meta property="og:url" content="http://yoursite.com/2020/03/08/Linux-Deploy-Ubuntu-部署/index.html">
+<meta property="og:site_name" content="ZHL的博客">
+<meta property="og:description" content="手机安装 Linux Deploy手上刚好有一台闲置的手机，把它刷成了魔趣，闲着也是闲着，耍起来~    项目 型号 备注    手机 LEX820    Android 8.1.0    魔趣 MK81.0-x2-200215-HISTORY    Kernel 3.18.109-mokee-gae88e076ad8    Linux Deploy 2.6.0-259    Ubuntu 18.">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2020/03/08/Linux-Deploy-Ubuntu-部署/1.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/08/Linux-Deploy-Ubuntu-部署/2.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/08/Linux-Deploy-Ubuntu-部署/3.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/08/Linux-Deploy-Ubuntu-部署/4.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/08/Linux-Deploy-Ubuntu-部署/5.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/08/Linux-Deploy-Ubuntu-部署/7.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/08/Linux-Deploy-Ubuntu-部署/6.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/08/Linux-Deploy-Ubuntu-部署/8.png">
+<meta property="og:updated_time" content="2020-03-08T16:11:03.933Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux Deploy Ubuntu 部署">
+<meta name="twitter:description" content="手机安装 Linux Deploy手上刚好有一台闲置的手机，把它刷成了魔趣，闲着也是闲着，耍起来~    项目 型号 备注    手机 LEX820    Android 8.1.0    魔趣 MK81.0-x2-200215-HISTORY    Kernel 3.18.109-mokee-gae88e076ad8    Linux Deploy 2.6.0-259    Ubuntu 18.">
+<meta name="twitter:image" content="http://yoursite.com/2020/03/08/Linux-Deploy-Ubuntu-部署/1.png">
+  <link rel="canonical" href="http://yoursite.com/2020/03/08/Linux-Deploy-Ubuntu-部署/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Linux Deploy Ubuntu 部署 | ZHL的博客</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9fd3e2a7c57b3971f3439f9713354241";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ZHL的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">love-wh</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/08/Linux-Deploy-Ubuntu-部署/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHL">
+      <meta itemprop="description" content="我的博客">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZHL的博客">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">Linux Deploy Ubuntu 部署
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-03-08 22:34:14" itemprop="dateCreated datePublished" datetime="2020-03-08T22:34:14+08:00">2020-03-08</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-09 00:11:03" itemprop="dateModified" datetime="2020-03-09T00:11:03+08:00">2020-03-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux-Deploy/" itemprop="url" rel="index"><span itemprop="name">Linux Deploy</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="手机安装-Linux-Deploy"><a href="#手机安装-Linux-Deploy" class="headerlink" title="手机安装 Linux Deploy"></a>手机安装 Linux Deploy</h1><p>手上刚好有一台闲置的手机，把它刷成了魔趣，闲着也是闲着，耍起来~</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>型号</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>手机</td>
+<td>LEX820</td>
+<td></td>
+</tr>
+<tr>
+<td>Android</td>
+<td>8.1.0</td>
+<td></td>
+</tr>
+<tr>
+<td>魔趣</td>
+<td>MK81.0-x2-200215-HISTORY</td>
+<td></td>
+</tr>
+<tr>
+<td>Kernel</td>
+<td>3.18.109-mokee-gae88e076ad8</td>
+<td></td>
+</tr>
+<tr>
+<td>Linux Deploy</td>
+<td>2.6.0-259</td>
+<td></td>
+</tr>
+<tr>
+<td>Ubuntu</td>
+<td>18.04 LTS</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>前提：</p>
+<ol>
+<li>手机需要 root，我使用的是 <code>Magisk Manager</code>，在<a href="https://www.mokeedev.com/guide/getting_started.html" target="_blank" rel="noopener">魔趣的刷机快速上手</a>中有介绍如何安装。</li>
+<li>安装好 <code>Linux Deploy</code>、<code>BusyBox</code>（Linux Deploy 官方建议安装）、选装 <code>Hacker&#39;s Keyboard</code>、<code>JuiceSSH</code>（个人认为 Android 下最好用的 SSH 终端）。</li>
+</ol>
+<p>这些软件都能在 <strong>Google Play 商店</strong>中找到，所以强烈建议安装 <code>Google Play 商店</code>，在魔趣中可以直接刷入 <code>OpenGapps</code> 。</p>
+<h1 id="安装-Ubuntu"><a href="#安装-Ubuntu" class="headerlink" title="安装 Ubuntu"></a>安装 Ubuntu</h1><p>Linux Deploy 中安装 Ubuntu 非常简单。</p>
+<h2 id="创建并选择配置文件"><a href="#创建并选择配置文件" class="headerlink" title="创建并选择配置文件"></a>创建并选择配置文件</h2><p>右上角打开菜单，打开配置文件选项，新建一个配置文件，我安装的是 Ubuntu，所以直接将配置文件命名为 Ubuntu。</p>
+<p><img src="/2020/03/08/Linux-Deploy-Ubuntu-部署/1.png" alt="1"></p>
+<h2 id="设置配置文件属性"><a href="#设置配置文件属性" class="headerlink" title="设置配置文件属性"></a>设置配置文件属性</h2><p>从上一步返回到 Linux Deploy 的主界面，点击右下角的设置按钮。我的是按照如下配置的。</p>
+<p><img src="/2020/03/08/Linux-Deploy-Ubuntu-部署/2.png" alt="2"></p>
+<p><img src="/2020/03/08/Linux-Deploy-Ubuntu-部署/3.png" alt="3"></p>
+<p>这里有几点要注意，其中架构可以点击主界面的右上角的信息菜单中的状态选项查看，当然，一般 Android 的机器都是 arm 架构。发行版选择 bionic 为最新。源地址要特别注意，选择国内源，我选的是清华源：<a href="http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/" target="_blank" rel="noopener">http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/</a> 。安装类型之后的选项请参考<a href="https://github.com/meefik/linuxdeploy" target="_blank" rel="noopener">官网</a>自己做选择。请一定勾选启用 SSH 服务器，不然无法和 Linux 交互。</p>
+<h1 id="安装部署软件"><a href="#安装部署软件" class="headerlink" title="安装部署软件"></a>安装部署软件</h1><h2 id="安装-nginx"><a href="#安装-nginx" class="headerlink" title="安装 nginx"></a>安装 nginx</h2><p><code>sudo apt install nginx</code></p>
+<p>之后启动</p>
+<p><code>sudo service nginx start</code></p>
+<p>注：Linux Deploy 无法使用 systemctl，详情请了解 chroot。</p>
+<h2 id="安装-jdk"><a href="#安装-jdk" class="headerlink" title="安装 jdk"></a>安装 jdk</h2><p>官网下载 arm 架构的 jdk，我使用的是 jdk 1.8，注意后缀一定要包含 <code>linux-arm32</code> 或 <code>linux-arm64</code>，32 还是 64 取决于你的手机 CPU 架构。</p>
+<p>update-alternatives 连接一下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives --install /usr/bin/java  java  ***/jdk1.8.0_202/bin/java  0800202</span><br><span class="line">sudo update-alternatives --install /usr/bin/javac javac ***/jdk1.8.0_202/bin/javac 0800202</span><br><span class="line">sudo update-alternatives --install /usr/bin/jar   jar   ***/jdk1.8.0_202/bin/jar   0800202</span><br><span class="line">sudo update-alternatives --install /usr/bin/javah javah ***/jdk1.8.0_202/bin/javah 0800202</span><br><span class="line">sudo update-alternatives --install /usr/bin/javap javap ***/jdk1.8.0_202/bin/javap 0800202</span><br></pre></td></tr></table></figure>
+
+<p>然后写个 Hello World 测试一下。</p>
+<h2 id="安装-Mysql"><a href="#安装-Mysql" class="headerlink" title="安装 Mysql"></a>安装 Mysql</h2><p>这个是出了点小问题的。</p>
+<p>安装： <code>sudo apt install mysql-server</code>。</p>
+<p>安装到后面会出现如下问题。</p>
+<p><img src="/2020/03/08/Linux-Deploy-Ubuntu-部署/4.png" alt="4"></p>
+<p>我采取的办法是，忽略它，继续后面的操作，毕竟实在没时间深究。</p>
+<p>启动：<code>sudo service mysql start</code>。</p>
+<p>启动会失败。。。</p>
+<p><img src="/2020/03/08/Linux-Deploy-Ubuntu-部署/5.png" alt="5"></p>
+<p>解决办法：<code>sudo usermod -d /var/lib/mysql/ mysql</code>。</p>
+<p>再次启动，还是出错，这一次更狠，连错误都不打印了。</p>
+<p><img src="/2020/03/08/Linux-Deploy-Ubuntu-部署/7.png" alt="7"></p>
+<p>只能查看错误日志：<code>sudo cat /var/log/mysql/error.log</code>。</p>
+<p>然后发现了：</p>
+<p><img src="/2020/03/08/Linux-Deploy-Ubuntu-部署/6.png" alt="6"></p>
+<p>解决办法：<code>sudo usermod -a -G aid_inet,aid_net_raw mysql</code></p>
+<p>再次启动，OK了。</p>
+<h1 id="开机自启"><a href="#开机自启" class="headerlink" title="开机自启"></a>开机自启</h1><p>总不能每次开机都要启动一下这些服务吧。</p>
+<p>使用开机自启吧。</p>
+<p><strong>注：要使用开机启动，则需要在设置配置文件属性中启用“允许使用初始化系统”。</strong>即如图：勾选即可</p>
+<p><img src="/2020/03/08/Linux-Deploy-Ubuntu-部署/8.png" alt="8"></p>
+<p>然后：<code>sudo vim /etc/rc.local</code>。</p>
+<p>之后在 vim 中加入以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/bin/sh -e</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># rc.local</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This script is executed at the end of each multiuser runlevel.</span></span><br><span class="line"><span class="comment"># Make sure that the script will "exit 0" on success or any other</span></span><br><span class="line"><span class="comment"># value on error.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># In order to enable or disable this script just change the execution</span></span><br><span class="line"><span class="comment"># bits.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># By default this script does nothing.</span></span><br><span class="line"></span><br><span class="line">service nginx start</span><br><span class="line">service mysql start</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>
+
+<p>要自启什么，就在 <code>exit 0</code> 之前加入启动命令。</p>
+<p>然后给与执行权限：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chown root:root /etc/rc.local</span><br><span class="line">sudo chmod 755 /etc/rc.local</span><br></pre></td></tr></table></figure>
+
+<p>再次启动系统就可以看到效果了。</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Linux/" rel="tag"># Linux</a>
+            
+              <a href="/tags/Linux-Deploy/" rel="tag"># Linux Deploy</a>
+            
+              <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/03/02/java-复习/" rel="next" title="java 复习">
+                  <i class="fa fa-chevron-left"></i> java 复习
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="gitalk-container"></div>
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.png"
+      alt="ZHL">
+  <p class="site-author-name" itemprop="name">ZHL</p>
+  <div class="site-description motion-element" itemprop="description">我的博客</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">48</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#手机安装-Linux-Deploy"><span class="nav-number">1.</span> <span class="nav-text">手机安装 Linux Deploy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装-Ubuntu"><span class="nav-number">2.</span> <span class="nav-text">安装 Ubuntu</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建并选择配置文件"><span class="nav-number">2.1.</span> <span class="nav-text">创建并选择配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置配置文件属性"><span class="nav-number">2.2.</span> <span class="nav-text">设置配置文件属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装部署软件"><span class="nav-number">3.</span> <span class="nav-text">安装部署软件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-nginx"><span class="nav-number">3.1.</span> <span class="nav-text">安装 nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-jdk"><span class="nav-number">3.2.</span> <span class="nav-text">安装 jdk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Mysql"><span class="nav-number">3.3.</span> <span class="nav-text">安装 Mysql</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开机自启"><span class="nav-number">4.</span> <span class="nav-text">开机自启</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZHL</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.3.0</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+    var gitalk = new Gitalk({
+      clientID: '1422018403cef567d9ea',
+      clientSecret: 'cff6b3aa554481268305af952f14f47e7acd7b19',
+      repo: 'Gitalk',
+      owner: 'zhuhelong',
+      admin: ['zhuhelong'],
+      id: 'd15115c05e6493795932fe54eea47da2',
+        language: 'zh-CN',
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
+
+</body>
+</html>
